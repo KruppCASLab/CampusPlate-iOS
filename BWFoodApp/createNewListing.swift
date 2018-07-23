@@ -10,7 +10,7 @@ import UIKit
 
 class createNewListing: UIViewController, UITextFieldDelegate {
     
-  
+   // Setting up outlets
     @IBOutlet weak var locationInput: UITextField!
     @IBOutlet weak var foodInput: UITextField!
     @IBOutlet weak var timeInput: UITextField!
