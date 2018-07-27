@@ -11,19 +11,36 @@ import UIKit
 class SecondViewController: UIViewController,UITextFieldDelegate {
 
     
-    @IBOutlet weak var textfield1: UITextField!
+    
+    @IBOutlet weak var textField1: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        textfield1.delegate = self
-        textfield1.returnKeyType = .done
+        textField1.delegate = self
+        textField1.returnKeyType = .done
     
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textfield1.resignFirstResponder()
+        textField1.resignFirstResponder()
+        return true
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        if identifier == "Email"{
+            
+            if textField1.text?.isEmpty == true {
+                print("needs a valid email address")
+                
+                return false
+            } else {
+                print("valid email")
+            }
+        }
         return true
     }
 
