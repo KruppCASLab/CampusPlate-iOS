@@ -6,17 +6,86 @@
 //  Copyright © 2018 Dan Fitzgerald. All rights reserved.
 //
 
+import MapKit
 import UIKit
 
-class mapViewController: UIViewController {
+class mapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    var food = ["Pizza", "Subs", "Cookies", "Salad", "Soda", "Chips"] 
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return food.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell()
+        cell.textLabel?.text = food[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let selectedFoodItem = food[indexPath.row]
+        performSegue(withIdentifier: "moveToPickUpScreen", sender: selectedFoodItem )
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let foodVC = segue.destination as? pickUpFoodViewController {
+            
+            if let selectedFoodItem = sender as? String {
+                foodVC.foodPickUp = selectedFoodItem
+            }
+        }
+    }
+    
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // Set initial location in Berea
+        let initialLocation = CLLocationCoordinate2D(latitude: 41.371039, longitude: -81.847857)
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.008,longitudeDelta: 0.008)
+        let region = MKCoordinateRegion(center:initialLocation, span: span)
+            mapView.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = initialLocation
+        annotation.title = "Berea"
+        annotation.subtitle = "Baldwin Wallace"
+        mapView.addAnnotation(annotation)
+        
     }
     
+    /*
+     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedFoodItem = food[indexPath.row]
+        performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let mapVC = sender as? pickUpFoodViewController {
+            
+            if let
+        }
+    }
+    */
+    
+    
+    
 
+    
+    
+    
     /*
     // MARK: - Navigation
 

@@ -12,8 +12,9 @@ class SecondViewController: UIViewController,UITextFieldDelegate {
 
     
     
-    @IBOutlet weak var textField1: UITextField!
+   
     
+    @IBOutlet weak var textField1: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,11 @@ class SecondViewController: UIViewController,UITextFieldDelegate {
         }
         return true
     }
+    
+    
+    
+
+    
 
     /*
     // MARK: - Navigation

@@ -29,6 +29,20 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        if textbox2.text?.isEmpty == true {
+            print("needs pin number from email")
+            
+            return false
+        } else {
+            print("pin number is good")
+            
+        }
+        return true
+    }
+    
+    
 
     
 

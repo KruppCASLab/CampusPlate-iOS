@@ -13,12 +13,11 @@ class CreateListing {
     var location = ""
     var food = ""
     var time = ""
+    
+    func PickUp () {
+        //pickUpFoodLabel.text =
+        //
+    }
 }
 
-class Email {
-    var email = ""
-}
 
-class PinNumber {
-    var pin = 0
-}

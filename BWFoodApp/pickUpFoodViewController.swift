@@ -9,9 +9,22 @@
 import UIKit
 
 class pickUpFoodViewController: UIViewController {
+    
+    @IBOutlet weak var foodPickUpLabel: UILabel!
+    @IBOutlet weak var locationPickUplabel: UILabel!
+    @IBOutlet weak var timePickUplabel: UILabel!
+    
+    var foodPickUp = ""
+    var pickUpLocation = ""
+    var pickUpTime = ""
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = foodPickUp
+        
+        
 
         // Do any additional setup after loading the view.
     }
