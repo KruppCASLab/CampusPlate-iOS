@@ -22,18 +22,21 @@ class mapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell()
-        cell.textLabel?.text = food[indexPath.row]
+        let cell:FoodListingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FoodListingCell", for: indexPath) as! FoodListingTableViewCell
+        cell.food.text = food[indexPath.row]
+       
         return cell
+        
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let selectedFoodItem = food[indexPath.row]
-        performSegue(withIdentifier: "moveToPickUpScreen", sender: selectedFoodItem )
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//
+//        let selectedFoodItem = food[indexPath.row]
+//        performSegue(withIdentifier: "moveToPickUpScreen", sender: selectedFoodItem )
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // TODO: Grab the food item selected and populate the next screen
         if let foodVC = segue.destination as? pickUpFoodViewController {
             
             if let selectedFoodItem = sender as? String {
