@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class CreateListing {
+class Listing {
     var location = ""
     var food = ""
     var time = ""

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */; };
+		E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F9212B00650057B2B5 /* ListingModel.swift */; };
 		F60E5B5E2115053600426FA3 /* pickUpFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E5B5D2115053600426FA3 /* pickUpFoodViewController.swift */; };
 		F62BEE852103D6E200006DC0 /* createNewListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEE842103D6E200006DC0 /* createNewListing.swift */; };
 		F62BEEB82106273500006DC0 /* PostingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */; };
@@ -20,7 +21,7 @@
 		F69BDB5820FA557A0065BB78 /* BWFoodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB5720FA557A0065BB78 /* BWFoodAppTests.swift */; };
 		F69BDB6320FA56F40065BB78 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB6220FA56F40065BB78 /* SecondViewController.swift */; };
 		F69BDB6520FACC8A0065BB78 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB6420FACC8A0065BB78 /* ThirdViewController.swift */; };
-		F6BBF7BA210BDBEC00B67BE9 /* CreateListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BBF7B9210BDBEC00B67BE9 /* CreateListing.swift */; };
+		F6BBF7BA210BDBEC00B67BE9 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BBF7B9210BDBEC00B67BE9 /* Listing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListingTableViewCell.swift; sourceTree = "<group>"; };
+		E00850F9212B00650057B2B5 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
 		F60E5B5D2115053600426FA3 /* pickUpFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickUpFoodViewController.swift; sourceTree = "<group>"; };
 		F62BEE842103D6E200006DC0 /* createNewListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createNewListing.swift; sourceTree = "<group>"; };
 		F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingConfirmationViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +53,7 @@
 		F69BDB5920FA557A0065BB78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F69BDB6220FA56F40065BB78 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F69BDB6420FACC8A0065BB78 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		F6BBF7B9210BDBEC00B67BE9 /* CreateListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListing.swift; sourceTree = "<group>"; };
+		F6BBF7B9210BDBEC00B67BE9 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,18 +74,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E00850F4212AFBE80057B2B5 /* Views */ = {
+		E00850F4212AFBE80057B2B5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F69BDB4620FA55780065BB78 /* Main.storyboard */,
 				E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */,
 			);
-			path = Views;
+			path = View;
+			sourceTree = "<group>";
+		};
+		E00850F7212B00360057B2B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E00850F9212B00650057B2B5 /* ListingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E00850F8212B00410057B2B5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F69BDB4420FA55780065BB78 /* ViewController.swift */,
+				F60E5B5D2115053600426FA3 /* pickUpFoodViewController.swift */,
+				F62BEEE52108EFF300006DC0 /* mapViewController.swift */,
+				F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */,
+				F62BEE842103D6E200006DC0 /* createNewListing.swift */,
+				F69BDB6420FACC8A0065BB78 /* ThirdViewController.swift */,
+				F69BDB6220FA56F40065BB78 /* SecondViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		F62BEEB62106255900006DC0 /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				F6BBF7B9210BDBEC00B67BE9 /* CreateListing.swift */,
+				F6BBF7B9210BDBEC00B67BE9 /* Listing.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -109,17 +134,11 @@
 		F69BDB4120FA55780065BB78 /* BWFoodApp */ = {
 			isa = PBXGroup;
 			children = (
-				E00850F4212AFBE80057B2B5 /* Views */,
+				E00850F8212B00410057B2B5 /* Controller */,
+				E00850F7212B00360057B2B5 /* Model */,
+				E00850F4212AFBE80057B2B5 /* View */,
 				F62BEEB62106255900006DC0 /* Types */,
 				F69BDB4220FA55780065BB78 /* AppDelegate.swift */,
-				F69BDB4420FA55780065BB78 /* ViewController.swift */,
-				F69BDB4620FA55780065BB78 /* Main.storyboard */,
-				F60E5B5D2115053600426FA3 /* pickUpFoodViewController.swift */,
-				F62BEEE52108EFF300006DC0 /* mapViewController.swift */,
-				F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */,
-				F62BEE842103D6E200006DC0 /* createNewListing.swift */,
-				F69BDB6420FACC8A0065BB78 /* ThirdViewController.swift */,
-				F69BDB6220FA56F40065BB78 /* SecondViewController.swift */,
 				F69BDB4920FA55790065BB78 /* Assets.xcassets */,
 				F69BDB4B20FA55790065BB78 /* LaunchScreen.storyboard */,
 				F69BDB4E20FA55790065BB78 /* Info.plist */,
@@ -240,9 +259,10 @@
 				F69BDB6320FA56F40065BB78 /* SecondViewController.swift in Sources */,
 				F62BEE852103D6E200006DC0 /* createNewListing.swift in Sources */,
 				F69BDB4520FA55780065BB78 /* ViewController.swift in Sources */,
-				F6BBF7BA210BDBEC00B67BE9 /* CreateListing.swift in Sources */,
+				F6BBF7BA210BDBEC00B67BE9 /* Listing.swift in Sources */,
 				F69BDB6520FACC8A0065BB78 /* ThirdViewController.swift in Sources */,
 				F60E5B5E2115053600426FA3 /* pickUpFoodViewController.swift in Sources */,
+				E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */,
 				E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */,
 				F62BEEE62108EFF400006DC0 /* mapViewController.swift in Sources */,
 				F62BEEB82106273500006DC0 /* PostingConfirmationViewController.swift in Sources */,
