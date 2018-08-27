@@ -10,14 +10,16 @@ import UIKit
 import Foundation
 
 class Listing {
-    var location = ""
-    var food = ""
-    var time = ""
+    public let food:String
+    public let location:String
+    public let time:String
     
-    func PickUp () {
-        //pickUpFoodLabel.text =
-        //
+    init(food:String, location:String, time:String) {
+        self.location = location
+        self.food = food
+        self.time = time
     }
+    
 }
 
 

@@ -9,39 +9,36 @@
 import MapKit
 import UIKit
 
-class mapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-    var food = ["Pizza", "Subs", "Cookies", "Salad", "Soda", "Chips"] 
+    var listingModel:ListingModel!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return food.count
+        return listingModel.getNumberOfListings()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:FoodListingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FoodListingCell", for: indexPath) as! FoodListingTableViewCell
-        cell.food.text = food[indexPath.row]
+       
+        let listing = listingModel.getListing(index: indexPath.row)
+        
+        cell.food.text = listing.food
+        cell.time.text = listing.time
        
         return cell
         
     }
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        let selectedFoodItem = food[indexPath.row]
-//        performSegue(withIdentifier: "moveToPickUpScreen", sender: selectedFoodItem )
-//    }
+
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // TODO: Grab the food item selected and populate the next screen
-        if let foodVC = segue.destination as? pickUpFoodViewController {
-            
-            if let selectedFoodItem = sender as? String {
-                foodVC.foodPickUp = selectedFoodItem
-            }
+        let row = self.tableView.indexPath(for: sender as! UITableViewCell)!.row
+        if let foodVC = segue.destination as? PickUpFoodViewController {
+            foodVC.listing = listingModel.getListing(index: row)
         }
     }
     
@@ -51,6 +48,8 @@ class mapViewController: UIViewController, UITableViewDataSource, UITableViewDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        self.listingModel = ListingModel()
 
         // Do any additional setup after loading the view.
         
