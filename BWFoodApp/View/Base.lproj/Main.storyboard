@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gEK-KP-nPj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gEK-KP-nPj">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -570,15 +569,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Whats Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUN-9F-RUb">
-                                            <rect key="frame" x="146.66666666666666" y="11.666666666666664" width="120.99999999999997" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aq-xp-oYL">
+                                            <rect key="frame" x="0.0" y="8" width="414" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="7aq-xp-oYL" firstAttribute="leading" secondItem="B9A-QJ-fwG" secondAttribute="leading" id="Jfv-95-yWH"/>
+                                        <constraint firstAttribute="trailing" secondItem="7aq-xp-oYL" secondAttribute="trailing" id="WvA-rV-H2D"/>
+                                        <constraint firstAttribute="bottom" secondItem="7aq-xp-oYL" secondAttribute="bottom" constant="15" id="YZN-2E-eXf"/>
+                                        <constraint firstItem="7aq-xp-oYL" firstAttribute="top" secondItem="B9A-QJ-fwG" secondAttribute="top" constant="8" id="vKj-UW-KUu"/>
+                                    </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodListingCell" rowHeight="84" id="R9L-WV-uhC" customClass="FoodListingTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
@@ -588,15 +592,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="83.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grr-Ai-ieB">
-                                                    <rect key="frame" x="20" y="17" width="39" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNM-c6-YHq">
+                                                    <rect key="frame" x="20" y="52" width="86" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNM-c6-YHq">
-                                                    <rect key="frame" x="20" y="52" width="38" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grr-Ai-ieB">
+                                                    <rect key="frame" x="20" y="11" width="86" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -625,7 +629,11 @@
                             <constraint firstItem="re8-fk-STR" firstAttribute="leading" secondItem="NUm-jb-hBy" secondAttribute="leading" id="Jy7-VZ-n66"/>
                             <constraint firstItem="RtO-O8-pSg" firstAttribute="bottom" secondItem="NUm-jb-hBy" secondAttribute="bottom" id="Oqv-0p-PeD"/>
                             <constraint firstItem="RtO-O8-pSg" firstAttribute="leading" secondItem="NUm-jb-hBy" secondAttribute="leading" id="TnH-Aa-h3P"/>
+                            <constraint firstItem="re8-fk-STR" firstAttribute="top" secondItem="cYj-tB-noR" secondAttribute="top" id="ULD-jk-u4a"/>
+                            <constraint firstItem="re8-fk-STR" firstAttribute="trailing" secondItem="NUm-jb-hBy" secondAttribute="trailing" id="Xxz-ub-sXN"/>
+                            <constraint firstItem="NUm-jb-hBy" firstAttribute="bottom" secondItem="re8-fk-STR" secondAttribute="bottom" constant="249" id="Yj9-tT-zgG"/>
                             <constraint firstItem="re8-fk-STR" firstAttribute="trailing" secondItem="NUm-jb-hBy" secondAttribute="trailing" id="eMJ-3P-CsS"/>
+                            <constraint firstItem="re8-fk-STR" firstAttribute="leading" secondItem="NUm-jb-hBy" secondAttribute="leading" id="oHG-uw-qYx"/>
                             <constraint firstItem="RtO-O8-pSg" firstAttribute="top" secondItem="NUm-jb-hBy" secondAttribute="top" constant="373" id="xvW-B0-cNe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NUm-jb-hBy"/>
@@ -639,7 +647,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nkC-wr-yDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4994" y="946"/>
+            <point key="canvasLocation" x="6528.985507246377" y="2291.576086956522"/>
         </scene>
         <!--Pick Up Food View Controller-->
         <scene sceneID="mHl-eV-sAA">
