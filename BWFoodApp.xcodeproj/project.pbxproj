@@ -13,6 +13,7 @@
 		F62BEE852103D6E200006DC0 /* createNewListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEE842103D6E200006DC0 /* createNewListing.swift */; };
 		F62BEEB82106273500006DC0 /* PostingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */; };
 		F62BEEE62108EFF400006DC0 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEEE52108EFF300006DC0 /* mapViewController.swift */; };
+		F69081D22146A59400FCEC26 /* FoodPickUpSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69081D12146A59400FCEC26 /* FoodPickUpSite.swift */; };
 		F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB4220FA55780065BB78 /* AppDelegate.swift */; };
 		F69BDB4520FA55780065BB78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB4420FA55780065BB78 /* ViewController.swift */; };
 		F69BDB4820FA55780065BB78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4620FA55780065BB78 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		F62BEE842103D6E200006DC0 /* createNewListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createNewListing.swift; sourceTree = "<group>"; };
 		F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingConfirmationViewController.swift; sourceTree = "<group>"; };
 		F62BEEE52108EFF300006DC0 /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
+		F69081D12146A59400FCEC26 /* FoodPickUpSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPickUpSite.swift; sourceTree = "<group>"; };
 		F69BDB3F20FA55780065BB78 /* BWFoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWFoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69BDB4220FA55780065BB78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F69BDB4420FA55780065BB78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				F69BDB4420FA55780065BB78 /* ViewController.swift */,
 				F60E5B5D2115053600426FA3 /* pickUpFoodViewController.swift */,
 				F62BEEE52108EFF300006DC0 /* mapViewController.swift */,
+				F69081D12146A59400FCEC26 /* FoodPickUpSite.swift */,
 				F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */,
 				F62BEE842103D6E200006DC0 /* createNewListing.swift */,
 				F69BDB6420FACC8A0065BB78 /* ThirdViewController.swift */,
@@ -264,6 +267,7 @@
 				F60E5B5E2115053600426FA3 /* pickUpFoodViewController.swift in Sources */,
 				E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */,
 				E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */,
+				F69081D22146A59400FCEC26 /* FoodPickUpSite.swift in Sources */,
 				F62BEEE62108EFF400006DC0 /* mapViewController.swift in Sources */,
 				F62BEEB82106273500006DC0 /* PostingConfirmationViewController.swift in Sources */,
 				F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */,

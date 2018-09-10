@@ -9,10 +9,9 @@
 import MapKit
 import UIKit
 
-class mapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class mapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var tableView: UITableView!
-    
     
     var food = ["Pizza", "Subs", "Cookies", "Salad", "Soda", "Chips"] 
     
@@ -65,8 +64,25 @@ class mapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         annotation.coordinate = initialLocation
         annotation.title = "Berea"
         annotation.subtitle = "Baldwin Wallace"
-        mapView.addAnnotation(annotation)
         
+        
+        
+        // Show pin on map
+        
+        let pizza = FoodPickUpSites(title: "Pizza", locationName: "Math and computer Science", discipline: "Lounge", coordinate: CLLocationCoordinate2D(latitude: 41.3708812, longitude: -81.8478923))
+        mapView.addAnnotation(pizza)
+        
+        let subs = FoodPickUpSites(title: "Subs", locationName: "Kamm Hall", discipline: "Business Lounge", coordinate: CLLocationCoordinate2D(latitude: 41.3684241, longitude: -81.8439512))
+        mapView.addAnnotation(subs)
+        
+        let cookies = FoodPickUpSites(title: "Cookies", locationName: "Lou Higgins Center", discipline: "Tressel Lounge", coordinate: CLLocationCoordinate2D(latitude: 41.3719144, longitude: -81.8478714))
+        mapView.addAnnotation(cookies)
+        
+        let salad = FoodPickUpSites(title: "Salads", locationName: "Ritter Library", discipline: "3rd Floor Lounge", coordinate: CLLocationCoordinate2D(latitude: 41.3732252, longitude: -81.8509172))
+        mapView.addAnnotation(salad)
+        
+        let chips = FoodPickUpSites(title: "Chips", locationName: "The Union", discipline: "Cyber", coordinate: CLLocationCoordinate2D(latitude: 41.3692863, longitude: -81.8478429))
+        mapView.addAnnotation(chips)
     }
     
     /*
