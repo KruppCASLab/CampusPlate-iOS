@@ -36,10 +36,10 @@ class mapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // TODO: Grab the food item selected and populate the next screen
-        if let foodVC = segue.destination as? pickUpFoodViewController {
+        if let foodVC = segue.destination as? PickUpFoodViewController {
             
             if let selectedFoodItem = sender as? String {
-                foodVC.foodPickUp = selectedFoodItem
+                //foodVC.foodPickUp = selectedFoodItem
             }
         }
     }

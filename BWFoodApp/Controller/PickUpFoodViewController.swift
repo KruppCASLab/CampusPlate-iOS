@@ -15,6 +15,8 @@ class PickUpFoodViewController: UIViewController {
     @IBOutlet weak var timePickUplabel: UILabel!
     
     public var listing:Listing!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
