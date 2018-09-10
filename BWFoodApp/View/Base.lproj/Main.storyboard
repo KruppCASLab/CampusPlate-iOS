@@ -660,7 +660,7 @@
                     <tabBarItem key="tabBarItem" title="View Items" selectedImage="icons8-map_marker" id="p27-Ol-UGv"/>
                     <navigationItem key="navigationItem" id="0Kk-E5-wbh"/>
                     <connections>
-                        <outlet property="mapView" destination="re8-fk-STR" id="H7e-eV-abL"/>
+                        <outlet property="mapView" destination="re8-fk-STR" id="ipL-ze-yfS"/>
                         <outlet property="tableView" destination="RtO-O8-pSg" id="nmG-TR-fAl"/>
                     </connections>
                 </viewController>

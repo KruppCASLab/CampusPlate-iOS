@@ -9,9 +9,11 @@
 import MapKit
 import UIKit
 
-class mapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class MapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var tableView: UITableView!
+
+    @IBOutlet weak var mapView: MKMapView!
     
     var food = ["Pizza", "Subs", "Cookies", "Salad", "Soda", "Chips"] 
     
@@ -38,14 +40,14 @@ class mapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         // TODO: Grab the food item selected and populate the next screen
         if let foodVC = segue.destination as? PickUpFoodViewController {
             
-            if let selectedFoodItem = sender as? String {
-                //foodVC.foodPickUp = selectedFoodItem
-            }
+//            if let selectedFoodItem = sender as? String {
+//                foodVC.foodPickUp = selectedFoodItem
+//            }
         }
     }
     
     
-    @IBOutlet weak var mapView: MKMapView!
+
     
 
     override func viewDidLoad() {
