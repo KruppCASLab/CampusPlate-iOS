@@ -22,7 +22,7 @@ class PickUpFoodViewController: UIViewController {
         super.viewDidLoad()
         
         self.foodPickUpLabel.text = listing.food
-        self.locationPickUplabel.text = listing.location
+        //self.locationPickUplabel.text = listing.coordinate
         self.timePickUplabel.text = listing.time
         
 

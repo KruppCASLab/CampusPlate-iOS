@@ -15,16 +15,18 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
 
     @IBOutlet weak var mapView: MKMapView!
     
-    var food = ["Pizza", "Subs", "Cookies", "Salad", "Soda", "Chips"] 
+    let listingModel = ListingModel()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return food.count
+        return listingModel.getNumberOfListings()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:FoodListingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FoodListingCell", for: indexPath) as! FoodListingTableViewCell
-        cell.food.text = food[indexPath.row]
+        var listing:Listing = listingModel.getListing(index: indexPath.row)
+        
+        cell.food.text = listing.food
        
         return cell
         
@@ -60,31 +62,18 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         let span = MKCoordinateSpan(latitudeDelta: 0.008,longitudeDelta: 0.008)
         let region = MKCoordinateRegion(center:initialLocation, span: span)
-            mapView.setRegion(region, animated: true)
+        mapView.setRegion(region, animated: true)
         
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = initialLocation
-        annotation.title = "Berea"
-        annotation.subtitle = "Baldwin Wallace"
-        
+
         
         
         // Show pin on map
         
-        let pizza = FoodPickUpSites(title: "Pizza", locationName: "Math and computer Science", discipline: "Lounge", coordinate: CLLocationCoordinate2D(latitude: 41.3708812, longitude: -81.8478923))
-        mapView.addAnnotation(pizza)
-        
-        let subs = FoodPickUpSites(title: "Subs", locationName: "Kamm Hall", discipline: "Business Lounge", coordinate: CLLocationCoordinate2D(latitude: 41.3684241, longitude: -81.8439512))
-        mapView.addAnnotation(subs)
-        
-        let cookies = FoodPickUpSites(title: "Cookies", locationName: "Lou Higgins Center", discipline: "Tressel Lounge", coordinate: CLLocationCoordinate2D(latitude: 41.3719144, longitude: -81.8478714))
-        mapView.addAnnotation(cookies)
-        
-        let salad = FoodPickUpSites(title: "Salads", locationName: "Ritter Library", discipline: "3rd Floor Lounge", coordinate: CLLocationCoordinate2D(latitude: 41.3732252, longitude: -81.8509172))
-        mapView.addAnnotation(salad)
-        
-        let chips = FoodPickUpSites(title: "Chips", locationName: "The Union", discipline: "Cyber", coordinate: CLLocationCoordinate2D(latitude: 41.3692863, longitude: -81.8478429))
-        mapView.addAnnotation(chips)
+        for i in 0 ..< listingModel.getNumberOfListings() {
+            let listing = listingModel.getListing(index: i)
+            mapView.addAnnotation(listing)
+        }
+    
     }
     
     /*

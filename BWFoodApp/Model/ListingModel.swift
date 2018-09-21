@@ -7,18 +7,19 @@
 //
 
 import Foundation
+import MapKit
 
 class ListingModel {
     private var listings = Array<Listing>()
     
     init() {
-        //TODO: Remove this stub code
-        self.listings.append(Listing(food: "Pizza", location: "Beech Street", time: "Today"))
-        self.listings.append(Listing(food: "Yogurt", location: "Berea Street", time: "Tomorrow"))
-        self.listings.append(Listing(food: "Hamburger", location: "Lincoln Street", time: "Yesterday"))
-        self.listings.append(Listing(food: "Cheese", location: "Dan Street", time: "Today"))
-        self.listings.append(Listing(food: "Pizza", location: "Brian Street", time: "Tommorrow"))
-        self.listings.append(Listing(food: "Salad", location: "Coffee Street", time: "Friday"))
+        // Mock Data
+        self.listings.append(Listing(food: "Pizza", coordinate: CLLocationCoordinate2D(latitude: 41.3708812, longitude: -81.8478923), time: "Today"))
+        self.listings.append(Listing(food: "Yogurt", coordinate: CLLocationCoordinate2D(latitude: 41.3684241, longitude: -81.8439512), time: "Tomorrow"))
+        self.listings.append(Listing(food: "Hamburger", coordinate: CLLocationCoordinate2D(latitude: 41.3719144, longitude: -81.8478714), time: "Yesterday"))
+        self.listings.append(Listing(food: "Cheese", coordinate: CLLocationCoordinate2D(latitude: 41.3732252, longitude: -81.8509172), time: "Today"))
+        self.listings.append(Listing(food: "Pizza", coordinate: CLLocationCoordinate2D(latitude: 41.3692863, longitude: -81.8478429), time: "Tommorrow"))
+        self.listings.append(Listing(food: "Salad", coordinate: CLLocationCoordinate2D(latitude: 41.3692883, longitude: -81.8478439), time: "Friday"))
     }
     
     public func update() {
