@@ -17,6 +17,8 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     let listingModel = ListingModel()
     
+    var indexSelected:IndexPath?
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listingModel.getNumberOfListings()
     }
@@ -37,19 +39,18 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        let selectedFoodItem = food[indexPath.row]
-//        performSegue(withIdentifier: "moveToPickUpScreen", sender: selectedFoodItem )
-//    }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return false
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // TODO: Grab the food item selected and populate the next screen
         if let foodVC = segue.destination as? PickUpFoodViewController {
+            if let indexPath = indexSelected {
+                let listing = self.listingModel.getListing(index: indexPath.row)
+                foodVC.listing = listing
+            }
             
-//            if let selectedFoodItem = sender as? String {
-//                foodVC.foodPickUp = selectedFoodItem
-//            }
         }
     }
     
@@ -81,12 +82,13 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     }
     
-    /*
-     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedFoodItem = food[indexPath.row]
-        performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.indexSelected = indexPath
+        self.performSegue(withIdentifier: "showFoodPickupDetail", sender: self)
     }
     
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let mapVC = sender as? pickUpFoodViewController {
             
