@@ -27,6 +27,11 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         var listing:Listing = listingModel.getListing(index: indexPath.row)
         
         cell.food.text = listing.food
+        cell.time.text = listing.time
+        cell.location.text = listing.location
+    
+        
+        
        
         return cell
         
