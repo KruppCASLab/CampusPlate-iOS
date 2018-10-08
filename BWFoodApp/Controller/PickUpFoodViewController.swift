@@ -16,13 +16,17 @@ class PickUpFoodViewController: UIViewController {
     
     public var listing:Listing!
     
+    @IBAction func pickUpButton(_ sender: Any) {
+        
+    }
     
-
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.foodPickUpLabel.text = listing.food
-        //self.locationPickUplabel.text = listing.coordinate
+        self.locationPickUplabel.text = listing.location
         self.timePickUplabel.text = listing.time
         
 
