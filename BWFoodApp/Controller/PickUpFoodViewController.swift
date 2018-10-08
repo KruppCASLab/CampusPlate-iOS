@@ -17,7 +17,10 @@ class PickUpFoodViewController: UIViewController {
     public var listing:Listing!
     
     @IBAction func pickUpButton(_ sender: Any) {
+        // TODO: Remove the item from model
+        //ListingModel.getSharedInstance().removeListing(index: <#T##Int#>)
         
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
   

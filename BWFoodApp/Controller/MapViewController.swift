@@ -15,7 +15,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
 
     @IBOutlet weak var mapView: MKMapView!
     
-    let listingModel = ListingModel()
+    let listingModel = ListingModel.getSharedInstance()
     
     var indexSelected:IndexPath?
     

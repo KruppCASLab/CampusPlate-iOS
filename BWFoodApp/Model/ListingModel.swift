@@ -12,7 +12,9 @@ import MapKit
 class ListingModel {
     private var listings = Array<Listing>()
     
-    init() {
+    private static let sharedInstance = ListingModel()
+    
+    private init() {
         // Mock Data
         self.listings.append(Listing(food: "Pizza", coordinate: CLLocationCoordinate2D(latitude: 41.3708812, longitude: -81.8478923), time: "Today", location: "MACs"))
         self.listings.append(Listing(food: "Yogurt", coordinate: CLLocationCoordinate2D(latitude: 41.3684241, longitude: -81.8439512), time: "Tomorrow", location: "Lou Higgins Center"))
@@ -21,6 +23,12 @@ class ListingModel {
         self.listings.append(Listing(food: "Pizza", coordinate: CLLocationCoordinate2D(latitude: 41.3692863, longitude: -81.8478429), time: "Tommorrow", location: "Bonds Administration"))
         self.listings.append(Listing(food: "Salad", coordinate: CLLocationCoordinate2D(latitude: 41.3692883, longitude: -81.8478439), time: "Friday", location: "Malickey"))
     }
+    
+    
+    static public func getSharedInstance() -> ListingModel {
+        return self.sharedInstance
+    }
+ 
     
     public func update() {
         //TODO: Call service client to update
@@ -37,6 +45,7 @@ class ListingModel {
     public func removeListing(index:Int) {
         self.listings.remove(at: index)
     }
+
     public func getNumberOfListings() -> Int {
         return self.listings.count
     }
