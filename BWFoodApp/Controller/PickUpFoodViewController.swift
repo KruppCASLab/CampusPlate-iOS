@@ -10,6 +10,8 @@ import UIKit
 
 class PickUpFoodViewController: UIViewController {
     
+
+    
     @IBOutlet weak var foodPickUpLabel: UILabel!
     @IBOutlet weak var locationPickUplabel: UILabel!
     @IBOutlet weak var timePickUplabel: UILabel!
@@ -20,7 +22,7 @@ class PickUpFoodViewController: UIViewController {
         
     }
     
-  
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,7 @@ class PickUpFoodViewController: UIViewController {
         self.foodPickUpLabel.text = listing.food
         self.locationPickUplabel.text = listing.location
         self.timePickUplabel.text = listing.time
+        
         
 
         // Do any additional setup after loading the view.
