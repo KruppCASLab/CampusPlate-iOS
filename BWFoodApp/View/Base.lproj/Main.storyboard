@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="40O-Up-JZD">
     <device id="retina4_7" orientation="portrait">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gEK-KP-nPj">
+    <device id="retina5_5" orientation="portrait">
+>>>>>>> 996d4fa8236417c8ea0e60ae4f85dc6fc0af7b01
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -465,10 +470,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="re8-fk-STR">
+<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="418"/>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RtO-O8-pSg">
                                 <rect key="frame" x="0.0" y="393" width="375" height="274"/>
+=======
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="438"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RtO-O8-pSg">
+                                <rect key="frame" x="0.0" y="437" width="414" height="250"/>
+>>>>>>> 996d4fa8236417c8ea0e60ae4f85dc6fc0af7b01
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="B9A-QJ-fwG">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -650,8 +662,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+<<<<<<< HEAD
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ny-AS-99g">
                                 <rect key="frame" x="189" y="289" width="151" height="20"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdR-sz-mfE">
+                                <rect key="frame" x="174" y="532" width="66" height="30"/>
+                                <state key="normal" title="Pick Up"/>
+                                <connections>
+                                    <action selector="pickUpButton:" destination="TYf-UR-E0w" eventType="touchUpInside" id="I4E-g3-zdi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Pick Up Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMQ-Nk-HOa">
+                                <rect key="frame" x="132" y="120" width="151" height="21"/>
+>>>>>>> 996d4fa8236417c8ea0e60ae4f85dc6fc0af7b01
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -777,7 +801,11 @@
         <image name="icons8-tear_off_calendar" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="2Eh-Ac-Jhm"/>
         <segue reference="G6Q-M4-apf"/>
+=======
+        <segue reference="6nB-MM-hub"/>
+>>>>>>> 996d4fa8236417c8ea0e60ae4f85dc6fc0af7b01
     </inferredMetricsTieBreakers>
 </document>
