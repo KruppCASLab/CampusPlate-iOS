@@ -11,9 +11,6 @@ import UIKit
 class SecondViewController: UIViewController,UITextFieldDelegate {
 
     
-    
-   
-    
     @IBOutlet weak var textField1: UITextField!
     
     override func viewDidLoad() {

@@ -2,16 +2,23 @@
 //  CreateNewListing.swift
 //  BWFoodApp
 //
-//  Created by Dan Fitzgerald on 10/22/18.
+//  Created by Dan Fitzgerald on 10/30/18.
 //  Copyright © 2018 Dan Fitzgerald. All rights reserved.
 //
 
 import UIKit
 
-class CreateNewListing: UITableViewController {
-
-    override func viewDidLoad() {
+class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelegate  {
+    
+    var isDateShowing = false
+    
+    var interestedCell:ShowTimeCell?
+    
+    
+        override func viewDidLoad() {
         super.viewDidLoad()
+    
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -22,25 +29,70 @@ class CreateNewListing: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if (self.isDateShowing) {
+            return 4
+        }
+        else {
+            return 3
+        }
+        
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if(indexPath.row == 0){
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+             cell.textLabel?.text = "Food:"
+            
+            return cell
+        }else if(indexPath.row == 1){
+             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
+            cell.textLabel?.text = "Location:"
+            
+            return cell
+        }else if(indexPath.row == 2){
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell4", for: indexPath) as! ShowTimeCell
+            
+            self.interestedCell = cell
+            cell.textLabel?.text = "Time:"
+            
+            return cell
+        }
+        else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! DatePickerTableViewCell
+            
+            if let interestedCell = self.interestedCell {
+                cell.interestedCell = interestedCell
+            }
+            
+            return cell
+        }
     }
-    */
+    
+    
+    
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (indexPath.row == 2) {
+            let indexPath = IndexPath(row: 3, section: 0)
+            if (!self.isDateShowing) {
+                self.isDateShowing = true
+                tableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.middle)
+            }
+            else {
+                self.isDateShowing = false
+                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.middle)
+            }
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

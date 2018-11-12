@@ -11,50 +11,73 @@ import UIKit
 class createNewListing: UIViewController, UITextFieldDelegate {
     
     
-   // Setting up outlets
-    @IBOutlet weak var locationInput: UITextField!
-    @IBOutlet weak var foodInput: UITextField!
-    @IBOutlet weak var timeInput: UITextField!
+    @IBOutlet weak var foodTextInput: UITextField!
+    @IBOutlet weak var locationTextInput: UITextField!
+    @IBOutlet weak var timeTextInput: UITextField!
     
-    
+    private var datePicker : UIDatePicker?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        foodTextInput.delegate = self
+        foodTextInput.returnKeyType = .done
+        locationTextInput.delegate = self
+        locationTextInput.returnKeyType = .done
+        timeTextInput.delegate = self
+        timeTextInput.returnKeyType = .done
         
-        locationInput.delegate = self
-        foodInput.delegate = self
-        timeInput.delegate = self
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showDatePicker))
+        timeTextInput.addGestureRecognizer(tapGesture)
+    
+    }
+    
+    @objc func timeChanged(datePicker : UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH/MM"
+        timeTextInput.text = dateFormatter.string(from: datePicker.date)
+        view.endEditing(true)
+        
+    
+    }
+    
+    @objc func showDatePicker() {
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .time
+        DispatchQueue.main.async {
+            self.timeTextInput.inputView = self.datePicker
+            self.timeTextInput.setNeedsDisplay()
+            self.view.setNeedsDisplay() 
+            //self.datePicker?.addTarget(self, action: #selector(ViewController.timeChanged(datePicker:)), for: .valueChanged)
+        }
+       
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        locationInput.resignFirstResponder()
-        foodInput.resignFirstResponder()
-        timeInput.resignFirstResponder()
-        
+        foodTextInput.resignFirstResponder()
+        locationTextInput.resignFirstResponder()
+        timeTextInput.resignFirstResponder()
         return true
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+    
+    @IBAction func createListing(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Create Listing", message: "Your Listing Is Now Public!", preferredStyle: UIAlertController.Style.alert)
         
-        if identifier == "postFood"{
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
+            self.presentingViewController?.dismiss(animated: true, completion: nil)
+            self.foodTextInput.text = ""
+            self.locationTextInput.text = ""
+            self.timeTextInput.text = ""
             
-            if locationInput.text?.isEmpty == true {
-                return false
-            }
-            
-            if foodInput.text?.isEmpty == true {
-                return false
-            }
-            
-            if timeInput.text?.isEmpty == true {
-                return false
-            }
-        }
+        }))
         
-        return true
-}
+       present(alert, animated: true, completion: nil)
+    }
+    
+   
+    
+    
     
 
 
@@ -66,10 +89,7 @@ class createNewListing: UIViewController, UITextFieldDelegate {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
-        let vc = segue.destination as! PostingConfirmationViewController
-        vc.food = self.foodInput.text
-        vc.location = self.locationInput.text
-        vc.time = self.timeInput.text
+    
     }
     
 
