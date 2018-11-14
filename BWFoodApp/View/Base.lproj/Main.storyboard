@@ -596,17 +596,17 @@
                                     <outlet property="showTimeLabel" destination="FBe-fs-GUJ" id="WYQ-rs-ttZ"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell3" rowHeight="200" id="3G9-2U-unJ" customClass="DatePickerTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="160" width="375" height="200"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell3" rowHeight="162" id="3G9-2U-unJ" customClass="DatePickerTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="160" width="375" height="162"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3G9-2U-unJ" id="EOb-y8-8DH" customClass="UITableViewCell">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="161.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TV0-Ob-t2m">
-                                            <rect key="frame" x="0.0" y="0.5" width="375" height="179"/>
+                                            <rect key="frame" x="16" y="11" width="343" height="140"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="179" id="Bbp-Xo-ZGm"/>
+                                                <constraint firstAttribute="height" constant="140" id="OwO-aD-vjh"/>
                                             </constraints>
                                             <date key="date" timeIntervalSinceReferenceDate="562726172.86950004">
                                                 <!--2018-11-01 00:49:32 +0000-->
@@ -617,9 +617,10 @@
                                         </datePicker>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="TV0-Ob-t2m" secondAttribute="bottom" constant="20" symbolic="YES" id="BS8-up-bQz"/>
-                                        <constraint firstItem="TV0-Ob-t2m" firstAttribute="centerX" secondItem="EOb-y8-8DH" secondAttribute="centerX" id="P0E-WY-fyY"/>
-                                        <constraint firstItem="TV0-Ob-t2m" firstAttribute="leading" secondItem="EOb-y8-8DH" secondAttribute="leadingMargin" constant="-16" id="vv9-BJ-u68"/>
+                                        <constraint firstItem="TV0-Ob-t2m" firstAttribute="trailing" secondItem="EOb-y8-8DH" secondAttribute="trailingMargin" id="7JV-vO-mKh"/>
+                                        <constraint firstItem="TV0-Ob-t2m" firstAttribute="top" secondItem="EOb-y8-8DH" secondAttribute="topMargin" id="Jyt-mo-uWf"/>
+                                        <constraint firstItem="TV0-Ob-t2m" firstAttribute="leading" secondItem="EOb-y8-8DH" secondAttribute="leadingMargin" id="ftg-d2-g4H"/>
+                                        <constraint firstItem="TV0-Ob-t2m" firstAttribute="bottom" secondItem="EOb-y8-8DH" secondAttribute="bottomMargin" id="zaR-dz-0qm"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -634,6 +635,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Create Listing" id="SQp-pt-Xtc"/>
+                    <connections>
+                        <outlet property="tableView" destination="wic-Zx-8qX" id="pLQ-0r-d0i"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOg-lL-fe0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
