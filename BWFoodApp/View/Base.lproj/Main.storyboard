@@ -274,19 +274,19 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCC-ia-fhA">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCC-ia-fhA">
                                                     <rect key="frame" x="13" y="40" width="42.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Food:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNj-ZF-NPf">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Food:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNj-ZF-NPf">
                                                     <rect key="frame" x="13" y="11" width="43.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfx-Oi-YPF">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfx-Oi-YPF">
                                                     <rect key="frame" x="13" y="69" width="70.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -536,10 +536,11 @@
         <scene sceneID="j1T-IY-Kjf">
             <objects>
                 <tableViewController id="dk1-jM-KKr" customClass="CreateNewListing" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" id="wic-Zx-8qX">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" id="wic-Zx-8qX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="P2F-dw-K00">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -582,8 +583,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBe-fs-GUJ">
-                                            <rect key="frame" x="224" y="11" width="135" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9:41 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBe-fs-GUJ">
+                                            <rect key="frame" x="272" y="11" width="87" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -598,14 +599,14 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell3" rowHeight="200" id="3G9-2U-unJ" customClass="DatePickerTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="160" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3G9-2U-unJ" id="EOb-y8-8DH" customClass="UITableViewCell">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3G9-2U-unJ" id="EOb-y8-8DH" customClass="UITableViewCell">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TV0-Ob-t2m">
-                                            <rect key="frame" x="0.0" y="47.5" width="375" height="156"/>
+                                            <rect key="frame" x="0.0" y="0.5" width="375" height="179"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="156" id="LcJ-co-qy9"/>
+                                                <constraint firstAttribute="height" constant="179" id="Bbp-Xo-ZGm"/>
                                             </constraints>
                                             <date key="date" timeIntervalSinceReferenceDate="562726172.86950004">
                                                 <!--2018-11-01 00:49:32 +0000-->
@@ -616,10 +617,9 @@
                                         </datePicker>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="TV0-Ob-t2m" secondAttribute="trailing" constant="-16" id="QfO-Kp-EBr"/>
-                                        <constraint firstItem="TV0-Ob-t2m" firstAttribute="leading" secondItem="EOb-y8-8DH" secondAttribute="leadingMargin" constant="-16" id="cJK-nB-tRW"/>
-                                        <constraint firstAttribute="bottom" secondItem="TV0-Ob-t2m" secondAttribute="bottom" constant="20" symbolic="YES" id="hBo-iV-j6J"/>
-                                        <constraint firstItem="TV0-Ob-t2m" firstAttribute="top" secondItem="EOb-y8-8DH" secondAttribute="top" constant="47" id="ln1-EZ-MLE"/>
+                                        <constraint firstAttribute="bottom" secondItem="TV0-Ob-t2m" secondAttribute="bottom" constant="20" symbolic="YES" id="BS8-up-bQz"/>
+                                        <constraint firstItem="TV0-Ob-t2m" firstAttribute="centerX" secondItem="EOb-y8-8DH" secondAttribute="centerX" id="P0E-WY-fyY"/>
+                                        <constraint firstItem="TV0-Ob-t2m" firstAttribute="leading" secondItem="EOb-y8-8DH" secondAttribute="leadingMargin" constant="-16" id="vv9-BJ-u68"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -627,6 +627,7 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="dk1-jM-KKr" id="hyC-5s-tR0"/>
                             <outlet property="delegate" destination="dk1-jM-KKr" id="oND-cU-Wzb"/>

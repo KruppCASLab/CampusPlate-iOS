@@ -355,11 +355,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BWFoodApp/View/CreateNewListing.swift"
-            timestampString = "563733040.080314"
+            timestampString = "563904589.9923919"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -371,11 +371,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BWFoodApp/View/CreateNewListing.swift"
-            timestampString = "563733040.080585"
+            timestampString = "563904589.993912"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -403,11 +403,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BWFoodApp/View/CreateNewListing.swift"
-            timestampString = "563733040.0807559"
+            timestampString = "563904589.994334"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -419,7 +419,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BWFoodApp/View/CreateNewListing.swift"
-            timestampString = "563733040.080852"
+            timestampString = "563904589.994795"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3"
@@ -451,11 +451,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BWFoodApp/View/CreateNewListing.swift"
-            timestampString = "563733040.080947"
+            timestampString = "563904589.995244"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "CreateNewListing"
             landmarkType = "3">
          </BreakpointContent>
@@ -467,7 +467,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BWFoodApp/View/ShowTimeCell.swift"
-            timestampString = "563733040.081004"
+            timestampString = "563751629.909881"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3"
@@ -483,13 +483,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BWFoodApp/View/ShowTimeCell.swift"
-            timestampString = "563733040.0812041"
+            timestampString = "563751629.909924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
-            landmarkName = "awakeFromNib()"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -499,13 +499,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BWFoodApp/View/ShowTimeCell.swift"
-            timestampString = "563733040.081375"
+            timestampString = "563751629.909965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
             endingLineNumber = "17"
-            landmarkName = "dateChanged(dateTime:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -515,7 +515,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BWFoodApp/View/DatePickerTableViewCell.swift"
-            timestampString = "563733040.0815181"
+            timestampString = "563860541.830494"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"

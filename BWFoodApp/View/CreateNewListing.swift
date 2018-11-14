@@ -17,6 +17,8 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     
         override func viewDidLoad() {
         super.viewDidLoad()
+            
+            
     
         
 
@@ -35,11 +37,14 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     }
 
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
         // #warning Incomplete implementation, return the number of rows
         if (self.isDateShowing) {
+            interestedCell?.showTimeLabel.textColor = .blue
             return 4
         }
         else {
+            interestedCell?.showTimeLabel.textColor = .black
             return 3
         }
         
@@ -66,15 +71,18 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
             
             return cell
         }
-        else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! DatePickerTableViewCell
+        else {
             
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! DatePickerTableViewCell
+        
             if let interestedCell = self.interestedCell {
                 cell.interestedCell = interestedCell
             }
             
+            
             return cell
         }
+        
     }
     
     
@@ -86,6 +94,7 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
             if (!self.isDateShowing) {
                 self.isDateShowing = true
                 tableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.middle)
+                tableView.setNeedsUpdateConstraints()
             }
             else {
                 self.isDateShowing = false
