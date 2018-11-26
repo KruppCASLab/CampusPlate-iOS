@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelegate  {
     
@@ -14,21 +15,29 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     
     var interestedCell:ShowTimeCell?
     
+    var listingCell:ListingModel?
     
+    
+   
         override func viewDidLoad() {
         super.viewDidLoad()
             
             
-            
-    
-        
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    @IBAction func submit(_ sender: Any) {
+        
+        
+        listingCell?.addListing(listing: Listing.init(food: foodPostLabel.text ?? "Food", coordinate: CLLocationCoordinate2D(latitude: 41.3708812, longitude: -81.8478923), time: "9:41 PM", location: locationPostLabel.text ?? "Location"))
+        
+        
+    }
+    
 
     // MARK: - Table view data source
 
