@@ -10,7 +10,9 @@ import UIKit
 
 class ShowTimeCell: UITableViewCell, DateChanged {
     
+  
     @IBOutlet weak var showTimeLabel: UILabel!
+    
     
     
     func dateChanged(dateTime: Date) {

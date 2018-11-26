@@ -10,16 +10,21 @@ import UIKit
 
 class DatePickerTableViewCell: UITableViewCell{
     
+   
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    
     public var interestedCell:DateChanged?
-
-    @IBAction func valueChanged(_ sender: Any) {
+    
+    
+    @IBAction func timeChanged(_ sender: Any) {
         let date = self.datePicker.date;
         if let interestedCell = interestedCell {
             interestedCell.dateChanged(dateTime: date)
         }
     }
+    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

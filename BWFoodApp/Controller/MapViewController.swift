@@ -32,9 +32,6 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         cell.time.text = listing.time
         cell.location.text = listing.location
     
-        
-        
-       
         return cell
         
     }
