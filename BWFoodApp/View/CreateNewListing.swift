@@ -17,6 +17,7 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     
     var listingCell:ListingModel?
     
+    @IBOutlet weak var foodPostLabel: UITextField!
     
    
         override func viewDidLoad() {
@@ -31,9 +32,9 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     }
     
     @IBAction func submit(_ sender: Any) {
+        let listing = Listing.init(food: "Food", coordinate: CLLocationCoordinate2D(latitude: 41.3708812, longitude: -81.8478923), time: "9:41", location: "Berea")
         
-        
-        listingCell?.addListing(listing: Listing.init(food: foodPostLabel.text ?? "Food", coordinate: CLLocationCoordinate2D(latitude: 41.3708812, longitude: -81.8478923), time: "9:41 PM", location: locationPostLabel.text ?? "Location"))
+        listingCell?.addListing(listing: listing)
         
         
     }

@@ -14,7 +14,8 @@ class FoodListingTableViewCell: UITableViewCell {
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var location: UILabel!
     
-   
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
