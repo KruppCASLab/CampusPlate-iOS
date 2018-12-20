@@ -19,6 +19,10 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     var indexSelected:IndexPath?
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listingModel.getNumberOfListings()
     }
