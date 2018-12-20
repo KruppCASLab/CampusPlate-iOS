@@ -22,7 +22,7 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     
     @IBOutlet weak var foodPostLabel: UITextField!
     
-   
+    
         override func viewDidLoad() {
         super.viewDidLoad()
             
@@ -42,7 +42,6 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
          self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
-
     // MARK: - Table view data source
 
     func numberOfSections(in tableView: UITableView) -> Int {
