@@ -17,10 +17,11 @@ class PickUpFoodViewController: UIViewController {
     @IBOutlet weak var timePickUplabel: UILabel!
     
     public var listing:Listing!
+    public var indexPathOfListing:IndexPath!
     
     @IBAction func pickUpButton(_ sender: Any) {
         // TODO: Remove the item from model
-        //ListingModel.getSharedInstance().removeListing(index: <#T##Int#>)
+        ListingModel.getSharedInstance().removeListing(index: self.indexPathOfListing.row)
         
         self.presentingViewController?.dismiss(animated: true, completion: nil)
         
