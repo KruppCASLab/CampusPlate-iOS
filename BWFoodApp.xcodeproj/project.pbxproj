@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5939E2CA21EBCCBB005AE617 /* ShowEligibleSchoolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5939E2C921EBCCBB005AE617 /* ShowEligibleSchoolsViewController.swift */; };
 		E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */; };
 		E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F9212B00650057B2B5 /* ListingModel.swift */; };
 		F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5939E2C921EBCCBB005AE617 /* ShowEligibleSchoolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEligibleSchoolsViewController.swift; sourceTree = "<group>"; };
 		E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListingTableViewCell.swift; sourceTree = "<group>"; };
 		E00850F9212B00650057B2B5 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
 		F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpFoodViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				F69BDB4620FA55780065BB78 /* Main.storyboard */,
+				5939E2C921EBCCBB005AE617 /* ShowEligibleSchoolsViewController.swift */,
 				F62AAA83218FDF2F00C650A5 /* ShowTimeCell.swift */,
 				E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */,
 				F6DBCAB02199DF0A00AB2A21 /* DatePickerTableViewCell.swift */,
@@ -274,6 +277,7 @@
 				F657636F2190A5E0004B0C0A /* DateChangedProtocol.swift in Sources */,
 				F62AAA84218FDF2F00C650A5 /* ShowTimeCell.swift in Sources */,
 				E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */,
+				5939E2CA21EBCCBB005AE617 /* ShowEligibleSchoolsViewController.swift in Sources */,
 				E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */,
 				F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */,
 				F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */,
