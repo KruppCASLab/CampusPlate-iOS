@@ -27,9 +27,9 @@ class PostingConfirmationViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         DispatchQueue.main.async {
-            self.timeTextfield.text = self.time
-            self.locationTextField.text = self.location
-            self.foodTextField.text = self.food
+//            self.timeTextfield.text = self.time
+//            self.locationTextField.text = self.location
+//            self.foodTextField.text = self.food
         }
 
     }

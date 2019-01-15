@@ -571,17 +571,17 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="Spx-iB-e7w">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="Spx-iB-e7w" customClass="CustomTableViewCells" customModule="BWFoodApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="53" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Spx-iB-e7w" id="3y9-BX-GTa">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Spx-iB-e7w" id="3y9-BX-GTa" customClass="CustomTableViewCells" customModule="BWFoodApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tRQ-S5-XxG">
-                                            <rect key="frame" x="183" y="6" width="176" height="30"/>
+                                        <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tRQ-S5-XxG">
+                                            <rect key="frame" x="183" y="7.5" width="176" height="28.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="176" id="4qW-7z-JzQ"/>
+                                                <constraint firstAttribute="width" constant="176" id="O43-Q9-CLf"/>
                                             </constraints>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -589,33 +589,41 @@
                                         </textField>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="tRQ-S5-XxG" firstAttribute="trailing" secondItem="3y9-BX-GTa" secondAttribute="trailingMargin" id="ZW1-Br-wN2"/>
-                                        <constraint firstItem="tRQ-S5-XxG" firstAttribute="centerY" secondItem="3y9-BX-GTa" secondAttribute="centerY" id="mGl-uY-Q3m"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="tRQ-S5-XxG" secondAttribute="bottom" constant="-3" id="veq-h6-Dlr"/>
+                                        <constraint firstItem="tRQ-S5-XxG" firstAttribute="centerY" secondItem="3y9-BX-GTa" secondAttribute="centerY" id="iBa-ab-6RA"/>
+                                        <constraint firstItem="tRQ-S5-XxG" firstAttribute="trailing" secondItem="3y9-BX-GTa" secondAttribute="trailingMargin" id="jfh-W6-TUJ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="tRQ-S5-XxG" secondAttribute="bottom" constant="-3" id="yB6-Tc-WBa"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="foodInputField" destination="tRQ-S5-XxG" id="xH5-DW-d9G"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell2" id="CLs-0t-AL1">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell2" id="CLs-0t-AL1" customClass="CustomTableViewCells" customModule="BWFoodApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="97" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CLs-0t-AL1" id="KWe-Lq-7fI">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CLs-0t-AL1" id="KWe-Lq-7fI" customClass="CustomTableViewCells" customModule="BWFoodApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xEr-Cv-q38">
+                                        <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GeN-Th-b7d">
                                             <rect key="frame" x="182" y="6" width="177" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="177" id="8SY-Dc-q0F"/>
+                                            </constraints>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="xEr-Cv-q38" firstAttribute="top" secondItem="KWe-Lq-7fI" secondAttribute="top" constant="6" id="G8o-33-6PT"/>
-                                        <constraint firstAttribute="bottom" secondItem="xEr-Cv-q38" secondAttribute="bottom" constant="7.5" id="NXH-Su-038"/>
-                                        <constraint firstItem="xEr-Cv-q38" firstAttribute="leading" secondItem="KWe-Lq-7fI" secondAttribute="leading" constant="182" id="Q5T-rz-xAB"/>
-                                        <constraint firstAttribute="trailing" secondItem="xEr-Cv-q38" secondAttribute="trailing" constant="16" id="YSA-BY-Uj5"/>
+                                        <constraint firstItem="GeN-Th-b7d" firstAttribute="centerY" secondItem="KWe-Lq-7fI" secondAttribute="centerY" id="FNk-Sg-mF0"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="GeN-Th-b7d" secondAttribute="bottom" constant="-3" id="dsy-zF-gLL"/>
+                                        <constraint firstItem="GeN-Th-b7d" firstAttribute="trailing" secondItem="KWe-Lq-7fI" secondAttribute="trailingMargin" id="iXO-gK-qHf"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="locationInputField" destination="GeN-Th-b7d" id="ceC-3J-so6"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell4" id="0VQ-s1-mP4" customClass="ShowTimeCell" customModule="BWFoodApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="141" width="375" height="44"/>
@@ -688,7 +696,6 @@
         <!--My Listings-->
         <scene sceneID="C3W-nc-LWt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mdz-2O-r36" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fgm-zl-nfw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Listings" image="icons8-list" id="AR4-Xf-dQK"/>
                     <toolbarItems/>
@@ -701,6 +708,7 @@
                         <segue destination="FZw-6F-mvD" kind="relationship" relationship="rootViewController" id="fbY-Yj-Khj"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mdz-2O-r36" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5908" y="471.8140929535233"/>
         </scene>

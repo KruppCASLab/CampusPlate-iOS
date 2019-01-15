@@ -17,9 +17,8 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     
     let listingModel = ListingModel.getSharedInstance()
     
-    @IBOutlet weak var foodPostLabel: UITextField!
-    
-    
+    var customCell:CustomTableViewCells?
+  
         override func viewDidLoad() {
         super.viewDidLoad()
             
@@ -32,7 +31,11 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     }
     
     @IBAction func submit(_ sender: Any) {
-        let listing = Listing(food: "Food", coordinate: CLLocationCoordinate2D(latitude: 41.3708812, longitude: -81.8478923), time: "9:41", location: "Berea")
+       
+        let food = customCell?.foodInputField.text
+        let location = customCell?.locationInputField.text
+        
+        let listing = Listing(food:food ?? "food", coordinate: CLLocationCoordinate2D(latitude: 41.3708812, longitude: -81.8478923), time: "9:41", location:location ?? "location")
         
         listingModel.addListing(listing: listing)
         
@@ -57,9 +60,10 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
             interestedCell?.showTimeLabel.textColor = .black
             return 3
         }
-        
+    
     }
 
+ 
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
