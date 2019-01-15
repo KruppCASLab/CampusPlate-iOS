@@ -256,7 +256,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aq-xp-oYL">
-                                            <rect key="frame" x="0.0" y="8" width="375" height="21"/>
+                                            <rect key="frame" x="0.0" y="8" width="600" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -272,7 +272,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodListingCell" rowHeight="102" id="R9L-WV-uhC" customClass="FoodListingTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodListingCell" rowHeight="102" id="R9L-WV-uhC" customClass="FoodListingTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="375" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R9L-WV-uhC" id="p9w-K1-QmJ">
@@ -557,13 +557,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="QNC-pW-d4s">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="QNC-pW-d4s">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="9nr-xm-GcX">
-                            <rect key="frame" x="0.0" y="385" width="375" height="44"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" misplaced="YES" id="9nr-xm-GcX">
+                            <rect key="frame" x="0.0" y="341" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFp-yP-eO9">
@@ -581,17 +581,17 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="Spx-iB-e7w">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="customCell" id="Spx-iB-e7w" customClass="CustomTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="53" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Spx-iB-e7w" id="3y9-BX-GTa">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Spx-iB-e7w" id="3y9-BX-GTa" customClass="CustomTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tRQ-S5-XxG">
-                                            <rect key="frame" x="183" y="6" width="176" height="30"/>
+                                        <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tRQ-S5-XxG">
+                                            <rect key="frame" x="183" y="7.5" width="176" height="28.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="176" id="4qW-7z-JzQ"/>
+                                                <constraint firstAttribute="width" constant="176" id="O43-Q9-CLf"/>
                                             </constraints>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -599,36 +599,17 @@
                                         </textField>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="tRQ-S5-XxG" firstAttribute="trailing" secondItem="3y9-BX-GTa" secondAttribute="trailingMargin" id="ZW1-Br-wN2"/>
-                                        <constraint firstItem="tRQ-S5-XxG" firstAttribute="centerY" secondItem="3y9-BX-GTa" secondAttribute="centerY" id="mGl-uY-Q3m"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="tRQ-S5-XxG" secondAttribute="bottom" constant="-3" id="veq-h6-Dlr"/>
+                                        <constraint firstItem="tRQ-S5-XxG" firstAttribute="centerY" secondItem="3y9-BX-GTa" secondAttribute="centerY" id="iBa-ab-6RA"/>
+                                        <constraint firstItem="tRQ-S5-XxG" firstAttribute="trailing" secondItem="3y9-BX-GTa" secondAttribute="trailingMargin" id="jfh-W6-TUJ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="tRQ-S5-XxG" secondAttribute="bottom" constant="-3" id="yB6-Tc-WBa"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell2" id="CLs-0t-AL1">
-                                <rect key="frame" x="0.0" y="97" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CLs-0t-AL1" id="KWe-Lq-7fI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xEr-Cv-q38">
-                                            <rect key="frame" x="182" y="6" width="177" height="30"/>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="xEr-Cv-q38" firstAttribute="top" secondItem="KWe-Lq-7fI" secondAttribute="top" constant="6" id="G8o-33-6PT"/>
-                                        <constraint firstAttribute="bottom" secondItem="xEr-Cv-q38" secondAttribute="bottom" constant="7.5" id="NXH-Su-038"/>
-                                        <constraint firstItem="xEr-Cv-q38" firstAttribute="leading" secondItem="KWe-Lq-7fI" secondAttribute="leading" constant="182" id="Q5T-rz-xAB"/>
-                                        <constraint firstAttribute="trailing" secondItem="xEr-Cv-q38" secondAttribute="trailing" constant="16" id="YSA-BY-Uj5"/>
-                                    </constraints>
-                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="textInputField" destination="tRQ-S5-XxG" id="swS-3A-d8n"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell4" id="0VQ-s1-mP4" customClass="ShowTimeCell" customModule="BWFoodApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="141" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="97" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0VQ-s1-mP4" id="VnE-O6-TDG">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -653,7 +634,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell3" rowHeight="200" id="dJq-xM-pWR" customClass="DatePickerTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="185" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="141" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dJq-xM-pWR" id="nxB-xp-RoL">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
@@ -711,6 +692,7 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdz-2O-r36" userLabel="First Responder" sceneMemberID="firstResponder"/>
+<<<<<<< HEAD
             </objects>
             <point key="canvasLocation" x="5393" y="133"/>
         </scene>
@@ -795,6 +777,8 @@
                     <navigationItem key="navigationItem" title="Cancel" id="PY2-Ga-CPp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BT6-X8-A2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+=======
+>>>>>>> 2309c9b6f233f24fbe1a10ad77be04ad1f873204
             </objects>
             <point key="canvasLocation" x="1861.5999999999999" y="-551.87406296851577"/>
         </scene>

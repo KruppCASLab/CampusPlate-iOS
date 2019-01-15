@@ -15,40 +15,44 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     
     var interestedCell:ShowTimeCell?
     
+    var foodCell:CustomTableViewCell?
+    var locationCell:CustomTableViewCell?
+    
     let listingModel = ListingModel.getSharedInstance()
     
-    @IBOutlet weak var foodPostLabel: UITextField!
+    var customCell:CustomTableViewCell?
     
-   
-        override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-            
-            
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     @IBAction func submit(_ sender: Any) {
-        let listing = Listing(food: "Food", coordinate: CLLocationCoordinate2D(latitude: 41.3708812, longitude: -81.8478923), time: "9:41", location: "Berea")
+        let food = foodCell?.textInputField.text
+        let location = locationCell?.textInputField.text
+        
+        let listing = Listing(food:food ?? "food", coordinate: CLLocationCoordinate2D(latitude: 41.3708812, longitude: -81.8478923), time: "9:41", location:location ?? "location")
         
         listingModel.addListing(listing: listing)
         
-         self.presentingViewController?.dismiss(animated: true, completion: nil)
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
-
     // MARK: - Table view data source
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
-   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         // #warning Incomplete implementation, return the number of rows
         if (self.isDateShowing) {
             interestedCell?.showTimeLabel.textColor = .blue
@@ -60,17 +64,19 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
         }
         
     }
-
     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if(indexPath.row == 0){
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-             cell.textLabel?.text = "Food:"
+            let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath)
+            self.foodCell = cell as? CustomTableViewCell
+            cell.textLabel?.text = "Food:"
             
             return cell
         }else if(indexPath.row == 1){
-             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath)
+            self.locationCell = cell as? CustomTableViewCell
             cell.textLabel?.text = "Location:"
             
             return cell
@@ -85,7 +91,7 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
         else {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! DatePickerTableViewCell
-        
+            
             if let interestedCell = self.interestedCell {
                 cell.interestedCell = interestedCell
             }
@@ -98,7 +104,7 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     
     
     
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (indexPath.row == 2) {
             let indexPath = IndexPath(row: 3, section: 0)
@@ -113,50 +119,50 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
             }
         }
     }
-
+    
     /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
+     // Override to support conditional editing of the table view.
+     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the specified item to be editable.
+     return true
+     }
+     */
+    
     /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
+     // Override to support editing the table view.
+     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+     if editingStyle == .delete {
+     // Delete the row from the data source
+     tableView.deleteRows(at: [indexPath], with: .fade)
+     } else if editingStyle == .insert {
+     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+     }
+     }
+     */
+    
     /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
+     // Override to support rearranging the table view.
+     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+     
+     }
+     */
+    
     /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
+     // Override to support conditional rearranging of the table view.
+     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

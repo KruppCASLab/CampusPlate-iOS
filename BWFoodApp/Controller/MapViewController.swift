@@ -50,6 +50,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
             if let indexPath = indexSelected {
                 let listing = self.listingModel.getListing(index: indexPath.row)
                 foodVC.listing = listing
+                foodVC.indexPathOfListing = indexPath
             }
             
         }
