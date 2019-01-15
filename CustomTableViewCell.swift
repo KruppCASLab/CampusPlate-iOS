@@ -8,13 +8,9 @@
 
 import UIKit
 
-class CustomTableViewCells: UITableViewCell {
+class CustomTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var foodInputField: UITextField!
-    @IBOutlet weak var locationInputField: UITextField!
-    
-    
-    
+    @IBOutlet weak var textInputField: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

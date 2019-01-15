@@ -247,7 +247,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aq-xp-oYL">
-                                            <rect key="frame" x="0.0" y="8" width="375" height="21"/>
+                                            <rect key="frame" x="0.0" y="8" width="600" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -263,7 +263,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodListingCell" rowHeight="102" id="R9L-WV-uhC" customClass="FoodListingTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodListingCell" rowHeight="102" id="R9L-WV-uhC" customClass="FoodListingTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="375" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R9L-WV-uhC" id="p9w-K1-QmJ">
@@ -547,13 +547,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="QNC-pW-d4s">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="QNC-pW-d4s">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="9nr-xm-GcX">
-                            <rect key="frame" x="0.0" y="385" width="375" height="44"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" misplaced="YES" id="9nr-xm-GcX">
+                            <rect key="frame" x="0.0" y="341" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFp-yP-eO9">
@@ -571,10 +571,10 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="Spx-iB-e7w" customClass="CustomTableViewCells" customModule="BWFoodApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="customCell" id="Spx-iB-e7w" customClass="CustomTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="53" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Spx-iB-e7w" id="3y9-BX-GTa" customClass="CustomTableViewCells" customModule="BWFoodApp" customModuleProvider="target">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Spx-iB-e7w" id="3y9-BX-GTa" customClass="CustomTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -595,38 +595,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="foodInputField" destination="tRQ-S5-XxG" id="xH5-DW-d9G"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell2" id="CLs-0t-AL1" customClass="CustomTableViewCells" customModule="BWFoodApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="97" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CLs-0t-AL1" id="KWe-Lq-7fI" customClass="CustomTableViewCells" customModule="BWFoodApp" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GeN-Th-b7d">
-                                            <rect key="frame" x="182" y="6" width="177" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="177" id="8SY-Dc-q0F"/>
-                                            </constraints>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="GeN-Th-b7d" firstAttribute="centerY" secondItem="KWe-Lq-7fI" secondAttribute="centerY" id="FNk-Sg-mF0"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="GeN-Th-b7d" secondAttribute="bottom" constant="-3" id="dsy-zF-gLL"/>
-                                        <constraint firstItem="GeN-Th-b7d" firstAttribute="trailing" secondItem="KWe-Lq-7fI" secondAttribute="trailingMargin" id="iXO-gK-qHf"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="locationInputField" destination="GeN-Th-b7d" id="ceC-3J-so6"/>
+                                    <outlet property="textInputField" destination="tRQ-S5-XxG" id="swS-3A-d8n"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell4" id="0VQ-s1-mP4" customClass="ShowTimeCell" customModule="BWFoodApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="141" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="97" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0VQ-s1-mP4" id="VnE-O6-TDG">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -651,7 +624,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell3" rowHeight="200" id="dJq-xM-pWR" customClass="DatePickerTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="185" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="141" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dJq-xM-pWR" id="nxB-xp-RoL">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
