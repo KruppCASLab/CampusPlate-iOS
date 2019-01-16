@@ -11,6 +11,9 @@ import UIKit
 class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var textInputField: UITextField!
+    @IBOutlet weak var cellLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

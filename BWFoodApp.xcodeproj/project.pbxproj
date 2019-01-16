@@ -14,6 +14,7 @@
 		F62AAA84218FDF2F00C650A5 /* ShowTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62AAA83218FDF2F00C650A5 /* ShowTimeCell.swift */; };
 		F62BEEB82106273500006DC0 /* PostingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */; };
 		F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEEE52108EFF300006DC0 /* MapViewController.swift */; };
+		F648600B21EE51C10053D54E /* PinVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F648600A21EE51C10053D54E /* PinVerificationViewController.swift */; };
 		F657636F2190A5E0004B0C0A /* DateChangedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F657636E2190A5E0004B0C0A /* DateChangedProtocol.swift */; };
 		F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A60372188BADC00DB7338 /* CreateNewListing.swift */; };
 		F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB4220FA55780065BB78 /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 		F62AAA83218FDF2F00C650A5 /* ShowTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTimeCell.swift; sourceTree = "<group>"; };
 		F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingConfirmationViewController.swift; sourceTree = "<group>"; };
 		F62BEEE52108EFF300006DC0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F648600A21EE51C10053D54E /* PinVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVerificationViewController.swift; sourceTree = "<group>"; };
 		F657636E2190A5E0004B0C0A /* DateChangedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateChangedProtocol.swift; sourceTree = "<group>"; };
 		F65A60372188BADC00DB7338 /* CreateNewListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateNewListing.swift; path = ../View/CreateNewListing.swift; sourceTree = "<group>"; };
 		F69BDB3F20FA55780065BB78 /* BWFoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWFoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 				F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */,
 				F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */,
 				F69BDB6420FACC8A0065BB78 /* ThirdViewController.swift */,
+				F648600A21EE51C10053D54E /* PinVerificationViewController.swift */,
 				F6A4F97021E52FFA007020EC /* CustomTableViewCell.swift */,
 				F65A60372188BADC00DB7338 /* CreateNewListing.swift */,
 				F69BDB6220FA56F40065BB78 /* SecondViewController.swift */,
@@ -276,6 +279,7 @@
 				F6BBF7BA210BDBEC00B67BE9 /* Listing.swift in Sources */,
 				F69BDB6520FACC8A0065BB78 /* ThirdViewController.swift in Sources */,
 				F6A4F97121E52FFA007020EC /* CustomTableViewCell.swift in Sources */,
+				F648600B21EE51C10053D54E /* PinVerificationViewController.swift in Sources */,
 				F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */,
 				F6DBCAB12199DF0A00AB2A21 /* DatePickerTableViewCell.swift in Sources */,
 				F657636F2190A5E0004B0C0A /* DateChangedProtocol.swift in Sources */,

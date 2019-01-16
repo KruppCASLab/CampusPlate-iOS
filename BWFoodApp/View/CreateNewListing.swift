@@ -17,10 +17,10 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     
     var foodCell:CustomTableViewCell?
     var locationCell:CustomTableViewCell?
+   
     
     let listingModel = ListingModel.getSharedInstance()
     
-    var customCell:CustomTableViewCell?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,20 +71,21 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
         if(indexPath.row == 0){
             let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath)
             self.foodCell = cell as? CustomTableViewCell
-            cell.textLabel?.text = "Food:"
+            self.foodCell?.cellLabel.text = "Food: "
             
             return cell
         }else if(indexPath.row == 1){
             let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath)
             self.locationCell = cell as? CustomTableViewCell
-            cell.textLabel?.text = "Location:"
+            self.locationCell?.cellLabel.text = "Location: "
             
             return cell
         }else if(indexPath.row == 2){
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell4", for: indexPath) as! ShowTimeCell
             
             self.interestedCell = cell
-            cell.textLabel?.text = "Time:"
+            
+            cell.textLabel?.text = "Time: "
             
             return cell
         }
