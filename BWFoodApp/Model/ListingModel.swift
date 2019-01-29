@@ -22,6 +22,9 @@ class ListingModel {
         self.listings.append(Listing(food: "Cheese", coordinate: CLLocationCoordinate2D(latitude: 41.3732252, longitude: -81.8509172), time: "Today", location: "Telfer Hall"))
         self.listings.append(Listing(food: "Pizza", coordinate: CLLocationCoordinate2D(latitude: 41.3692863, longitude: -81.8478429), time: "Tommorrow", location: "Bonds Administration"))
         self.listings.append(Listing(food: "Salad", coordinate: CLLocationCoordinate2D(latitude: 41.3692883, longitude: -81.8478439), time: "Friday", location: "Malickey"))
+        
+        //TEST
+        self.listings.append(Listing(food: "Salad", coordinate: CLLocationCoordinate2D(latitude:41.447804747590425, longitude: -81.855845197022916), time: "5:12", location: "Fairview"))
     }
     
     

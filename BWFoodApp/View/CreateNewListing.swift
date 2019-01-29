@@ -8,8 +8,12 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelegate  {
+class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelegate,CLLocationManagerDelegate{
+    
+    
+    
     
     var isDateShowing = false
     
@@ -21,10 +25,20 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     
     let listingModel = ListingModel.getSharedInstance()
     
+    let locationManager = CLLocationManager()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,15 +47,29 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    var longitude: Double = 0.0
+    var latitude: Double = 0.0
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            longitude = location.coordinate.longitude
+            latitude = location.coordinate.latitude
+        }
+    }
+    
     @IBAction func submit(_ sender: Any) {
         let food = foodCell?.textInputField.text
         let location = locationCell?.textInputField.text
         
-        let listing = Listing(food:food ?? "food", coordinate: CLLocationCoordinate2D(latitude: 41.3708812, longitude: -81.8478923), time: "9:41", location:location ?? "location")
+        let listing = Listing(food:food ?? "food", coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), time: "9:41", location:location ?? "location")
         
         listingModel.addListing(listing: listing)
         
+        let numListings = listingModel.getNumberOfListings()
+        print(numListings)
+        
         self.presentingViewController?.dismiss(animated: true, completion: nil)
+        
     }
     
     // MARK: - Table view data source

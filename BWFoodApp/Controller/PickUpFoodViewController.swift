@@ -23,7 +23,9 @@ class PickUpFoodViewController: UIViewController {
         // TODO: Remove the item from model
         ListingModel.getSharedInstance().removeListing(index: self.indexPathOfListing.row)
         
+        
         self.presentingViewController?.dismiss(animated: true, completion: nil)
+        
         
         
     }
