@@ -11,49 +11,51 @@ import UIKit
 class ThirdViewController: UIViewController, UITextFieldDelegate {
     
     
-    @IBOutlet weak var textbox2: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
         
-        textbox2.keyboardType = .numberPad
-        textbox2.delegate = self
-        textbox2.returnKeyType = .done
+//        textbox2.keyboardType = .numberPad
+//        textbox2.delegate = self
+//        textbox2.returnKeyType = .done
         
     }
    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-     textbox2.resignFirstResponder()
-        return true
-    }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        
-        if textbox2.text?.isEmpty == true {
-            print("needs pin number from email")
-            
-            return false
-        } else {
-            print("pin number is good")
-            
-        }
-        return true
-    }
-    
-    
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//     textbox2.resignFirstResponder()
+//        return true
+//    }
+//
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//
+//        if textbox2.text?.isEmpty == true {
+//            print("needs pin number from email")
+//
+//            return false
+//        } else {
+//            print("pin number is good")
+//
+//        }
+//        return true
+//    }
+//
+//
+//
+//
+//
+//    /*
+//    // MARK: - Navigation
+//
+//    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destination.
+//        // Pass the selected object to the new view controller.
+//    }
+//    */
 
 }

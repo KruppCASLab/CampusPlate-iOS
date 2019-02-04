@@ -20,6 +20,20 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     var indexSelected:IndexPath?
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        for annotation in mapView.annotations {
+            mapView.removeAnnotation(annotation)
+        }
+        
+        //Show Pins on Map
+        for i in 0 ..< listingModel.getNumberOfListings() {
+            
+            let listing = listingModel.getListing(index: i)
+        
+            mapView.addAnnotation(listing)
+            
+        }
+        
         self.tableView.reloadData()
     }
     
@@ -75,12 +89,9 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
 
         
         
-        // Show pin on map
         
-        for i in 0 ..< listingModel.getNumberOfListings() {
-            let listing = listingModel.getListing(index: i)
-            mapView.addAnnotation(listing)
-        }
+        
+      
     
     }
     

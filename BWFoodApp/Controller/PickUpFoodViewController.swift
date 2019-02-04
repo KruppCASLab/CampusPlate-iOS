@@ -16,6 +16,8 @@ class PickUpFoodViewController: UIViewController {
     @IBOutlet weak var locationPickUplabel: UILabel!
     @IBOutlet weak var timePickUplabel: UILabel!
     
+    
+    
     public var listing:Listing!
     public var indexPathOfListing:IndexPath!
     
@@ -24,9 +26,8 @@ class PickUpFoodViewController: UIViewController {
         ListingModel.getSharedInstance().removeListing(index: self.indexPathOfListing.row)
         
         
+        
         self.presentingViewController?.dismiss(animated: true, completion: nil)
-        
-        
         
     }
     
