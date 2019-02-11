@@ -14,11 +14,12 @@
 		F62AAA84218FDF2F00C650A5 /* ShowTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62AAA83218FDF2F00C650A5 /* ShowTimeCell.swift */; };
 		F62BEEB82106273500006DC0 /* PostingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */; };
 		F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEEE52108EFF300006DC0 /* MapViewController.swift */; };
+		F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */; };
+		F6412C1E2207F9EC00C2927E /* EligibleSchoolCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6412C1D2207F9EC00C2927E /* EligibleSchoolCustomCell.swift */; };
 		F648600B21EE51C10053D54E /* PinVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F648600A21EE51C10053D54E /* PinVerificationViewController.swift */; };
 		F657636F2190A5E0004B0C0A /* DateChangedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F657636E2190A5E0004B0C0A /* DateChangedProtocol.swift */; };
 		F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A60372188BADC00DB7338 /* CreateNewListing.swift */; };
 		F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB4220FA55780065BB78 /* AppDelegate.swift */; };
-		F69BDB4520FA55780065BB78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB4420FA55780065BB78 /* ViewController.swift */; };
 		F69BDB4820FA55780065BB78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4620FA55780065BB78 /* Main.storyboard */; };
 		F69BDB4A20FA55790065BB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4920FA55790065BB78 /* Assets.xcassets */; };
 		F69BDB4D20FA55790065BB78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4B20FA55790065BB78 /* LaunchScreen.storyboard */; };
@@ -48,12 +49,13 @@
 		F62AAA83218FDF2F00C650A5 /* ShowTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTimeCell.swift; sourceTree = "<group>"; };
 		F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingConfirmationViewController.swift; sourceTree = "<group>"; };
 		F62BEEE52108EFF300006DC0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaterULoginScreenVC.swift; sourceTree = "<group>"; };
+		F6412C1D2207F9EC00C2927E /* EligibleSchoolCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EligibleSchoolCustomCell.swift; sourceTree = "<group>"; };
 		F648600A21EE51C10053D54E /* PinVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVerificationViewController.swift; sourceTree = "<group>"; };
 		F657636E2190A5E0004B0C0A /* DateChangedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateChangedProtocol.swift; sourceTree = "<group>"; };
 		F65A60372188BADC00DB7338 /* CreateNewListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateNewListing.swift; path = ../View/CreateNewListing.swift; sourceTree = "<group>"; };
 		F69BDB3F20FA55780065BB78 /* BWFoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWFoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69BDB4220FA55780065BB78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F69BDB4420FA55780065BB78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F69BDB4720FA55780065BB78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F69BDB4920FA55790065BB78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F69BDB4C20FA55790065BB78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				F69BDB4620FA55780065BB78 /* Main.storyboard */,
-				5939E2C921EBCCBB005AE617 /* ShowEligibleSchoolsViewController.swift */,
+				F6412C1D2207F9EC00C2927E /* EligibleSchoolCustomCell.swift */,
 				F62AAA83218FDF2F00C650A5 /* ShowTimeCell.swift */,
 				E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */,
 				F6DBCAB02199DF0A00AB2A21 /* DatePickerTableViewCell.swift */,
@@ -109,13 +111,14 @@
 		E00850F8212B00410057B2B5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F69BDB4420FA55780065BB78 /* ViewController.swift */,
+				F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */,
+				F69BDB6420FACC8A0065BB78 /* ThirdViewController.swift */,
 				F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */,
 				F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */,
-				F69BDB6420FACC8A0065BB78 /* ThirdViewController.swift */,
 				F648600A21EE51C10053D54E /* PinVerificationViewController.swift */,
 				F6A4F97021E52FFA007020EC /* CustomTableViewCell.swift */,
 				F65A60372188BADC00DB7338 /* CreateNewListing.swift */,
+				5939E2C921EBCCBB005AE617 /* ShowEligibleSchoolsViewController.swift */,
 				F69BDB6220FA56F40065BB78 /* SecondViewController.swift */,
 				F657636E2190A5E0004B0C0A /* DateChangedProtocol.swift */,
 				F62BEEE52108EFF300006DC0 /* MapViewController.swift */,
@@ -275,16 +278,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F69BDB6320FA56F40065BB78 /* SecondViewController.swift in Sources */,
-				F69BDB4520FA55780065BB78 /* ViewController.swift in Sources */,
 				F6BBF7BA210BDBEC00B67BE9 /* Listing.swift in Sources */,
 				F69BDB6520FACC8A0065BB78 /* ThirdViewController.swift in Sources */,
 				F6A4F97121E52FFA007020EC /* CustomTableViewCell.swift in Sources */,
 				F648600B21EE51C10053D54E /* PinVerificationViewController.swift in Sources */,
+				F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */,
 				F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */,
 				F6DBCAB12199DF0A00AB2A21 /* DatePickerTableViewCell.swift in Sources */,
 				F657636F2190A5E0004B0C0A /* DateChangedProtocol.swift in Sources */,
 				F62AAA84218FDF2F00C650A5 /* ShowTimeCell.swift in Sources */,
 				E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */,
+				F6412C1E2207F9EC00C2927E /* EligibleSchoolCustomCell.swift in Sources */,
 				5939E2CA21EBCCBB005AE617 /* ShowEligibleSchoolsViewController.swift in Sources */,
 				E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */,
 				F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */,

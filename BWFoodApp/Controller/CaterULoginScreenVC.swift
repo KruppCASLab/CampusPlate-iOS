@@ -1,30 +1,34 @@
 //
-//  PinVerificationViewController.swift
+//  CaterULoginScreenVC.swift
 //  BWFoodApp
 //
-//  Created by Dan Fitzgerald on 1/15/19.
+//  Created by Dan Fitzgerald on 2/3/19.
 //  Copyright © 2019 Dan Fitzgerald. All rights reserved.
 //
 
 import UIKit
 
-class PinVerificationViewController: UIViewController, UITextFieldDelegate {
-
-    @IBOutlet weak var pinInput: UITextField!
+class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
     
+    
+    @IBOutlet weak var studentEmailField: UITextField!
+    
+    @IBOutlet weak var passwordField: UITextField!
+    
+   
     @IBOutlet weak var continueButton: UIButton!
     
     
-    @IBAction func resendPin(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        pinInput.delegate = self
-        pinInput.returnKeyType = .done
         
+        studentEmailField.delegate = self
+        studentEmailField.returnKeyType = .done
+        
+        passwordField.delegate = self
+        passwordField.returnKeyType = .done
+        
+
         // Do any additional setup after loading the view.
     }
     
@@ -32,37 +36,36 @@ class PinVerificationViewController: UIViewController, UITextFieldDelegate {
 //        continueButton.isEnabled = false
     }
     
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        pinInput.resignFirstResponder()
+        studentEmailField.resignFirstResponder()
+        passwordField.resignFirstResponder()
         
         return true
     }
     
-   
-    @IBAction func resendCode(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+    func loginSuccessful() {
+        continueButton.isEnabled = true
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        
-        if pinInput.text?.isEmpty == true {
+        if (studentEmailField.text?.isEmpty == true) || (passwordField.text?.isEmpty == true) {
+            print("needs valid email")
+            print("needs valid password")
             
-            print("pin is invalid")
-
             return false
-        }else if pinInput.text?.isEmpty == false{
-            
-            continueButton.isEnabled = true
-            
-            return true
-        }
+        }else{
         
+            print("email is valid")
+            print("password is valid")
+            
+            
+            loginSuccessful()
+        }
+     
         return true
     }
-    
-    
-    
     
 
     /*
