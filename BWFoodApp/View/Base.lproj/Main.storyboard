@@ -270,19 +270,27 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Near You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aq-xp-oYL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aq-xp-oYL">
+                                            <rect key="frame" x="0.0" y="-4" width="375" height="53"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Near  You">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="36" name="GillSans-Light"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.82352941180000006" green="0.96078431369999995" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="7aq-xp-oYL" firstAttribute="leading" secondItem="B9A-QJ-fwG" secondAttribute="leading" id="Jfv-95-yWH"/>
-                                        <constraint firstAttribute="trailing" secondItem="7aq-xp-oYL" secondAttribute="trailing" id="WvA-rV-H2D"/>
-                                        <constraint firstAttribute="bottom" secondItem="7aq-xp-oYL" secondAttribute="bottom" constant="15" id="YZN-2E-eXf"/>
-                                        <constraint firstItem="7aq-xp-oYL" firstAttribute="top" secondItem="B9A-QJ-fwG" secondAttribute="top" constant="8" id="vKj-UW-KUu"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="7aq-xp-oYL" secondAttribute="bottom" constant="7" id="ye1-72-004"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="7aq-xp-oYL" secondAttribute="bottom" id="Lug-AY-n2G"/>
+                                        <constraint firstAttribute="bottom" secondItem="7aq-xp-oYL" secondAttribute="bottom" constant="8" id="P2q-gF-aJb"/>
+                                        <constraint firstItem="7aq-xp-oYL" firstAttribute="top" secondItem="B9A-QJ-fwG" secondAttribute="top" constant="-19" id="Q3C-Gy-xzn"/>
+                                        <constraint firstAttribute="trailing" secondItem="7aq-xp-oYL" secondAttribute="trailing" id="VPZ-gG-Qnh"/>
+                                        <constraint firstItem="7aq-xp-oYL" firstAttribute="leading" secondItem="B9A-QJ-fwG" secondAttribute="leading" id="yye-VN-bjo"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -295,20 +303,20 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 Slices of Pizza" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grr-Ai-ieB">
                                                     <rect key="frame" x="15" y="9" width="140" height="21"/>
-                                                    <color key="backgroundColor" red="0.82352941180000006" green="0.96078431369999995" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.82352941180000006" green="0.96078431369999995" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Grr-Ai-ieB" secondAttribute="trailing" constant="187" id="eRr-kd-9NK"/>
                                                 <constraint firstItem="Grr-Ai-ieB" firstAttribute="top" secondItem="p9w-K1-QmJ" secondAttribute="top" constant="9" id="hwA-ua-ldj"/>
                                                 <constraint firstItem="Grr-Ai-ieB" firstAttribute="leading" secondItem="p9w-K1-QmJ" secondAttribute="leading" constant="15" id="o5A-WG-zgp"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.82352941180000006" green="0.96078431369999995" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="food" destination="Grr-Ai-ieB" id="Gyb-Qb-hzr"/>
                                             <segue destination="TYf-UR-E0w" kind="show" identifier="showFoodPickupDetail" id="bqx-rD-Nas"/>
@@ -324,7 +332,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.82352941180000006" green="0.96078431369999995" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="re8-fk-STR" firstAttribute="top" secondItem="cYj-tB-noR" secondAttribute="top" id="92v-8P-3kY"/>
                             <constraint firstItem="RtO-O8-pSg" firstAttribute="trailing" secondItem="NUm-jb-hBy" secondAttribute="trailing" id="ALG-q3-1eI"/>
@@ -367,7 +375,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="SuX-tn-RXt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="37"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -472,7 +480,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.82352941180000006" green="0.96078431369999995" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TMQ-Nk-HOa" firstAttribute="leading" secondItem="rD1-c2-svF" secondAttribute="leading" constant="36" id="1La-6f-Z3y"/>
                             <constraint firstItem="rD1-c2-svF" firstAttribute="bottom" secondItem="GdR-sz-mfE" secondAttribute="bottom" constant="20" id="6AV-Ya-Qak"/>
@@ -706,7 +714,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAA-z0-0P5">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="backgroundColor" red="0.82259827852249146" green="0.96148520708084106" blue="0.90980130434036255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="barTintColor" red="0.79974150659999999" green="0.96551340819999998" blue="0.90587943790000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="Eligible Schools" id="MX2-yS-TpA">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="3kE-Fr-jni">
@@ -748,7 +756,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.82352941176470584" green="0.96078431372549022" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="tintColor" red="0.99208098649978638" green="0.9921995997428894" blue="0.99204069375991821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="9Uh-Wm-RdK" firstAttribute="top" secondItem="Ufc-Nf-5Ts" secondAttribute="topMargin" constant="10" id="BlW-Jd-dTM"/>
@@ -771,7 +779,7 @@
                                 <sections/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.82259827852249146" green="0.96148520708084106" blue="0.90980130434036255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fAA-z0-0P5" secondAttribute="trailing" id="74f-AU-UuY"/>
                             <constraint firstItem="fAA-z0-0P5" firstAttribute="top" secondItem="T1v-Zf-w73" secondAttribute="top" id="AbI-MB-9Re"/>
