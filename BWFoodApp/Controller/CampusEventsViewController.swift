@@ -8,14 +8,19 @@
 
 import UIKit
 
-class CampusEventsViewController: UITableView {
+//class CampusEventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+////
+//    let campusEvents = ["Lan Party", "Meet the Prof night!", "BW Alum finds success at Apple"]
+//
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return campusEvents.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "campusEventCell", for: indexPath)
+//
+//    }
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
-}
+//}

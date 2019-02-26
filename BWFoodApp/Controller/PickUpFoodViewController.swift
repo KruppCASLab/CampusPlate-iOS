@@ -12,8 +12,11 @@ class PickUpFoodViewController: UIViewController {
     
 
     
+    
     @IBOutlet weak var foodPickUpLabel: UILabel!
+    
     @IBOutlet weak var locationPickUplabel: UILabel!
+    
     @IBOutlet weak var timePickUplabel: UILabel!
     
     

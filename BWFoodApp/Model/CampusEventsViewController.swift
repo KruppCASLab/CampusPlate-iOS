@@ -9,6 +9,8 @@
 import UIKit
 
 class CampusEventsViewController: UITableViewCell {
+    
+    let campusEvents = ["LAN Party",]
 
     override func awakeFromNib() {
         super.awakeFromNib()

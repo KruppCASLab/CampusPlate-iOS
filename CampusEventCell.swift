@@ -9,6 +9,11 @@
 import UIKit
 
 class CampusEventCell: UITableViewCell {
+    
+    @IBOutlet weak var eventTitle: UILabel!
+    
+    @IBOutlet weak var eventDate: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
