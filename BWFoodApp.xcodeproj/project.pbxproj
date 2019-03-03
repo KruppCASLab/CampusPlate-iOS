@@ -11,6 +11,9 @@
 		E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */; };
 		E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F9212B00650057B2B5 /* ListingModel.swift */; };
 		F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */; };
+		F613A8DD2217DE7F00C6A6A0 /* CampusEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F613A8DC2217DE7F00C6A6A0 /* CampusEventCell.swift */; };
+		F613A8E32217DFC400C6A6A0 /* CampusEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F613A8E22217DFC400C6A6A0 /* CampusEventsViewController.swift */; };
+		F613A8E52217E21100C6A6A0 /* CampusEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F613A8E42217E21100C6A6A0 /* CampusEvent.swift */; };
 		F62AAA84218FDF2F00C650A5 /* ShowTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62AAA83218FDF2F00C650A5 /* ShowTimeCell.swift */; };
 		F62BEEB82106273500006DC0 /* PostingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */; };
 		F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEEE52108EFF300006DC0 /* MapViewController.swift */; };
@@ -29,6 +32,7 @@
 		F6A4F97121E52FFA007020EC /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4F97021E52FFA007020EC /* CustomTableViewCell.swift */; };
 		F6BBF7BA210BDBEC00B67BE9 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BBF7B9210BDBEC00B67BE9 /* Listing.swift */; };
 		F6DBCAB12199DF0A00AB2A21 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DBCAB02199DF0A00AB2A21 /* DatePickerTableViewCell.swift */; };
+		F6FD421C2214854800D1C6FE /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FD421B2214854800D1C6FE /* ServiceClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,9 @@
 		E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListingTableViewCell.swift; sourceTree = "<group>"; };
 		E00850F9212B00650057B2B5 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
 		F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpFoodViewController.swift; sourceTree = "<group>"; };
+		F613A8DC2217DE7F00C6A6A0 /* CampusEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusEventCell.swift; sourceTree = "<group>"; };
+		F613A8E22217DFC400C6A6A0 /* CampusEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusEventsViewController.swift; sourceTree = "<group>"; };
+		F613A8E42217E21100C6A6A0 /* CampusEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusEvent.swift; sourceTree = "<group>"; };
 		F62AAA83218FDF2F00C650A5 /* ShowTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTimeCell.swift; sourceTree = "<group>"; };
 		F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingConfirmationViewController.swift; sourceTree = "<group>"; };
 		F62BEEE52108EFF300006DC0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +75,7 @@
 		F6A4F97021E52FFA007020EC /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = ../../CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F6BBF7B9210BDBEC00B67BE9 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		F6DBCAB02199DF0A00AB2A21 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		F6FD421B2214854800D1C6FE /* ServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				F69BDB4620FA55780065BB78 /* Main.storyboard */,
+				F6FD421B2214854800D1C6FE /* ServiceClient.swift */,
 				F6412C1D2207F9EC00C2927E /* EligibleSchoolCustomCell.swift */,
 				F62AAA83218FDF2F00C650A5 /* ShowTimeCell.swift */,
 				E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */,
@@ -122,6 +131,7 @@
 				F69BDB6220FA56F40065BB78 /* SecondViewController.swift */,
 				F657636E2190A5E0004B0C0A /* DateChangedProtocol.swift */,
 				F62BEEE52108EFF300006DC0 /* MapViewController.swift */,
+				F613A8E22217DFC400C6A6A0 /* CampusEventsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -130,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				F6BBF7B9210BDBEC00B67BE9 /* Listing.swift */,
+				F613A8E42217E21100C6A6A0 /* CampusEvent.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -137,6 +148,7 @@
 		F69BDB3620FA55780065BB78 = {
 			isa = PBXGroup;
 			children = (
+				F613A8DC2217DE7F00C6A6A0 /* CampusEventCell.swift */,
 				F69BDB4120FA55780065BB78 /* BWFoodApp */,
 				F69BDB5620FA557A0065BB78 /* BWFoodAppTests */,
 				F69BDB4020FA55780065BB78 /* Products */,
@@ -282,18 +294,22 @@
 				F69BDB6520FACC8A0065BB78 /* ThirdViewController.swift in Sources */,
 				F6A4F97121E52FFA007020EC /* CustomTableViewCell.swift in Sources */,
 				F648600B21EE51C10053D54E /* PinVerificationViewController.swift in Sources */,
+				F613A8E32217DFC400C6A6A0 /* CampusEventsViewController.swift in Sources */,
 				F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */,
 				F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */,
 				F6DBCAB12199DF0A00AB2A21 /* DatePickerTableViewCell.swift in Sources */,
+				F613A8E52217E21100C6A6A0 /* CampusEvent.swift in Sources */,
 				F657636F2190A5E0004B0C0A /* DateChangedProtocol.swift in Sources */,
 				F62AAA84218FDF2F00C650A5 /* ShowTimeCell.swift in Sources */,
 				E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */,
+				F613A8DD2217DE7F00C6A6A0 /* CampusEventCell.swift in Sources */,
 				F6412C1E2207F9EC00C2927E /* EligibleSchoolCustomCell.swift in Sources */,
 				5939E2CA21EBCCBB005AE617 /* ShowEligibleSchoolsViewController.swift in Sources */,
 				E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */,
 				F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */,
 				F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */,
 				F62BEEB82106273500006DC0 /* PostingConfirmationViewController.swift in Sources */,
+				F6FD421C2214854800D1C6FE /* ServiceClient.swift in Sources */,
 				F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

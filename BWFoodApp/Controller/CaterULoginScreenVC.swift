@@ -49,7 +49,7 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
         continueButton.isEnabled = true
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+    override func shouldPerformSegue(withIdentifier: String = "enterPinScreen", sender: Any?) -> Bool {
         if (studentEmailField.text?.isEmpty == true) || (passwordField.text?.isEmpty == true) {
             print("needs valid email")
             print("needs valid password")
@@ -66,6 +66,14 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
      
         return true
     }
+    
+    
+    @IBAction func showScreenButtonTapped(_ sender: Any) {
+        
+        performSegue(withIdentifier: "eligibleScreenSegue", sender: self)
+        
+    }
+    
     
 
     /*
