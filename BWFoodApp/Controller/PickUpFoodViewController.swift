@@ -13,11 +13,18 @@ class PickUpFoodViewController: UIViewController {
 
     
     
-    @IBOutlet weak var foodPickUpLabel: UILabel!
+
     
     @IBOutlet weak var locationPickUplabel: UILabel!
     
-    @IBOutlet weak var timePickUplabel: UILabel!
+    @IBOutlet weak var foodPickUpLabel: UILabel!
+    
+    @IBOutlet weak var timePickUpLabel: UILabel!
+    
+    @IBOutlet weak var quantityLabel: UILabel!
+    
+    @IBOutlet weak var quantityPickUpValue: UILabel!
+    
     
     
     
@@ -28,10 +35,17 @@ class PickUpFoodViewController: UIViewController {
         // TODO: Remove the item from model
         ListingModel.getSharedInstance().removeListing(index: self.indexPathOfListing.row)
         
-        
-        
         self.presentingViewController?.dismiss(animated: true, completion: nil)
         
+    }
+    
+    
+    @IBAction func quanPickUpStepper(_ sender: UIStepper) {
+        
+        quantityLabel.text = String(sender.value)
+        
+        sender.maximumValue = Double(quantityPickUpValue.text!) ?? 0
+    
     }
     
     
@@ -41,7 +55,9 @@ class PickUpFoodViewController: UIViewController {
         
         self.foodPickUpLabel.text = listing.food
         self.locationPickUplabel.text = listing.location
-        self.timePickUplabel.text = listing.time
+        self.timePickUpLabel.text = listing.time
+        self.quantityPickUpValue.text = listing.quantity
+        
         
         
 

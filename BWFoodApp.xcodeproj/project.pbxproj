@@ -19,6 +19,7 @@
 		F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEEE52108EFF300006DC0 /* MapViewController.swift */; };
 		F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */; };
 		F6412C1E2207F9EC00C2927E /* EligibleSchoolCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6412C1D2207F9EC00C2927E /* EligibleSchoolCustomCell.swift */; };
+		F6481F9B2241C1FC003D9E2D /* StepperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6481F9A2241C1FC003D9E2D /* StepperTableViewCell.swift */; };
 		F648600B21EE51C10053D54E /* PinVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F648600A21EE51C10053D54E /* PinVerificationViewController.swift */; };
 		F657636F2190A5E0004B0C0A /* DateChangedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F657636E2190A5E0004B0C0A /* DateChangedProtocol.swift */; };
 		F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A60372188BADC00DB7338 /* CreateNewListing.swift */; };
@@ -58,6 +59,7 @@
 		F62BEEE52108EFF300006DC0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaterULoginScreenVC.swift; sourceTree = "<group>"; };
 		F6412C1D2207F9EC00C2927E /* EligibleSchoolCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EligibleSchoolCustomCell.swift; sourceTree = "<group>"; };
+		F6481F9A2241C1FC003D9E2D /* StepperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperTableViewCell.swift; sourceTree = "<group>"; };
 		F648600A21EE51C10053D54E /* PinVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVerificationViewController.swift; sourceTree = "<group>"; };
 		F657636E2190A5E0004B0C0A /* DateChangedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateChangedProtocol.swift; sourceTree = "<group>"; };
 		F65A60372188BADC00DB7338 /* CreateNewListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateNewListing.swift; path = ../View/CreateNewListing.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				F648600A21EE51C10053D54E /* PinVerificationViewController.swift */,
 				F6A4F97021E52FFA007020EC /* CustomTableViewCell.swift */,
 				F65A60372188BADC00DB7338 /* CreateNewListing.swift */,
+				F6481F9A2241C1FC003D9E2D /* StepperTableViewCell.swift */,
 				5939E2C921EBCCBB005AE617 /* ShowEligibleSchoolsViewController.swift */,
 				F69BDB6220FA56F40065BB78 /* SecondViewController.swift */,
 				F657636E2190A5E0004B0C0A /* DateChangedProtocol.swift */,
@@ -290,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F69BDB6320FA56F40065BB78 /* SecondViewController.swift in Sources */,
+				F6481F9B2241C1FC003D9E2D /* StepperTableViewCell.swift in Sources */,
 				F6BBF7BA210BDBEC00B67BE9 /* Listing.swift in Sources */,
 				F69BDB6520FACC8A0065BB78 /* ThirdViewController.swift in Sources */,
 				F6A4F97121E52FFA007020EC /* CustomTableViewCell.swift in Sources */,

@@ -16,14 +16,16 @@ class Listing : NSObject, MKAnnotation {
     public let coordinate:CLLocationCoordinate2D
     public let time:String
     public let location: String
+    public let quantity: String
     
     
     
-    init(food:String, coordinate:CLLocationCoordinate2D, time:String, location:String) {
+    init(food:String, coordinate:CLLocationCoordinate2D, time:String, location:String, quantity: String) {
         self.coordinate = coordinate
         self.food = food
         self.time = time
         self.location = location
+        self.quantity = quantity
     }
     
     public var title:String? {

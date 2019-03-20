@@ -11,9 +11,7 @@ import MapKit
 import CoreLocation
 
 class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelegate,CLLocationManagerDelegate{
-    
-    
-    
+
     
     var isDateShowing = false
     
@@ -21,6 +19,8 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     
     var foodCell:CustomTableViewCell?
     var locationCell:CustomTableViewCell?
+    var quantityCell:StepperTableViewCell?
+    
    
     
     let listingModel = ListingModel.getSharedInstance()
@@ -57,11 +57,25 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
         }
     }
     
-    @IBAction func submit(_ sender: Any) {
+    @IBAction func quanValue(_ sender: UIStepper) {
+        
+        quantityCell?.quantityValue.text = String(sender.value)
+        
+    }
+    
+    
+    @IBAction func cancelListing(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+   
+    @IBAction func postListingButton(_ sender: Any) {
+        
         let food = foodCell?.textInputField.text
         let location = locationCell?.textInputField.text
+        let quantity = quantityCell?.quantityValue.text
         
-        let listing = Listing(food:food ?? "food", coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), time: "9:41", location:location ?? "location")
+        let listing = Listing(food:food ?? "food", coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), time: "9:41", location:location ?? "location", quantity: quantity ?? "Not Available")
         
         listingModel.addListing(listing: listing)
         
@@ -71,11 +85,15 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
         self.presentingViewController?.dismiss(animated: true, completion: nil)
         
     }
+   
+        
+    
     
     // MARK: - Table view data source
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
+        tableView.tableFooterView = UIView(frame: .zero)
         return 1
     }
     
@@ -103,9 +121,9 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
             
             return cell
         }else if(indexPath.row == 1){
-            let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath)
-            self.locationCell = cell as? CustomTableViewCell
-            self.locationCell?.cellLabel.text = "Location: "
+            let cell = tableView.dequeueReusableCell(withIdentifier: "stepperCell", for: indexPath)
+            self.quantityCell = cell as? StepperTableViewCell
+            self.quantityCell?.quantityLabel.text = "Quantity:"
             
             return cell
         }else if(indexPath.row == 2){

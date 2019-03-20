@@ -9,6 +9,12 @@
 import UIKit
 
 class StepperTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var stepper: UIStepper!
+    @IBOutlet weak var quantityValue: UITextField!
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
