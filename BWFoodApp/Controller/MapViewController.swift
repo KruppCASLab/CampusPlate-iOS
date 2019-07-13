@@ -15,6 +15,12 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
 
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBAction func addListing(_ sender: Any) {
+        
+    performSegue(withIdentifier: "addScreen", sender: self)
+    }
+    
+    
     let listingModel = ListingModel.getSharedInstance()
     
     var indexSelected:IndexPath?

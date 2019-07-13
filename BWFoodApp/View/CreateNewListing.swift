@@ -99,15 +99,16 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        // #warning Incomplete implementation, return the number of rows
-        if (self.isDateShowing) {
-            interestedCell?.showTimeLabel.textColor = .blue
-            return 4
-        }
-        else {
-            interestedCell?.showTimeLabel.textColor = .black
-            return 3
-        }
+        return 3
+//        // #warning Incomplete implementation, return the number of rows
+//        if (self.isDateShowing) {
+//            interestedCell?.showTimeLabel.textColor = .blue
+//            return 3
+//        }
+//        else {
+//            interestedCell?.showTimeLabel.textColor = .black
+//            return 2
+//        }
         
     }
     
@@ -120,52 +121,31 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
             self.foodCell?.cellLabel.text = "Food: "
             
             return cell
-        }else if(indexPath.row == 1){
+        }else if (indexPath.row == 1){
             let cell = tableView.dequeueReusableCell(withIdentifier: "stepperCell", for: indexPath)
             self.quantityCell = cell as? StepperTableViewCell
             self.quantityCell?.quantityLabel.text = "Quantity:"
             
             return cell
-        }else if(indexPath.row == 2){
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell4", for: indexPath) as! ShowTimeCell
-            
-            self.interestedCell = cell
-            
-            cell.textLabel?.text = "Time: "
-            
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cameraCell", for: indexPath)
             return cell
         }
-        else {
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! DatePickerTableViewCell
-            
-            if let interestedCell = self.interestedCell {
-                cell.interestedCell = interestedCell
-            }
-            
-            
-            return cell
-        }
-        
-    }
     
-    
-    
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if (indexPath.row == 2) {
-            let indexPath = IndexPath(row: 3, section: 0)
-            if (!self.isDateShowing) {
-                self.isDateShowing = true
-                tableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.middle)
-                tableView.setNeedsUpdateConstraints()
-            }
-            else {
-                self.isDateShowing = false
-                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.middle)
-            }
-        }
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if (indexPath.row == 2) {
+//            let indexPath = IndexPath(row: 3, section: 0)
+//            if (!self.isDateShowing) {
+//                self.isDateShowing = true
+//                tableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.middle)
+//                tableView.setNeedsUpdateConstraints()
+//            }
+//            else {
+//                self.isDateShowing = false
+//                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.middle)
+//            }
+//        }
+//    }
     
     /*
      // Override to support conditional editing of the table view.
@@ -212,4 +192,5 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
      }
      */
     
+    }
 }
