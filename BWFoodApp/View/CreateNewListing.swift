@@ -39,7 +39,7 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
-        
+    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -97,6 +97,7 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
         return 1
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return 3
@@ -112,6 +113,13 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
         
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if(indexPath.row == 2){
+            return 200
+        }else{
+            return 44
+        }
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         

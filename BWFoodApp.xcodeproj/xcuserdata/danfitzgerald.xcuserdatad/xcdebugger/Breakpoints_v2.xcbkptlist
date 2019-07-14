@@ -215,11 +215,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BWFoodApp/View/CreateNewListing.swift"
-            timestampString = "584738102.805746"
+            timestampString = "584755142.548847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -231,7 +231,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BWFoodApp/View/CreateNewListing.swift"
-            timestampString = "584738102.80633"
+            timestampString = "584755142.550033"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3"
@@ -311,7 +311,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BWFoodApp/View/CreateNewListing.swift"
-            timestampString = "584738102.806926"
+            timestampString = "584755142.5506639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "12"
@@ -343,7 +343,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BWFoodApp/Controller/MapViewController.swift"
-            timestampString = "584738102.807409"
+            timestampString = "584755142.551208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
@@ -359,7 +359,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BWFoodApp/Controller/MapViewController.swift"
-            timestampString = "584738102.807566"
+            timestampString = "584755142.551318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -375,11 +375,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BWFoodApp/View/CreateNewListing.swift"
-            timestampString = "584738102.807732"
+            timestampString = "584755142.551412"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "CreateNewListing"
             landmarkType = "3">
          </BreakpointContent>
@@ -407,7 +407,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BWFoodApp/View/CreateNewListing.swift"
-            timestampString = "584738102.808521"
+            timestampString = "584755142.551963"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
@@ -606,6 +606,22 @@
                   offsetFromSymbolStart = "562">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BWFoodApp/View/CreateNewListing.swift"
+            timestampString = "584755142.5527149"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

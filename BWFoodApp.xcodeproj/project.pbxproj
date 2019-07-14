@@ -76,7 +76,7 @@
 		F69BDB6420FACC8A0065BB78 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		F6A4F97021E52FFA007020EC /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTableViewCell.swift; path = ../../CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F6BBF7B9210BDBEC00B67BE9 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
-		F6DBCAB02199DF0A00AB2A21 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		F6DBCAB02199DF0A00AB2A21 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatePickerTableViewCell.swift; path = View/DatePickerTableViewCell.swift; sourceTree = "<group>"; };
 		F6FD421B2214854800D1C6FE /* ServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +106,6 @@
 				F6412C1D2207F9EC00C2927E /* EligibleSchoolCustomCell.swift */,
 				F62AAA83218FDF2F00C650A5 /* ShowTimeCell.swift */,
 				E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */,
-				F6DBCAB02199DF0A00AB2A21 /* DatePickerTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +172,7 @@
 				E00850F8212B00410057B2B5 /* Controller */,
 				E00850F7212B00360057B2B5 /* Model */,
 				E00850F4212AFBE80057B2B5 /* View */,
+				F6DBCAB02199DF0A00AB2A21 /* DatePickerTableViewCell.swift */,
 				F62BEEB62106255900006DC0 /* Types */,
 				F69BDB4220FA55780065BB78 /* AppDelegate.swift */,
 				F69BDB4920FA55790065BB78 /* Assets.xcassets */,
