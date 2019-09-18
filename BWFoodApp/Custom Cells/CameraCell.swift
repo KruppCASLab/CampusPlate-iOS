@@ -1,21 +1,18 @@
 //
-//  StepperTableViewCell.swift
+//  CameraCell.swift
 //  BWFoodApp
 //
-//  Created by Dan Fitzgerald on 3/19/19.
+//  Created by Dan Fitzgerald on 7/13/19.
 //  Copyright © 2019 Dan Fitzgerald. All rights reserved.
 //
 
 import UIKit
 
-class StepperTableViewCell: UITableViewCell {
+class CameraCell: UITableViewCell {
     
-    @IBOutlet weak var quantityLabel: UILabel!
-    @IBOutlet weak var stepper: UIStepper!
-    @IBOutlet weak var quantityValue: UITextField!
+    @IBOutlet weak var FoodImage: UIImageView!
+    @IBOutlet weak var TakePicture: UIButton!
     
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

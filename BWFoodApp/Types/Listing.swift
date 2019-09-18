@@ -17,15 +17,15 @@ class Listing : NSObject, MKAnnotation {
     public let time:String
     public let location: String
     public let quantity: String
+    public let foodImage: UIImage
     
-    
-    
-    init(food:String, coordinate:CLLocationCoordinate2D, time:String, location:String, quantity: String) {
+    init(food:String, coordinate:CLLocationCoordinate2D, time:String, location:String, quantity: String, foodImage: UIImage) {
         self.coordinate = coordinate
         self.food = food
         self.time = time
         self.location = location
         self.quantity = quantity
+        self.foodImage = foodImage
     }
     
     public var title:String? {
@@ -38,9 +38,6 @@ class Listing : NSObject, MKAnnotation {
     public var locationSubTitle:String? {
         return self.location
     }
-    
-
-    
 
 }
 

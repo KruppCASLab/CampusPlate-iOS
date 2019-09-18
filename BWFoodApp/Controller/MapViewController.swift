@@ -8,22 +8,25 @@
 
 import MapKit
 import UIKit
+import CoreLocation
 
-class MapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class MapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate{
     
     @IBOutlet weak var tableView: UITableView!
 
     @IBOutlet weak var mapView: MKMapView!
     
     @IBAction func addListing(_ sender: Any) {
-        
     performSegue(withIdentifier: "addScreen", sender: self)
     }
-    
     
     let listingModel = ListingModel.getSharedInstance()
     
     var indexSelected:IndexPath?
+    
+    let locationManager = CLLocationManager()
+    
+    let session = URLSession.shared
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -40,7 +43,19 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
             
         }
         
-        self.tableView.reloadData()
+        listingModel.loadListings { (completed) in
+            self.tableView.reloadData()
+        }
+        //self.tableView.reloadData()
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+       
+        
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,12 +89,24 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         }
     }
     
-    
-
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.indexSelected = indexPath
+        self.performSegue(withIdentifier: "showFoodPickupDetail", sender: self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView.mapType = .satelliteFlyover
+        
+
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+
+        
+        locationManager.delegate = self
 
         // Do any additional setup after loading the view.
         
@@ -89,20 +116,50 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let span = MKCoordinateSpan(latitudeDelta: 0.008,longitudeDelta: 0.008)
         let region = MKCoordinateRegion(center:initialLocation, span: span)
         mapView.setRegion(region, animated: true)
-        
-
-        
-        
-        
-        
-      
     
     }
     
+    //var locations = [CLCircularRegion]()
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.indexSelected = indexPath
-        self.performSegue(withIdentifier: "showFoodPickupDetail", sender: self)
+    func setUpGeofenceForMaCS() {
+        let geofenceRegionCenter = CLLocationCoordinate2DMake(41.370600, -81.848127);
+        let geofenceRegion = CLCircularRegion(center: geofenceRegionCenter, radius: 74, identifier: "MaCS")
+        geofenceRegion.notifyOnExit = true
+        geofenceRegion.notifyOnEntry = true
+        self.locationManager.startMonitoring(for: geofenceRegion)
+        //locations.append(geofenceRegion)
+    }
+    func setUpGeofenceForHiggins() {
+        let geofenceRegionCenter = CLLocationCoordinate2DMake(41.371816, -81.847962);
+        let geofenceRegion = CLCircularRegion(center: geofenceRegionCenter, radius: 85, identifier: "Lou Higgins")
+        geofenceRegion.notifyOnExit = true
+        geofenceRegion.notifyOnEntry = true
+        self.locationManager.startMonitoring(for: geofenceRegion)
+        //locations.append(geofenceRegion)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        if region.identifier == "MaCS"{
+             print("Welcome to MaCS!")
+        }else if region.identifier == "Lou Higgins"{
+            print("Welcome to Lou Higgins!")
+        }
+       
+        //Good place to schedule a local notification
+    }
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        print("Bye! Hope you had a great day at MaCS")
+        //Good place to schedule a local notification
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if (status == CLAuthorizationStatus.authorizedAlways) {
+            self.setUpGeofenceForMaCS()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(locations[0])
     }
     
     /*

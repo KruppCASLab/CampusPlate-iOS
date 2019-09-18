@@ -10,41 +10,23 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelegate,CLLocationManagerDelegate{
-
+class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelegate,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
-    var isDateShowing = false
-    
-    var interestedCell:ShowTimeCell?
+    @IBOutlet weak var postListing: UIBarButtonItem!
     
     var foodCell:CustomTableViewCell?
     var locationCell:CustomTableViewCell?
     var quantityCell:StepperTableViewCell?
+    var camCell:CameraCell?
     
-   
     
     let listingModel = ListingModel.getSharedInstance()
     
-    let locationManager = CLLocationManager()
-    
+    var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        locationManager.requestAlwaysAuthorization()
-        locationManager.requestWhenInUseAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
-        }
-    
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+
     }
     
     var longitude: Double = 0.0
@@ -58,24 +40,48 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     }
     
     @IBAction func quanValue(_ sender: UIStepper) {
-        
         quantityCell?.quantityValue.text = String(sender.value)
-        
     }
-    
     
     @IBAction func cancelListing(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        print("cancelled")
     }
     
-   
+    @IBAction func TakePicture(_ sender: AnyObject) {
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerController.SourceType.camera
+        image.allowsEditing = false
+        self.present(image,animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        {
+            camCell?.FoodImage.image = image //set image
+        }else{
+            //error message
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func postListingButton(_ sender: Any) {
         
         let food = foodCell?.textInputField.text
         let location = locationCell?.textInputField.text
         let quantity = quantityCell?.quantityValue.text
         
-        let listing = Listing(food:food ?? "food", coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), time: "9:41", location:location ?? "location", quantity: quantity ?? "Not Available")
+        let currentDate = Date()
+        
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "h:mm a"
+        
+        let dateString = dateFormatter.string(from: currentDate)
+        
+        let listing = Listing(food:food ?? "food", coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), time: dateString, location:location ?? "location", quantity: quantity ?? "Not Available", foodImage: camCell?.FoodImage.image ?? UIImage(named:"pizza")!)
         
         listingModel.addListing(listing: listing)
         
@@ -86,9 +92,6 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
         
     }
    
-        
-    
-    
     // MARK: - Table view data source
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -99,18 +102,7 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return 3
-//        // #warning Incomplete implementation, return the number of rows
-//        if (self.isDateShowing) {
-//            interestedCell?.showTimeLabel.textColor = .blue
-//            return 3
-//        }
-//        else {
-//            interestedCell?.showTimeLabel.textColor = .black
-//            return 2
-//        }
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -137,24 +129,9 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cameraCell", for: indexPath)
+            self.camCell = cell as? CameraCell
             return cell
         }
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if (indexPath.row == 2) {
-//            let indexPath = IndexPath(row: 3, section: 0)
-//            if (!self.isDateShowing) {
-//                self.isDateShowing = true
-//                tableView.insertRows(at: [indexPath], with: UITableView.RowAnimation.middle)
-//                tableView.setNeedsUpdateConstraints()
-//            }
-//            else {
-//                self.isDateShowing = false
-//                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.middle)
-//            }
-//        }
-//    }
-    
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

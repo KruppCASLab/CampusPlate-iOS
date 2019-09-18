@@ -9,12 +9,7 @@
 import UIKit
 
 class PickUpFoodViewController: UIViewController {
-    
 
-    
-    
-
-    
     @IBOutlet weak var locationPickUplabel: UILabel!
     
     @IBOutlet weak var foodPickUpLabel: UILabel!
@@ -26,6 +21,7 @@ class PickUpFoodViewController: UIViewController {
     @IBOutlet weak var quantityPickUpValue: UILabel!
     
     
+    @IBOutlet weak var pickUpFoodImage: UIImageView!
     
     
     public var listing:Listing!
@@ -57,7 +53,7 @@ class PickUpFoodViewController: UIViewController {
         self.locationPickUplabel.text = listing.location
         self.timePickUpLabel.text = listing.time
         self.quantityPickUpValue.text = listing.quantity
-        
+        self.pickUpFoodImage.image = listing.foodImage
         
         
 
