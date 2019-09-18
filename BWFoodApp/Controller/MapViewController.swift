@@ -44,11 +44,10 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         }
         
         listingModel.loadListings { (completed) in
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
-        //self.tableView.reloadData()
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -81,14 +81,34 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
         
         let dateString = dateFormatter.string(from: currentDate)
         
-        let listing = Listing(food:food ?? "food", coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), time: dateString, location:location ?? "location", quantity: quantity ?? "Not Available", foodImage: camCell?.FoodImage.image ?? UIImage(named:"pizza")!)
+//        let listing = Listing(food:food ?? "food", coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), time: dateString, location:location ?? "location", quantity: quantity ?? "Not Available", foodImage: camCell?.FoodImage.image ?? UIImage(named:"pizza")!)
         
-        //listingModel.addListing(listing: listing)
+        let listing = WSListing()
+        listing.title = "Apple"
+        listing.quantity = 10
+        listing.creationTime = ""
+        listing.lat = 41.011234
+        listing.lng = -81.1234
+        listing.userId = -1
+        
+        
+        listingModel.addListing(listing: listing) { (completed) in
+            if (!completed) {
+                let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true, completion: nil)
+                }
+            
+            }
+            else {
+                self.presentingViewController?.dismiss(animated: true, completion: nil)
+            }
+        }
         
         let numListings = listingModel.getNumberOfListings()
         print(numListings)
         
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
+        
         
     }
    
