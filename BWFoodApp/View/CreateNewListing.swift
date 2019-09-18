@@ -83,7 +83,7 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
         
         let listing = Listing(food:food ?? "food", coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), time: dateString, location:location ?? "location", quantity: quantity ?? "Not Available", foodImage: camCell?.FoodImage.image ?? UIImage(named:"pizza")!)
         
-        listingModel.addListing(listing: listing)
+        //listingModel.addListing(listing: listing)
         
         let numListings = listingModel.getNumberOfListings()
         print(numListings)

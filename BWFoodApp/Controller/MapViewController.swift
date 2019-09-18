@@ -39,7 +39,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
             
             let listing = listingModel.getListing(index: i)
         
-            mapView.addAnnotation(listing)
+            //mapView.addAnnotation(listing)
             
         }
         
@@ -65,9 +65,9 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:FoodListingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FoodListingCell", for: indexPath) as! FoodListingTableViewCell
-        var listing:Listing = listingModel.getListing(index: indexPath.row)
+        var listing:WSListing = listingModel.getListing(index: indexPath.row)
         
-        cell.food.text = listing.food
+        cell.food.text = listing.title!
     
         return cell
         

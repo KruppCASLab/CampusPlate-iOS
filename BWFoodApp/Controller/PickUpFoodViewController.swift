@@ -24,7 +24,7 @@ class PickUpFoodViewController: UIViewController {
     @IBOutlet weak var pickUpFoodImage: UIImageView!
     
     
-    public var listing:Listing!
+    public var listing:WSListing!
     public var indexPathOfListing:IndexPath!
     
     @IBAction func pickUpButton(_ sender: Any) {
@@ -49,11 +49,11 @@ class PickUpFoodViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.foodPickUpLabel.text = listing.food
-        self.locationPickUplabel.text = listing.location
-        self.timePickUpLabel.text = listing.time
-        self.quantityPickUpValue.text = listing.quantity
-        self.pickUpFoodImage.image = listing.foodImage
+        self.foodPickUpLabel.text = listing.title
+        self.locationPickUplabel.text = String(format: "%d", listing.lat!)
+        self.timePickUpLabel.text = listing.creationTime
+        self.quantityPickUpValue.text = String(format: "%d", listing.quantity!)
+        //self.pickUpFoodImage.image = listing.foodImage
         
         
 
