@@ -93,7 +93,7 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
 //        let listing = Listing(food:food ?? "food", coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), time: dateString, location:location ?? "location", quantity: quantity ?? "Not Available", foodImage: camCell?.FoodImage.image ?? UIImage(named:"pizza")!)
         let q = Int(quantity)
         
-        let listing = WSListing(listingId: -1, userId: -1, title: food, lat: latitude, lng: longitude, creationTime: "9:41", quantity: Int(quantity)!)
+        let listing = WSListing(listingId: -1, userId: -1, title: food, lat: latitude, lng: longitude, creationTime: 1, quantity: Int(quantity)!)
         
         listingModel.addListing(listing: listing) { (completed) in
             if (!completed) {

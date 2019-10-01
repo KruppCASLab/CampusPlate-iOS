@@ -14,10 +14,10 @@ public class WSListing: Codable {
     public var title:String?
     public var lat:Double?
     public var lng:Double?
-    public var creationTime:String?
+    public var creationTime:Int?
     public var quantity:Int?
     
-    init(listingId: Int, userId: Int, title: String, lat: Double, lng: Double, creationTime: String, quantity: Int) {
+    init(listingId: Int, userId: Int, title: String, lat: Double, lng: Double, creationTime: Int, quantity: Int) {
         self.creationTime = creationTime
         self.lat = lat
         self.lng = lng

@@ -45,7 +45,7 @@ class PickUpFoodViewController: UIViewController {
         
         self.foodPickUpLabel.text = listing.title
         self.locationPickUplabel.text = String(format: "%d", listing.lat!)
-        self.timePickUpLabel.text = listing.creationTime
+        //self.timePickUpLabel.text = listing.creationTime
         self.quantityPickUpValue.text = String(format: "%d", listing.quantity!)
         
 
