@@ -17,7 +17,7 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     var foodCell:CustomTableViewCell?
     var locationCell:CustomTableViewCell?
     var quantityCell:StepperTableViewCell?
-    var camCell:CameraCell?
+    //var camCell:CameraCell?
     
     
     let listingModel = ListingModel.getSharedInstance()
@@ -26,6 +26,14 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        
+        
+        locationManager.delegate = self
 
     }
     
@@ -40,7 +48,7 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     }
     
     @IBAction func quanValue(_ sender: UIStepper) {
-        quantityCell?.quantityValue.text = String(sender.value)
+        quantityCell?.quantityValue.text = String(Int(sender.value))
     }
     
     @IBAction func cancelListing(_ sender: Any) {
@@ -48,49 +56,44 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
         print("cancelled")
     }
     
-    @IBAction func TakePicture(_ sender: AnyObject) {
-        let image = UIImagePickerController()
-        image.delegate = self
-        image.sourceType = UIImagePickerController.SourceType.camera
-        image.allowsEditing = false
-        self.present(image,animated: true)
-    }
+//    @IBAction func TakePicture(_ sender: AnyObject) {
+//        let image = UIImagePickerController()
+//        image.delegate = self
+//        image.sourceType = UIImagePickerController.SourceType.camera
+//        image.allowsEditing = false
+//        self.present(image,animated: true)
+//    }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-        {
-            camCell?.FoodImage.image = image //set image
-        }else{
-            //error message
-        }
-        self.dismiss(animated: true, completion: nil)
-    }
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//
+//        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+//        {
+//            camCell?.FoodImage.image = image //set image
+//        }else{
+//            //error message
+//        }
+//        self.dismiss(animated: true, completion: nil)
+//    }
     
     @IBAction func postListingButton(_ sender: Any) {
         
-        let food = foodCell?.textInputField.text
-        let location = locationCell?.textInputField.text
-        let quantity = quantityCell?.quantityValue.text
+        postListing.isEnabled = false
+        let food = (foodCell?.textInputField.text)!
+//        let location = locationCell?.textInputField.text
+        let quantity = (quantityCell?.quantityValue.text)!
         
-        let currentDate = Date()
+//        let currentDate = Date()
+//
+//        let dateFormatter = DateFormatter()
         
-        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "h:mm a"
         
-        dateFormatter.dateFormat = "h:mm a"
-        
-        let dateString = dateFormatter.string(from: currentDate)
+//        let dateString = dateFormatter.string(from: currentDate)
         
 //        let listing = Listing(food:food ?? "food", coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), time: dateString, location:location ?? "location", quantity: quantity ?? "Not Available", foodImage: camCell?.FoodImage.image ?? UIImage(named:"pizza")!)
+        let q = Int(quantity)
         
-        let listing = WSListing()
-        listing.title = "Apple"
-        listing.quantity = 10
-        listing.creationTime = ""
-        listing.lat = 41.011234
-        listing.lng = -81.1234
-        listing.userId = -1
-        
+        let listing = WSListing(listingId: -1, userId: -1, title: food, lat: latitude, lng: longitude, creationTime: "9:41", quantity: Int(quantity)!)
         
         listingModel.addListing(listing: listing) { (completed) in
             if (!completed) {
@@ -101,15 +104,12 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
             
             }
             else {
-                self.presentingViewController?.dismiss(animated: true, completion: nil)
+                DispatchQueue.main.async {
+                    self.presentingViewController?.dismiss(animated: true, completion: nil)
+                }
             }
         }
-        
-        let numListings = listingModel.getNumberOfListings()
-        print(numListings)
-        
-        
-        
+    
     }
    
     // MARK: - Table view data source
@@ -122,16 +122,16 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if(indexPath.row == 2){
-            return 200
-        }else{
-            return 44
-        }
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if(indexPath.row == 2){
+//            return 200
+//        }else{
+//            return 44
+//        }
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -141,15 +141,11 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
             self.foodCell?.cellLabel.text = "Food: "
             
             return cell
-        }else if (indexPath.row == 1){
+        }else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "stepperCell", for: indexPath)
             self.quantityCell = cell as? StepperTableViewCell
             self.quantityCell?.quantityLabel.text = "Quantity:"
-            
-            return cell
-        }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cameraCell", for: indexPath)
-            self.camCell = cell as? CameraCell
+        
             return cell
         }
     /*
@@ -198,4 +194,5 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
      */
     
     }
+    
 }

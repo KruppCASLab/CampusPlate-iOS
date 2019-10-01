@@ -19,11 +19,7 @@ class PickUpFoodViewController: UIViewController {
     @IBOutlet weak var quantityLabel: UILabel!
     
     @IBOutlet weak var quantityPickUpValue: UILabel!
-    
-    
-    @IBOutlet weak var pickUpFoodImage: UIImageView!
-    
-    
+
     public var listing:WSListing!
     public var indexPathOfListing:IndexPath!
     
@@ -44,8 +40,6 @@ class PickUpFoodViewController: UIViewController {
     
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,8 +47,6 @@ class PickUpFoodViewController: UIViewController {
         self.locationPickUplabel.text = String(format: "%d", listing.lat!)
         self.timePickUpLabel.text = listing.creationTime
         self.quantityPickUpValue.text = String(format: "%d", listing.quantity!)
-        //self.pickUpFoodImage.image = listing.foodImage
-        
         
 
         // Do any additional setup after loading the view.

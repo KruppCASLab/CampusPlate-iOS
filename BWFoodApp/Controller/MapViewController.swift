@@ -66,7 +66,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         let cell:FoodListingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FoodListingCell", for: indexPath) as! FoodListingTableViewCell
         var listing:WSListing = listingModel.getListing(index: indexPath.row)
         
-        cell.food.text = listing.title!
+        cell.food.text = listing.title ?? "Food"
     
         return cell
         
@@ -95,10 +95,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        mapView.mapType = .satelliteFlyover
-        
-
+    
         self.locationManager.requestWhenInUseAuthorization()
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
