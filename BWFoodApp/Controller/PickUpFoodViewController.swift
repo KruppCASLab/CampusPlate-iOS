@@ -10,16 +10,20 @@ import UIKit
 
 class PickUpFoodViewController: UIViewController {
 
-    @IBOutlet weak var locationPickUplabel: UILabel!
-    
+   
     @IBOutlet weak var foodPickUpLabel: UILabel!
-    
-    @IBOutlet weak var timePickUpLabel: UILabel!
-    
+    @IBOutlet weak var locationSubLocation: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
     
-    @IBOutlet weak var quantityPickUpValue: UILabel!
+    @IBOutlet weak var postedTime: UILabel!
+    @IBOutlet weak var expireTime: UILabel!
+    @IBOutlet weak var availableLeft: UILabel!
+   
+    @IBOutlet weak var foodImageView: UIImageView!
 
+    @IBOutlet weak var claimButton: UIButton!
+    
+    
     public var listing:WSListing!
     public var indexPathOfListing:IndexPath!
     
@@ -32,21 +36,39 @@ class PickUpFoodViewController: UIViewController {
     }
     
     
-    @IBAction func quanPickUpStepper(_ sender: UIStepper) {
+    @IBAction func cancelButton(_ sender: Any) {
         
-        quantityLabel.text = String(sender.value)
-        
-        sender.maximumValue = Double(quantityPickUpValue.text!) ?? 0
+        self.dismiss(animated: true, completion: nil)
+    }
     
+
+    @IBAction func quantityStepper(_ sender: UIStepper) {
+        
+        quantityLabel.text = Int(sender.value).description
+        
+        sender.maximumValue = Double(availableLeft.text!) ?? 0
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        foodImageView.layer.borderWidth = 2
+        foodImageView.layer.cornerRadius = 15
+        foodImageView.layer.borderColor = UIColor.systemOrange.cgColor
+        
+        claimButton.layer.cornerRadius = 20
+        
+        let available : Int = listing.quantity ?? 0
+        var availableStr = String(available)
+        
+    
         self.foodPickUpLabel.text = listing.title
-        self.locationPickUplabel.text = String(format: "%d", listing.lat!)
-        self.timePickUpLabel.text = listing.creationTime
-        self.quantityPickUpValue.text = String(format: "%d", listing.quantity!)
+        self.availableLeft.text = availableStr
+//        self.locationPickUplabel.text = String(format: "%d", listing.lat!)
+//        self.timePickUpLabel.text = ""
+////        self.timePickUpLabel.text = listing.creationTime
+//        self.quantityPickUpValue.text = String(format: "%d", listing.quantity!)
         
 
         // Do any additional setup after loading the view.

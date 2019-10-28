@@ -10,31 +10,90 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelegate,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class CreateNewListing: UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate{
     
-    @IBOutlet weak var postListing: UIBarButtonItem!
+    @IBOutlet weak var postListing: UIButton!
     
-    var foodCell:CustomTableViewCell?
-    var locationCell:CustomTableViewCell?
-    var quantityCell:StepperTableViewCell?
-    //var camCell:CameraCell?
+    @IBOutlet weak var foodImage: UIImageView!
     
+    @IBOutlet weak var itemTextField: UITextField!
+    @IBOutlet weak var quantityTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
+    
+    var mapView = MapViewController()
     
     let listingModel = ListingModel.getSharedInstance()
     
     var locationManager = CLLocationManager()
     
+    public var listing:WSListing!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let leftView = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
+               
+        let leftView2 = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
+        
+        let leftView3 = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
+        
+        itemTextField.layer.cornerRadius = 16
+        itemTextField.layer.borderWidth = 2
+        itemTextField.layer.borderColor = UIColor.systemOrange.cgColor
+        itemTextField.leftView = leftView
+        itemTextField.leftViewMode = .always
+        itemTextField.contentVerticalAlignment = .center
+        
+        quantityTextField.layer.cornerRadius = 16
+        quantityTextField.layer.borderWidth = 2
+        quantityTextField.layer.borderColor = UIColor.systemOrange.cgColor
+        quantityTextField.leftView = leftView2
+        quantityTextField.leftViewMode = .always
+        quantityTextField.contentVerticalAlignment = .center
+        
+        
+        locationTextField.layer.cornerRadius = 16
+        locationTextField.layer.borderWidth = 2
+        locationTextField.layer.borderColor = UIColor.systemOrange.cgColor
+        locationTextField.leftView = leftView3
+        locationTextField.leftViewMode = .always
+        locationTextField.contentVerticalAlignment = .center
+        
+        
+        foodImage.layer.borderWidth = 2
+        foodImage.layer.cornerRadius = 15
+        foodImage.layer.borderColor = UIColor.systemOrange.cgColor
         self.locationManager.requestWhenInUseAuthorization()
+        
+        postListing.layer.cornerRadius = 20
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         
+        itemTextField.delegate = self
+        itemTextField.returnKeyType = .done
+        
+        quantityTextField.keyboardType = .numberPad
+        quantityTextField.delegate = self
+        quantityTextField.returnKeyType = .done
+        
+        locationTextField.delegate = self
+        locationTextField.returnKeyType = .done
         
         locationManager.delegate = self
 
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        itemTextField.resignFirstResponder()
+        locationTextField.resignFirstResponder()
+        
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     var longitude: Double = 0.0
@@ -47,14 +106,12 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
         }
     }
     
-    @IBAction func quanValue(_ sender: UIStepper) {
-        quantityCell?.quantityValue.text = String(Int(sender.value))
-    }
-    
     @IBAction func cancelListing(_ sender: Any) {
+        
         self.dismiss(animated: true, completion: nil)
         print("cancelled")
     }
+    
     
 //    @IBAction func TakePicture(_ sender: AnyObject) {
 //        let image = UIImagePickerController()
@@ -75,33 +132,31 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
 //        self.dismiss(animated: true, completion: nil)
 //    }
     
+    
     @IBAction func postListingButton(_ sender: Any) {
         
+//        let annotation = MKPointAnnotation()
+//        annotation.title = listing.title
+//        annotation.coordinate = CLLocationCoordinate2D(latitude: listing.lat!, longitude: listing.lng!)
+//        mapView.mapView.addAnnotation(annotation)
+        
         postListing.isEnabled = false
-        let food = (foodCell?.textInputField.text)!
-//        let location = locationCell?.textInputField.text
-        let quantity = (quantityCell?.quantityValue.text)!
         
-//        let currentDate = Date()
-//
-//        let dateFormatter = DateFormatter()
+        let food = (itemTextField.text) ?? ""
+        let quantity = Int(quantityTextField.text ?? "0") ?? 0
+        let subLocation = locationTextField.text
         
-//        dateFormatter.dateFormat = "h:mm a"
+//        let date = Date(timeIntervalSince1970: 1415637900)
         
-//        let dateString = dateFormatter.string(from: currentDate)
-        
-//        let listing = Listing(food:food ?? "food", coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), time: dateString, location:location ?? "location", quantity: quantity ?? "Not Available", foodImage: camCell?.FoodImage.image ?? UIImage(named:"pizza")!)
-        let q = Int(quantity)
-        
-        let listing = WSListing(listingId: -1, userId: -1, title: food, lat: latitude, lng: longitude, creationTime: "9:41", quantity: Int(quantity)!)
-        
+        let listing = WSListing(listingId: -1, userId: -1, title: food, lat: latitude, lng: longitude, creationTime: -1, quantity: quantity)
+
         listingModel.addListing(listing: listing) { (completed) in
             if (!completed) {
                 let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
                 DispatchQueue.main.async {
                     self.present(alert, animated: true, completion: nil)
                 }
-            
+
             }
             else {
                 DispatchQueue.main.async {
@@ -109,90 +164,8 @@ class CreateNewListing: UIViewController,UITableViewDataSource,UITableViewDelega
                 }
             }
         }
-    
-    }
-   
-    // MARK: - Table view data source
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        tableView.tableFooterView = UIView(frame: .zero)
-        return 1
-    }
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if(indexPath.row == 2){
-//            return 200
-//        }else{
-//            return 44
-//        }
-//    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if(indexPath.row == 0){
-            let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath)
-            self.foodCell = cell as? CustomTableViewCell
-            self.foodCell?.cellLabel.text = "Food: "
-            
-            return cell
-        }else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "stepperCell", for: indexPath)
-            self.quantityCell = cell as? StepperTableViewCell
-            self.quantityCell?.quantityLabel.text = "Quantity:"
-        
-            return cell
-        }
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
     }
     
 }
+

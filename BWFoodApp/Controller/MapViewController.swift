@@ -12,13 +12,27 @@ import CoreLocation
 
 class MapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate{
     
+
+    @IBOutlet weak var listingsLabel: UILabel!
+    
     @IBOutlet weak var tableView: UITableView!
 
     @IBOutlet weak var mapView: MKMapView!
     
-    @IBAction func addListing(_ sender: Any) {
-    performSegue(withIdentifier: "addScreen", sender: self)
+    @IBOutlet weak var postListingButton: UIButton!
+    
+    
+    @IBAction func postListingScreen(_ sender: Any) {
+        
+        performSegue(withIdentifier: "createListingScreen", sender: self)
+        
     }
+
+//    @IBAction func addListing(_ sender: Any) {
+//    performSegue(withIdentifier: "addScreen", sender: self)
+//    }
+    
+    
     
     let listingModel = ListingModel.getSharedInstance()
     
@@ -52,9 +66,9 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func viewDidAppear(_ animated: Bool) {
         
-       
-        
-        
+        listingsLabel.layer.borderWidth = 1
+        listingsLabel.layer.borderColor = UIColor.systemOrange.cgColor
+        tableView.separatorColor = .systemOrange
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -95,7 +109,11 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        postListingButton.layer.cornerRadius = 15
+        
+        tableView.separatorColor = .systemOrange
+        
         self.locationManager.requestWhenInUseAuthorization()
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -114,50 +132,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         mapView.setRegion(region, animated: true)
     
     }
-    
-    //var locations = [CLCircularRegion]()
-    
-    func setUpGeofenceForMaCS() {
-        let geofenceRegionCenter = CLLocationCoordinate2DMake(41.370600, -81.848127);
-        let geofenceRegion = CLCircularRegion(center: geofenceRegionCenter, radius: 74, identifier: "MaCS")
-        geofenceRegion.notifyOnExit = true
-        geofenceRegion.notifyOnEntry = true
-        self.locationManager.startMonitoring(for: geofenceRegion)
-        //locations.append(geofenceRegion)
-    }
-    func setUpGeofenceForHiggins() {
-        let geofenceRegionCenter = CLLocationCoordinate2DMake(41.371816, -81.847962);
-        let geofenceRegion = CLCircularRegion(center: geofenceRegionCenter, radius: 85, identifier: "Lou Higgins")
-        geofenceRegion.notifyOnExit = true
-        geofenceRegion.notifyOnEntry = true
-        self.locationManager.startMonitoring(for: geofenceRegion)
-        //locations.append(geofenceRegion)
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        if region.identifier == "MaCS"{
-             print("Welcome to MaCS!")
-        }else if region.identifier == "Lou Higgins"{
-            print("Welcome to Lou Higgins!")
-        }
-       
-        //Good place to schedule a local notification
-    }
-    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        print("Bye! Hope you had a great day at MaCS")
-        //Good place to schedule a local notification
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if (status == CLAuthorizationStatus.authorizedAlways) {
-            self.setUpGeofenceForMaCS()
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print(locations[0])
-    }
-    
+   
     /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let mapVC = sender as? pickUpFoodViewController {

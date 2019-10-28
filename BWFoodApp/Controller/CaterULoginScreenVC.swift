@@ -10,30 +10,53 @@ import UIKit
 
 class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var studentEmailLabel: UILabel!
+    
+    @IBOutlet weak var passwordLabel: UILabel!
     
     @IBOutlet weak var studentEmailField: UITextField!
     
     @IBOutlet weak var passwordField: UITextField!
     
-   
-    @IBOutlet weak var continueButton: UIButton!
-    
+    @IBOutlet weak var signInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let leftView = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
+        
+        let leftView2 = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
+        
+        studentEmailField.layer.cornerRadius = 16
+        studentEmailField.layer.borderWidth = 1
+        studentEmailField.layer.borderColor = UIColor.systemOrange.cgColor
+    
+        studentEmailField.leftView = leftView
+        studentEmailField.leftViewMode = .always
+        studentEmailField.contentVerticalAlignment = .center
+        
         studentEmailField.delegate = self
         studentEmailField.returnKeyType = .done
         
+        passwordField.layer.cornerRadius = 16
+        passwordField.layer.borderWidth = 1
+        passwordField.layer.borderColor = UIColor.systemOrange.cgColor
+       
+        passwordField.leftView = leftView2
+        passwordField.leftViewMode = .always
+        passwordField.contentVerticalAlignment = .center
+        
         passwordField.delegate = self
         passwordField.returnKeyType = .done
-        
 
-        // Do any additional setup after loading the view.
+        signInButton.layer.cornerRadius = 16
+
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-//        continueButton.isEnabled = false
+    
+    @IBAction func goToListingScreen(_ sender: Any) {
+        
+        performSegue(withIdentifier: "listingScreen", sender: self)
     }
     
     
@@ -45,34 +68,8 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func loginSuccessful() {
-        continueButton.isEnabled = true
-    }
-    
-    override func shouldPerformSegue(withIdentifier: String = "enterPinScreen", sender: Any?) -> Bool {
-        if (studentEmailField.text?.isEmpty == true) || (passwordField.text?.isEmpty == true) {
-            print("needs valid email")
-            print("needs valid password")
-            
-            return false
-        }else{
-        
-            print("email is valid")
-            print("password is valid")
-            
-            
-            loginSuccessful()
-        }
-     
-        return true
-    }
     
     
-    @IBAction func showScreenButtonTapped(_ sender: Any) {
-        
-        performSegue(withIdentifier: "eligibleScreenSegue", sender: self)
-        
-    }
     
     
 
