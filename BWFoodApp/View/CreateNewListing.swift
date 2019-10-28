@@ -10,8 +10,14 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class CreateNewListing: UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate{
+protocol CreateNewListingDelegate {
+    func didComplete()
+}
+
+class CreateNewListing:
+UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate{
     
+    public var delegate:CreateNewListingDelegate?
     @IBOutlet weak var postListing: UIButton!
     
     @IBOutlet weak var foodImage: UIImageView!
@@ -148,7 +154,8 @@ class CreateNewListing: UIViewController,CLLocationManagerDelegate, UIImagePicke
         
 //        let date = Date(timeIntervalSince1970: 1415637900)
         
-        let listing = WSListing(listingId: -1, userId: -1, title: food, lat: latitude, lng: longitude, creationTime: -1, quantity: quantity)
+        
+        let listing = WSListing(listingId: -1, userId: -1, title: food, locationDescription: subLocation!, lat: latitude, lng: longitude, creationTime: -1, quantity: quantity)
 
         listingModel.addListing(listing: listing) { (completed) in
             if (!completed) {
@@ -161,6 +168,8 @@ class CreateNewListing: UIViewController,CLLocationManagerDelegate, UIImagePicke
             else {
                 DispatchQueue.main.async {
                     self.presentingViewController?.dismiss(animated: true, completion: nil)
+                    
+                    self.delegate?.didComplete()
                 }
             }
         }
