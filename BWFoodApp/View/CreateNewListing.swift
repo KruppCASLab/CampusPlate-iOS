@@ -135,11 +135,6 @@ class CreateNewListing: UIViewController,CLLocationManagerDelegate, UIImagePicke
     
     @IBAction func postListingButton(_ sender: Any) {
         
-//        let annotation = MKPointAnnotation()
-//        annotation.title = listing.title
-//        annotation.coordinate = CLLocationCoordinate2D(latitude: listing.lat!, longitude: listing.lng!)
-//        mapView.mapView.addAnnotation(annotation)
-        
         postListing.isEnabled = false
         
         let food = (itemTextField.text) ?? ""
