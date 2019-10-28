@@ -10,7 +10,7 @@ import MapKit
 import UIKit
 import CoreLocation
 
-class MapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate{
+class MapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, CreateNewListingDelegate{
     
 
     @IBOutlet weak var listingsLabel: UILabel!
@@ -86,6 +86,15 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
     }
     
+    func didComplete() {
+        listingModel.loadListings { (completed) in
+            DispatchQueue.main.async {
+                //TODO: Create annotation
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         return false
     }
@@ -99,6 +108,9 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
                 foodVC.indexPathOfListing = indexPath
             }
             
+        }
+        else if let createVc = segue.destination as? CreateNewListing {
+            createVc.delegate = self
         }
     }
     

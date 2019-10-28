@@ -65,6 +65,13 @@ class PickUpFoodViewController: UIViewController {
     
         self.foodPickUpLabel.text = listing.title
         self.availableLeft.text = availableStr
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .medium
+        dateFormatter.dateStyle = .medium
+
+        
+       self.postedTime.text = dateFormatter.string(from: Date(timeIntervalSince1970: listing!.creationTime!))
 //        self.locationPickUplabel.text = String(format: "%d", listing.lat!)
 //        self.timePickUpLabel.text = ""
 ////        self.timePickUpLabel.text = listing.creationTime
