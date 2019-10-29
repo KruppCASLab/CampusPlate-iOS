@@ -24,6 +24,7 @@ class PickUpFoodViewController: UIViewController {
     @IBOutlet weak var claimButton: UIButton!
     
     
+    
     public var listing:WSListing!
     public var indexPathOfListing:IndexPath!
     
@@ -53,6 +54,8 @@ class PickUpFoodViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        locationSubLocation.text = listing.locationDescription ?? " "
+        
         foodImageView.layer.borderWidth = 2
         foodImageView.layer.cornerRadius = 15
         foodImageView.layer.borderColor = UIColor.systemOrange.cgColor
@@ -72,11 +75,6 @@ class PickUpFoodViewController: UIViewController {
 
         
        self.postedTime.text = dateFormatter.string(from: Date(timeIntervalSince1970: listing!.creationTime!))
-//        self.locationPickUplabel.text = String(format: "%d", listing.lat!)
-//        self.timePickUpLabel.text = ""
-////        self.timePickUpLabel.text = listing.creationTime
-//        self.quantityPickUpValue.text = String(format: "%d", listing.quantity!)
-        
 
         // Do any additional setup after loading the view.
     }

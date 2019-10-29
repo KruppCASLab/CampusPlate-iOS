@@ -26,8 +26,6 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var quantityTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     
-    var mapView = MapViewController()
-    
     let listingModel = ListingModel.getSharedInstance()
     
     var locationManager = CLLocationManager()

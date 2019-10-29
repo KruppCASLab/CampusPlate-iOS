@@ -261,8 +261,8 @@
                                 <rect key="frame" x="44" y="223.33333333333331" width="287" height="189.33333333333331"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 Minutes Ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEp-ny-wDj">
-                                <rect key="frame" x="184" y="460" width="147" height="23"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                                <rect key="frame" x="142" y="460" width="189" height="23"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -295,15 +295,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 Minutes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPd-qt-wh6">
-                                <rect key="frame" x="199" y="533" width="132" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="rjC-BE-NIA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95T-xk-bKT">
@@ -357,10 +348,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location - Sub Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdC-bg-myR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location - Sub Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdC-bg-myR">
                                 <rect key="frame" x="76" y="155" width="222" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="L9O-Eg-hDA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 Minutes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPd-qt-wh6">
+                                <rect key="frame" x="199" y="533" width="132" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="rjC-BE-NIA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -375,11 +375,11 @@
                             <constraint firstItem="Y62-X4-9tz" firstAttribute="centerY" secondItem="NPd-qt-wh6" secondAttribute="centerY" id="6MQ-Cs-mLM"/>
                             <constraint firstAttribute="trailing" secondItem="1MY-B8-6Cv" secondAttribute="trailing" constant="143.33333333333334" id="6Nu-NS-0mi"/>
                             <constraint firstItem="XEp-ny-wDj" firstAttribute="trailing" secondItem="NPd-qt-wh6" secondAttribute="trailing" id="8Js-aJ-dVJ"/>
-                            <constraint firstItem="XEp-ny-wDj" firstAttribute="leading" secondItem="769-DD-6uw" secondAttribute="leading" id="8c9-1T-Cwc"/>
+                            <constraint firstItem="XEp-ny-wDj" firstAttribute="leading" secondItem="769-DD-6uw" secondAttribute="leading" constant="-42" id="8c9-1T-Cwc"/>
                             <constraint firstItem="1MY-B8-6Cv" firstAttribute="centerX" secondItem="769-DD-6uw" secondAttribute="centerX" id="9A2-gQ-3Be"/>
                             <constraint firstItem="ecz-dO-Uve" firstAttribute="centerY" secondItem="utb-0v-J9I" secondAttribute="centerY" id="Ax2-gU-Uuf"/>
                             <constraint firstItem="utb-0v-J9I" firstAttribute="top" secondItem="95T-xk-bKT" secondAttribute="bottom" constant="48.333333333333371" id="DQP-eF-7qz"/>
-                            <constraint firstItem="769-DD-6uw" firstAttribute="centerY" secondItem="utb-0v-J9I" secondAttribute="centerY" id="FGv-OC-UBd"/>
+                            <constraint firstItem="769-DD-6uw" firstAttribute="centerY" secondItem="utb-0v-J9I" secondAttribute="centerY" constant="1.1666666666667425" id="FGv-OC-UBd"/>
                             <constraint firstItem="XyX-5w-Q1C" firstAttribute="top" secondItem="ecz-dO-Uve" secondAttribute="bottom" constant="36" id="GTC-Jk-Xbr"/>
                             <constraint firstItem="SdC-bg-myR" firstAttribute="centerX" secondItem="pXA-UP-eez" secondAttribute="centerX" id="GwX-vQ-bWd"/>
                             <constraint firstItem="Y62-X4-9tz" firstAttribute="top" secondItem="kVz-yh-L4J" secondAttribute="bottom" constant="51" id="I87-G6-uNY"/>
@@ -427,7 +427,7 @@
                         <outlet property="expireTime" destination="NPd-qt-wh6" id="Zg7-95-uqQ"/>
                         <outlet property="foodImageView" destination="pXA-UP-eez" id="6Yh-TT-OOS"/>
                         <outlet property="foodPickUpLabel" destination="xvj-V0-PJF" id="KDQ-qd-jHJ"/>
-                        <outlet property="locationSubLocation" destination="SdC-bg-myR" id="Zxm-a5-hxA"/>
+                        <outlet property="locationSubLocation" destination="SdC-bg-myR" id="DJU-1R-bYf"/>
                         <outlet property="postedTime" destination="XEp-ny-wDj" id="0mf-h8-9pl"/>
                         <outlet property="quantityLabel" destination="utb-0v-J9I" id="U3K-ZO-A2f"/>
                     </connections>

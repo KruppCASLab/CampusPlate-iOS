@@ -42,6 +42,8 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     let session = URLSession.shared
     
+    let WSlisting : WSListing! = nil
+    
     override func viewWillAppear(_ animated: Bool) {
         
         for annotation in mapView.annotations {
@@ -51,8 +53,14 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         //Show Pins on Map
         for i in 0 ..< listingModel.getNumberOfListings() {
             
-            let listing = listingModel.getListing(index: i)
-        
+            //let listing = listingModel.getListing(index: i)
+            
+//            let mapAnnotation = MKPointAnnotation()
+//            mapAnnotation.title = WSlisting.title
+//            mapAnnotation.subtitle = WSlisting.locationDescription
+//            mapAnnotation.coordinate = CLLocationCoordinate2DMake(WSlisting.lat!, WSlisting.lng!)
+//            mapView.addAnnotation(mapAnnotation)
+//
             //mapView.addAnnotation(listing)
             
         }
@@ -101,6 +109,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // TODO: Grab the food item selected and populate the next screen
+        
         if let foodVC = segue.destination as? PickUpFoodViewController {
             if let indexPath = indexSelected {
                 let listing = self.listingModel.getListing(index: indexPath.row)
