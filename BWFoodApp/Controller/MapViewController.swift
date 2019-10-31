@@ -46,27 +46,29 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func viewWillAppear(_ animated: Bool) {
         
-        for annotation in mapView.annotations {
-            mapView.removeAnnotation(annotation)
-        }
         
-        //Show Pins on Map
-        for i in 0 ..< listingModel.getNumberOfListings() {
-            
-            let listing2 = listingModel.getListing(index: i)
-            
-            let mapAnnotation = MKPointAnnotation()
-            mapAnnotation.title = listing2.title
-            mapAnnotation.subtitle = listing2.locationDescription
-            mapAnnotation.coordinate = CLLocationCoordinate2DMake(listing2.lat!, listing2.lng!)
-            
-            mapView.addAnnotation(mapAnnotation)
-            
-        }
         
         listingModel.loadListings { (completed) in
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                
+                for annotation in self.mapView.annotations {
+                    self.mapView.removeAnnotation(annotation)
+                }
+                
+                //Show Pins on Map
+                for i in 0 ..< self.listingModel.getNumberOfListings() {
+                    
+                    let listing2 = self.listingModel.getListing(index: i)
+                    
+                    let mapAnnotation = MKPointAnnotation()
+                    mapAnnotation.title = listing2.title
+                    mapAnnotation.subtitle = listing2.locationDescription
+                    mapAnnotation.coordinate = CLLocationCoordinate2DMake(listing2.lat!, listing2.lng!)
+                    
+                    self.mapView.addAnnotation(mapAnnotation)
+                    
+                }
             }
         }
     }
