@@ -145,8 +145,6 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
         let quantity = Int(quantityTextField.text ?? "0") ?? 0
         let subLocation = locationTextField.text
         
-//        let date = Date(timeIntervalSince1970: 1415637900)
-        
         
         let listing = WSListing(listingId: -1, userId: -1, title: food, locationDescription: subLocation!, lat: latitude, lng: longitude, creationTime: -1, quantity: quantity)
 

@@ -42,7 +42,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     let session = URLSession.shared
     
-    let WSlisting : WSListing! = nil
+    let listing : WSListing! = nil
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -53,15 +53,14 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         //Show Pins on Map
         for i in 0 ..< listingModel.getNumberOfListings() {
             
-            //let listing = listingModel.getListing(index: i)
+            let listing2 = listingModel.getListing(index: i)
             
-//            let mapAnnotation = MKPointAnnotation()
-//            mapAnnotation.title = WSlisting.title
-//            mapAnnotation.subtitle = WSlisting.locationDescription
-//            mapAnnotation.coordinate = CLLocationCoordinate2DMake(WSlisting.lat!, WSlisting.lng!)
-//            mapView.addAnnotation(mapAnnotation)
-//
-            //mapView.addAnnotation(listing)
+            let mapAnnotation = MKPointAnnotation()
+            mapAnnotation.title = listing2.title
+            mapAnnotation.subtitle = listing2.locationDescription
+            mapAnnotation.coordinate = CLLocationCoordinate2DMake(listing2.lat!, listing2.lng!)
+            
+            mapView.addAnnotation(mapAnnotation)
             
         }
         
@@ -153,7 +152,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         mapView.setRegion(region, animated: true)
     
     }
-   
+    
     /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let mapVC = sender as? pickUpFoodViewController {

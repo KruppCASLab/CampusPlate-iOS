@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreGraphics
 
 class PickUpFoodViewController: UIViewController {
 
@@ -23,10 +24,10 @@ class PickUpFoodViewController: UIViewController {
 
     @IBOutlet weak var claimButton: UIButton!
     
-    
-    
     public var listing:WSListing!
     public var indexPathOfListing:IndexPath!
+    
+    
     
     @IBAction func pickUpButton(_ sender: Any) {
         // TODO: Remove the item from model
@@ -35,7 +36,6 @@ class PickUpFoodViewController: UIViewController {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
         
     }
-    
     
     @IBAction func cancelButton(_ sender: Any) {
         
@@ -53,8 +53,35 @@ class PickUpFoodViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        let macs = [CGPoint(x: 41.370711, y: -81.848924),
+                    CGPoint(x: 41.370652, y: -81.847243),
+                    CGPoint(x: 41.370456, y: -81.847267),
+                    CGPoint(x: 41.370472, y: -81.847909),
+                    CGPoint(x: 41.370277, y: -81.847906),
+                    CGPoint(x: 41.370306, y: -81.848210),
+                    CGPoint(x: 41.370515, y: -81.848236),
+                    CGPoint(x: 41.370523, y: -81.848868),
+                    CGPoint(x: 41.370706, y: -81.848901),
+        ]
+
+        // Build a closed path from points representing the ordered edges of a polygon
+        func closedPath(points: [CGPoint]) -> CGPath {
+            let path = CGMutablePath()
+            path.addLines(between: points)
+            path.closeSubpath()
+            return path
+        }
+
+        let path = closedPath(points: macs)
         
-        locationSubLocation.text = listing.locationDescription ?? " "
+        let pointInside = CGPoint(x: listing.lat!, y: listing.lng!)
+
+        if (path.contains(pointInside)){
+            locationSubLocation.text = "MaCS"
+        }
+        
+//        locationSubLocation.text = listing.locationDescription ?? " "
         
         foodImageView.layer.borderWidth = 2
         foodImageView.layer.cornerRadius = 15
@@ -78,6 +105,7 @@ class PickUpFoodViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+
     
 
     /*
