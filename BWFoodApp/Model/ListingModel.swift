@@ -17,9 +17,6 @@ class ListingModel {
     private static let sharedInstance = ListingModel()
     let session = URLSession.shared
     
-    private init() {
-    }
-    
     static public func getSharedInstance() -> ListingModel {
         return self.sharedInstance
     }

@@ -11,28 +11,10 @@ import UIKit
 import CoreLocation
 
 class MapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, CreateNewListingDelegate{
-    
 
-    @IBOutlet weak var listingsLabel: UILabel!
-    
     @IBOutlet weak var tableView: UITableView!
-
+    
     @IBOutlet weak var mapView: MKMapView!
-    
-    @IBOutlet weak var postListingButton: UIButton!
-    
-    
-    @IBAction func postListingScreen(_ sender: Any) {
-        
-        performSegue(withIdentifier: "createListingScreen", sender: self)
-        
-    }
-
-//    @IBAction func addListing(_ sender: Any) {
-//    performSegue(withIdentifier: "addScreen", sender: self)
-//    }
-    
-    
     
     let listingModel = ListingModel.getSharedInstance()
     
@@ -43,40 +25,52 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     let session = URLSession.shared
     
     let listing : WSListing! = nil
-    
+
     override func viewWillAppear(_ animated: Bool) {
-        
-        
         
         listingModel.loadListings { (completed) in
             DispatchQueue.main.async {
+                
                 self.tableView.reloadData()
-                
-                for annotation in self.mapView.annotations {
-                    self.mapView.removeAnnotation(annotation)
-                }
-                
-                //Show Pins on Map
-                for i in 0 ..< self.listingModel.getNumberOfListings() {
-                    
-                    let listing2 = self.listingModel.getListing(index: i)
-                    
-                    let mapAnnotation = MKPointAnnotation()
-                    mapAnnotation.title = listing2.title
-                    mapAnnotation.subtitle = listing2.locationDescription
-                    mapAnnotation.coordinate = CLLocationCoordinate2DMake(listing2.lat!, listing2.lng!)
-                    
-                    self.mapView.addAnnotation(mapAnnotation)
-                    
-                }
+                self.refreshMap()
+             
             }
         }
     }
     
+    @IBAction func navBarButton(_ sender: Any) {
+        performSegue(withIdentifier: "navBarButton", sender: self)
+    }
+    
+    @IBAction func mapButton(_ sender: Any) {
+        performSegue(withIdentifier: "mapButton", sender: self)
+    }
+    
+    
+    func refreshMap(){
+        for annotation in self.mapView.annotations {
+                         self.mapView.removeAnnotation(annotation)
+                     }
+                     
+                     //Show Pins on Map
+                     for i in 0 ..< self.listingModel.getNumberOfListings() {
+                         
+                         let listing2 = self.listingModel.getListing(index: i)
+                         
+                         let mapAnnotation = MKPointAnnotation()
+                         mapAnnotation.title = listing2.title
+                         mapAnnotation.subtitle = listing2.locationDescription
+                         mapAnnotation.coordinate = CLLocationCoordinate2DMake(listing2.lat!, listing2.lng!)
+                         
+                         self.mapView.addAnnotation(mapAnnotation)
+                         
+                     }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         
-        listingsLabel.layer.borderWidth = 1
-        listingsLabel.layer.borderColor = UIColor.systemOrange.cgColor
+     //   listingsLabel.layer.borderWidth = 1
+        //listingsLabel.layer.borderColor = UIColor.systemOrange.cgColor
         tableView.separatorColor = .systemOrange
     }
     
@@ -98,8 +92,8 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     func didComplete() {
         listingModel.loadListings { (completed) in
             DispatchQueue.main.async {
-                //TODO: Create annotation
                 self.tableView.reloadData()
+                self.refreshMap()
             }
         }
     }
@@ -132,8 +126,6 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        postListingButton.layer.cornerRadius = 15
-        
         tableView.separatorColor = .systemOrange
         
         self.locationManager.requestWhenInUseAuthorization()
@@ -141,7 +133,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
 
-        
+    
         locationManager.delegate = self
 
         // Do any additional setup after loading the view.
