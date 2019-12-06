@@ -13,8 +13,8 @@ class PickUpScreenLine: UIView {
     var line = UIBezierPath()
         
     func graph(){
-        line.move(to: .init(x: 0, y: bounds.height / 4.1))
-        line.addLine(to: .init(x: bounds.width, y: bounds.height / 4.1))
+        line.move(to: .init(x: 0, y: bounds.height / 2.4))
+        line.addLine(to: .init(x: bounds.width, y: bounds.height / 2.4))
         UIColor.systemOrange.setStroke()
         line.lineWidth = 2
         line.stroke()

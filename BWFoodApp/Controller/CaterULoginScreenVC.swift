@@ -54,11 +54,7 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
     }
     
     
-    @IBAction func goToListingScreen(_ sender: Any) {
-        
-        performSegue(withIdentifier: "listingScreen", sender: self)
-    }
-    
+
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -69,6 +65,9 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
     }
     
     
+    @IBAction func goToListingsScreen(_ sender: Any) {
+        
+    }
     
     
     

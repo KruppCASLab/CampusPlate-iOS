@@ -33,8 +33,8 @@ class ListingModel {
             catch {
                 
             }
-        
-            }.resume()
+            
+        }.resume()
     }
     
     
@@ -63,6 +63,31 @@ class ListingModel {
             
         }
     }
+    
+    public func updateQuantity(listingID: Int, releventQuantity: Int, completion:@escaping (Bool)->Void) {
+        
+        // TODO : Add to URL listingId
+        let patchUrl = (self.url?.appendingPathComponent(String(listingID)))!
+        
+        var request = URLRequest(url: patchUrl)
+        
+        request.httpMethod = "PATCH"
+        
+        let encoder = JSONEncoder()
+        do{
+            let quantityToUpdate: [String:Int] = ["quantity":releventQuantity * -1]
+            
+            let data = try encoder.encode(quantityToUpdate)
+            session.uploadTask(with: request, from: data) { (data, response, error) in
+                completion(true)
+            }.resume()
+        }
+        catch {
+            
+        }
+    }
+    
+    
     
     public func removeListing(index:Int) {
         self.listings.remove(at: index)

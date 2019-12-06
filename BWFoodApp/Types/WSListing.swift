@@ -17,8 +17,9 @@ public class WSListing: Codable {
     public var lng:Double?
     public var creationTime:Double?
     public var quantity:Int?
-    
-    init(listingId: Int, userId: Int, title: String, locationDescription: String, lat: Double, lng: Double, creationTime: Double, quantity: Int) {
+    public var image: String?
+ 
+    init(listingId: Int, userId: Int, title: String, locationDescription: String, lat: Double, lng: Double, creationTime: Double, quantity: Int, image: String) {
         self.creationTime = creationTime
         self.lat = lat
         self.lng = lng
@@ -27,5 +28,6 @@ public class WSListing: Codable {
         self.locationDescription = locationDescription
         self.userId = userId
         self.listingId = listingId
+        self.image = image
     }
 }

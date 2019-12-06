@@ -11,8 +11,12 @@ import CoreGraphics
 
 class PickUpFoodViewController: UIViewController {
 
-   
-    @IBOutlet weak var foodPickUpLabel: UILabel!
+    let listingModel = ListingModel.getSharedInstance()
+    
+    public var delegate:CreateNewListingDelegate?
+    
+    @IBOutlet weak var navBar: UINavigationItem!
+    
     @IBOutlet weak var locationSubLocation: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
     
@@ -24,10 +28,10 @@ class PickUpFoodViewController: UIViewController {
 
     @IBOutlet weak var claimButton: UIButton!
     
+    
+    
     public var listing:WSListing!
     public var indexPathOfListing:IndexPath!
-    
-    
     
     @IBAction func pickUpButton(_ sender: Any) {
         // TODO: Remove the item from model
@@ -36,6 +40,27 @@ class PickUpFoodViewController: UIViewController {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
         
     }
+    
+    @IBAction func claimButton(_ sender: Any) {
+        
+        listingModel.updateQuantity(listingID: listing.listingId!, releventQuantity: listing.quantity!) { (completed) in
+            if (!completed) {
+                let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }else {
+                DispatchQueue.main.async {
+                    
+                    self.delegate?.didComplete()
+                }
+           }
+            
+        }
+        
+        
+    }
+    
     
     @IBAction func cancelButton(_ sender: Any) {
         
@@ -54,37 +79,17 @@ class PickUpFoodViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        let macs = [CGPoint(x: 41.370711, y: -81.848924),
-                    CGPoint(x: 41.370652, y: -81.847243),
-                    CGPoint(x: 41.370456, y: -81.847267),
-                    CGPoint(x: 41.370472, y: -81.847909),
-                    CGPoint(x: 41.370277, y: -81.847906),
-                    CGPoint(x: 41.370306, y: -81.848210),
-                    CGPoint(x: 41.370515, y: -81.848236),
-                    CGPoint(x: 41.370523, y: -81.848868),
-                    CGPoint(x: 41.370706, y: -81.848901),
-        ]
-
-        // Build a closed path from points representing the ordered edges of a polygon
-        func closedPath(points: [CGPoint]) -> CGPath {
-            let path = CGMutablePath()
-            path.addLines(between: points)
-            path.closeSubpath()
-            return path
-        }
-
-        let path = closedPath(points: macs)
+        locationSubLocation.text = listing.locationDescription
         
-        let pointInside = CGPoint(x: listing.lat!, y: listing.lng!)
+        let dataDecoded : Data = Data(base64Encoded: listing.image! , options: .ignoreUnknownCharacters)!
+        let decodedimage = UIImage(data: dataDecoded)
+        foodImageView.image = decodedimage
 
-        if (path.contains(pointInside)){
-            locationSubLocation.text = "MaCS"
-        }
+        foodImageView.image = decodedimage
         
-//        locationSubLocation.text = listing.locationDescription ?? " "
+        navBar.title = listing.title
         
         foodImageView.layer.borderWidth = 2
-        foodImageView.layer.cornerRadius = 15
         foodImageView.layer.borderColor = UIColor.systemOrange.cgColor
         
         claimButton.layer.cornerRadius = 20
@@ -93,7 +98,6 @@ class PickUpFoodViewController: UIViewController {
         var availableStr = String(available)
         
     
-        self.foodPickUpLabel.text = listing.title
         self.availableLeft.text = availableStr
         
         let dateFormatter = DateFormatter()

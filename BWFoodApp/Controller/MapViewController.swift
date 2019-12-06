@@ -25,6 +25,14 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     let session = URLSession.shared
     
     let listing : WSListing! = nil
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var activityView: UIView!
+    
+    @IBOutlet weak var activityText1: UILabel!
+    @IBOutlet weak var activityText2: UILabel!
+    
 
     override func viewWillAppear(_ animated: Bool) {
         
@@ -33,19 +41,20 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
                 
                 self.tableView.reloadData()
                 self.refreshMap()
-             
+                self.activityIndicator.stopAnimating()
+                self.activityView.isHidden = true
+                self.activityText1.isHidden = true
+                self.activityText2.isHidden = true
+
             }
         }
     }
     
-    @IBAction func navBarButton(_ sender: Any) {
-        performSegue(withIdentifier: "navBarButton", sender: self)
-    }
     
-    @IBAction func mapButton(_ sender: Any) {
-        performSegue(withIdentifier: "mapButton", sender: self)
-    }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        
+    }
     
     func refreshMap(){
         for annotation in self.mapView.annotations {
@@ -98,7 +107,17 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         }
     }
     
+    @IBAction func goToCreateListingScreen(_ sender: Any){
+    
+        
+        
+    }
+    
+    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "goToListingScreen" {
+            return true
+        }
         return false
     }
     
@@ -113,8 +132,11 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
             }
             
         }
-        else if let createVc = segue.destination as? CreateNewListing {
-            createVc.delegate = self
+        else if let navVc = segue.destination as? UINavigationController {
+            if let createVc = navVc.viewControllers[0] as? CreateNewListing {
+                createVc.delegate = self
+            }
+            
         }
     }
     
@@ -125,6 +147,8 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityIndicator.startAnimating()
         
         tableView.separatorColor = .systemOrange
         

@@ -26,6 +26,10 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var quantityTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    public var mapViewDelegate: MapViewController?
+    
     let listingModel = ListingModel.getSharedInstance()
     
     var locationManager = CLLocationManager()
@@ -35,37 +39,37 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        activityIndicator.isHidden = true
+        
         let leftView = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
                
         let leftView2 = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
         
         let leftView3 = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
         
-        itemTextField.layer.cornerRadius = 16
-        itemTextField.layer.borderWidth = 2
-        itemTextField.layer.borderColor = UIColor.systemOrange.cgColor
+
+        itemTextField.layer.borderWidth = 1
+        // itemTextField.layer.borderColor = UIColor.systemOrange.cgColor
         itemTextField.leftView = leftView
         itemTextField.leftViewMode = .always
         itemTextField.contentVerticalAlignment = .center
         
-        quantityTextField.layer.cornerRadius = 16
-        quantityTextField.layer.borderWidth = 2
-        quantityTextField.layer.borderColor = UIColor.systemOrange.cgColor
+
+        quantityTextField.layer.borderWidth = 1
+        //quantityTextField.layer.borderColor = UIColor.systemOrange.cgColor
         quantityTextField.leftView = leftView2
         quantityTextField.leftViewMode = .always
         quantityTextField.contentVerticalAlignment = .center
         
-        
-        locationTextField.layer.cornerRadius = 16
-        locationTextField.layer.borderWidth = 2
-        locationTextField.layer.borderColor = UIColor.systemOrange.cgColor
+
+        locationTextField.layer.borderWidth = 1
+        //locationTextField.layer.borderColor = UIColor.systemOrange.cgColor
         locationTextField.leftView = leftView3
         locationTextField.leftViewMode = .always
         locationTextField.contentVerticalAlignment = .center
         
         
         foodImage.layer.borderWidth = 2
-        foodImage.layer.cornerRadius = 15
         foodImage.layer.borderColor = UIColor.systemOrange.cgColor
         self.locationManager.requestWhenInUseAuthorization()
         
@@ -110,43 +114,57 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
         }
     }
     
-    @IBAction func cancelListing(_ sender: Any) {
-        
-        self.dismiss(animated: true, completion: nil)
-        print("cancelled")
+    
+    @IBAction func takePicture(_ sender: Any) {
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerController.SourceType.camera
+        image.allowsEditing = false
+        self.present(image,animated: true)
     }
     
     
-//    @IBAction func TakePicture(_ sender: AnyObject) {
-//        let image = UIImagePickerController()
-//        image.delegate = self
-//        image.sourceType = UIImagePickerController.SourceType.camera
-//        image.allowsEditing = false
-//        self.present(image,animated: true)
-//    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        {
+            foodImage.image = image //set image
+            //TODO: Base 64 Encode from here
+//            let imageData:Data = image.jpegData(compressionQuality: 0.1)! as Data
+//            let imageBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+            //print(imageBase64)
+       
+        }else{
+            //error message
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
     
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//
-//        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-//        {
-//            camCell?.FoodImage.image = image //set image
-//        }else{
-//            //error message
-//        }
-//        self.dismiss(animated: true, completion: nil)
-//    }
+    
+    @IBAction func cancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     
     @IBAction func postListingButton(_ sender: Any) {
         
         postListing.isEnabled = false
+        activityIndicator.isHidden = false
+        
+        activityIndicator.startAnimating()
+        
+        postListing.alpha = 0.5
         
         let food = (itemTextField.text) ?? ""
         let quantity = Int(quantityTextField.text ?? "0") ?? 0
         let subLocation = locationTextField.text
+        let image = foodImage.image
         
+        let imageData:Data = (image?.jpegData(compressionQuality: 0.05)!)!
+        let imageBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
         
-        let listing = WSListing(listingId: -1, userId: -1, title: food, locationDescription: subLocation!, lat: latitude, lng: longitude, creationTime: -1, quantity: quantity)
+        let listing = WSListing(listingId: -1, userId: -1, title: food, locationDescription: subLocation!, lat: latitude, lng: longitude, creationTime: -1, quantity: quantity, image: imageBase64)
 
         listingModel.addListing(listing: listing) { (completed) in
             if (!completed) {
@@ -164,6 +182,9 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
                 }
             }
         }
+        
+        mapViewDelegate?.refreshMap()
+        mapViewDelegate?.tableView.reloadData()
         
     }
     

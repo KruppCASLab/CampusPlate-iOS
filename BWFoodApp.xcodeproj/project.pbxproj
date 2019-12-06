@@ -7,36 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5939E2CA21EBCCBB005AE617 /* ShowEligibleSchoolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5939E2C921EBCCBB005AE617 /* ShowEligibleSchoolsViewController.swift */; };
 		E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */; };
 		E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F9212B00650057B2B5 /* ListingModel.swift */; };
 		F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */; };
 		F61379B9235CBEEA008CF83F /* CampusPlateLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F61379B8235CBEE9008CF83F /* CampusPlateLogo.png */; };
-		F613A8DD2217DE7F00C6A6A0 /* CampusEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F613A8DC2217DE7F00C6A6A0 /* CampusEventCell.swift */; };
-		F613A8E32217DFC400C6A6A0 /* CampusEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F613A8E22217DFC400C6A6A0 /* CampusEventsViewController.swift */; };
 		F6179EE9235E924C00299A9C /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6179EE8235E924C00299A9C /* Line.swift */; };
-		F61C175E22DAAD16008313FD /* CameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C175D22DAAD16008313FD /* CameraCell.swift */; };
 		F61DCBAD2326E7C700F7FD7C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DCBAC2326E7C700F7FD7C /* Response.swift */; };
 		F61DCBAF2326E95800F7FD7C /* WSListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DCBAE2326E95800F7FD7C /* WSListing.swift */; };
-		F62AAA84218FDF2F00C650A5 /* ShowTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62AAA83218FDF2F00C650A5 /* ShowTimeCell.swift */; };
-		F62BEEB82106273500006DC0 /* PostingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */; };
 		F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEEE52108EFF300006DC0 /* MapViewController.swift */; };
 		F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */; };
-		F6412C1E2207F9EC00C2927E /* EligibleSchoolCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6412C1D2207F9EC00C2927E /* EligibleSchoolCustomCell.swift */; };
-		F6481F9B2241C1FC003D9E2D /* StepperTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6481F9A2241C1FC003D9E2D /* StepperTableViewCell.swift */; };
-		F648600B21EE51C10053D54E /* PinVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F648600A21EE51C10053D54E /* PinVerificationViewController.swift */; };
 		F6491E3B235FAB0C00D6C715 /* PickUpScreenLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6491E3A235FAB0C00D6C715 /* PickUpScreenLine.swift */; };
-		F657636F2190A5E0004B0C0A /* DateChangedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F657636E2190A5E0004B0C0A /* DateChangedProtocol.swift */; };
 		F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A60372188BADC00DB7338 /* CreateNewListing.swift */; };
 		F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB4220FA55780065BB78 /* AppDelegate.swift */; };
 		F69BDB4820FA55780065BB78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4620FA55780065BB78 /* Main.storyboard */; };
 		F69BDB4A20FA55790065BB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4920FA55790065BB78 /* Assets.xcassets */; };
 		F69BDB4D20FA55790065BB78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4B20FA55790065BB78 /* LaunchScreen.storyboard */; };
 		F69BDB5820FA557A0065BB78 /* BWFoodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB5720FA557A0065BB78 /* BWFoodAppTests.swift */; };
-		F69BDB6320FA56F40065BB78 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB6220FA56F40065BB78 /* SecondViewController.swift */; };
-		F69BDB6520FACC8A0065BB78 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB6420FACC8A0065BB78 /* ThirdViewController.swift */; };
-		F6A4F97121E52FFA007020EC /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4F97021E52FFA007020EC /* CustomTableViewCell.swift */; };
-		F6DBCAB12199DF0A00AB2A21 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DBCAB02199DF0A00AB2A21 /* DatePickerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,26 +36,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5939E2C921EBCCBB005AE617 /* ShowEligibleSchoolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEligibleSchoolsViewController.swift; sourceTree = "<group>"; };
 		E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListingTableViewCell.swift; sourceTree = "<group>"; };
 		E00850F9212B00650057B2B5 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
 		F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpFoodViewController.swift; sourceTree = "<group>"; };
 		F61379B8235CBEE9008CF83F /* CampusPlateLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CampusPlateLogo.png; sourceTree = "<group>"; };
-		F613A8DC2217DE7F00C6A6A0 /* CampusEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusEventCell.swift; sourceTree = "<group>"; };
-		F613A8E22217DFC400C6A6A0 /* CampusEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusEventsViewController.swift; sourceTree = "<group>"; };
 		F6179EE8235E924C00299A9C /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
-		F61C175D22DAAD16008313FD /* CameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCell.swift; sourceTree = "<group>"; };
 		F61DCBAC2326E7C700F7FD7C /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		F61DCBAE2326E95800F7FD7C /* WSListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSListing.swift; sourceTree = "<group>"; };
-		F62AAA83218FDF2F00C650A5 /* ShowTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTimeCell.swift; sourceTree = "<group>"; };
-		F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingConfirmationViewController.swift; sourceTree = "<group>"; };
 		F62BEEE52108EFF300006DC0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaterULoginScreenVC.swift; sourceTree = "<group>"; };
-		F6412C1D2207F9EC00C2927E /* EligibleSchoolCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EligibleSchoolCustomCell.swift; sourceTree = "<group>"; };
-		F6481F9A2241C1FC003D9E2D /* StepperTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperTableViewCell.swift; sourceTree = "<group>"; };
-		F648600A21EE51C10053D54E /* PinVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVerificationViewController.swift; sourceTree = "<group>"; };
 		F6491E3A235FAB0C00D6C715 /* PickUpScreenLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpScreenLine.swift; sourceTree = "<group>"; };
-		F657636E2190A5E0004B0C0A /* DateChangedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateChangedProtocol.swift; sourceTree = "<group>"; };
 		F65A60372188BADC00DB7338 /* CreateNewListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateNewListing.swift; path = ../View/CreateNewListing.swift; sourceTree = "<group>"; };
 		F69BDB3F20FA55780065BB78 /* BWFoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWFoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69BDB4220FA55780065BB78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,10 +56,6 @@
 		F69BDB5320FA55790065BB78 /* BWFoodAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BWFoodAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69BDB5720FA557A0065BB78 /* BWFoodAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWFoodAppTests.swift; sourceTree = "<group>"; };
 		F69BDB5920FA557A0065BB78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F69BDB6220FA56F40065BB78 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		F69BDB6420FACC8A0065BB78 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		F6A4F97021E52FFA007020EC /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		F6DBCAB02199DF0A00AB2A21 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,16 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */,
-				F69BDB6420FACC8A0065BB78 /* ThirdViewController.swift */,
 				F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */,
-				F62BEEB72106273500006DC0 /* PostingConfirmationViewController.swift */,
-				F648600A21EE51C10053D54E /* PinVerificationViewController.swift */,
 				F65A60372188BADC00DB7338 /* CreateNewListing.swift */,
-				5939E2C921EBCCBB005AE617 /* ShowEligibleSchoolsViewController.swift */,
-				F69BDB6220FA56F40065BB78 /* SecondViewController.swift */,
-				F657636E2190A5E0004B0C0A /* DateChangedProtocol.swift */,
 				F62BEEE52108EFF300006DC0 /* MapViewController.swift */,
-				F613A8E22217DFC400C6A6A0 /* CampusEventsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -141,14 +106,7 @@
 		F61C175F22DBA814008313FD /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F6481F9A2241C1FC003D9E2D /* StepperTableViewCell.swift */,
-				F6A4F97021E52FFA007020EC /* CustomTableViewCell.swift */,
-				F61C175D22DAAD16008313FD /* CameraCell.swift */,
-				F6412C1D2207F9EC00C2927E /* EligibleSchoolCustomCell.swift */,
 				E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */,
-				F6DBCAB02199DF0A00AB2A21 /* DatePickerTableViewCell.swift */,
-				F62AAA83218FDF2F00C650A5 /* ShowTimeCell.swift */,
-				F613A8DC2217DE7F00C6A6A0 /* CampusEventCell.swift */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -310,30 +268,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F69BDB6320FA56F40065BB78 /* SecondViewController.swift in Sources */,
-				F6481F9B2241C1FC003D9E2D /* StepperTableViewCell.swift in Sources */,
 				F6491E3B235FAB0C00D6C715 /* PickUpScreenLine.swift in Sources */,
-				F69BDB6520FACC8A0065BB78 /* ThirdViewController.swift in Sources */,
-				F6A4F97121E52FFA007020EC /* CustomTableViewCell.swift in Sources */,
-				F648600B21EE51C10053D54E /* PinVerificationViewController.swift in Sources */,
 				F61DCBAD2326E7C700F7FD7C /* Response.swift in Sources */,
-				F613A8E32217DFC400C6A6A0 /* CampusEventsViewController.swift in Sources */,
 				F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */,
 				F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */,
-				F6DBCAB12199DF0A00AB2A21 /* DatePickerTableViewCell.swift in Sources */,
-				F657636F2190A5E0004B0C0A /* DateChangedProtocol.swift in Sources */,
-				F61C175E22DAAD16008313FD /* CameraCell.swift in Sources */,
-				F62AAA84218FDF2F00C650A5 /* ShowTimeCell.swift in Sources */,
 				E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */,
-				F613A8DD2217DE7F00C6A6A0 /* CampusEventCell.swift in Sources */,
-				F6412C1E2207F9EC00C2927E /* EligibleSchoolCustomCell.swift in Sources */,
-				5939E2CA21EBCCBB005AE617 /* ShowEligibleSchoolsViewController.swift in Sources */,
 				E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */,
 				F61DCBAF2326E95800F7FD7C /* WSListing.swift in Sources */,
 				F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */,
 				F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */,
 				F6179EE9235E924C00299A9C /* Line.swift in Sources */,
-				F62BEEB82106273500006DC0 /* PostingConfirmationViewController.swift in Sources */,
 				F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
