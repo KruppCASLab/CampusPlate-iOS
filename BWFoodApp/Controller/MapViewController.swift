@@ -107,12 +107,6 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         }
     }
     
-    @IBAction func goToCreateListingScreen(_ sender: Any){
-    
-        
-        
-    }
-    
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "goToListingScreen" {
