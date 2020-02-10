@@ -18,6 +18,9 @@
 		F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */; };
 		F6491E3B235FAB0C00D6C715 /* PickUpScreenLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6491E3A235FAB0C00D6C715 /* PickUpScreenLine.swift */; };
 		F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A60372188BADC00DB7338 /* CreateNewListing.swift */; };
+		F6788FFF23E7C037009FC4C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6788FFE23E7C037009FC4C6 /* User.swift */; };
+		F678900123E7C1A1009FC4C6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F678900023E7C1A1009FC4C6 /* UserModel.swift */; };
+		F678900323EB4261009FC4C6 /* EnterPinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F678900223EB4261009FC4C6 /* EnterPinVC.swift */; };
 		F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB4220FA55780065BB78 /* AppDelegate.swift */; };
 		F69BDB4820FA55780065BB78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4620FA55780065BB78 /* Main.storyboard */; };
 		F69BDB4A20FA55790065BB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4920FA55790065BB78 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 		F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaterULoginScreenVC.swift; sourceTree = "<group>"; };
 		F6491E3A235FAB0C00D6C715 /* PickUpScreenLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpScreenLine.swift; sourceTree = "<group>"; };
 		F65A60372188BADC00DB7338 /* CreateNewListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateNewListing.swift; path = ../View/CreateNewListing.swift; sourceTree = "<group>"; };
+		F6788FFE23E7C037009FC4C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F678900023E7C1A1009FC4C6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		F678900223EB4261009FC4C6 /* EnterPinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPinVC.swift; sourceTree = "<group>"; };
 		F69BDB3F20FA55780065BB78 /* BWFoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWFoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69BDB4220FA55780065BB78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F69BDB4720FA55780065BB78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				E00850F9212B00650057B2B5 /* ListingModel.swift */,
+				F678900023E7C1A1009FC4C6 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -97,6 +104,7 @@
 			children = (
 				F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */,
 				F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */,
+				F678900223EB4261009FC4C6 /* EnterPinVC.swift */,
 				F65A60372188BADC00DB7338 /* CreateNewListing.swift */,
 				F62BEEE52108EFF300006DC0 /* MapViewController.swift */,
 			);
@@ -115,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				F61DCBAE2326E95800F7FD7C /* WSListing.swift */,
+				F6788FFE23E7C037009FC4C6 /* User.swift */,
 				F61DCBAC2326E7C700F7FD7C /* Response.swift */,
 			);
 			path = Types;
@@ -269,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6491E3B235FAB0C00D6C715 /* PickUpScreenLine.swift in Sources */,
+				F6788FFF23E7C037009FC4C6 /* User.swift in Sources */,
 				F61DCBAD2326E7C700F7FD7C /* Response.swift in Sources */,
 				F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */,
 				F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */,
@@ -277,6 +287,8 @@
 				F61DCBAF2326E95800F7FD7C /* WSListing.swift in Sources */,
 				F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */,
 				F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */,
+				F678900123E7C1A1009FC4C6 /* UserModel.swift in Sources */,
+				F678900323EB4261009FC4C6 /* EnterPinVC.swift in Sources */,
 				F6179EE9235E924C00299A9C /* Line.swift in Sources */,
 				F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */,
 			);

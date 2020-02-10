@@ -12,7 +12,7 @@ import MapKit
 class ListingModel {
     private var listings = Array<WSListing>()
     
-    private let url = URL(string: "https://mops.bw.edu/food/rest.php/listings")
+    private let url = URL(string: "https://mopsdev.bw.edu/food/rest.php/listings")
     
     private static let sharedInstance = ListingModel()
     let session = URLSession.shared
@@ -45,6 +45,8 @@ class ListingModel {
     public func getListing(index:Int) -> WSListing {
         return self.listings[index]
     }
+    
+    
     
     public func addListing(listing:WSListing, completion:@escaping (Bool)->Void) {
         self.listings.append(listing)
@@ -86,8 +88,6 @@ class ListingModel {
             
         }
     }
-    
-    
     
     public func removeListing(index:Int) {
         self.listings.remove(at: index)

@@ -28,6 +28,7 @@ class PickUpFoodViewController: UIViewController {
 
     @IBOutlet weak var claimButton: UIButton!
     
+    @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView!
     
     
     public var listing:WSListing!
@@ -40,10 +41,18 @@ class PickUpFoodViewController: UIViewController {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
         
     }
+
     
     @IBAction func claimButton(_ sender: Any) {
         
-        listingModel.updateQuantity(listingID: listing.listingId!, releventQuantity: listing.quantity!) { (completed) in
+        claimButton.isEnabled = false
+        ActivityIndicator.isHidden = false
+        
+        ActivityIndicator.startAnimating()
+        claimButton.alpha = 0.5
+        
+        
+        listingModel.updateQuantity(listingID: listing.listingId!, releventQuantity: Int(quantityLabel.text!)!) { (completed) in
             if (!completed) {
                 let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
                 DispatchQueue.main.async {
@@ -51,7 +60,6 @@ class PickUpFoodViewController: UIViewController {
                 }
             }else {
                 DispatchQueue.main.async {
-                    
                     self.delegate?.didComplete()
                 }
            }
@@ -80,6 +88,7 @@ class PickUpFoodViewController: UIViewController {
         super.viewDidLoad()
     
         locationSubLocation.text = listing.locationDescription
+        ActivityIndicator.isHidden = true
         
         let dataDecoded : Data = Data(base64Encoded: listing.image! , options: .ignoreUnknownCharacters)!
         let decodedimage = UIImage(data: dataDecoded)

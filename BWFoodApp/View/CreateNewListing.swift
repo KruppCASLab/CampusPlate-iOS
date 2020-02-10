@@ -129,10 +129,6 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         {
             foodImage.image = image //set image
-            //TODO: Base 64 Encode from here
-//            let imageData:Data = image.jpegData(compressionQuality: 0.1)! as Data
-//            let imageBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
-            //print(imageBase64)
        
         }else{
             //error message
@@ -176,15 +172,10 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
             }
             else {
                 DispatchQueue.main.async {
-                    self.presentingViewController?.dismiss(animated: true, completion: nil)
-                    
                     self.delegate?.didComplete()
                 }
             }
         }
-        
-        mapViewDelegate?.refreshMap()
-        mapViewDelegate?.tableView.reloadData()
         
     }
     

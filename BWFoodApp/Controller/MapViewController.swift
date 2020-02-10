@@ -101,6 +101,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     func didComplete() {
         listingModel.loadListings { (completed) in
             DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
                 self.tableView.reloadData()
                 self.refreshMap()
             }
@@ -123,12 +124,14 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
                 let listing = self.listingModel.getListing(index: indexPath.row)
                 foodVC.listing = listing
                 foodVC.indexPathOfListing = indexPath
+                foodVC.delegate = self
             }
             
         }
         else if let navVc = segue.destination as? UINavigationController {
             if let createVc = navVc.viewControllers[0] as? CreateNewListing {
                 createVc.delegate = self
+    
             }
             
         }
