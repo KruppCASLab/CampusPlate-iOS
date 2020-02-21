@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */; };
 		E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F9212B00650057B2B5 /* ListingModel.swift */; };
+		E05F76E724005C2B006E29AF /* PinVerifyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */; };
+		E05F76E924005C43006E29AF /* ListingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F76E824005C43006E29AF /* ListingResponse.swift */; };
 		F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */; };
 		F61379B9235CBEEA008CF83F /* CampusPlateLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F61379B8235CBEE9008CF83F /* CampusPlateLogo.png */; };
 		F6179EE9235E924C00299A9C /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6179EE8235E924C00299A9C /* Line.swift */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListingTableViewCell.swift; sourceTree = "<group>"; };
 		E00850F9212B00650057B2B5 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
+		E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVerifyResponse.swift; sourceTree = "<group>"; };
+		E05F76E824005C43006E29AF /* ListingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingResponse.swift; sourceTree = "<group>"; };
 		F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpFoodViewController.swift; sourceTree = "<group>"; };
 		F61379B8235CBEE9008CF83F /* CampusPlateLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CampusPlateLogo.png; sourceTree = "<group>"; };
 		F6179EE8235E924C00299A9C /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 				F61DCBAE2326E95800F7FD7C /* WSListing.swift */,
 				F6788FFE23E7C037009FC4C6 /* User.swift */,
 				F61DCBAC2326E7C700F7FD7C /* Response.swift */,
+				E05F76E824005C43006E29AF /* ListingResponse.swift */,
+				E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -283,8 +289,10 @@
 				F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */,
 				F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */,
 				E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */,
+				E05F76E724005C2B006E29AF /* PinVerifyResponse.swift in Sources */,
 				E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */,
 				F61DCBAF2326E95800F7FD7C /* WSListing.swift in Sources */,
+				E05F76E924005C43006E29AF /* ListingResponse.swift in Sources */,
 				F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */,
 				F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */,
 				F678900123E7C1A1009FC4C6 /* UserModel.swift in Sources */,

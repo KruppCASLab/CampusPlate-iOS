@@ -42,14 +42,19 @@ class UserModel {
         
         // TODO : Add to URL listingId
         let patchUrl = self.url?.appendingPathComponent(userName)
+    
         
         var request = URLRequest(url: patchUrl!)
         
         request.httpMethod = "PATCH"
         
+        var userUpdate = Dictionary<String, Int>()
+        userUpdate["pin"] = pin
+        
         let encoder = JSONEncoder()
         do{
-            let data = try encoder.encode(pin)
+            //TODO:
+            let data = try encoder.encode(userUpdate)
             session.uploadTask(with: request, from: data) { (data, response, error) in
                 completion(true)
             }.resume()

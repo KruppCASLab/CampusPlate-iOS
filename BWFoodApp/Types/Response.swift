@@ -9,7 +9,6 @@
 import Foundation
 
 public class Response: Codable {
-    public var data:[WSListing]?
     public var status:Int?
     public var error:String?
     
