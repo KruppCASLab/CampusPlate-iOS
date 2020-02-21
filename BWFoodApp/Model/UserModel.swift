@@ -20,11 +20,6 @@ class UserModel {
         return self.sharedInstance
     }
     
-    
-    public func update() {
-        //TODO: Call service client to update
-    }
-    
     public func addUser(user:User, completion:@escaping (Bool)->Void) {
         self.users.append(user)
         var request = URLRequest(url: self.url!)
@@ -34,6 +29,27 @@ class UserModel {
         let encoder = JSONEncoder()
         do {
             let data = try encoder.encode(user)
+            session.uploadTask(with: request, from: data) { (data, response, error) in
+                completion(true)
+            }.resume()
+        }
+        catch {
+            
+        }
+    }
+    
+    public func updateAccountVerificationFlag(userName: String, pin: Int, completion:@escaping (Bool)->Void) {
+        
+        // TODO : Add to URL listingId
+        let patchUrl = self.url?.appendingPathComponent(userName)
+        
+        var request = URLRequest(url: patchUrl!)
+        
+        request.httpMethod = "PATCH"
+        
+        let encoder = JSONEncoder()
+        do{
+            let data = try encoder.encode(pin)
             session.uploadTask(with: request, from: data) { (data, response, error) in
                 completion(true)
             }.resume()

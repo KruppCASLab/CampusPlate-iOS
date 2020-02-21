@@ -58,6 +58,7 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
         
     }
     
+    var user:User = User(username: "",password: "",emailAddress: "")
     
     @IBAction func register(_ sender: Any) {
         
@@ -73,7 +74,7 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
             username = String(emailAddress.prefix(upTo: index))
         }
         
-        let user = User(username: username, password: password, emailAddress: emailAddress)
+        user = User(username: username, password: password, emailAddress: emailAddress)
         
         userModel.addUser(user:user) { (completed) in
             if (!completed) {
@@ -85,7 +86,6 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
             }
             else {
                 DispatchQueue.main.async {
-                    
                     self.performSegue(withIdentifier: "goToPinScreen", sender: nil)
                     
                 }
@@ -93,6 +93,7 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
             
         }
     }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -110,15 +111,27 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
         
     }
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
+        //TODO: DO IT HERE AND PASS THE USERNAME!
+        if let destinationVC = segue.destination as? EnterPinVC {
+            
+            destinationVC.userName = user.username!
+            
+        }
+        
+        
      }
-     */
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return false
+    }
+     
     
     
 }

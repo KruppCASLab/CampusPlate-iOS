@@ -13,7 +13,7 @@ public class User: Codable {
     public var password:String?
     public var emailAddress:String?
     
- 
+    
     init(username: String, password: String, emailAddress: String) {
         self.username = username
         self.password = password
