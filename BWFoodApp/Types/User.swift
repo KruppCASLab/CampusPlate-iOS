@@ -9,14 +9,17 @@
 import Foundation
 
 public class User: Codable {
-    public var username:String?
+    public var userName:String?
     public var password:String?
-    public var emailAddress:String?
+
+
+    init(userName: String) {
+        self.userName = userName
+    }
     
-    
-    init(username: String, password: String, emailAddress: String) {
-        self.username = username
+    init(userName: String, password: String) {
+        self.userName = userName
         self.password = password
-        self.emailAddress = emailAddress
     }
 }
+ 

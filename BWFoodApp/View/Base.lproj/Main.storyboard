@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,68 +29,63 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5b-RR-0EG">
-                                <rect key="frame" x="84" y="471" width="84" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dxy-nC-JUK">
-                                <rect key="frame" x="84" y="500" width="213" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Nug-tK-SK8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Njs-h9-sff">
                                 <rect key="frame" x="16" y="757" width="343" height="30"/>
                                 <state key="normal" title="Cant register? Check the eligible school list.">
                                     <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" placeholder="  " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S8A-Nf-x7S">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="  " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S8A-Nf-x7S">
                                 <rect key="frame" x="84" y="423" width="213" height="40"/>
+                                <color key="backgroundColor" name="bgcolor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="fl2-er-dJA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyy-Is-Frv">
-                                <rect key="frame" x="136" y="578" width="103" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyy-Is-Frv" customClass="CPButton" customModule="BWFoodApp" customModuleProvider="target">
+                                <rect key="frame" x="81" y="605" width="213" height="30"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="O8G-Ar-wK9"/>
+                                    <constraint firstAttribute="width" constant="213" id="sMC-9q-Le8"/>
                                 </constraints>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="frame.height">
+                                        <integer key="value" value="1200"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="frame.width">
+                                        <integer key="value" value="500"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="register:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f9q-Qa-Aio"/>
                                     <segue destination="ZtP-yc-jJo" kind="presentation" identifier="goToPinScreen" modalPresentationStyle="fullScreen" id="dPc-AC-SSq"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="bgcolor"/>
                         <constraints>
-                            <constraint firstItem="S8A-Nf-x7S" firstAttribute="trailing" secondItem="dxy-nC-JUK" secondAttribute="trailing" id="1Zn-9X-bjr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jyy-Is-Frv" secondAttribute="bottom" constant="143" id="1Wx-NK-kPU"/>
                             <constraint firstItem="Jyy-Is-Frv" firstAttribute="centerX" secondItem="Njs-h9-sff" secondAttribute="centerX" id="3IM-kt-jzs"/>
-                            <constraint firstItem="n5b-RR-0EG" firstAttribute="leading" secondItem="dxy-nC-JUK" secondAttribute="leading" id="9ab-rs-SGt"/>
+                            <constraint firstItem="Jyy-Is-Frv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="81" id="7gj-0T-bOp"/>
                             <constraint firstItem="O1l-js-KqJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="129" id="AJO-gx-j6l"/>
                             <constraint firstItem="S8A-Nf-x7S" firstAttribute="top" secondItem="teX-Bb-MqN" secondAttribute="bottom" constant="3" id="EbP-7b-Elr"/>
-                            <constraint firstItem="Jyy-Is-Frv" firstAttribute="top" secondItem="dxy-nC-JUK" secondAttribute="bottom" constant="38" id="OFM-vP-1zJ"/>
                             <constraint firstItem="teX-Bb-MqN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="PTm-fo-yxR"/>
                             <constraint firstItem="O1l-js-KqJ" firstAttribute="centerX" secondItem="Jyy-Is-Frv" secondAttribute="centerX" id="Q2G-lK-LcC"/>
-                            <constraint firstItem="Jyy-Is-Frv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136" id="R4w-Uo-xmD"/>
-                            <constraint firstItem="dxy-nC-JUK" firstAttribute="top" secondItem="n5b-RR-0EG" secondAttribute="bottom" constant="5" id="SFU-Tz-8s1"/>
                             <constraint firstItem="O1l-js-KqJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="V6I-Cm-fh2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jyy-Is-Frv" secondAttribute="trailing" constant="81" id="XjF-Vv-bgK"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Njs-h9-sff" secondAttribute="bottom" constant="-9" id="ZIz-Fg-5tV"/>
-                            <constraint firstItem="S8A-Nf-x7S" firstAttribute="leading" secondItem="n5b-RR-0EG" secondAttribute="leading" id="bg7-w3-ss7"/>
-                            <constraint firstItem="n5b-RR-0EG" firstAttribute="top" secondItem="S8A-Nf-x7S" secondAttribute="bottom" constant="8" id="bq3-Xq-tJq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S8A-Nf-x7S" secondAttribute="trailing" constant="78" id="hRH-8b-Skx"/>
                             <constraint firstItem="Njs-h9-sff" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hxT-IQ-5pH"/>
                             <constraint firstItem="Njs-h9-sff" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="pvq-8U-Nbc"/>
+                            <constraint firstItem="Jyy-Is-Frv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xGU-er-WGc"/>
                             <constraint firstItem="teX-Bb-MqN" firstAttribute="top" secondItem="O1l-js-KqJ" secondAttribute="bottom" constant="95" id="yJx-ak-irS"/>
                             <constraint firstItem="teX-Bb-MqN" firstAttribute="leading" secondItem="S8A-Nf-x7S" secondAttribute="leading" id="zxH-si-OiP"/>
                         </constraints>
@@ -97,8 +93,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="0Kt-Gd-EdK"/>
                     <connections>
-                        <outlet property="passwordField" destination="dxy-nC-JUK" id="VO3-MV-RqQ"/>
-                        <outlet property="passwordLabel" destination="n5b-RR-0EG" id="QPp-wd-dCZ"/>
                         <outlet property="signInButton" destination="Jyy-Is-Frv" id="H9L-rV-89y"/>
                         <outlet property="studentEmailField" destination="S8A-Nf-x7S" id="yUm-B7-Qo2"/>
                         <outlet property="studentEmailLabel" destination="teX-Bb-MqN" id="MBe-nT-oNH"/>
@@ -106,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2150" y="132"/>
+            <point key="canvasLocation" x="2149.5999999999999" y="131.52709359605913"/>
         </scene>
         <!--Listings-->
         <scene sceneID="D1Z-ip-IiF">
@@ -700,6 +694,9 @@
         <image name="CampusPlateLogo.png" width="1289" height="293"/>
         <image name="camera.fill" catalog="system" width="64" height="48"/>
         <image name="plus" catalog="system" width="64" height="56"/>
+        <namedColor name="bgcolor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
     <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

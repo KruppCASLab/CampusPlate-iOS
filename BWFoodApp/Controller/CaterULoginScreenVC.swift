@@ -16,7 +16,6 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var studentEmailField: UITextField!
     
-    @IBOutlet weak var passwordField: UITextField!
     
     @IBOutlet weak var signInButton: UIButton!
     
@@ -28,37 +27,13 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
         signInButton.isEnabled = true
         signInButton.alpha = 1.0
         
-        let leftView = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
-        
-        let leftView2 = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
-        
-        studentEmailField.layer.cornerRadius = 16
-        studentEmailField.layer.borderWidth = 1
-        studentEmailField.layer.borderColor = UIColor.systemOrange.cgColor
-        
-        studentEmailField.leftView = leftView
-        studentEmailField.leftViewMode = .always
-        studentEmailField.contentVerticalAlignment = .center
-        
         studentEmailField.delegate = self
         studentEmailField.returnKeyType = .done
-        
-        passwordField.layer.cornerRadius = 16
-        passwordField.layer.borderWidth = 1
-        passwordField.layer.borderColor = UIColor.systemOrange.cgColor
-        
-        passwordField.leftView = leftView2
-        passwordField.leftViewMode = .always
-        passwordField.contentVerticalAlignment = .center
-        
-        passwordField.delegate = self
-        passwordField.returnKeyType = .done
-        
-        signInButton.layer.cornerRadius = 16
+
         
     }
     
-    var user:User = User(username: "",password: "",emailAddress: "")
+    var user:User = User(username: "",password: nil,emailAddress: "")
     
     @IBAction func register(_ sender: Any) {
         
@@ -66,7 +41,7 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
         signInButton.alpha = 0.5
         
         let emailAddress = (studentEmailField.text) ?? ""
-        let password = (passwordField.text) ?? ""
+ 
         
         var username = ""
         
@@ -74,7 +49,7 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
             username = String(emailAddress.prefix(upTo: index))
         }
         
-        user = User(username: username, password: password, emailAddress: emailAddress)
+        user = User(username: username, password: "", emailAddress: emailAddress)
         
         userModel.addUser(user:user) { (completed) in
             if (!completed) {
@@ -98,7 +73,6 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         studentEmailField.resignFirstResponder()
-        passwordField.resignFirstResponder()
         
         return true
     }
