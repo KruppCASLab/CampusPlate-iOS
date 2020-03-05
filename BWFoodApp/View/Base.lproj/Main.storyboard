@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xtO-PN-PxH">
     <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,8 +44,8 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyy-Is-Frv" customClass="CPButton" customModule="BWFoodApp" customModuleProvider="target">
-                                <rect key="frame" x="81" y="605" width="213" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyy-Is-Frv" customClass="CPButton" customModule="BWFoodApp" customModuleProvider="target">
+                                <rect key="frame" x="84" y="553" width="213" height="54"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="213" id="sMC-9q-Le8"/>
@@ -112,7 +112,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RtO-O8-pSg">
                                 <rect key="frame" x="0.0" y="564" width="375" height="248"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="bgcolor"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -126,12 +126,12 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza Slices" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grr-Ai-ieB">
                                                     <rect key="frame" x="10" y="12" width="284" height="23"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" name="bgcolor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="284" id="MEg-ko-fTI"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location - Sub Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbs-tK-zAn">
@@ -144,7 +144,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="bgcolor"/>
                                             <constraints>
                                                 <constraint firstItem="Grr-Ai-ieB" firstAttribute="leading" secondItem="zbs-tK-zAn" secondAttribute="leading" id="0Oe-ty-1sA"/>
                                                 <constraint firstItem="zbs-tK-zAn" firstAttribute="top" secondItem="Grr-Ai-ieB" secondAttribute="bottom" constant="13" id="6RU-4k-sNt"/>
@@ -154,7 +154,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="zbs-tK-zAn" secondAttribute="bottom" constant="7" id="uzl-lv-hjw"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="bgcolor"/>
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="food" destination="Grr-Ai-ieB" id="Gyb-Qb-hzr"/>
@@ -172,9 +172,11 @@
                             </tableView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="re8-fk-STR">
                                 <rect key="frame" x="0.0" y="88" width="375" height="432"/>
+                                <color key="backgroundColor" name="bgcolor"/>
                             </mapView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gX4-ZR-l6V">
+                            <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="gX4-ZR-l6V">
                                 <rect key="frame" x="0.0" y="520" width="375" height="44"/>
+                                <color key="backgroundColor" name="bgcolor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="osV-3c-GKc"/>
                                 </constraints>
@@ -188,7 +190,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="yNU-tX-Xy3"/>
                                         </constraints>
-                                        <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Wait..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2O-DA-L3j">
                                         <rect key="frame" x="13" y="8.0000000000000018" width="103" height="20.666666666666671"/>
@@ -203,7 +205,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="r1l-FV-5Oi" firstAttribute="top" secondItem="0Dl-d1-oDn" secondAttribute="bottom" constant="8.3333333333333144" id="49F-jo-MzU"/>
                                     <constraint firstItem="K2O-DA-L3j" firstAttribute="centerX" secondItem="5v9-oc-rlb" secondAttribute="centerX" id="99z-qf-4Tr"/>
@@ -218,7 +220,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" name="bgcolor"/>
                         <constraints>
                             <constraint firstItem="gX4-ZR-l6V" firstAttribute="top" secondItem="5v9-oc-rlb" secondAttribute="bottom" constant="50" id="2g8-9t-WJa"/>
                             <constraint firstItem="RtO-O8-pSg" firstAttribute="top" secondItem="gX4-ZR-l6V" secondAttribute="bottom" id="JdF-7J-DbO"/>
@@ -250,6 +252,7 @@
                         <outlet property="activityText1" destination="K2O-DA-L3j" id="xer-Fp-ja0"/>
                         <outlet property="activityText2" destination="r1l-FV-5Oi" id="tbi-J2-uPt"/>
                         <outlet property="activityView" destination="5v9-oc-rlb" id="1Vs-00-tqs"/>
+                        <outlet property="loadingBackground" destination="5v9-oc-rlb" id="YSF-O8-wKg"/>
                         <outlet property="mapView" destination="re8-fk-STR" id="jIt-fd-6QD"/>
                         <outlet property="tableView" destination="RtO-O8-pSg" id="nmG-TR-fAl"/>
                     </connections>
@@ -360,16 +363,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyX-5w-Q1C">
-                                <rect key="frame" x="37" y="724" width="300" height="54"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="CLAIM">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="claimButton:" destination="TYf-UR-E0w" eventType="touchUpInside" id="ioG-Q4-Am2"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utb-0v-J9I">
                                 <rect key="frame" x="314" y="601" width="45" height="17"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
@@ -380,8 +373,18 @@
                                 <rect key="frame" x="165" y="729" width="46" height="44"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyX-5w-Q1C">
+                                <rect key="frame" x="38" y="724" width="300" height="54"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="CLAIM">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="claimButton:" destination="TYf-UR-E0w" eventType="touchUpInside" id="ioG-Q4-Am2"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="bgcolor"/>
                         <constraints>
                             <constraint firstItem="Y62-X4-9tz" firstAttribute="top" secondItem="kVz-yh-L4J" secondAttribute="bottom" constant="54" id="0nr-5x-KMI"/>
                             <constraint firstAttribute="trailing" secondItem="1MY-B8-6Cv" secondAttribute="trailing" constant="143.33333333333334" id="3Zu-zF-tXR"/>
@@ -468,7 +471,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsg-n2-0mV">
-                                <rect key="frame" x="41" y="655" width="300" height="54"/>
+                                <rect key="frame" x="37" y="670" width="300" height="54"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="POST">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -501,13 +504,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ngA-0s-CaN">
-                                <rect key="frame" x="168" y="660" width="46" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="f9f-Ec-6D2"/>
-                                </constraints>
-                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
-                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE A LISTING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJD-7l-QIx">
                                 <rect key="frame" x="56" y="114" width="271" height="41"/>
                                 <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="30"/>
@@ -516,7 +512,7 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4il-OR-OK6">
                                 <rect key="frame" x="46" y="442" width="293" height="124"/>
-                                <color key="backgroundColor" red="0.88911959914232341" green="0.86472715144728896" blue="0.89691069162436543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="bgcolor"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAw-om-o26">
                                 <rect key="frame" x="171" y="489" width="42" height="30"/>
@@ -528,8 +524,15 @@
                                     <action selector="takePicture:" destination="3vD-Xu-yWT" eventType="touchUpInside" id="ccr-FK-K2p"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ngA-0s-CaN">
+                                <rect key="frame" x="164" y="675" width="46" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="f9f-Ec-6D2"/>
+                                </constraints>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="bgcolor"/>
                         <constraints>
                             <constraint firstItem="PiM-jX-Qr8" firstAttribute="top" secondItem="vlx-Yl-fSK" secondAttribute="bottom" constant="12" id="1vE-eI-UGb"/>
                             <constraint firstItem="dsg-n2-0mV" firstAttribute="centerX" secondItem="ngA-0s-CaN" secondAttribute="centerX" id="2tJ-Ez-K8c"/>
@@ -614,11 +617,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUJ-fU-rJr">
-                                <rect key="frame" x="93" y="580" width="188" height="30"/>
+                                <rect key="frame" x="84" y="553" width="213" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Submit">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="submitPinButton:" destination="ZtP-yc-jJo" eventType="touchUpInside" id="wwE-P1-3wG"/>
@@ -639,7 +642,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="bgcolor"/>
                         <viewLayoutGuide key="safeArea" id="tec-el-4it"/>
                     </view>
                     <connections>

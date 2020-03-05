@@ -33,7 +33,7 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
         
     }
     
-    var user:User = User(username: "",password: nil,emailAddress: "")
+    var user:User = User(userName: "")
     
     @IBAction func register(_ sender: Any) {
         
@@ -49,7 +49,7 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
             username = String(emailAddress.prefix(upTo: index))
         }
         
-        user = User(username: username, password: "", emailAddress: emailAddress)
+        user = User(userName: username)
         
         userModel.addUser(user:user) { (completed) in
             if (!completed) {
@@ -95,7 +95,7 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
         //TODO: DO IT HERE AND PASS THE USERNAME!
         if let destinationVC = segue.destination as? EnterPinVC {
             
-            destinationVC.userName = user.username!
+            destinationVC.userName = user.userName!
             
         }
         

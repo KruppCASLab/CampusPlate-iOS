@@ -33,8 +33,13 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     @IBOutlet weak var activityText1: UILabel!
     @IBOutlet weak var activityText2: UILabel!
     
+    @IBOutlet weak var loadingBackground: UIView!
+    
+    
 
     override func viewWillAppear(_ animated: Bool) {
+        
+        loadingBackground.layer.cornerRadius = 20
         
         listingModel.loadListings { (completed) in
             DispatchQueue.main.async {

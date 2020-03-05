@@ -10,5 +10,6 @@ import Foundation
 
 public class ListingResponse : Response {
     public var data:[WSListing]?
+    
 }
 
