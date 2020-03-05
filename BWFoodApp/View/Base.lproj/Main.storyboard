@@ -205,7 +205,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="Color-1"/>
                                 <constraints>
                                     <constraint firstItem="r1l-FV-5Oi" firstAttribute="top" secondItem="0Dl-d1-oDn" secondAttribute="bottom" constant="8.3333333333333144" id="49F-jo-MzU"/>
                                     <constraint firstItem="K2O-DA-L3j" firstAttribute="centerX" secondItem="5v9-oc-rlb" secondAttribute="centerX" id="99z-qf-4Tr"/>
@@ -602,20 +602,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJs-IZ-1Od">
-                                <rect key="frame" x="139" y="389" width="97" height="34"/>
+                                <rect key="frame" x="139" y="423" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="bgcolor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lug-b3-PZp">
-                                <rect key="frame" x="24" y="748" width="326" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Did'nt receive code? Try Reentering information"/>
-                                <connections>
-                                    <action selector="reEnterInfoButton:" destination="ZtP-yc-jJo" eventType="touchUpInside" id="Cj2-Fv-atg"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToRegisterScreen" modalPresentationStyle="fullScreen" id="0Ai-fL-RDd"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUJ-fU-rJr">
                                 <rect key="frame" x="84" y="553" width="213" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -627,18 +620,20 @@
                                     <action selector="submitPinButton:" destination="ZtP-yc-jJo" eventType="touchUpInside" id="wwE-P1-3wG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lug-b3-PZp">
+                                <rect key="frame" x="27" y="748" width="326" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Did'nt receive code? Try Reentering information"/>
+                                <connections>
+                                    <action selector="reEnterInfoButton:" destination="ZtP-yc-jJo" eventType="touchUpInside" id="Cj2-Fv-atg"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToRegisterScreen" modalPresentationStyle="fullScreen" id="0Ai-fL-RDd"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Pin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh5-eH-yZt">
-                                <rect key="frame" x="124" y="155" width="126" height="40"/>
+                                <rect key="frame" x="124" y="173" width="126" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PuL-Pg-zCE">
-                                <rect key="frame" x="166" y="293" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -647,7 +642,6 @@
                     </view>
                     <connections>
                         <outlet property="enterPinField" destination="KJs-IZ-1Od" id="eU3-QI-5wD"/>
-                        <outlet property="label" destination="PuL-Pg-zCE" id="qS0-9S-Mx4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0l-jZ-It8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -697,12 +691,12 @@
         <image name="CampusPlateLogo.png" width="1289" height="293"/>
         <image name="camera.fill" catalog="system" width="64" height="48"/>
         <image name="plus" catalog="system" width="64" height="56"/>
+        <namedColor name="Color-1">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
         <namedColor name="bgcolor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="dPc-AC-SSq"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
