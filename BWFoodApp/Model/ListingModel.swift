@@ -26,6 +26,7 @@ class ListingModel {
             let decoder = JSONDecoder()
             
             do {
+                let jsonString = String(data: data!, encoding: .utf8)
                 let response = try decoder.decode(ListingResponse.self, from: data!)
                 self.listings = response.data!
                 completion(true)

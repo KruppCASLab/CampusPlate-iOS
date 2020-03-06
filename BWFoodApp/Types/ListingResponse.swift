@@ -8,8 +8,9 @@
 
 import Foundation
 
-public class ListingResponse : Response {
+public class ListingResponse : Codable {
+    public var status:Int?
+    public var error:String?
     public var data:[WSListing]?
-    
 }
 

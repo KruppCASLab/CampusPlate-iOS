@@ -8,6 +8,8 @@
 
 import Foundation
 
-public class PinVerifyResponse : Response {
-    public var data:String?
+public class PinVerifyResponse : Codable {
+    public var status:Int?
+    public var error:String?
+    public var data:GUID?
 }

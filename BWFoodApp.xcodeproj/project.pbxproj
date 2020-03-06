@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */; };
 		E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F9212B00650057B2B5 /* ListingModel.swift */; };
+		E02014B12412E71300C75D6A /* GUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02014B02412E71300C75D6A /* GUID.swift */; };
 		E05F76E724005C2B006E29AF /* PinVerifyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */; };
 		E05F76E924005C43006E29AF /* ListingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F76E824005C43006E29AF /* ListingResponse.swift */; };
 		F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListingTableViewCell.swift; sourceTree = "<group>"; };
 		E00850F9212B00650057B2B5 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
+		E02014B02412E71300C75D6A /* GUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUID.swift; sourceTree = "<group>"; };
 		E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVerifyResponse.swift; sourceTree = "<group>"; };
 		E05F76E824005C43006E29AF /* ListingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingResponse.swift; sourceTree = "<group>"; };
 		F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpFoodViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				F61DCBAC2326E7C700F7FD7C /* Response.swift */,
 				E05F76E824005C43006E29AF /* ListingResponse.swift */,
 				E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */,
+				E02014B02412E71300C75D6A /* GUID.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */,
 				E05F76E724005C2B006E29AF /* PinVerifyResponse.swift in Sources */,
 				E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */,
+				E02014B12412E71300C75D6A /* GUID.swift in Sources */,
 				F61DCBAF2326E95800F7FD7C /* WSListing.swift in Sources */,
 				E05F76E924005C43006E29AF /* ListingResponse.swift in Sources */,
 				F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */,

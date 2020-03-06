@@ -12,6 +12,4 @@ public class Response: Codable {
     public var status:Int?
     public var error:String?
     
-    init() {
-    }
 }
