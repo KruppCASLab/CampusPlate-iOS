@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CampusPlateLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="O1l-js-KqJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CampusPlateLogo-01.png" translatesAutoresizingMaskIntoConstraints="NO" id="O1l-js-KqJ">
                                 <rect key="frame" x="29" y="173" width="317" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="u4N-Uc-dzN"/>
@@ -205,7 +205,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="Color-1"/>
+                                <color key="backgroundColor" name="bgcolor"/>
                                 <constraints>
                                     <constraint firstItem="r1l-FV-5Oi" firstAttribute="top" secondItem="0Dl-d1-oDn" secondAttribute="bottom" constant="8.3333333333333144" id="49F-jo-MzU"/>
                                     <constraint firstItem="K2O-DA-L3j" firstAttribute="centerX" secondItem="5v9-oc-rlb" secondAttribute="centerX" id="99z-qf-4Tr"/>
@@ -618,6 +618,7 @@
                                 </state>
                                 <connections>
                                     <action selector="submitPinButton:" destination="ZtP-yc-jJo" eventType="touchUpInside" id="wwE-P1-3wG"/>
+                                    <segue destination="xtO-PN-PxH" kind="presentation" identifier="goToMap" modalPresentationStyle="fullScreen" id="RHB-v6-PJR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lug-b3-PZp">
@@ -688,12 +689,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CampusPlateLogo.png" width="1289" height="293"/>
+        <image name="CampusPlateLogo-01.png" width="1366.0799560546875" height="768"/>
         <image name="camera.fill" catalog="system" width="64" height="48"/>
         <image name="plus" catalog="system" width="64" height="56"/>
-        <namedColor name="Color-1">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </namedColor>
         <namedColor name="bgcolor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

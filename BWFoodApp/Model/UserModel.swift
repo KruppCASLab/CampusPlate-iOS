@@ -43,7 +43,6 @@ class UserModel {
         // TODO : Add to URL listingId
         let patchUrl = self.url?.appendingPathComponent(userName)
     
-        
         var request = URLRequest(url: patchUrl!)
         
         request.httpMethod = "PATCH"

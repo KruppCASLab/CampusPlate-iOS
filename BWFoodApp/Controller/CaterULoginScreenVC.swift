@@ -41,15 +41,8 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
         signInButton.alpha = 0.5
         
         let emailAddress = (studentEmailField.text) ?? ""
- 
         
-        var username = ""
-        
-        if let index = emailAddress.firstIndex(of: "@") {
-            username = String(emailAddress.prefix(upTo: index))
-        }
-        
-        user = User(userName: username)
+        user = User(userName: emailAddress)
         
         userModel.addUser(user:user) { (completed) in
             if (!completed) {

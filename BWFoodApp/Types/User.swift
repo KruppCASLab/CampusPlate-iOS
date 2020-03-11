@@ -11,6 +11,7 @@ import Foundation
 public class User: Codable {
     public var userName:String?
     public var password:String?
+    public var pin: Int?
 
 
     init(userName: String) {
@@ -20,6 +21,11 @@ public class User: Codable {
     init(userName: String, password: String) {
         self.userName = userName
         self.password = password
+    }
+    
+    init(userName: String, pin: Int) {
+        self.userName = userName
+        self.pin = pin
     }
 }
  

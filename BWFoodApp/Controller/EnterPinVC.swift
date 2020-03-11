@@ -13,7 +13,7 @@ protocol EnterPinDelegate {
 }
 
 
-class EnterPinVC: UIViewController {
+class EnterPinVC: UIViewController, UITextFieldDelegate {
     
     let userModel = UserModel.getSharedInstance()
     
@@ -23,14 +23,12 @@ class EnterPinVC: UIViewController {
     
     var userName = ""
     
-
-    @IBOutlet weak var label: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.text = userName
+        enterPinField.delegate = self
+        enterPinField.returnKeyType = .done
         // Do any additional setup after loading the view.
     }
     
@@ -42,21 +40,35 @@ class EnterPinVC: UIViewController {
     
     @IBAction func submitPinButton(_ sender: Any) {
         
-        let pinEntered = Int(enterPinField.text ?? "0") ?? 0
+        let pinEntered = Int(enterPinField.text!)!
         
-    userModel.updateAccountVerificationFlag(userName: userName, pin: pinEntered) { (completed) in
+        let user = User(userName: userName, pin: pinEntered)
+        
+        userModel.updateAccountVerificationFlag(userName: user.userName ?? "", pin: user.pin ?? 0) { (completed) in
             if (!completed) {
-                let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Incorrect Pin", message: "The pin you entered is not what we have on file, please go back and reenter your email.", preferredStyle: .alert)
                 DispatchQueue.main.async {
                     self.present(alert, animated: true, completion: nil)
                 }
             }else{
-                //perform segue to next screen
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "goToMap", sender: nil)
+                }
             }
         }
+    
         
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        enterPinField.resignFirstResponder()
+        
+        return true
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return false
+    }
     
     /*
     // MARK: - Navigation
