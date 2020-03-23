@@ -51,12 +51,22 @@ class UserModel {
         userUpdate["pin"] = pin
         
         let encoder = JSONEncoder()
+        
         do{
             //TODO:
             let data = try encoder.encode(userUpdate)
             session.uploadTask(with: request, from: data) { (data, response, error) in
-                //Todo: decode into pin verify response and then check response codes, if not 0 completion(false)
-                completion(true)
+                let decoder = JSONDecoder()
+                
+                //Todo: decode data into pin verify response and then check response codes, if not 0 completion(false)
+                do{
+                    let response = try decoder.decode(PinVerifyResponse.self, from: data!)
+                }
+                catch{
+                    
+                }
+
+                
             }.resume()
         }
         catch {

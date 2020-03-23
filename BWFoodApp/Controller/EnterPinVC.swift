@@ -23,12 +23,16 @@ class EnterPinVC: UIViewController, UITextFieldDelegate {
     
     var userName = ""
     
+    @IBOutlet weak var submitButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         enterPinField.delegate = self
         enterPinField.returnKeyType = .done
+        
+        submitButton.isEnabled = false
+        submitButton.alpha = 0.5
         // Do any additional setup after loading the view.
     }
     
@@ -37,6 +41,21 @@ class EnterPinVC: UIViewController, UITextFieldDelegate {
         self.delegate?.resetRegisterButton()
         
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let text = (enterPinField.text! as NSString).replacingCharacters(in: range, with: string)
+        
+        if text.isEmpty {
+        submitButton.isEnabled = false
+        submitButton.alpha = 0.5
+        } else {
+            submitButton.isEnabled = true
+            submitButton.alpha = 1.0
+        }
+        return true
+    }
+    
     
     @IBAction func submitPinButton(_ sender: Any) {
         
@@ -47,6 +66,9 @@ class EnterPinVC: UIViewController, UITextFieldDelegate {
         userModel.updateAccountVerificationFlag(userName: user.userName ?? "", pin: user.pin ?? 0) { (completed) in
             if (!completed) {
                 let alert = UIAlertController(title: "Incorrect Pin", message: "The pin you entered is not what we have on file, please go back and reenter your email.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (UIAlertAction) in
+                    alert.dismiss(animated: true, completion: nil)
+                }))
                 DispatchQueue.main.async {
                     self.present(alert, animated: true, completion: nil)
                 }
@@ -67,7 +89,12 @@ class EnterPinVC: UIViewController, UITextFieldDelegate {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return false
+        
+        if identifier == "goToRegisterScreen" {
+            return true
+        }else{
+            return false
+        }
     }
     
     /*

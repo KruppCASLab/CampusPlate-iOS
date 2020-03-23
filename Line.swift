@@ -13,11 +13,11 @@ class Line: UIView {
     var line = UIBezierPath()
     
     func graph(){
-        line.move(to: .init(x: 0, y: bounds.height / 5.0))
-    line.addLine(to: .init(x: bounds.width, y: bounds.height / 5.0))
-    UIColor.systemOrange.setStroke()
-    line.lineWidth = 2
-    line.stroke()
+        line.move(to: .init(x: 0, y: bounds.height / 4.7))
+        line.addLine(to: .init(x: bounds.width, y: bounds.height / 4.7))
+        UIColor.init(named:"CampusPlateOrange")?.setStroke()
+        line.lineWidth = 2
+        line.stroke()
     }
     
     override func draw(_ rect: CGRect) {
