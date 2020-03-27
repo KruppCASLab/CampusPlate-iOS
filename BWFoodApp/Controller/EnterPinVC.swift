@@ -90,11 +90,12 @@ class EnterPinVC: UIViewController, UITextFieldDelegate {
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
-        if identifier == "goToRegisterScreen" {
-            return true
-        }else{
-            return false
-        }
+//        if identifier == "goToRegisterScreen" {
+//            return true
+//        }else{
+//            return true
+//        }
+        return false
     }
     
     /*

@@ -30,6 +30,8 @@
 		F69BDB4A20FA55790065BB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4920FA55790065BB78 /* Assets.xcassets */; };
 		F69BDB4D20FA55790065BB78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4B20FA55790065BB78 /* LaunchScreen.storyboard */; };
 		F69BDB5820FA557A0065BB78 /* BWFoodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB5720FA557A0065BB78 /* BWFoodAppTests.swift */; };
+		F6BCD71924286CE1000C2E02 /* gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCD71824286CE1000C2E02 /* gif.swift */; };
+		F6BCD71B24286EF2000C2E02 /* fork-and-knife-logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		F69BDB5320FA55790065BB78 /* BWFoodAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BWFoodAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69BDB5720FA557A0065BB78 /* BWFoodAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWFoodAppTests.swift; sourceTree = "<group>"; };
 		F69BDB5920FA557A0065BB78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6BCD71824286CE1000C2E02 /* gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gif.swift; sourceTree = "<group>"; };
+		F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "fork-and-knife-logo.gif"; path = "Assets.xcassets/fork-and-knife-logo.dataset/fork-and-knife-logo.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		F69BDB3620FA55780065BB78 = {
 			isa = PBXGroup;
 			children = (
+				F6BCD71824286CE1000C2E02 /* gif.swift */,
 				F6491E3A235FAB0C00D6C715 /* PickUpScreenLine.swift */,
 				F6179EE8235E924C00299A9C /* Line.swift */,
 				F69BDB4120FA55780065BB78 /* BWFoodApp */,
@@ -171,6 +176,7 @@
 				F69BDB4220FA55780065BB78 /* AppDelegate.swift */,
 				F61379B8235CBEE9008CF83F /* CampusPlateLogo.png */,
 				F61C0E702413451B0017C3A0 /* CampusPlateLogo-01.png */,
+				F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */,
 				F69BDB4920FA55790065BB78 /* Assets.xcassets */,
 				F69BDB4B20FA55790065BB78 /* LaunchScreen.storyboard */,
 				F69BDB4E20FA55790065BB78 /* Info.plist */,
@@ -273,6 +279,7 @@
 				F69BDB4D20FA55790065BB78 /* LaunchScreen.storyboard in Resources */,
 				F69BDB4A20FA55790065BB78 /* Assets.xcassets in Resources */,
 				F61C0E712413451B0017C3A0 /* CampusPlateLogo-01.png in Resources */,
+				F6BCD71B24286EF2000C2E02 /* fork-and-knife-logo.gif in Resources */,
 				F61379B9235CBEEA008CF83F /* CampusPlateLogo.png in Resources */,
 				F69BDB4820FA55780065BB78 /* Main.storyboard in Resources */,
 			);
@@ -302,6 +309,7 @@
 				E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */,
 				E02014B12412E71300C75D6A /* GUID.swift in Sources */,
 				F61DCBAF2326E95800F7FD7C /* WSListing.swift in Sources */,
+				F6BCD71924286CE1000C2E02 /* gif.swift in Sources */,
 				E05F76E924005C43006E29AF /* ListingResponse.swift in Sources */,
 				F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */,
 				F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */,

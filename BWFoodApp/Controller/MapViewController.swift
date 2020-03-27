@@ -10,6 +10,7 @@ import MapKit
 import UIKit
 import CoreLocation
 
+
 class MapViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, CreateNewListingDelegate{
 
     @IBOutlet weak var tableView: UITableView!
@@ -26,35 +27,22 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     let listing : WSListing! = nil
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+   
+    @IBOutlet weak var loadingIndicator: UIImageView!
     
-    @IBOutlet weak var activityView: UIView!
-    
-    @IBOutlet weak var activityText1: UILabel!
-    @IBOutlet weak var activityText2: UILabel!
-    
-    @IBOutlet weak var loadingBackground: UIView!
-    
-    
-
     override func viewWillAppear(_ animated: Bool) {
-        
-        loadingBackground.layer.cornerRadius = 20
         
         listingModel.loadListings { (completed) in
             DispatchQueue.main.async {
                 
                 self.tableView.reloadData()
                 self.refreshMap()
-                self.activityIndicator.stopAnimating()
-                self.activityView.isHidden = true
-                self.activityText1.isHidden = true
-                self.activityText2.isHidden = true
+    
+                self.loadingIndicator.isHidden = true
 
             }
         }
     }
-    
     
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -82,9 +70,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
-     //   listingsLabel.layer.borderWidth = 1
-        //listingsLabel.layer.borderColor = UIColor.systemOrange.cgColor
+    
         tableView.separatorColor = .systemOrange
     }
     
@@ -150,7 +136,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        activityIndicator.startAnimating()
+        loadingIndicator.loadGif(name: "fork-and-knife-logo")
         
         tableView.separatorColor = .systemOrange
         

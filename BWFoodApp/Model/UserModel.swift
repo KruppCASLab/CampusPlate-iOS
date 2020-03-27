@@ -61,10 +61,19 @@ class UserModel {
                 //Todo: decode data into pin verify response and then check response codes, if not 0 completion(false)
                 do{
                     let response = try decoder.decode(PinVerifyResponse.self, from: data!)
+                    
+                    if response.error != "0"{
+                        completion(false)
+                    }else{
+                        completion(true)
+                    }
+                    
                 }
                 catch{
                     
                 }
+                
+                completion(true)
 
                 
             }.resume()
