@@ -25,6 +25,8 @@
 		F6788FFF23E7C037009FC4C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6788FFE23E7C037009FC4C6 /* User.swift */; };
 		F678900123E7C1A1009FC4C6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F678900023E7C1A1009FC4C6 /* UserModel.swift */; };
 		F678900323EB4261009FC4C6 /* EnterPinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F678900223EB4261009FC4C6 /* EnterPinVC.swift */; };
+		F69265DE24463754005C0701 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69265DD24463754005C0701 /* CredentialManager.swift */; };
+		F69265E02446376C005C0701 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69265DF2446376C005C0701 /* Credential.swift */; };
 		F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB4220FA55780065BB78 /* AppDelegate.swift */; };
 		F69BDB4820FA55780065BB78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4620FA55780065BB78 /* Main.storyboard */; };
 		F69BDB4A20FA55790065BB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4920FA55790065BB78 /* Assets.xcassets */; };
@@ -63,6 +65,8 @@
 		F6788FFE23E7C037009FC4C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F678900023E7C1A1009FC4C6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F678900223EB4261009FC4C6 /* EnterPinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPinVC.swift; sourceTree = "<group>"; };
+		F69265DD24463754005C0701 /* CredentialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialManager.swift; sourceTree = "<group>"; };
+		F69265DF2446376C005C0701 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		F69BDB3F20FA55780065BB78 /* BWFoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWFoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69BDB4220FA55780065BB78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F69BDB4720FA55780065BB78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 		F69BDB3620FA55780065BB78 = {
 			isa = PBXGroup;
 			children = (
+				F69265DD24463754005C0701 /* CredentialManager.swift */,
+				F69265DF2446376C005C0701 /* Credential.swift */,
 				F6BCD71824286CE1000C2E02 /* gif.swift */,
 				F6491E3A235FAB0C00D6C715 /* PickUpScreenLine.swift */,
 				F6179EE8235E924C00299A9C /* Line.swift */,
@@ -301,6 +307,7 @@
 			files = (
 				F6491E3B235FAB0C00D6C715 /* PickUpScreenLine.swift in Sources */,
 				F6788FFF23E7C037009FC4C6 /* User.swift in Sources */,
+				F69265E02446376C005C0701 /* Credential.swift in Sources */,
 				F61DCBAD2326E7C700F7FD7C /* Response.swift in Sources */,
 				F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */,
 				F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */,
@@ -317,6 +324,7 @@
 				F678900323EB4261009FC4C6 /* EnterPinVC.swift in Sources */,
 				F6179EE9235E924C00299A9C /* Line.swift in Sources */,
 				F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */,
+				F69265DE24463754005C0701 /* CredentialManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

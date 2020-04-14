@@ -62,7 +62,7 @@ class UserModel {
                 do{
                     let response = try decoder.decode(PinVerifyResponse.self, from: data!)
                     
-                    if response.error != "0"{
+                    if response.status != 0{
                         completion(false)
                     }else{
                         completion(true)
@@ -72,8 +72,6 @@ class UserModel {
                 catch{
                     
                 }
-                
-                completion(true)
 
                 
             }.resume()

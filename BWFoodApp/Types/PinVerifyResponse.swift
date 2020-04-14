@@ -10,6 +10,6 @@ import Foundation
 
 public class PinVerifyResponse : Codable {
     public var status:Int?
-    public var error:String?
+    public var error:Int?
     public var data:GUID?
 }
