@@ -12,7 +12,6 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var studentEmailLabel: UILabel!
     
-    @IBOutlet weak var passwordLabel: UILabel!
     
     @IBOutlet weak var studentEmailField: UITextField!
     
@@ -23,10 +22,10 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         
         signInButton.isEnabled = true
         signInButton.alpha = 1.0
-        
+
         studentEmailField.delegate = self
         studentEmailField.returnKeyType = .done
 
@@ -35,8 +34,7 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
     
     var user:User = User(userName: "")
     
-    @IBAction func register(_ sender: Any) {
-        
+    @IBAction func register(_ sender: UIButton) {
         signInButton.isEnabled = false
         signInButton.alpha = 0.5
         
@@ -61,6 +59,10 @@ class CaterULoginScreenVC: UIViewController, UITextFieldDelegate {
             
         }
     }
+    
+        
+        
+    
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

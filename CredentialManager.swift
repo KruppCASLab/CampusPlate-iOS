@@ -17,11 +17,11 @@ class CredentialManager {
 
     static public func saveCredential(credential:Credential) -> Bool {
         let account = credential.username
-        let password = credential.password.data(using: String.Encoding.utf8)!
-        let query: [String: Any] = [kSecClass as String: kSecClassInternetPassword,
-                                    kSecAttrLabel as String: "Tready",
+        let password = credential.password.data(using: .utf8)!
+        
+        let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
+                                    kSecAttrLabel as String: "Campus Plate",
                                     kSecAttrAccount as String: account,
-                                    kSecAttrServer as String: credential.url,
                                     kSecValueData as String: password]
 
         SecItemAdd(query as CFDictionary, nil)
@@ -31,8 +31,8 @@ class CredentialManager {
     }
 
     static public func getCredential() -> Credential? {
-        let query: [String: Any] = [kSecClass as String: kSecClassInternetPassword,
-        kSecAttrLabel as String: "Tready",
+        let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
+        kSecAttrLabel as String: "Campus Plate",
         kSecMatchLimit as String: kSecMatchLimitOne,
         kSecReturnAttributes as String: true,
         kSecReturnData as String: true]
@@ -43,13 +43,13 @@ class CredentialManager {
         guard let existingItem = item as? [String : Any],
             let passwordData = existingItem[kSecValueData as String] as? Data,
             let password = String(data: passwordData, encoding: String.Encoding.utf8),
-            let username = existingItem[kSecAttrAccount as String] as? String,
-            let url = existingItem[kSecAttrServer as String] as? String
+            let username = existingItem[kSecAttrAccount as String] as? String
+            //let url = existingItem[kSecAttrServer as String] as? String
         else {
             return nil
         }
-
-        return Credential(username: username, password: password, url: url)
+        
+        return Credential(username: username, password: password)
 
     }
 

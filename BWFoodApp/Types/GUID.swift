@@ -9,5 +9,5 @@
 import Foundation
 
 public class GUID : Codable {
-    public var guid:String?
+    public var GUID:String?
 }

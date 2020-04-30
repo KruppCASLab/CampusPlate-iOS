@@ -66,6 +66,11 @@ class UserModel {
                         completion(false)
                     }else{
                         completion(true)
+                        
+                        let credentials : Credential = Credential(username: userName, password: response.data!.GUID!)
+                        
+                        CredentialManager.saveCredential(credential: credentials)
+                    
                     }
                     
                 }

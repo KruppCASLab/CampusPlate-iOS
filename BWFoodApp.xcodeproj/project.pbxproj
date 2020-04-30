@@ -34,6 +34,7 @@
 		F69BDB5820FA557A0065BB78 /* BWFoodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB5720FA557A0065BB78 /* BWFoodAppTests.swift */; };
 		F6BCD71924286CE1000C2E02 /* gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCD71824286CE1000C2E02 /* gif.swift */; };
 		F6BCD71B24286EF2000C2E02 /* fork-and-knife-logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */; };
+		F6E9726B244B51C8009A2BB0 /* SegueCheckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		F69BDB5920FA557A0065BB78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6BCD71824286CE1000C2E02 /* gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gif.swift; sourceTree = "<group>"; };
 		F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "fork-and-knife-logo.gif"; path = "Assets.xcassets/fork-and-knife-logo.dataset/fork-and-knife-logo.gif"; sourceTree = "<group>"; };
+		F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueCheckerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				F69BDB4620FA55780065BB78 /* Main.storyboard */,
+				F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				F61DCBAF2326E95800F7FD7C /* WSListing.swift in Sources */,
 				F6BCD71924286CE1000C2E02 /* gif.swift in Sources */,
 				E05F76E924005C43006E29AF /* ListingResponse.swift in Sources */,
+				F6E9726B244B51C8009A2BB0 /* SegueCheckerViewController.swift in Sources */,
 				F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */,
 				F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */,
 				F678900123E7C1A1009FC4C6 /* UserModel.swift in Sources */,

@@ -11,12 +11,12 @@ import Foundation
 class Credential {
     let username: String
     let password: String
-    let url: String
+    
 
-    init(username:String, password:String, url:String) {
+    init(username:String, password:String) {
         self.username = username
         self.password = password
-        self.url = url
+        
     }
 }
 
