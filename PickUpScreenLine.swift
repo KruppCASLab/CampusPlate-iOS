@@ -15,7 +15,7 @@ class PickUpScreenLine: UIView {
     func graph(){
         line.move(to: .init(x: 0, y: bounds.height / 2.4))
         line.addLine(to: .init(x: bounds.width, y: bounds.height / 2.4))
-        UIColor.systemOrange.setStroke()
+        UIColor.init(named: "CampusPlateGreen")?.setStroke()
         line.lineWidth = 2
         line.stroke()
     }

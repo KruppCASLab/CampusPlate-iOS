@@ -71,7 +71,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func viewDidAppear(_ animated: Bool) {
     
-        tableView.separatorColor = .systemOrange
+        tableView.separatorColor = UIColor.init(named: "CampusPlateGreen")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -138,7 +138,7 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         loadingIndicator.loadGif(name: "fork-and-knife-logo")
         
-        tableView.separatorColor = .systemOrange
+        tableView.separatorColor = UIColor.init(named: "CampusPlateGreen")
         
         self.locationManager.requestWhenInUseAuthorization()
         

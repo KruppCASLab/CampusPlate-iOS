@@ -15,7 +15,7 @@ class Line: UIView {
     func graph(){
         line.move(to: .init(x: 0, y: bounds.height / 4.7))
         line.addLine(to: .init(x: bounds.width, y: bounds.height / 4.7))
-        UIColor.init(named:"CampusPlateOrange")?.setStroke()
+        UIColor.init(named:"CampusPlateGreen")?.setStroke()
         line.lineWidth = 2
         line.stroke()
     }

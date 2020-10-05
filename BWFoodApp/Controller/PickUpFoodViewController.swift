@@ -87,6 +87,8 @@ class PickUpFoodViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+    
+        
         locationSubLocation.text = listing.locationDescription
         ActivityIndicator.isHidden = true
         
@@ -99,7 +101,7 @@ class PickUpFoodViewController: UIViewController {
         navBar.title = listing.title
         
         foodImageView.layer.borderWidth = 2
-        foodImageView.layer.borderColor = UIColor.systemOrange.cgColor
+        foodImageView.layer.borderColor = UIColor.init(named: "CampusPlateGreen")?.cgColor
         
         claimButton.layer.cornerRadius = 20
         

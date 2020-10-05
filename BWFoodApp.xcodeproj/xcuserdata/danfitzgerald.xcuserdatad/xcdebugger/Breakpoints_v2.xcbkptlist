@@ -21,7 +21,7 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "BFC883BF-BC70-432A-AB62-6FE6406F67E3 - 459910abf7073376"
+                  uuid = "BFC883BF-BC70-432A-AB62-6FE6406F67E3 - 5d2216e1d6fbc6b6"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -37,7 +37,7 @@
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
-                  uuid = "BFC883BF-BC70-432A-AB62-6FE6406F67E3 - 1e06a25f00439ac7"
+                  uuid = "BFC883BF-BC70-432A-AB62-6FE6406F67E3 - 6bda41521bf7116"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -53,7 +53,7 @@
                   offsetFromSymbolStart = "57">
                </Location>
                <Location
-                  uuid = "BFC883BF-BC70-432A-AB62-6FE6406F67E3 - 8078f8c7ef25f3cf"
+                  uuid = "BFC883BF-BC70-432A-AB62-6FE6406F67E3 - 98c3fe8dced9060f"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -69,7 +69,7 @@
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
-                  uuid = "BFC883BF-BC70-432A-AB62-6FE6406F67E3 - d808f9a343dbccc0"
+                  uuid = "BFC883BF-BC70-432A-AB62-6FE6406F67E3 - c0b3ffe962272711"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -85,7 +85,7 @@
                   offsetFromSymbolStart = "50">
                </Location>
                <Location
-                  uuid = "BFC883BF-BC70-432A-AB62-6FE6406F67E3 - d6a0dc7948343c58"
+                  uuid = "BFC883BF-BC70-432A-AB62-6FE6406F67E3 - ce1bda3369c8c998"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -352,8 +352,8 @@
             timestampString = "589484014.099957"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -409,7 +409,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "2EE2C636-64B9-445B-A160-F405CD5551BC - 7e43363d008e092a"
+                  uuid = "2EE2C636-64B9-445B-A160-F405CD5551BC - 9355a8152524fbd8"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -424,7 +424,7 @@
                   offsetFromSymbolStart = "2441">
                </Location>
                <Location
-                  uuid = "2EE2C636-64B9-445B-A160-F405CD5551BC - fb2645aa6c73fa49"
+                  uuid = "2EE2C636-64B9-445B-A160-F405CD5551BC - 1630db8249d9089a"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -525,7 +525,7 @@
             landmarkType = "0">
             <Locations>
                <Location
-                  uuid = "F5FB9BF3-F431-41E3-92DF-351701828C2B - 3bd079c7cea118f5"
+                  uuid = "F5FB9BF3-F431-41E3-92DF-351701828C2B - d6c6e7efeb0be075"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -540,7 +540,7 @@
                   offsetFromSymbolStart = "12">
                </Location>
                <Location
-                  uuid = "F5FB9BF3-F431-41E3-92DF-351701828C2B - caf9a3f757fd3535"
+                  uuid = "F5FB9BF3-F431-41E3-92DF-351701828C2B - 27ef3ddf7257ce22"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -555,7 +555,7 @@
                   offsetFromSymbolStart = "359">
                </Location>
                <Location
-                  uuid = "F5FB9BF3-F431-41E3-92DF-351701828C2B - 1a3f5895af4ebe0d"
+                  uuid = "F5FB9BF3-F431-41E3-92DF-351701828C2B - f729c6bd8ae4468d"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -570,7 +570,7 @@
                   offsetFromSymbolStart = "12">
                </Location>
                <Location
-                  uuid = "F5FB9BF3-F431-41E3-92DF-351701828C2B - 96f91918c1bc76f1"
+                  uuid = "F5FB9BF3-F431-41E3-92DF-351701828C2B - 7bef8730e4168de6"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -585,7 +585,7 @@
                   offsetFromSymbolStart = "228">
                </Location>
                <Location
-                  uuid = "F5FB9BF3-F431-41E3-92DF-351701828C2B - d58eba80ee9d0e7d"
+                  uuid = "F5FB9BF3-F431-41E3-92DF-351701828C2B - 389824a8cb37f6fd"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -618,7 +618,7 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "3A89B668-D373-4AD8-8BC8-5A651EACFF5F - caa6e273bbab5106"
+                  uuid = "3A89B668-D373-4AD8-8BC8-5A651EACFF5F - 3434b7c9b5964f92"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -633,7 +633,7 @@
                   offsetFromSymbolStart = "88">
                </Location>
                <Location
-                  uuid = "3A89B668-D373-4AD8-8BC8-5A651EACFF5F - a99c8fecdae8bd12"
+                  uuid = "3A89B668-D373-4AD8-8BC8-5A651EACFF5F - 570eda56d4d5a386"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -648,7 +648,7 @@
                   offsetFromSymbolStart = "104">
                </Location>
                <Location
-                  uuid = "3A89B668-D373-4AD8-8BC8-5A651EACFF5F - 3f449e7b0e9ef401"
+                  uuid = "3A89B668-D373-4AD8-8BC8-5A651EACFF5F - c1d6cbc100a3ec01"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -663,7 +663,7 @@
                   offsetFromSymbolStart = "67">
                </Location>
                <Location
-                  uuid = "3A89B668-D373-4AD8-8BC8-5A651EACFF5F - 7ebabd1a1e0c327"
+                  uuid = "3A89B668-D373-4AD8-8BC8-5A651EACFF5F - f979fe6bafddddb3"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -678,7 +678,7 @@
                   offsetFromSymbolStart = "76">
                </Location>
                <Location
-                  uuid = "3A89B668-D373-4AD8-8BC8-5A651EACFF5F - 68f9f3be8cf11ef"
+                  uuid = "3A89B668-D373-4AD8-8BC8-5A651EACFF5F - f81dca81e6f20f7b"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -693,7 +693,7 @@
                   offsetFromSymbolStart = "721">
                </Location>
                <Location
-                  uuid = "3A89B668-D373-4AD8-8BC8-5A651EACFF5F - 587c3eb22f68900e"
+                  uuid = "3A89B668-D373-4AD8-8BC8-5A651EACFF5F - a6ee6b0821558e9a"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -742,7 +742,7 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "D84DC822-2829-4337-B1F3-F07A26D0A1A6 - 29ec079070a59596"
+                  uuid = "D84DC822-2829-4337-B1F3-F07A26D0A1A6 - b38527a148d4fdce"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -757,7 +757,7 @@
                   offsetFromSymbolStart = "59">
                </Location>
                <Location
-                  uuid = "D84DC822-2829-4337-B1F3-F07A26D0A1A6 - a888f393e91e9e18"
+                  uuid = "D84DC822-2829-4337-B1F3-F07A26D0A1A6 - 32e1d3a2d16ff640"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -772,7 +772,7 @@
                   offsetFromSymbolStart = "589">
                </Location>
                <Location
-                  uuid = "D84DC822-2829-4337-B1F3-F07A26D0A1A6 - fd61499c10da4ce2"
+                  uuid = "D84DC822-2829-4337-B1F3-F07A26D0A1A6 - 670869ad28ab24ba"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -821,7 +821,7 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "660E84A8-454D-4136-BEF2-6072D0F4D78B - 4a7c0ed932fc3a36"
+                  uuid = "660E84A8-454D-4136-BEF2-6072D0F4D78B - b4ee5b633cc12236"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -836,7 +836,7 @@
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
-                  uuid = "660E84A8-454D-4136-BEF2-6072D0F4D78B - 68f9f3be8cf11ef"
+                  uuid = "660E84A8-454D-4136-BEF2-6072D0F4D78B - f81dca81e6f20fc0"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -851,7 +851,7 @@
                   offsetFromSymbolStart = "184">
                </Location>
                <Location
-                  uuid = "660E84A8-454D-4136-BEF2-6072D0F4D78B - a75e6273cca72d19"
+                  uuid = "660E84A8-454D-4136-BEF2-6072D0F4D78B - 59cc37c9c29a3519"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -866,7 +866,7 @@
                   offsetFromSymbolStart = "20">
                </Location>
                <Location
-                  uuid = "660E84A8-454D-4136-BEF2-6072D0F4D78B - 587c3eb22f68900e"
+                  uuid = "660E84A8-454D-4136-BEF2-6072D0F4D78B - a6ee6b0821558e21"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -881,7 +881,7 @@
                   offsetFromSymbolStart = "152">
                </Location>
                <Location
-                  uuid = "660E84A8-454D-4136-BEF2-6072D0F4D78B - f8d47083a37ded81"
+                  uuid = "660E84A8-454D-4136-BEF2-6072D0F4D78B - 6462539ad40f581"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -924,8 +924,8 @@
             filePath = "BWFoodApp/View/CreateNewListing.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -978,7 +978,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "2F57D9C0-67A4-495A-A0D1-6CB83C51686A - d94c0b0e08cbb89d"
+                  uuid = "2F57D9C0-67A4-495A-A0D1-6CB83C51686A - cd81ae9ea3899c07"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -993,7 +993,7 @@
                   offsetFromSymbolStart = "1040">
                </Location>
                <Location
-                  uuid = "2F57D9C0-67A4-495A-A0D1-6CB83C51686A - 82ec921d89c19f97"
+                  uuid = "2F57D9C0-67A4-495A-A0D1-6CB83C51686A - 9621378d2283bb2c"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1026,7 +1026,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "C8545505-D838-4893-A11A-CE9EC2A0D089 - d94c0b0e08cbb89d"
+                  uuid = "C8545505-D838-4893-A11A-CE9EC2A0D089 - cd81ae9ea3899c59"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1041,7 +1041,7 @@
                   offsetFromSymbolStart = "1576">
                </Location>
                <Location
-                  uuid = "C8545505-D838-4893-A11A-CE9EC2A0D089 - 82ec921d89c19f97"
+                  uuid = "C8545505-D838-4893-A11A-CE9EC2A0D089 - 9621378d2283bb53"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1090,7 +1090,7 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "2AA319A9-12AC-47CB-872D-C47E8C1A2D7C - 700889d477b4c449"
+                  uuid = "2AA319A9-12AC-47CB-872D-C47E8C1A2D7C - ea61a9e54fc59663"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1105,7 +1105,7 @@
                   offsetFromSymbolStart = "68">
                </Location>
                <Location
-                  uuid = "2AA319A9-12AC-47CB-872D-C47E8C1A2D7C - 8ef29e2e5745db16"
+                  uuid = "2AA319A9-12AC-47CB-872D-C47E8C1A2D7C - 149bbe1f6f34891f"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1120,22 +1120,6 @@
                   offsetFromSymbolStart = "176">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E4B5403A-5596-44E7-929B-5FA09A95CCE8"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BWFoodApp/View/CreateNewListing.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "postListingButton(_:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1173,70 +1157,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "79FDE2B1-0691-46B3-A7D0-DFD36CFC3E67"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BWFoodApp/View/CreateNewListing.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
-            landmarkName = "postListingButton(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5EA3625C-112A-4861-9256-EEFAEC04FBD1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BWFoodApp/View/CreateNewListing.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "postListingButton(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5EA3625C-112A-4861-9256-EEFAEC04FBD1 - d4e36c7bf66a21bb"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BWFoodApp.CreateNewListing.postListingButton(Any) -&gt; ()"
-                  moduleName = "BWFoodApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danfitzgerald/newfoodapp-ios/BWFoodApp/View/CreateNewListing.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "169"
-                  endingLineNumber = "169"
-                  offsetFromSymbolStart = "3736">
-               </Location>
-               <Location
-                  uuid = "5EA3625C-112A-4861-9256-EEFAEC04FBD1 - ecaed873672b989e"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in BWFoodApp.CreateNewListing.postListingButton(Any) -&gt; ()"
-                  moduleName = "BWFoodApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danfitzgerald/newfoodapp-ios/BWFoodApp/View/CreateNewListing.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "170"
-                  endingLineNumber = "170"
-                  offsetFromSymbolStart = "168">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "09404069-A1F1-4511-BDF2-3C649A3FEB9C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1266,7 +1186,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "D0754344-7317-4D5A-898B-B37D2ADB43EB - deeb2ffda0ed500a"
+                  uuid = "D0754344-7317-4D5A-898B-B37D2ADB43EB - 20797a47aed0431d"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1281,7 +1201,7 @@
                   offsetFromSymbolStart = "1052">
                </Location>
                <Location
-                  uuid = "D0754344-7317-4D5A-898B-B37D2ADB43EB - 8e99cb334fb1cf55"
+                  uuid = "D0754344-7317-4D5A-898B-B37D2ADB43EB - 700b9e89418cdc2d"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1426,7 +1346,7 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "8A49D787-0B63-498C-A80F-71B647C03E2C - fb2645aa6c73fa49"
+                  uuid = "8A49D787-0B63-498C-A80F-71B647C03E2C - 1630db8249d90858"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1441,7 +1361,7 @@
                   offsetFromSymbolStart = "379">
                </Location>
                <Location
-                  uuid = "8A49D787-0B63-498C-A80F-71B647C03E2C - ed5226e0fb0492e5"
+                  uuid = "8A49D787-0B63-498C-A80F-71B647C03E2C - 44b8c8deae608b"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1468,13 +1388,13 @@
             filePath = "BWFoodApp/Controller/EnterPinVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "EnterPinVC"
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "90D3CD70-E4DB-455B-8EA9-3CF00BE5D3FA - 71f0439a98558ec2"
+                  uuid = "90D3CD70-E4DB-455B-8EA9-3CF00BE5D3FA - 506334be207c746a"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1489,7 +1409,7 @@
                   offsetFromSymbolStart = "139">
                </Location>
                <Location
-                  uuid = "90D3CD70-E4DB-455B-8EA9-3CF00BE5D3FA - 57b039719eec9eb6"
+                  uuid = "90D3CD70-E4DB-455B-8EA9-3CF00BE5D3FA - 76234e5526c5641e"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1504,7 +1424,7 @@
                   offsetFromSymbolStart = "150">
                </Location>
                <Location
-                  uuid = "90D3CD70-E4DB-455B-8EA9-3CF00BE5D3FA - 150ef87afe5cb2c7"
+                  uuid = "90D3CD70-E4DB-455B-8EA9-3CF00BE5D3FA - 349d8f5e46754d87"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1519,7 +1439,7 @@
                   offsetFromSymbolStart = "18">
                </Location>
                <Location
-                  uuid = "90D3CD70-E4DB-455B-8EA9-3CF00BE5D3FA - 962e412b4965deb6"
+                  uuid = "90D3CD70-E4DB-455B-8EA9-3CF00BE5D3FA - b7bd360ff14c241e"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1534,7 +1454,7 @@
                   offsetFromSymbolStart = "4">
                </Location>
                <Location
-                  uuid = "90D3CD70-E4DB-455B-8EA9-3CF00BE5D3FA - 7fc73aabe24f328f"
+                  uuid = "90D3CD70-E4DB-455B-8EA9-3CF00BE5D3FA - 5e544d8f5a66c827"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1549,7 +1469,7 @@
                   offsetFromSymbolStart = "445">
                </Location>
                <Location
-                  uuid = "90D3CD70-E4DB-455B-8EA9-3CF00BE5D3FA - 8f1c7b3dd00baad8"
+                  uuid = "90D3CD70-E4DB-455B-8EA9-3CF00BE5D3FA - ae8f0c1968225070"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1576,13 +1496,13 @@
             filePath = "BWFoodApp/Controller/EnterPinVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "EnterPinVC"
-            landmarkType = "3">
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "userModel"
+            landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "AA257BAA-28C6-4F54-AD72-21269A11ADC7 - cb0a6924d750080c"
+                  uuid = "AA257BAA-28C6-4F54-AD72-21269A11ADC7 - ea991e006f79f5fe"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1597,7 +1517,7 @@
                   offsetFromSymbolStart = "52">
                </Location>
                <Location
-                  uuid = "AA257BAA-28C6-4F54-AD72-21269A11ADC7 - 7fc73aabe24f328f"
+                  uuid = "AA257BAA-28C6-4F54-AD72-21269A11ADC7 - 5e544d8f5a66cf7d"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1612,7 +1532,7 @@
                   offsetFromSymbolStart = "189">
                </Location>
                <Location
-                  uuid = "AA257BAA-28C6-4F54-AD72-21269A11ADC7 - 8f1c7b3dd00baad8"
+                  uuid = "AA257BAA-28C6-4F54-AD72-21269A11ADC7 - ae8f0c196822572a"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1655,8 +1575,8 @@
             filePath = "BWFoodApp/Controller/EnterPinVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "submitPinButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1671,8 +1591,8 @@
             filePath = "BWFoodApp/Controller/EnterPinVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "submitPinButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1687,13 +1607,13 @@
             filePath = "BWFoodApp/Controller/EnterPinVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "submitPinButton(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "00004420-9C16-4D34-9BF0-C73C3E7AFEB0 - 4a279e6ec42ee156"
+                  uuid = "00004420-9C16-4D34-9BF0-C73C3E7AFEB0 - a59f2b8925377c50"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1708,7 +1628,7 @@
                   offsetFromSymbolStart = "1037">
                </Location>
                <Location
-                  uuid = "00004420-9C16-4D34-9BF0-C73C3E7AFEB0 - 6a3474abb24afa75"
+                  uuid = "00004420-9C16-4D34-9BF0-C73C3E7AFEB0 - 858cc14c53536712"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1767,8 +1687,8 @@
             filePath = "BWFoodApp/Controller/EnterPinVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "submitPinButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1789,7 +1709,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "F94C675E-CAB0-4D18-ACA2-60FD32AC5B8E - a404c788904bffec"
+                  uuid = "F94C675E-CAB0-4D18-ACA2-60FD32AC5B8E - a468989b25c03bd2"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1804,7 +1724,7 @@
                   offsetFromSymbolStart = "1336">
                </Location>
                <Location
-                  uuid = "F94C675E-CAB0-4D18-ACA2-60FD32AC5B8E - 6d63e31d561f6c49"
+                  uuid = "F94C675E-CAB0-4D18-ACA2-60FD32AC5B8E - 6d0fbc0ee394a994"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1930,6 +1850,194 @@
             startingLineNumber = "29"
             endingLineNumber = "29"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18CCCE5A-D4AD-47FE-87DC-0948CC71494D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../newfoodapp-ios/BWFoodApp/Controller/EnterPinVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "EnterPinVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "18CCCE5A-D4AD-47FE-87DC-0948CC71494D - 58ce2dd5f4ea5eb6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.EnterPinVC.submitButton.getter : Swift.Optional&lt;__C.UIButton&gt;"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/newfoodapp-ios/BWFoodApp/Controller/EnterPinVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "18CCCE5A-D4AD-47FE-87DC-0948CC71494D - c7d9544b624b94aa"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.EnterPinVC.submitButton.setter : Swift.Optional&lt;__C.UIButton&gt;"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/newfoodapp-ios/BWFoodApp/Controller/EnterPinVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "18CCCE5A-D4AD-47FE-87DC-0948CC71494D - 3fa421932aa08591"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.EnterPinVC.submitButton.modify : Swift.Optional&lt;__C.UIButton&gt;"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/newfoodapp-ios/BWFoodApp/Controller/EnterPinVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "18CCCE5A-D4AD-47FE-87DC-0948CC71494D - 59d91c6397db3b90"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.EnterPinVC.submitButton.modify : Swift.Optional&lt;__C.UIButton&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/newfoodapp-ios/BWFoodApp/Controller/EnterPinVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "18CCCE5A-D4AD-47FE-87DC-0948CC71494D - 5e544d8f5a66c865"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.EnterPinVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; BWFoodApp.EnterPinVC"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/newfoodapp-ios/BWFoodApp/Controller/EnterPinVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "890">
+               </Location>
+               <Location
+                  uuid = "18CCCE5A-D4AD-47FE-87DC-0948CC71494D - ae8f0c1968225032"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.EnterPinVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;BWFoodApp.EnterPinVC&gt;"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/newfoodapp-ios/BWFoodApp/Controller/EnterPinVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "831">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2C221A6C-FC8E-46F2-8171-16CB6F8FBBB3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../newfoodapp-ios/BWFoodApp/Controller/EnterPinVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "textChanged(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46C99B02-B23B-4B2C-AEE6-C4509F106759"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../newfoodapp-ios/BWFoodApp/Controller/EnterPinVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "textChanged(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "044D38DB-BF0C-4707-997C-244684C14FF5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../newfoodapp-ios/BWFoodApp/Controller/EnterPinVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "textChanged(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EFD9B957-1FB3-4B25-878A-1AE051E246FC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../newfoodapp-ios/BWFoodApp/Controller/EnterPinVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2045DFB-C505-494F-83A4-209BE121EAB8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../newfoodapp-ios/BWFoodApp/Controller/EnterPinVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "textChanged(sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

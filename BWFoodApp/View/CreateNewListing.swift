@@ -22,9 +22,11 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
     
     @IBOutlet weak var foodImage: UIImageView!
     
-    @IBOutlet weak var itemTextField: UITextField!
-    @IBOutlet weak var quantityTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
+    
+    @IBOutlet weak var itemTextField: UITextField!
+    
+    @IBOutlet weak var quantityTextField: UITextField!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -46,48 +48,27 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
         let leftView2 = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
         
         let leftView3 = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
-        
 
-        itemTextField.layer.borderWidth = 1
-        // itemTextField.layer.borderColor = UIColor.systemOrange.cgColor
-        itemTextField.leftView = leftView
-        itemTextField.leftViewMode = .always
-        itemTextField.contentVerticalAlignment = .center
-        
-
-        quantityTextField.layer.borderWidth = 1
-        //quantityTextField.layer.borderColor = UIColor.systemOrange.cgColor
-        quantityTextField.leftView = leftView2
-        quantityTextField.leftViewMode = .always
-        quantityTextField.contentVerticalAlignment = .center
-        
-
-        locationTextField.layer.borderWidth = 1
-        //locationTextField.layer.borderColor = UIColor.systemOrange.cgColor
-        locationTextField.leftView = leftView3
-        locationTextField.leftViewMode = .always
-        locationTextField.contentVerticalAlignment = .center
-        
         
         foodImage.layer.borderWidth = 2
-        foodImage.layer.borderColor = UIColor.systemOrange.cgColor
+        foodImage.layer.borderColor = UIColor.init(named: "CampusPlateGreen")?.cgColor
         self.locationManager.requestWhenInUseAuthorization()
         
         postListing.layer.cornerRadius = 20
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
-        
+
         itemTextField.delegate = self
         itemTextField.returnKeyType = .done
-        
+
         quantityTextField.keyboardType = .numberPad
         quantityTextField.delegate = self
         quantityTextField.returnKeyType = .done
-        
+
         locationTextField.delegate = self
         locationTextField.returnKeyType = .done
-        
+
         locationManager.delegate = self
 
     }
@@ -151,8 +132,9 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
         activityIndicator.startAnimating()
         
         postListing.alpha = 0.5
+    
         
-        let food = (itemTextField.text) ?? ""
+        let food = itemTextField.text
         let quantity = Int(quantityTextField.text ?? "0") ?? 0
         let subLocation = locationTextField.text
         let image = foodImage.image
@@ -160,24 +142,25 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
         let imageData:Data = (image?.jpegData(compressionQuality: 0.05)!)!
         let imageBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
         
-        let listing = WSListing(listingId: -1, userId: -1, title: food, locationDescription: subLocation!, lat: latitude, lng: longitude, creationTime: -1, quantity: quantity, image: imageBase64)
+        let listing = WSListing(listingId: -1, userId: -1, title: food ?? "", locationDescription: subLocation!, lat: latitude, lng: longitude, creationTime: -1, quantity: quantity, image: imageBase64)
+    
+            listingModel.addListing(listing: listing) { (completed) in
+                    if (!completed) {
+                        let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
+                        DispatchQueue.main.async {
+                            self.present(alert, animated: true, completion: nil)
+                        }
 
-        listingModel.addListing(listing: listing) { (completed) in
-            if (!completed) {
-                let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
-                DispatchQueue.main.async {
-                    self.present(alert, animated: true, completion: nil)
-                }
-
+                    }
+                    else {
+                        DispatchQueue.main.async {
+                            self.delegate?.didComplete()
+                        }
+                    }
+            
             }
-            else {
-                DispatchQueue.main.async {
-                    self.delegate?.didComplete()
-                }
-            }
-        }
         
-    }
     
 }
 
+}
