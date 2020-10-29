@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E003B722254B33300065DF41 /* EnterPinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E003B721254B33300065DF41 /* EnterPinVC.swift */; };
 		E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */; };
 		E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F9212B00650057B2B5 /* ListingModel.swift */; };
 		E02014B12412E71300C75D6A /* GUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02014B02412E71300C75D6A /* GUID.swift */; };
@@ -40,7 +41,6 @@
 		F6BCD71924286CE1000C2E02 /* gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCD71824286CE1000C2E02 /* gif.swift */; };
 		F6BCD71B24286EF2000C2E02 /* fork-and-knife-logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */; };
 		F6E9726B244B51C8009A2BB0 /* SegueCheckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */; };
-		F6EC99E925256A9900328BDC /* EnterPinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC99E825256A9900328BDC /* EnterPinVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E003B721254B33300065DF41 /* EnterPinVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPinVC.swift; sourceTree = "<group>"; };
 		E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListingTableViewCell.swift; sourceTree = "<group>"; };
 		E00850F9212B00650057B2B5 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
 		E02014B02412E71300C75D6A /* GUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUID.swift; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		F6BCD71824286CE1000C2E02 /* gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gif.swift; sourceTree = "<group>"; };
 		F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "fork-and-knife-logo.gif"; path = "Assets.xcassets/fork-and-knife-logo.dataset/fork-and-knife-logo.gif"; sourceTree = "<group>"; };
 		F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueCheckerViewController.swift; sourceTree = "<group>"; };
-		F6EC99E825256A9900328BDC /* EnterPinVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnterPinVC.swift; path = "../../../newfoodapp-ios/BWFoodApp/Controller/EnterPinVC.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */,
-				F6EC99E825256A9900328BDC /* EnterPinVC.swift */,
+				E003B721254B33300065DF41 /* EnterPinVC.swift */,
 				F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */,
 				F65A60372188BADC00DB7338 /* CreateNewListing.swift */,
 				F62BEEE52108EFF300006DC0 /* MapViewController.swift */,
@@ -342,7 +342,6 @@
 				F6AE833F25477A9400D38310 /* UIViewController+PulleyViewController.swift in Sources */,
 				F69265E02446376C005C0701 /* Credential.swift in Sources */,
 				F61DCBAD2326E7C700F7FD7C /* Response.swift in Sources */,
-				F6EC99E925256A9900328BDC /* EnterPinVC.swift in Sources */,
 				F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */,
 				F656694625263F9B00A6BA2B /* TextFieldMaxLength.swift in Sources */,
 				F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */,
@@ -361,6 +360,7 @@
 				F678900123E7C1A1009FC4C6 /* UserModel.swift in Sources */,
 				F6179EE9235E924C00299A9C /* Line.swift in Sources */,
 				F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */,
+				E003B722254B33300065DF41 /* EnterPinVC.swift in Sources */,
 				F69265DE24463754005C0701 /* CredentialManager.swift in Sources */,
 				F6AE833E25477A9400D38310 /* PulleyViewController.swift in Sources */,
 			);
