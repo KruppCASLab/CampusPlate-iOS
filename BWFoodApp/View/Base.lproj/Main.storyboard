@@ -677,7 +677,7 @@
         <!--Pulley View Controller-->
         <scene sceneID="coY-bR-dcX">
             <objects>
-                <viewController id="bHu-jP-lHB" customClass="PulleyViewController" customModule="Pulley" sceneMemberID="viewController">
+                <viewController id="bHu-jP-lHB" customClass="PulleyViewController" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FtJ-Rc-kbe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -709,8 +709,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="drawerContentContainerView" destination="6x4-C8-EMC" id="8GJ-Ys-FOh"/>
-                        <outlet property="primaryContentContainerView" destination="FtJ-Rc-kbe" id="fMn-Hi-Ide"/>
+                        <outlet property="drawerContentContainerView" destination="6x4-C8-EMC" id="6lY-8P-yyn"/>
+                        <outlet property="primaryContentContainerView" destination="Ura-cP-Xgb" id="F7o-40-aS7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5U5-4i-Btz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -720,7 +720,7 @@
         <!--Map View Controller-->
         <scene sceneID="gZf-GM-1NE">
             <objects>
-                <viewController storyboardIdentifier="PrimaryContentViewController" id="q7Y-US-kbJ" customClass="MapViewController" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="q7Y-US-kbJ" customClass="MapViewController" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GTo-6q-3ho">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -770,7 +770,7 @@
         <!--Map View Controller-->
         <scene sceneID="Mpv-ag-5iq">
             <objects>
-                <viewController storyboardIdentifier="DrawerContentViewController" id="eSb-7o-G8O" customClass="MapViewController" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eSb-7o-G8O" customClass="MapViewController" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cGN-eb-7Cc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -912,7 +912,7 @@
                     <connections>
                         <outlet property="bottomSeperatorView" destination="hqY-qZ-k6w" id="U0j-LK-wgT"/>
                         <outlet property="gripperTopConstraint" destination="cTf-rF-C0X" id="deU-Ke-lrc"/>
-                        <outlet property="gripperView" destination="HjR-6e-wyY" id="DNO-UA-0nc"/>
+                        <outlet property="gripperView" destination="HjR-6e-wyY" id="Yvt-zn-i2B"/>
                         <outlet property="headerSectionHeightConstraint" destination="vDD-iy-MOC" id="tjY-d8-0D4"/>
                         <outlet property="searchBar" destination="12m-OU-T89" id="Hmd-lC-weG"/>
                         <outlet property="tableView" destination="zSY-7J-meI" id="CyB-L8-sqs"/>

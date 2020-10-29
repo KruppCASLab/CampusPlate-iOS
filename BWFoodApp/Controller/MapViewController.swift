@@ -28,7 +28,8 @@ class MapViewController: UIViewController, UITableViewDataSource, UITableViewDel
     let listing : WSListing! = nil
     
     @IBOutlet var searchBar: UISearchBar!
-    @IBOutlet var gripperView: UIView!
+    @IBOutlet weak var gripperView: UIView!
+    
     @IBOutlet var topSeparatorView: UIView!
     @IBOutlet var bottomSeperatorView: UIView!
     
