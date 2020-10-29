@@ -39,6 +39,10 @@ class CredentialManager {
 
         var item: CFTypeRef?
         SecItemCopyMatching(query as CFDictionary, &item)
+        
+        let status = SecItemDelete(query as CFDictionary)
+        
+        guard status == errSecSuccess || status == errSecItemNotFound else { print( KeychainError.unhandledError(status: status)); return nil}
 
         guard let existingItem = item as? [String : Any],
             let passwordData = existingItem[kSecValueData as String] as? Data,
@@ -50,6 +54,7 @@ class CredentialManager {
         }
         
         return Credential(username: username, password: password)
+        
 
     }
 
