@@ -33,10 +33,10 @@
 		F69BDB4A20FA55790065BB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4920FA55790065BB78 /* Assets.xcassets */; };
 		F69BDB4D20FA55790065BB78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4B20FA55790065BB78 /* LaunchScreen.storyboard */; };
 		F69BDB5820FA557A0065BB78 /* BWFoodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB5720FA557A0065BB78 /* BWFoodAppTests.swift */; };
-		F6AE833E25477A9400D38310 /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE833825477A9400D38310 /* PulleyViewController.swift */; };
-		F6AE833F25477A9400D38310 /* UIViewController+PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE833925477A9400D38310 /* UIViewController+PulleyViewController.swift */; };
-		F6AE834125477A9400D38310 /* PulleyPassthroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE833C25477A9400D38310 /* PulleyPassthroughScrollView.swift */; };
-		F6AE834225477A9400D38310 /* UIView+constrainToParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE833D25477A9400D38310 /* UIView+constrainToParent.swift */; };
+		F6AE83A1254B33A500D38310 /* UIViewController+PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE839D254B33A400D38310 /* UIViewController+PulleyViewController.swift */; };
+		F6AE83A2254B33A500D38310 /* PulleyPassthroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE839E254B33A500D38310 /* PulleyPassthroughScrollView.swift */; };
+		F6AE83A3254B33A500D38310 /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE839F254B33A500D38310 /* PulleyViewController.swift */; };
+		F6AE83A4254B33A500D38310 /* UIView+constrainToParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE83A0254B33A500D38310 /* UIView+constrainToParent.swift */; };
 		F6BCD71924286CE1000C2E02 /* gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCD71824286CE1000C2E02 /* gif.swift */; };
 		F6BCD71B24286EF2000C2E02 /* fork-and-knife-logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */; };
 		F6E9726B244B51C8009A2BB0 /* SegueCheckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */; };
@@ -84,11 +84,11 @@
 		F69BDB5320FA55790065BB78 /* BWFoodAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BWFoodAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69BDB5720FA557A0065BB78 /* BWFoodAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWFoodAppTests.swift; sourceTree = "<group>"; };
 		F69BDB5920FA557A0065BB78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6AE833825477A9400D38310 /* PulleyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PulleyViewController.swift; path = "../../../Downloads/Pulley-master-2/PulleyLib/PulleyViewController.swift"; sourceTree = "<group>"; };
-		F6AE833925477A9400D38310 /* UIViewController+PulleyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+PulleyViewController.swift"; path = "../../../Downloads/Pulley-master-2/PulleyLib/UIViewController+PulleyViewController.swift"; sourceTree = "<group>"; };
 		F6AE833A25477A9400D38310 /* Pulley.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pulley.h; path = "../../../Downloads/Pulley-master-2/Pulley/Pulley.h"; sourceTree = "<group>"; };
-		F6AE833C25477A9400D38310 /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PulleyPassthroughScrollView.swift; path = "../../../Downloads/Pulley-master-2/PulleyLib/PulleyPassthroughScrollView.swift"; sourceTree = "<group>"; };
-		F6AE833D25477A9400D38310 /* UIView+constrainToParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+constrainToParent.swift"; path = "../../../Downloads/Pulley-master-2/PulleyLib/UIView+constrainToParent.swift"; sourceTree = "<group>"; };
+		F6AE839D254B33A400D38310 /* UIViewController+PulleyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PulleyViewController.swift"; sourceTree = "<group>"; };
+		F6AE839E254B33A500D38310 /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulleyPassthroughScrollView.swift; sourceTree = "<group>"; };
+		F6AE839F254B33A500D38310 /* PulleyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulleyViewController.swift; sourceTree = "<group>"; };
+		F6AE83A0254B33A500D38310 /* UIView+constrainToParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constrainToParent.swift"; sourceTree = "<group>"; };
 		F6BCD71824286CE1000C2E02 /* gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gif.swift; sourceTree = "<group>"; };
 		F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "fork-and-knife-logo.gif"; path = "Assets.xcassets/fork-and-knife-logo.dataset/fork-and-knife-logo.gif"; sourceTree = "<group>"; };
 		F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueCheckerViewController.swift; sourceTree = "<group>"; };
@@ -221,11 +221,11 @@
 		F6AE832325477A7000D38310 /* Pulley */ = {
 			isa = PBXGroup;
 			children = (
+				F6AE839E254B33A500D38310 /* PulleyPassthroughScrollView.swift */,
+				F6AE839F254B33A500D38310 /* PulleyViewController.swift */,
+				F6AE83A0254B33A500D38310 /* UIView+constrainToParent.swift */,
+				F6AE839D254B33A400D38310 /* UIViewController+PulleyViewController.swift */,
 				F6AE833A25477A9400D38310 /* Pulley.h */,
-				F6AE833C25477A9400D38310 /* PulleyPassthroughScrollView.swift */,
-				F6AE833825477A9400D38310 /* PulleyViewController.swift */,
-				F6AE833D25477A9400D38310 /* UIView+constrainToParent.swift */,
-				F6AE833925477A9400D38310 /* UIViewController+PulleyViewController.swift */,
 			);
 			path = Pulley;
 			sourceTree = "<group>";
@@ -336,23 +336,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6AE83A2254B33A500D38310 /* PulleyPassthroughScrollView.swift in Sources */,
 				F656694A252B968800A6BA2B /* DoneButton.swift in Sources */,
 				F6491E3B235FAB0C00D6C715 /* PickUpScreenLine.swift in Sources */,
 				F6788FFF23E7C037009FC4C6 /* User.swift in Sources */,
-				F6AE833F25477A9400D38310 /* UIViewController+PulleyViewController.swift in Sources */,
 				F69265E02446376C005C0701 /* Credential.swift in Sources */,
 				F61DCBAD2326E7C700F7FD7C /* Response.swift in Sources */,
 				F6EC99E925256A9900328BDC /* EnterPinVC.swift in Sources */,
 				F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */,
 				F656694625263F9B00A6BA2B /* TextFieldMaxLength.swift in Sources */,
+				F6AE83A1254B33A500D38310 /* UIViewController+PulleyViewController.swift in Sources */,
 				F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */,
 				E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */,
 				E05F76E724005C2B006E29AF /* PinVerifyResponse.swift in Sources */,
 				E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */,
 				E02014B12412E71300C75D6A /* GUID.swift in Sources */,
 				F61DCBAF2326E95800F7FD7C /* WSListing.swift in Sources */,
-				F6AE834125477A9400D38310 /* PulleyPassthroughScrollView.swift in Sources */,
-				F6AE834225477A9400D38310 /* UIView+constrainToParent.swift in Sources */,
+				F6AE83A4254B33A500D38310 /* UIView+constrainToParent.swift in Sources */,
 				F6BCD71924286CE1000C2E02 /* gif.swift in Sources */,
 				E05F76E924005C43006E29AF /* ListingResponse.swift in Sources */,
 				F6E9726B244B51C8009A2BB0 /* SegueCheckerViewController.swift in Sources */,
@@ -362,7 +362,7 @@
 				F6179EE9235E924C00299A9C /* Line.swift in Sources */,
 				F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */,
 				F69265DE24463754005C0701 /* CredentialManager.swift in Sources */,
-				F6AE833E25477A9400D38310 /* PulleyViewController.swift in Sources */,
+				F6AE83A3254B33A500D38310 /* PulleyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
