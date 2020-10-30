@@ -19,6 +19,7 @@
 		F61C0E712413451B0017C3A0 /* CampusPlateLogo-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F61C0E702413451B0017C3A0 /* CampusPlateLogo-01.png */; };
 		F61DCBAD2326E7C700F7FD7C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DCBAC2326E7C700F7FD7C /* Response.swift */; };
 		F61DCBAF2326E95800F7FD7C /* WSListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DCBAE2326E95800F7FD7C /* WSListing.swift */; };
+		F62A57BA254C86BC00F232BE /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62A57B9254C86BC00F232BE /* FoodTableViewController.swift */; };
 		F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEEE52108EFF300006DC0 /* MapViewController.swift */; };
 		F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */; };
 		F6491E3B235FAB0C00D6C715 /* PickUpScreenLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6491E3A235FAB0C00D6C715 /* PickUpScreenLine.swift */; };
@@ -66,6 +67,7 @@
 		F61C0E702413451B0017C3A0 /* CampusPlateLogo-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CampusPlateLogo-01.png"; sourceTree = "<group>"; };
 		F61DCBAC2326E7C700F7FD7C /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		F61DCBAE2326E95800F7FD7C /* WSListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSListing.swift; sourceTree = "<group>"; };
+		F62A57B9254C86BC00F232BE /* FoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
 		F62BEEE52108EFF300006DC0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaterULoginScreenVC.swift; sourceTree = "<group>"; };
 		F6491E3A235FAB0C00D6C715 /* PickUpScreenLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpScreenLine.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				F69BDB4620FA55780065BB78 /* Main.storyboard */,
+				F62A57B9254C86BC00F232BE /* FoodTableViewController.swift */,
 				F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */,
 			);
 			path = View;
@@ -339,6 +342,7 @@
 				F6AE83A2254B33A500D38310 /* PulleyPassthroughScrollView.swift in Sources */,
 				F656694A252B968800A6BA2B /* DoneButton.swift in Sources */,
 				F6491E3B235FAB0C00D6C715 /* PickUpScreenLine.swift in Sources */,
+				F62A57BA254C86BC00F232BE /* FoodTableViewController.swift in Sources */,
 				F6788FFF23E7C037009FC4C6 /* User.swift in Sources */,
 				F69265E02446376C005C0701 /* Credential.swift in Sources */,
 				F61DCBAD2326E7C700F7FD7C /* Response.swift in Sources */,
@@ -526,7 +530,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MF9639JBWV;
+				DEVELOPMENT_TEAM = R4WWA43GUF;
 				INFOPLIST_FILE = BWFoodApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -546,7 +550,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MF9639JBWV;
+				DEVELOPMENT_TEAM = R4WWA43GUF;
 				INFOPLIST_FILE = BWFoodApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
