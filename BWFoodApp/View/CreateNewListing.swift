@@ -21,13 +21,11 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var postListing: UIButton!
     
     @IBOutlet weak var foodImage: UIImageView!
-    
+    @IBOutlet weak var itemTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     
-    @IBOutlet weak var itemTextField: UITextField!
-    
     @IBOutlet weak var quantityTextField: UITextField!
-    
+
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     public var mapViewDelegate: MapViewController?
@@ -71,6 +69,14 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
 
         locationManager.delegate = self
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool){
+        
+        navigationController?.navigationBar.barTintColor = UIColor.init(named: "CampusPlateGreenNew")
+        
+//        navigationController?.navigationBar.backgroundColor = UIColor.init(named: "CampusPlateGreenNew")
+//        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -142,7 +148,7 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
         let imageData:Data = (image?.jpegData(compressionQuality: 0.05)!)!
         let imageBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
         
-        let listing = WSListing(listingId: -1, userId: -1, title: food ?? "", locationDescription: subLocation!, lat: latitude, lng: longitude, creationTime: -1, quantity: quantity, image: imageBase64)
+        let listing = WSListing(listingId: -1, foodStopId: -1, userId: -1, title: food ?? "", description: "", creationTime: -1, quantity: quantity, image: "")
     
             listingModel.addListing(listing: listing) { (completed) in
                     if (!completed) {
@@ -154,13 +160,13 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
                     }
                     else {
                         DispatchQueue.main.async {
+                            self.dismiss(animated: true, completion: nil)
                             self.delegate?.didComplete()
                         }
                     }
             
             }
         
-    
 }
 
 }

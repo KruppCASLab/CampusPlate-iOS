@@ -13,19 +13,20 @@
 		E02014B12412E71300C75D6A /* GUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02014B02412E71300C75D6A /* GUID.swift */; };
 		E05F76E724005C2B006E29AF /* PinVerifyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */; };
 		E05F76E924005C43006E29AF /* ListingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F76E824005C43006E29AF /* ListingResponse.swift */; };
+		F603CA2825C09829005B6F79 /* FoodStopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F603CA2725C09829005B6F79 /* FoodStopModel.swift */; };
 		F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */; };
 		F61379B9235CBEEA008CF83F /* CampusPlateLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F61379B8235CBEE9008CF83F /* CampusPlateLogo.png */; };
-		F6179EE9235E924C00299A9C /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6179EE8235E924C00299A9C /* Line.swift */; };
+		F61785FE2559F03B00CEC8FA /* CustomMaskExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61785FD2559F03B00CEC8FA /* CustomMaskExample.swift */; };
 		F61C0E712413451B0017C3A0 /* CampusPlateLogo-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F61C0E702413451B0017C3A0 /* CampusPlateLogo-01.png */; };
 		F61DCBAD2326E7C700F7FD7C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DCBAC2326E7C700F7FD7C /* Response.swift */; };
-		F61DCBAF2326E95800F7FD7C /* WSListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DCBAE2326E95800F7FD7C /* WSListing.swift */; };
 		F62A57BA254C86BC00F232BE /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62A57B9254C86BC00F232BE /* FoodTableViewController.swift */; };
 		F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEEE52108EFF300006DC0 /* MapViewController.swift */; };
 		F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */; };
-		F6491E3B235FAB0C00D6C715 /* PickUpScreenLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6491E3A235FAB0C00D6C715 /* PickUpScreenLine.swift */; };
 		F656694625263F9B00A6BA2B /* TextFieldMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = F656694525263F9B00A6BA2B /* TextFieldMaxLength.swift */; };
 		F656694A252B968800A6BA2B /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6566949252B968800A6BA2B /* DoneButton.swift */; };
 		F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A60372188BADC00DB7338 /* CreateNewListing.swift */; };
+		F6663F56256C4D6E0084EC1C /* FoodStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6663F55256C4D6E0084EC1C /* FoodStop.swift */; };
+		F6663F63257E7EE10084EC1C /* WSListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DCBAE2326E95800F7FD7C /* WSListing.swift */; };
 		F6788FFF23E7C037009FC4C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6788FFE23E7C037009FC4C6 /* User.swift */; };
 		F678900123E7C1A1009FC4C6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F678900023E7C1A1009FC4C6 /* UserModel.swift */; };
 		F69265DE24463754005C0701 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69265DD24463754005C0701 /* CredentialManager.swift */; };
@@ -41,6 +42,7 @@
 		F6AE83A4254B33A500D38310 /* UIView+constrainToParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE83A0254B33A500D38310 /* UIView+constrainToParent.swift */; };
 		F6BCD71924286CE1000C2E02 /* gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCD71824286CE1000C2E02 /* gif.swift */; };
 		F6BCD71B24286EF2000C2E02 /* fork-and-knife-logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */; };
+		F6E3C33425B8CF82007FD10E /* RequestUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E3C33325B8CF82007FD10E /* RequestUtility.swift */; };
 		F6E9726B244B51C8009A2BB0 /* SegueCheckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,19 +63,22 @@
 		E02014B02412E71300C75D6A /* GUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUID.swift; sourceTree = "<group>"; };
 		E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVerifyResponse.swift; sourceTree = "<group>"; };
 		E05F76E824005C43006E29AF /* ListingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingResponse.swift; sourceTree = "<group>"; };
+		F603CA2725C09829005B6F79 /* FoodStopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStopModel.swift; sourceTree = "<group>"; };
 		F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpFoodViewController.swift; sourceTree = "<group>"; };
 		F61379B8235CBEE9008CF83F /* CampusPlateLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CampusPlateLogo.png; sourceTree = "<group>"; };
-		F6179EE8235E924C00299A9C /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		F61785FD2559F03B00CEC8FA /* CustomMaskExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMaskExample.swift; sourceTree = "<group>"; };
 		F61C0E702413451B0017C3A0 /* CampusPlateLogo-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CampusPlateLogo-01.png"; sourceTree = "<group>"; };
 		F61DCBAC2326E7C700F7FD7C /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		F61DCBAE2326E95800F7FD7C /* WSListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSListing.swift; sourceTree = "<group>"; };
 		F62A57B9254C86BC00F232BE /* FoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
+		F62A57D3254DE6F400F232BE /* SF-Pro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Italic.ttf"; path = "../../../../Library/Fonts/SF-Pro-Italic.ttf"; sourceTree = "<group>"; };
+		F62A57D4254DE6F400F232BE /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro.ttf"; path = "../../../../Library/Fonts/SF-Pro.ttf"; sourceTree = "<group>"; };
 		F62BEEE52108EFF300006DC0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaterULoginScreenVC.swift; sourceTree = "<group>"; };
-		F6491E3A235FAB0C00D6C715 /* PickUpScreenLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpScreenLine.swift; sourceTree = "<group>"; };
 		F656694525263F9B00A6BA2B /* TextFieldMaxLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMaxLength.swift; sourceTree = "<group>"; };
 		F6566949252B968800A6BA2B /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
 		F65A60372188BADC00DB7338 /* CreateNewListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateNewListing.swift; path = ../View/CreateNewListing.swift; sourceTree = "<group>"; };
+		F6663F55256C4D6E0084EC1C /* FoodStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStop.swift; sourceTree = "<group>"; };
 		F6788FFE23E7C037009FC4C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F678900023E7C1A1009FC4C6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F69265DD24463754005C0701 /* CredentialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialManager.swift; sourceTree = "<group>"; };
@@ -94,6 +99,7 @@
 		F6AE83A0254B33A500D38310 /* UIView+constrainToParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constrainToParent.swift"; sourceTree = "<group>"; };
 		F6BCD71824286CE1000C2E02 /* gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gif.swift; sourceTree = "<group>"; };
 		F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "fork-and-knife-logo.gif"; path = "Assets.xcassets/fork-and-knife-logo.dataset/fork-and-knife-logo.gif"; sourceTree = "<group>"; };
+		F6E3C33325B8CF82007FD10E /* RequestUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUtility.swift; sourceTree = "<group>"; };
 		F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueCheckerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +126,7 @@
 			children = (
 				F69BDB4620FA55780065BB78 /* Main.storyboard */,
 				F62A57B9254C86BC00F232BE /* FoodTableViewController.swift */,
+				F61785FD2559F03B00CEC8FA /* CustomMaskExample.swift */,
 				F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */,
 			);
 			path = View;
@@ -130,6 +137,8 @@
 			children = (
 				E00850F9212B00650057B2B5 /* ListingModel.swift */,
 				F678900023E7C1A1009FC4C6 /* UserModel.swift */,
+				F603CA2725C09829005B6F79 /* FoodStopModel.swift */,
+				F6E3C33325B8CF82007FD10E /* RequestUtility.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,6 +168,7 @@
 			children = (
 				F61DCBAE2326E95800F7FD7C /* WSListing.swift */,
 				F6788FFE23E7C037009FC4C6 /* User.swift */,
+				F6663F55256C4D6E0084EC1C /* FoodStop.swift */,
 				F61DCBAC2326E7C700F7FD7C /* Response.swift */,
 				E05F76E824005C43006E29AF /* ListingResponse.swift */,
 				E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */,
@@ -173,10 +183,8 @@
 				F69265DD24463754005C0701 /* CredentialManager.swift */,
 				F69265DF2446376C005C0701 /* Credential.swift */,
 				F6BCD71824286CE1000C2E02 /* gif.swift */,
-				F6491E3A235FAB0C00D6C715 /* PickUpScreenLine.swift */,
 				F6566949252B968800A6BA2B /* DoneButton.swift */,
 				F656694525263F9B00A6BA2B /* TextFieldMaxLength.swift */,
-				F6179EE8235E924C00299A9C /* Line.swift */,
 				F69BDB4120FA55780065BB78 /* BWFoodApp */,
 				F69BDB5620FA557A0065BB78 /* BWFoodAppTests */,
 				F69BDB4020FA55780065BB78 /* Products */,
@@ -206,6 +214,8 @@
 				F61C0E702413451B0017C3A0 /* CampusPlateLogo-01.png */,
 				F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */,
 				F69BDB4920FA55790065BB78 /* Assets.xcassets */,
+				F62A57D3254DE6F400F232BE /* SF-Pro-Italic.ttf */,
+				F62A57D4254DE6F400F232BE /* SF-Pro.ttf */,
 				F69BDB4B20FA55790065BB78 /* LaunchScreen.storyboard */,
 				F69BDB4E20FA55790065BB78 /* Info.plist */,
 			);
@@ -339,22 +349,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E3C33425B8CF82007FD10E /* RequestUtility.swift in Sources */,
+				F6663F63257E7EE10084EC1C /* WSListing.swift in Sources */,
 				F6AE83A2254B33A500D38310 /* PulleyPassthroughScrollView.swift in Sources */,
 				F656694A252B968800A6BA2B /* DoneButton.swift in Sources */,
-				F6491E3B235FAB0C00D6C715 /* PickUpScreenLine.swift in Sources */,
 				F62A57BA254C86BC00F232BE /* FoodTableViewController.swift in Sources */,
 				F6788FFF23E7C037009FC4C6 /* User.swift in Sources */,
 				F69265E02446376C005C0701 /* Credential.swift in Sources */,
 				F61DCBAD2326E7C700F7FD7C /* Response.swift in Sources */,
+				F61785FE2559F03B00CEC8FA /* CustomMaskExample.swift in Sources */,
 				F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */,
 				F656694625263F9B00A6BA2B /* TextFieldMaxLength.swift in Sources */,
+				F603CA2825C09829005B6F79 /* FoodStopModel.swift in Sources */,
 				F6AE83A1254B33A500D38310 /* UIViewController+PulleyViewController.swift in Sources */,
 				F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */,
+				F6663F56256C4D6E0084EC1C /* FoodStop.swift in Sources */,
 				E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */,
 				E05F76E724005C2B006E29AF /* PinVerifyResponse.swift in Sources */,
 				E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */,
 				E02014B12412E71300C75D6A /* GUID.swift in Sources */,
-				F61DCBAF2326E95800F7FD7C /* WSListing.swift in Sources */,
 				F6AE83A4254B33A500D38310 /* UIView+constrainToParent.swift in Sources */,
 				F6BCD71924286CE1000C2E02 /* gif.swift in Sources */,
 				E05F76E924005C43006E29AF /* ListingResponse.swift in Sources */,
@@ -362,7 +375,6 @@
 				F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */,
 				F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */,
 				F678900123E7C1A1009FC4C6 /* UserModel.swift in Sources */,
-				F6179EE9235E924C00299A9C /* Line.swift in Sources */,
 				F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */,
 				E003B722254B33300065DF41 /* EnterPinVC.swift in Sources */,
 				F69265DE24463754005C0701 /* CredentialManager.swift in Sources */,

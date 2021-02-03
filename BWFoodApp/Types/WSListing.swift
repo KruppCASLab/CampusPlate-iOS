@@ -10,24 +10,24 @@ import Foundation
 
 public class WSListing: Codable {
     public var listingId:Int?
+    public var foodStopId:Int?
     public var userId:Int?
     public var title:String?
-    public var locationDescription:String?
-    public var lat:Double?
-    public var lng:Double?
-    public var creationTime:Double?
+    public var description:String?
+    public var creationTime:Int?
     public var quantity:Int?
     public var image: String?
  
-    init(listingId: Int, userId: Int, title: String, locationDescription: String, lat: Double, lng: Double, creationTime: Double, quantity: Int, image: String) {
-        self.creationTime = creationTime
-        self.lat = lat
-        self.lng = lng
-        self.quantity = quantity
-        self.title = title
-        self.locationDescription = locationDescription
-        self.userId = userId
+    init(listingId:Int, foodStopId:Int, userId:Int, title:String, description:String, creationTime:Int, quantity:Int, image:String) {
+        
         self.listingId = listingId
+        self.foodStopId = foodStopId
+        self.userId = userId
+        self.title = title
+        self.description = description
+        self.creationTime = creationTime
+        self.quantity = quantity
         self.image = image
+        
     }
 }

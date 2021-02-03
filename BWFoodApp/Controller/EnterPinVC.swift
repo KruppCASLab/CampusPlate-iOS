@@ -74,6 +74,7 @@ class EnterPinVC: UIViewController, UITextFieldDelegate {
                 }
             }else{
                 DispatchQueue.main.async {
+                    
                     self.performSegue(withIdentifier: "goToMap", sender: nil)
                 }
             }

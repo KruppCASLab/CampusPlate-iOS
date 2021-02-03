@@ -193,8 +193,26 @@ public enum PulleySnapMode {
 private let kPulleyDefaultCollapsedHeight: CGFloat = 68.0
 private let kPulleyDefaultPartialRevealHeight: CGFloat = 264.0
 
-open class PulleyViewController: UIViewController, PulleyDrawerViewControllerDelegate {
+open class PulleyViewController: UIViewController, PulleyDrawerViewControllerDelegate, CreateNewListingDelegate {
     
+    
+    func didComplete() {
+       
+        if let controller = drawerContentViewController as? FoodTableViewController{
+            controller.didComplete()
+        }
+    }
+    
+    open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "goToViewListings") {
+            if let vc = segue.destination as? UINavigationController {
+                if let viewTableViewVC:CreateNewListing = vc.viewControllers[0] as? CreateNewListing {
+                    viewTableViewVC.delegate = self
+                }
+            }
+        }
+    }
+
     // Interface Builder
     
     /// When using with Interface Builder only! Connect a containing view to this outlet.
@@ -240,6 +258,10 @@ open class PulleyViewController: UIViewController, PulleyDrawerViewControllerDel
             }
 
             addChild(controller)
+            
+            if let controller = primaryContentViewController as? MapViewController {
+                controller.createNewListingDelegate = self
+            }
 
             primaryContentContainer.addSubview(controller.view)
             
@@ -772,6 +794,8 @@ open class PulleyViewController: UIViewController, PulleyDrawerViewControllerDel
     
     override open func viewDidLoad() {
         super.viewDidLoad()
+        
+        //primaryContentViewController.create
         
         // IB Support
         if primaryContentViewController == nil || drawerContentViewController == nil

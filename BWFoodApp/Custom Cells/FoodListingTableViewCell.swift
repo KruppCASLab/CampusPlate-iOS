@@ -10,10 +10,10 @@ import UIKit
 
 class FoodListingTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var food: UILabel!
-    @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var location: UILabel!
     
+    @IBOutlet weak var foodLabel: UILabel!
+    
+    @IBOutlet weak var foodStopLocationLabel: UILabel!
     
     
     
@@ -27,5 +27,7 @@ class FoodListingTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
 
 }

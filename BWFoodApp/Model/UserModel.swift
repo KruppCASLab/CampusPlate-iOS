@@ -46,7 +46,8 @@ class UserModel {
         var request = URLRequest(url: patchUrl!)
         
         request.httpMethod = "PATCH"
-        
+        //request = RequestUtility.addAuth(original: request)
+    
         var userUpdate = Dictionary<String, Int>()
         userUpdate["pin"] = pin
         
@@ -65,11 +66,12 @@ class UserModel {
                     if response.status != 0{
                         completion(false)
                     }else{
-                        completion(true)
+                        
                         
                         let credentials : Credential = Credential(username: userName, password: response.data!.GUID!)
                         
                         CredentialManager.saveCredential(credential: credentials)
+                        completion(true)
                     
                     }
                     

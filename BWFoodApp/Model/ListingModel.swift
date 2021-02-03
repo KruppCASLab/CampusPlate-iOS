@@ -22,9 +22,15 @@ class ListingModel {
     }
     
     public func loadListings(completion:@escaping (Bool)->Void) {
-        session.dataTask(with: url!) { (data, response, error) in
+        
+        var request = URLRequest(url: self.url!)
+        
+        request.httpMethod = "GET"
+        request = RequestUtility.addAuth(original: request)
+        session.dataTask(with: request){ (data, response, error) in
+        
             let decoder = JSONDecoder()
-            
+        
             do {
                 let jsonString = String(data: data!, encoding: .utf8)
                 let response = try decoder.decode(ListingResponse.self, from: data!)
@@ -44,16 +50,17 @@ class ListingModel {
     }
     
     public func getListing(index:Int) -> WSListing {
+        
         return self.listings[index]
     }
-    
-    
-    
+
     public func addListing(listing:WSListing, completion:@escaping (Bool)->Void) {
         self.listings.append(listing)
         var request = URLRequest(url: self.url!)
         
         request.httpMethod = "POST"
+        
+        request = RequestUtility.addAuth(original: request)
         
         let encoder = JSONEncoder()
         do {
@@ -75,6 +82,8 @@ class ListingModel {
         var request = URLRequest(url: patchUrl)
         
         request.httpMethod = "PATCH"
+        
+        request = RequestUtility.addAuth(original: request)
         
         let encoder = JSONEncoder()
         do{
