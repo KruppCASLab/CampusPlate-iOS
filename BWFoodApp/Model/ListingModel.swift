@@ -12,7 +12,7 @@ import MapKit
 class ListingModel {
     private var listings = Array<WSListing>()
     
-    private let url = URL(string: "https://mopsdev.bw.edu/food/rest.php/listings")
+    private let url = URL(string: "https://krupp.dev/food/rest.php/listings")
     
     private static let sharedInstance = ListingModel()
     let session = URLSession.shared
