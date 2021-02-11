@@ -648,6 +648,7 @@
                                                 <connections>
                                                     <outlet property="foodLabel" destination="Grr-Ai-ieB" id="gqa-ay-sdv"/>
                                                     <outlet property="foodStopLocationLabel" destination="zbs-tK-zAn" id="0yC-IQ-P5G"/>
+                                                    <outlet property="leftBar" destination="ngC-ki-kSP" id="PVh-5p-qil"/>
                                                     <segue destination="NFq-Ii-tXi" kind="show" identifier="showFoodPickupDetail" id="iYe-dH-Lyd"/>
                                                 </connections>
                                             </tableViewCell>

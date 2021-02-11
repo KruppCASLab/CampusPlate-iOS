@@ -58,11 +58,14 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
         let cell:FoodListingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FoodListingCell", for: indexPath) as! FoodListingTableViewCell
         
         let listing:WSListing = listingModel.getListing(index: indexPath.row)
+        
+        let foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)
 
-        cell.foodStopLocationLabel.text = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)!.name
+        cell.foodStopLocationLabel.text = foodStop!.name
 //
         cell.foodLabel.text = listing.title?.uppercased()
         
+        cell.leftBar.backgroundColor = UIColor(hexaRGB: foodStop!.hexColor)
     
         return cell
         

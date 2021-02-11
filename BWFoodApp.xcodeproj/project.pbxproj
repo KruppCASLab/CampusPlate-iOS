@@ -12,6 +12,7 @@
 		E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F9212B00650057B2B5 /* ListingModel.swift */; };
 		E02014B12412E71300C75D6A /* GUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02014B02412E71300C75D6A /* GUID.swift */; };
 		E04EAC3125D59C63000F5879 /* FoodStopResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EAC3025D59C63000F5879 /* FoodStopResponse.swift */; };
+		E04EAC3525D5A2B9000F5879 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EAC3425D5A2B9000F5879 /* UIColorExtension.swift */; };
 		E05F76E724005C2B006E29AF /* PinVerifyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */; };
 		E05F76E924005C43006E29AF /* ListingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F76E824005C43006E29AF /* ListingResponse.swift */; };
 		F603CA2825C09829005B6F79 /* FoodStopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F603CA2725C09829005B6F79 /* FoodStopModel.swift */; };
@@ -63,6 +64,7 @@
 		E00850F9212B00650057B2B5 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
 		E02014B02412E71300C75D6A /* GUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUID.swift; sourceTree = "<group>"; };
 		E04EAC3025D59C63000F5879 /* FoodStopResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStopResponse.swift; sourceTree = "<group>"; };
+		E04EAC3425D5A2B9000F5879 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVerifyResponse.swift; sourceTree = "<group>"; };
 		E05F76E824005C43006E29AF /* ListingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingResponse.swift; sourceTree = "<group>"; };
 		F603CA2725C09829005B6F79 /* FoodStopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStopModel.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				F69BDB4620FA55780065BB78 /* Main.storyboard */,
 				F61785FD2559F03B00CEC8FA /* CustomMaskExample.swift */,
 				F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */,
+				E04EAC3425D5A2B9000F5879 /* UIColorExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				F61785FE2559F03B00CEC8FA /* CustomMaskExample.swift in Sources */,
 				F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */,
 				F656694625263F9B00A6BA2B /* TextFieldMaxLength.swift in Sources */,
+				E04EAC3525D5A2B9000F5879 /* UIColorExtension.swift in Sources */,
 				F603CA2825C09829005B6F79 /* FoodStopModel.swift in Sources */,
 				F6AE83A1254B33A500D38310 /* UIViewController+PulleyViewController.swift in Sources */,
 				F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */,
