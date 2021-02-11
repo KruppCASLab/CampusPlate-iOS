@@ -11,6 +11,7 @@
 		E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */; };
 		E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F9212B00650057B2B5 /* ListingModel.swift */; };
 		E02014B12412E71300C75D6A /* GUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02014B02412E71300C75D6A /* GUID.swift */; };
+		E04EAC3125D59C63000F5879 /* FoodStopResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EAC3025D59C63000F5879 /* FoodStopResponse.swift */; };
 		E05F76E724005C2B006E29AF /* PinVerifyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */; };
 		E05F76E924005C43006E29AF /* ListingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F76E824005C43006E29AF /* ListingResponse.swift */; };
 		F603CA2825C09829005B6F79 /* FoodStopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F603CA2725C09829005B6F79 /* FoodStopModel.swift */; };
@@ -61,6 +62,7 @@
 		E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListingTableViewCell.swift; sourceTree = "<group>"; };
 		E00850F9212B00650057B2B5 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
 		E02014B02412E71300C75D6A /* GUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUID.swift; sourceTree = "<group>"; };
+		E04EAC3025D59C63000F5879 /* FoodStopResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStopResponse.swift; sourceTree = "<group>"; };
 		E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVerifyResponse.swift; sourceTree = "<group>"; };
 		E05F76E824005C43006E29AF /* ListingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingResponse.swift; sourceTree = "<group>"; };
 		F603CA2725C09829005B6F79 /* FoodStopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStopModel.swift; sourceTree = "<group>"; };
@@ -125,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				F69BDB4620FA55780065BB78 /* Main.storyboard */,
-				F62A57B9254C86BC00F232BE /* FoodTableViewController.swift */,
 				F61785FD2559F03B00CEC8FA /* CustomMaskExample.swift */,
 				F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */,
 			);
@@ -146,6 +147,7 @@
 		E00850F8212B00410057B2B5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F62A57B9254C86BC00F232BE /* FoodTableViewController.swift */,
 				F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */,
 				E003B721254B33300065DF41 /* EnterPinVC.swift */,
 				F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */,
@@ -173,6 +175,7 @@
 				E05F76E824005C43006E29AF /* ListingResponse.swift */,
 				E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */,
 				E02014B02412E71300C75D6A /* GUID.swift */,
+				E04EAC3025D59C63000F5879 /* FoodStopResponse.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				F678900123E7C1A1009FC4C6 /* UserModel.swift in Sources */,
 				F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */,
 				E003B722254B33300065DF41 /* EnterPinVC.swift in Sources */,
+				E04EAC3125D59C63000F5879 /* FoodStopResponse.swift in Sources */,
 				F69265DE24463754005C0701 /* CredentialManager.swift in Sources */,
 				F6AE83A3254B33A500D38310 /* PulleyViewController.swift in Sources */,
 			);
@@ -542,7 +546,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R4WWA43GUF;
+				DEVELOPMENT_TEAM = MF9639JBWV;
 				INFOPLIST_FILE = BWFoodApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -562,7 +566,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R4WWA43GUF;
+				DEVELOPMENT_TEAM = MF9639JBWV;
 				INFOPLIST_FILE = BWFoodApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
