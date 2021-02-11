@@ -36,7 +36,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     
     
-
+    
     
     fileprivate var drawerBottomSafeArea: CGFloat = 0.0 {
         didSet {
@@ -60,13 +60,13 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
         let listing:WSListing = listingModel.getListing(index: indexPath.row)
         
         let foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)
-
+        
         cell.foodStopLocationLabel.text = foodStop!.name
-//
+        //
         cell.foodLabel.text = listing.title?.uppercased()
         
         cell.leftBar.backgroundColor = UIColor(hexaRGB: foodStop!.hexColor)
-    
+        
         return cell
         
     }
@@ -78,9 +78,9 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.indexSelected = indexPath
         self.performSegue(withIdentifier: "showFoodPickupDetail", sender: self)
-
+        
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -109,8 +109,8 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
         
         loadData()
         
-   
-
+        
+        
         // The bounce here is optional, but it's done automatically after appearance as a demonstration.
         Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(bounceDrawer), userInfo: nil, repeats: false)
         
@@ -126,35 +126,34 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
         return false
         
     }
-
+    
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        if let navVC = segue.destination as? UINavigationController{
-//            if let foodVC = navVC.viewControllers[0] as? PickUpFoodViewController {
-//                if let indexPath = indexSelected {
-//                    let listing = self.listingModel.getListing(index: indexPath.row)
-//                    foodVC.listing = listing
-//                    foodVC.indexPathOfListing = indexPath
-//                }
-//
-//            }
-//        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+
+        if let foodVC = segue.destination as? PickUpFoodViewController {
+            if let indexPath = indexSelected {
+                let listing = self.listingModel.getListing(index: indexPath.row)
+                foodVC.listing = listing
+                foodVC.indexPathOfListing = indexPath
+            }
+        }
+
         
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
     
-//}
-
+}
+    
 extension FoodTableViewController: PulleyDrawerViewControllerDelegate{
     
     func collapsedDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat
     {
-    
+        
         
         // For devices with a bottom safe area, we want to make our drawer taller. Your implementation may not want to do that. In that case, disregard the bottomSafeArea value.
         return 68.0 + (pulleyViewController?.currentDisplayMode == .drawer ? bottomSafeArea : 0.0)
@@ -212,31 +211,32 @@ extension FoodTableViewController: PulleyDrawerViewControllerDelegate{
     func drawerDisplayModeDidChange(drawer: PulleyViewController) {
         
         print("Drawer: \(drawer.currentDisplayMode)")
-//        gripperTopConstraint.isActive = drawer.currentDisplayMode == .drawer
+        //        gripperTopConstraint.isActive = drawer.currentDisplayMode == .drawer
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         pulleyViewController?.setDrawerPosition(position: .open, animated: true)
     }
     
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        return tableView.dequeueReusableCell(withIdentifier: "SampleCell", for: indexPath)
-//    }
+    //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    //        return tableView.dequeueReusableCell(withIdentifier: "SampleCell", for: indexPath)
+    //    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 125
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//
-//        let primaryContent = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PrimaryTransitionTargetViewController")
-//
-//        pulleyViewController?.setDrawerPosition(position: .collapsed, animated: true)
-//
-//        pulleyViewController?.setPrimaryContentViewController(controller: primaryContent, animated: false)
-//    }
-
+    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //        tableView.deselectRow(at: indexPath, animated: true)
+    //
+    //        let primaryContent = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PrimaryTransitionTargetViewController")
+    //
+    //        pulleyViewController?.setDrawerPosition(position: .collapsed, animated: true)
+    //
+    //        pulleyViewController?.setPrimaryContentViewController(controller: primaryContent, animated: false)
+    //    }
+    
     
     
 }
+

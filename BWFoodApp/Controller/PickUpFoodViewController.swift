@@ -12,6 +12,7 @@ import CoreGraphics
 class PickUpFoodViewController: UIViewController {
 
     let listingModel = ListingModel.getSharedInstance()
+    let foodStopModel = FoodStopModel.getSharedInstance()
     
     public var delegate:CreateNewListingDelegate?
     
@@ -22,6 +23,7 @@ class PickUpFoodViewController: UIViewController {
     
     
     @IBOutlet weak var pickUpLocation: UILabel!
+    @IBOutlet weak var foodStopCircleView: UIView!
     
     @IBOutlet weak var foodImageView: UIImageView!
     
@@ -120,55 +122,55 @@ class PickUpFoodViewController: UIViewController {
 
         
     
-//        foodLabel.text = listing.title
+        foodLabel.text = listing.title
 //
-//        pickUpLocation.text = listing.title
+        pickUpLocation.text = listing.title
         
         //ActivityIndicator.isHidden = true
         
-//        let dataDecoded : Data = Data(base64Encoded: listing.image! , options: .ignoreUnknownCharacters)!
-//        let decodedimage = UIImage(data: dataDecoded)
-//        foodImageView.image = decodedimage
-//
-//        foodImageView.image = decodedimage
+        //let dataDecoded : Data = Data(base64Encoded: listing.image! , options: .ignoreUnknownCharacters)!
+        //let decodedimage = UIImage(data: dataDecoded)
+        //foodImageView.image = decodedimage
+
         
-        //navBar.title = listing.title
+   
         
-//        foodImageView.layer.borderWidth = 2
-//        foodImageView.layer.borderColor = UIColor.init(named: "CampusPlateGreen")?.cgColor
+        foodImageView.layer.borderWidth = 2
+        foodImageView.layer.borderColor = UIColor.init(named: "CampusPlateGreen")?.cgColor
         
-        //claimButton.layer.cornerRadius = 20
+        foodStopCircleView.backgroundColor = UIColor.init(hexaRGB: foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)!.hexColor)
+        claimButton.layer.cornerRadius = 20
         
-        //let available : Int = listing.quantity ?? 0
-        //var availableStr = String(available)
+        let available : Int = listing.quantity ?? 0
+        var availableStr = String(available)
         
     
-//        let unixTimestamp = listing.creationTime
-//        let date = Date(timeIntervalSince1970: TimeInterval(unixTimestamp!))
-//        
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.timeZone = TimeZone(abbreviation: "GMT") //Set timezone that you want
-//        dateFormatter.locale = NSLocale.current
-//        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm" //Specify your format that you want
-//        let strDate = dateFormatter.string(from: date)
-//        
-//        func daysBetween(start: Date, end: Date) -> Int {
-//                return Calendar.current.dateComponents([.day], from: start, to: end).day!
-//        }
-//        
-//        let currentDate = Date()
-//        
-//        let daysSince = daysBetween(start: date, end: currentDate)
-//    
-//        let strDaysSince = String(daysSince)
-//        
-//        if strDaysSince == "0" {
-//            daysPosted.text = "POSTED TODAY"
-//        }else{
-//            daysPosted.text = "POSTED " + strDaysSince + " DAYS AGO"
-//        }
-//        
-//        self.quantityLabel.text = availableStr
+        let unixTimestamp = listing.creationTime
+        let date = Date(timeIntervalSince1970: TimeInterval(unixTimestamp!))
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT") //Set timezone that you want
+        dateFormatter.locale = NSLocale.current
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm" //Specify your format that you want
+        let strDate = dateFormatter.string(from: date)
+        
+        func daysBetween(start: Date, end: Date) -> Int {
+                return Calendar.current.dateComponents([.day], from: start, to: end).day!
+        }
+        
+        let currentDate = Date()
+        
+        let daysSince = daysBetween(start: date, end: currentDate)
+    
+        let strDaysSince = String(daysSince)
+        
+        if strDaysSince == "0" {
+            daysPosted.text = "POSTED TODAY"
+        }else{
+            daysPosted.text = "POSTED " + strDaysSince + " DAYS AGO"
+        }
+        
+        //self.quantityLabel.text = availableStr
 
         // Do any additional setup after loading the view.
     }

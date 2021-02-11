@@ -877,7 +877,13 @@
                     <navigationItem key="navigationItem" id="fCn-Dx-xla"/>
                     <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="claimButton" destination="LdP-RD-V6L" id="Eso-b9-Y5X"/>
+                        <outlet property="daysPosted" destination="vDH-aW-Wmc" id="BaE-Iy-Zu5"/>
+                        <outlet property="foodImageView" destination="48n-5Y-J0c" id="dFc-n5-MEa"/>
+                        <outlet property="foodLabel" destination="5Zg-XD-fRC" id="qa8-63-j7f"/>
+                        <outlet property="foodStopCircleView" destination="Str-L1-oBS" id="iTX-Xq-j8q"/>
                         <outlet property="gripper" destination="nvs-i5-Af8" id="KaI-aj-xDf"/>
+                        <outlet property="pickUpLocation" destination="8wD-h5-MlL" id="gYO-08-J0o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5K-UX-qn3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
