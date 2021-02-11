@@ -10,20 +10,26 @@ import Foundation
 
 public class FoodStop:Codable {
     
-    let foodStopID : Int
+    let foodStopId : Int
     let name : String
     let description : String
+    let streetAddress : String
     let lat : Double
     let lng : Double
+    let hexColor: String
+    let foodStopNumber: Int
     
 
-    init(foodStopID:Int, name:String, description: String, lat : Double, lng : Double) {
-        
-        self.foodStopID = foodStopID
+    init(foodStopID:Int, name:String, description: String, streetAddress:String, lat: Double, lng: Double, hexColor: String, foodStopNumber:Int) {
+    
+        self.foodStopId = foodStopID
         self.name = name
         self.description = description
+        self.streetAddress = streetAddress
         self.lat = lat
         self.lng = lng
+        self.hexColor = hexColor
+        self.foodStopNumber = foodStopNumber
         
     }
 }

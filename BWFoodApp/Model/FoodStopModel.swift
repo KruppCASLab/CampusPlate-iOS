@@ -21,8 +21,36 @@ class FoodStopModel{
         return self.sharedInstance
     }
     
-    public func getFoodStop(index: Int) -> FoodStop {
-        return self.foodStops[index]
+    public func loadFoodStops(completion:@escaping (Bool)->Void) {
+        var request = URLRequest(url: self.url!)
+
+        request.httpMethod = "GET"
+        request = RequestUtility.addAuth(original: request)
+        session.dataTask(with: request){ (data, response, error) in
+        
+            let decoder = JSONDecoder()
+        
+            do {
+                let jsonString = String(data: data!, encoding: .utf8)
+                let response = try decoder.decode(FoodStopResponse.self, from: data!)
+                self.foodStops = response.data!
+                completion(true)
+            }
+            catch {
+                completion(false)
+            }
+            
+        }.resume()
+    }
+    
+    public func getFoodStop(foodStopId: Int) -> FoodStop? {
+        for foodStop in self.foodStops {
+            if foodStop.foodStopId == foodStopId {
+                return foodStop
+            }
+        }
+    
+        return nil
     }
 }
 
