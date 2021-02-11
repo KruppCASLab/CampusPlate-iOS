@@ -119,26 +119,18 @@ class PickUpFoodViewController: UIViewController {
         ])
         
        
+        let foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)!
 
         
     
         foodLabel.text = listing.title
-//
-        pickUpLocation.text = listing.title
+        pickUpLocation.text = foodStop.name
         
-        //ActivityIndicator.isHidden = true
         
-        //let dataDecoded : Data = Data(base64Encoded: listing.image! , options: .ignoreUnknownCharacters)!
-        //let decodedimage = UIImage(data: dataDecoded)
-        //foodImageView.image = decodedimage
 
-        
-   
-        
-        foodImageView.layer.borderWidth = 2
-        foodImageView.layer.borderColor = UIColor.init(named: "CampusPlateGreen")?.cgColor
-        
-        foodStopCircleView.backgroundColor = UIColor.init(hexaRGB: foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)!.hexColor)
+        // TODO Update image
+    
+        foodStopCircleView.backgroundColor = UIColor.init(hexaRGB: foodStop.hexColor)
         claimButton.layer.cornerRadius = 20
         
         let available : Int = listing.quantity ?? 0
