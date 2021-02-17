@@ -17,36 +17,22 @@ class PickUpFoodViewController: UIViewController {
     public var delegate:CreateNewListingDelegate?
     
     @IBOutlet weak var daysPosted: UILabel!
-    
     @IBOutlet weak var foodLabel: UILabel!
-    
-    
-    
+    @IBOutlet weak var colorIndicator: UIView!
     @IBOutlet weak var pickUpLocation: UILabel!
+    @IBOutlet weak var pickUpLocationAddress: UILabel!
     @IBOutlet weak var foodStopCircleView: UIView!
-    
     @IBOutlet weak var foodImageView: UIImageView!
-    
-    @IBOutlet weak var quantityLabel: UILabel!
-    
-    
-    @IBOutlet weak var navBar: UINavigationItem!
-    
-    @IBOutlet weak var gripper: UIView!
-    
-    
+    @IBOutlet weak var foodDescription: UITextView!
     @IBOutlet weak var claimButton: UIButton!
-    
     @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView!
-    
     
     public var listing:WSListing!
     public var indexPathOfListing:IndexPath!
     
     @IBAction func pickUpButton(_ sender: Any) {
         // TODO: Remove the item from model
-        ListingModel.getSharedInstance().removeListing(index: self.indexPathOfListing.row)
-        
+//        ListingModel.getSharedInstance().removeListing(index: self.indexPathOfListing.row)
         self.presentingViewController?.dismiss(animated: true, completion: nil)
         
     }
@@ -61,42 +47,31 @@ class PickUpFoodViewController: UIViewController {
         claimButton.alpha = 0.5
         
         
-        listingModel.updateQuantity(listingID: listing.listingId!, releventQuantity: Int(quantityLabel.text!)!) { (completed) in
-            if (!completed) {
-                let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
-                DispatchQueue.main.async {
-                    self.present(alert, animated: true, completion: nil)
-                }
-            }else {
-                DispatchQueue.main.async {
-                    self.delegate?.didComplete()
-                }
-           }
-            
-        }
+//        listingModel.updateQuantity(listingID: listing.listingId!, releventQuantity: Int(quantityLabel.text!)!) { (completed) in
+//            if (!completed) {
+//                let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
+//                DispatchQueue.main.async {
+//                    self.present(alert, animated: true, completion: nil)
+//                }
+//            }else {
+//                DispatchQueue.main.async {
+//                    self.delegate?.didComplete()
+//                }
+//           }
+//
+//        }
         
         
-    }
-    
-    
-    @IBAction func cancelButton(_ sender: Any) {
-        
-        self.dismiss(animated: true, completion: nil)
     }
     
 
-    @IBAction func quantityStepper(_ sender: UIStepper) {
-        
-        quantityLabel.text = Int(sender.value).description
-        
-        sender.maximumValue = Double(quantityLabel.text!) ?? 0
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        gripper.layer.cornerRadius = 2.5
+        let width:CGFloat = UIScreen.main.bounds.width*0.0533
+        colorIndicator.frame = CGRect(x: 0,y: 0,width: width,height: width)
+        colorIndicator.layer.masksToBounds = true
+        colorIndicator.layer.cornerRadius = width/2
         
         view.layer.cornerRadius=10
         
@@ -124,7 +99,10 @@ class PickUpFoodViewController: UIViewController {
         
     
         foodLabel.text = listing.title
+        //listfoodDescription.text = listing.description
+        
         pickUpLocation.text = foodStop.name
+        pickUpLocationAddress.text = foodStop.streetAddress
         
         
 
@@ -132,6 +110,16 @@ class PickUpFoodViewController: UIViewController {
     
         foodStopCircleView.backgroundColor = UIColor.init(hexaRGB: foodStop.hexColor)
         claimButton.layer.cornerRadius = 20
+        
+        listingModel.getImage(listingId: listing.listingId!) { (data) in
+            
+            DispatchQueue.main.async {
+                var decodedImage = UIImage(data: data)
+                self.foodImageView.image = decodedImage
+            }
+        
+        }
+        
         
         let available : Int = listing.quantity ?? 0
         var availableStr = String(available)
@@ -161,8 +149,6 @@ class PickUpFoodViewController: UIViewController {
         }else{
             daysPosted.text = "POSTED " + strDaysSince + " DAYS AGO"
         }
-        
-        //self.quantityLabel.text = availableStr
 
         // Do any additional setup after loading the view.
     }

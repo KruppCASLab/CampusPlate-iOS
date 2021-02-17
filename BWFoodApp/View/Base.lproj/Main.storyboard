@@ -728,18 +728,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Discard in 2 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aK-CP-LCi">
-                                <rect key="frame" x="44" y="85.333333333333329" width="330" height="14"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
-                                <color key="textColor" systemColor="systemYellowColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QDs-cz-REA">
-                                <rect key="frame" x="15.999999999999998" y="83" width="20.333333333333329" height="19"/>
-                                <color key="tintColor" systemColor="systemYellowColor"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3WX-1h-SMM">
-                                <rect key="frame" x="16" y="248" width="358" height="1"/>
+                                <rect key="frame" x="16" y="251" width="358" height="1"/>
                                 <color key="backgroundColor" red="0.70534247159999997" green="0.72145563359999998" blue="0.73390191790000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="ccq-WF-ob1"/>
@@ -751,19 +741,19 @@
                                 <color key="backgroundColor" red="0.70534247159999997" green="0.72145563359999998" blue="0.73390191790000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PICK UP LOCATION:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7B-oC-8Sd">
-                                <rect key="frame" x="16" y="257" width="358" height="20"/>
+                                <rect key="frame" x="16" y="260" width="358" height="20"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Knowlton Center" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wD-h5-MlL">
-                                <rect key="frame" x="44" y="283" width="330" height="26.333333333333314"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <rect key="frame" x="44" y="286" width="330" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123 Smith Street, Berea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c01-WA-Qk3">
-                                <rect key="frame" x="16" y="317.33333333333331" width="358" height="24"/>
+                                <rect key="frame" x="16" y="318" width="358" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -786,27 +776,26 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ba-kS-vsN">
-                                <rect key="frame" x="16" y="121" width="358" height="1"/>
+                                <rect key="frame" x="16" y="124" width="358" height="1"/>
                                 <color key="backgroundColor" red="0.70534247159999997" green="0.72145563359999998" blue="0.73390191790000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="pTn-hg-qgZ"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iyj-Fa-Yyt">
-                                <rect key="frame" x="16" y="130" width="358" height="101"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="16" y="133" width="358" height="101"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="101" id="GxW-ba-2zu"/>
                                 </constraints>
-                                <string key="text">Chocolate cookies with natural ingredients
- - Contains Nuts
- - Contains Gluten</string>
+                                <string key="text">Pepperoni pizza
+- Contains dairy</string>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Str-L1-oBS">
-                                <rect key="frame" x="16" y="285" width="20" height="20"/>
+                                <rect key="frame" x="16" y="288" width="20" height="20"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="hST-kr-Jc1"/>
@@ -819,14 +808,17 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9f-6u-IAV">
-                                <rect key="frame" x="16" y="366.33333333333331" width="358" height="1"/>
+                                <rect key="frame" x="16" y="367" width="358" height="1"/>
                                 <color key="backgroundColor" red="0.70534247159999997" green="0.72145563359999998" blue="0.73390191790000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="KDB-Ld-Zeu"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="48n-5Y-J0c">
-                                <rect key="frame" x="16" y="413.33333333333331" width="358" height="225.66666666666669"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="bw campus-1" translatesAutoresizingMaskIntoConstraints="NO" id="48n-5Y-J0c">
+                                <rect key="frame" x="16" y="414" width="358" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="48n-5Y-J0c" secondAttribute="height" multiplier="358:225" id="cXa-5x-k2M"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qGI-ch-wBB"/>
@@ -835,21 +827,17 @@
                             <constraint firstItem="qGI-ch-wBB" firstAttribute="trailing" secondItem="vDH-aW-Wmc" secondAttribute="trailing" constant="16" id="1OU-uC-VfH"/>
                             <constraint firstItem="3WX-1h-SMM" firstAttribute="leading" secondItem="xRC-x0-scu" secondAttribute="leadingMargin" id="7qr-cJ-0fZ"/>
                             <constraint firstItem="4ba-kS-vsN" firstAttribute="leading" secondItem="xRC-x0-scu" secondAttribute="leadingMargin" id="BJP-L0-DDD"/>
-                            <constraint firstItem="4ba-kS-vsN" firstAttribute="top" secondItem="QDs-cz-REA" secondAttribute="bottom" constant="18.670000000000002" id="Fhi-Dd-USw"/>
                             <constraint firstItem="y9f-6u-IAV" firstAttribute="leading" secondItem="xRC-x0-scu" secondAttribute="leadingMargin" id="GPh-gM-ha7"/>
                             <constraint firstItem="vDH-aW-Wmc" firstAttribute="top" secondItem="5Zg-XD-fRC" secondAttribute="bottom" constant="7" id="H9f-9m-Rf6"/>
                             <constraint firstItem="qGI-ch-wBB" firstAttribute="trailing" secondItem="c01-WA-Qk3" secondAttribute="trailing" constant="16" id="Hxr-jg-FVa"/>
                             <constraint firstItem="P7B-oC-8Sd" firstAttribute="top" secondItem="3WX-1h-SMM" secondAttribute="bottom" constant="8" symbolic="YES" id="K7S-j7-oTq"/>
-                            <constraint firstItem="7aK-CP-LCi" firstAttribute="centerY" secondItem="QDs-cz-REA" secondAttribute="centerY" id="LFZ-EQ-FZb"/>
                             <constraint firstItem="vDH-aW-Wmc" firstAttribute="leading" secondItem="qGI-ch-wBB" secondAttribute="leading" constant="16" id="MXZ-er-vtZ"/>
                             <constraint firstItem="c01-WA-Qk3" firstAttribute="top" secondItem="8wD-h5-MlL" secondAttribute="bottom" constant="8" symbolic="YES" id="Mk3-9h-xhj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3WX-1h-SMM" secondAttribute="trailing" id="Nrg-uF-ZN7"/>
-                            <constraint firstItem="qGI-ch-wBB" firstAttribute="trailing" secondItem="7aK-CP-LCi" secondAttribute="trailing" constant="16" id="R2A-Xp-A5G"/>
                             <constraint firstItem="4ba-kS-vsN" firstAttribute="trailing" secondItem="xRC-x0-scu" secondAttribute="trailingMargin" id="Rm9-Gq-iDs"/>
                             <constraint firstItem="48n-5Y-J0c" firstAttribute="top" secondItem="y9f-6u-IAV" secondAttribute="bottom" constant="46" id="T7M-Af-F1P"/>
                             <constraint firstItem="y9f-6u-IAV" firstAttribute="trailing" secondItem="xRC-x0-scu" secondAttribute="trailingMargin" id="UHB-7a-mli"/>
                             <constraint firstItem="qGI-ch-wBB" firstAttribute="trailing" secondItem="iyj-Fa-Yyt" secondAttribute="trailing" constant="16" id="UmW-E6-93a"/>
-                            <constraint firstItem="QDs-cz-REA" firstAttribute="leading" secondItem="qGI-ch-wBB" secondAttribute="leading" constant="16" id="VQb-CO-jQ1"/>
                             <constraint firstItem="iyj-Fa-Yyt" firstAttribute="top" secondItem="4ba-kS-vsN" secondAttribute="bottom" constant="8" symbolic="YES" id="Y24-nG-hBn"/>
                             <constraint firstItem="LdP-RD-V6L" firstAttribute="centerX" secondItem="qGI-ch-wBB" secondAttribute="centerX" id="YMg-e6-V5H"/>
                             <constraint firstItem="5Zg-XD-fRC" firstAttribute="top" secondItem="qGI-ch-wBB" secondAttribute="top" constant="23" id="ZlC-5j-6AX"/>
@@ -861,8 +849,6 @@
                             <constraint firstItem="iyj-Fa-Yyt" firstAttribute="leading" secondItem="qGI-ch-wBB" secondAttribute="leading" constant="16" id="esO-D7-NxS"/>
                             <constraint firstItem="8wD-h5-MlL" firstAttribute="top" secondItem="P7B-oC-8Sd" secondAttribute="bottom" constant="6" id="hET-pc-MyZ"/>
                             <constraint firstItem="48n-5Y-J0c" firstAttribute="leading" secondItem="qGI-ch-wBB" secondAttribute="leading" constant="16" id="iby-g4-AE0"/>
-                            <constraint firstItem="7aK-CP-LCi" firstAttribute="leading" secondItem="QDs-cz-REA" secondAttribute="trailing" constant="7.6666666666666714" id="kbW-U9-DLg"/>
-                            <constraint firstItem="QDs-cz-REA" firstAttribute="top" secondItem="vDH-aW-Wmc" secondAttribute="bottom" constant="8" symbolic="YES" id="mhE-Xd-M49"/>
                             <constraint firstItem="c01-WA-Qk3" firstAttribute="leading" secondItem="qGI-ch-wBB" secondAttribute="leading" constant="16" id="p96-wa-sRh"/>
                             <constraint firstItem="P7B-oC-8Sd" firstAttribute="leading" secondItem="qGI-ch-wBB" secondAttribute="leading" constant="16" id="pAc-pR-zhT"/>
                             <constraint firstItem="3WX-1h-SMM" firstAttribute="top" secondItem="iyj-Fa-Yyt" secondAttribute="bottom" constant="17" id="qIr-Rd-qLN"/>
@@ -878,12 +864,14 @@
                     <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="claimButton" destination="LdP-RD-V6L" id="Eso-b9-Y5X"/>
+                        <outlet property="colorIndicator" destination="Str-L1-oBS" id="nCI-1J-aOb"/>
                         <outlet property="daysPosted" destination="vDH-aW-Wmc" id="BaE-Iy-Zu5"/>
+                        <outlet property="foodDescription" destination="iyj-Fa-Yyt" id="1tw-WD-mYr"/>
                         <outlet property="foodImageView" destination="48n-5Y-J0c" id="dFc-n5-MEa"/>
                         <outlet property="foodLabel" destination="5Zg-XD-fRC" id="qa8-63-j7f"/>
                         <outlet property="foodStopCircleView" destination="Str-L1-oBS" id="iTX-Xq-j8q"/>
-                        <outlet property="gripper" destination="nvs-i5-Af8" id="KaI-aj-xDf"/>
                         <outlet property="pickUpLocation" destination="8wD-h5-MlL" id="gYO-08-J0o"/>
+                        <outlet property="pickUpLocationAddress" destination="c01-WA-Qk3" id="q05-ZK-gnB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5K-UX-qn3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -897,9 +885,8 @@
     <resources>
         <image name="Campus-Plate-App-Background" width="5939" height="8305"/>
         <image name="Campus-Plate-Logo-White-Full" width="6001" height="2100"/>
+        <image name="bw campus-1" width="1200" height="630"/>
         <image name="campusplategreen" width="6001" height="2100"/>
-        <image name="info.circle" catalog="system" width="128" height="121"/>
-        <image name="pizza" width="225" height="225"/>
         <namedColor name="CampusPlateGreen">
             <color red="0.40900000929832458" green="0.63700002431869507" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -926,9 +913,6 @@
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -33,6 +33,7 @@
 		F678900123E7C1A1009FC4C6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F678900023E7C1A1009FC4C6 /* UserModel.swift */; };
 		F69265DE24463754005C0701 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69265DD24463754005C0701 /* CredentialManager.swift */; };
 		F69265E02446376C005C0701 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69265DF2446376C005C0701 /* Credential.swift */; };
+		F692EA9225DB0E480069589B /* ImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F692EA9125DB0E480069589B /* ImageResponse.swift */; };
 		F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB4220FA55780065BB78 /* AppDelegate.swift */; };
 		F69BDB4820FA55780065BB78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4620FA55780065BB78 /* Main.storyboard */; };
 		F69BDB4A20FA55790065BB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4920FA55790065BB78 /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 		F678900023E7C1A1009FC4C6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F69265DD24463754005C0701 /* CredentialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialManager.swift; sourceTree = "<group>"; };
 		F69265DF2446376C005C0701 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		F692EA9125DB0E480069589B /* ImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
 		F69BDB3F20FA55780065BB78 /* BWFoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWFoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69BDB4220FA55780065BB78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F69BDB4720FA55780065BB78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		F69BDB3620FA55780065BB78 = {
 			isa = PBXGroup;
 			children = (
+				F692EA9125DB0E480069589B /* ImageResponse.swift */,
 				F69265DD24463754005C0701 /* CredentialManager.swift */,
 				F69265DF2446376C005C0701 /* Credential.swift */,
 				F6BCD71824286CE1000C2E02 /* gif.swift */,
@@ -381,6 +384,7 @@
 				F6E9726B244B51C8009A2BB0 /* SegueCheckerViewController.swift in Sources */,
 				F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */,
 				F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */,
+				F692EA9225DB0E480069589B /* ImageResponse.swift in Sources */,
 				F678900123E7C1A1009FC4C6 /* UserModel.swift in Sources */,
 				F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */,
 				E003B722254B33300065DF41 /* EnterPinVC.swift in Sources */,
@@ -550,7 +554,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MF9639JBWV;
+				DEVELOPMENT_TEAM = R4WWA43GUF;
 				INFOPLIST_FILE = BWFoodApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -570,7 +574,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MF9639JBWV;
+				DEVELOPMENT_TEAM = R4WWA43GUF;
 				INFOPLIST_FILE = BWFoodApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (

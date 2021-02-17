@@ -27,6 +27,7 @@ class ListingModel {
         
         request.httpMethod = "GET"
         request = RequestUtility.addAuth(original: request)
+        
         session.dataTask(with: request){ (data, response, error) in
         
             let decoder = JSONDecoder()
@@ -44,6 +45,31 @@ class ListingModel {
         }.resume()
     }
     
+    public func getImage(listingId: Int, completion:@escaping (Data)-> Void){
+
+        var imageURL = (self.url?.appendingPathComponent("/" + String(listingId) + "/image"))!
+
+        var request = URLRequest(url: imageURL)
+        request.httpMethod = "GET"
+        request = RequestUtility.addAuth(original: request)
+
+        session.dataTask(with: request){ (data, response, error) in
+
+            let decoder = JSONDecoder()
+
+            do {
+                let jsonString = String(data: data!, encoding: .utf8)
+                let response = try decoder.decode(ImageResponse.self, from: data!)
+                var imageString = response.data!
+            
+                let decodedData = Data(base64Encoded: imageString)!
+                completion(decodedData)
+            }
+            catch{
+
+            }
+        }.resume()
+    }
     
     public func update() {
         //TODO: Call service client to update
@@ -74,10 +100,10 @@ class ListingModel {
         }
     }
     
-    public func updateQuantity(listingID: Int, releventQuantity: Int, completion:@escaping (Bool)->Void) {
+    public func updateQuantity(listingId: Int, releventQuantity: Int, completion:@escaping (Bool)->Void) {
         
         // TODO : Add to URL listingId
-        let patchUrl = (self.url?.appendingPathComponent(String(listingID)))!
+        let patchUrl = (self.url?.appendingPathComponent(String(listingId)))!
         
         var request = URLRequest(url: patchUrl)
         

@@ -318,8 +318,8 @@
             timestampString = "589484014.099786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "pickUpButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -335,10 +335,10 @@
             timestampString = "589484014.099883"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "pickUpButton(_:)"
-            landmarkType = "7">
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "PickUpFoodViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -352,8 +352,8 @@
             timestampString = "589484014.099957"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -766,9 +766,9 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "updateQuantity(listingID:releventQuantity:completion:)"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "updateQuantity(listingId:releventQuantity:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -798,8 +798,8 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "addListing(listing:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -814,8 +814,8 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "addListing(listing:completion:)"
             landmarkType = "7">
             <Locations>
@@ -862,8 +862,8 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "addListing(listing:completion:)"
             landmarkType = "7">
             <Locations>
@@ -942,10 +942,10 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "claimButton(_:)"
-            landmarkType = "7">
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "PickUpFoodViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -958,8 +958,8 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "claimButton(_:)"
             landmarkType = "7">
             <Locations>
@@ -1006,8 +1006,8 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "claimButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2261,8 +2261,8 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2517,8 +2517,8 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "getListing(index:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2533,8 +2533,8 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "loadListings(completion:)"
             landmarkType = "7">
             <Locations>
@@ -2581,8 +2581,8 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "loadListings(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2597,8 +2597,8 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "loadListings(completion:)"
             landmarkType = "7">
          </BreakpointContent>
