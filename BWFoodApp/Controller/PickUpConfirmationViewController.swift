@@ -15,13 +15,18 @@ class PickUpConfirmationViewController: UIViewController {
     @IBOutlet weak var FoodStopAddress: UILabel!
     @IBOutlet weak var FoodStopIdNumber: UILabel!
     
+    public var foodStop:FoodStop!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        FoodStopLocation.text = foodStop.name
+        FoodStopAddress.text = foodStop.streetAddress
         CircleView.layer.cornerRadius = CircleView.frame.size.width/2
+        CircleView.backgroundColor = UIColor.init(hexaRGB: foodStop.hexColor)
+        FoodStopIdNumber.textColor = UIColor.init(hexaRGB: foodStop.hexColor)
+        
     }
     
  

@@ -30,6 +30,8 @@ class PickUpFoodViewController: UIViewController {
     public var listing:WSListing!
     public var indexPathOfListing:IndexPath!
     
+    public var foodStop:FoodStop!
+    
     @IBAction func pickUpButton(_ sender: Any) {
         // TODO: Remove the item from model
 //        ListingModel.getSharedInstance().removeListing(index: self.indexPathOfListing.row)
@@ -94,19 +96,15 @@ class PickUpFoodViewController: UIViewController {
         ])
         
        
-        let foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)!
+        foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)!
 
-        
-    
         foodLabel.text = listing.title
         //listfoodDescription.text = listing.description
         
         pickUpLocation.text = foodStop.name
         pickUpLocationAddress.text = foodStop.streetAddress
         
-        
-
-        // TODO Update image
+    
     
         foodStopCircleView.backgroundColor = UIColor.init(hexaRGB: foodStop.hexColor)
         claimButton.layer.cornerRadius = 20
@@ -160,14 +158,21 @@ class PickUpFoodViewController: UIViewController {
 
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+//     MARK: - Navigation
+//
+//     In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//         Get the new view controller using segue.destination.
+//         Pass the selected object to the new view controller.
+        
+        if (segue.identifier == "pickUpConfirmation") {
+            if let vc = segue.destination as? PickUpConfirmationViewController {
+                vc.foodStop = foodStop
+                }
+            }
+        }
     }
-    */
+    
 
-}
+
