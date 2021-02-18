@@ -24,6 +24,7 @@
 		F62A57BA254C86BC00F232BE /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62A57B9254C86BC00F232BE /* FoodTableViewController.swift */; };
 		F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEEE52108EFF300006DC0 /* MapViewController.swift */; };
 		F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */; };
+		F64FB5C525DF05D900672D51 /* PickUpConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FB5C425DF05D900672D51 /* PickUpConfirmationViewController.swift */; };
 		F656694625263F9B00A6BA2B /* TextFieldMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = F656694525263F9B00A6BA2B /* TextFieldMaxLength.swift */; };
 		F656694A252B968800A6BA2B /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6566949252B968800A6BA2B /* DoneButton.swift */; };
 		F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65A60372188BADC00DB7338 /* CreateNewListing.swift */; };
@@ -80,6 +81,7 @@
 		F62A57D4254DE6F400F232BE /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro.ttf"; path = "../../../../Library/Fonts/SF-Pro.ttf"; sourceTree = "<group>"; };
 		F62BEEE52108EFF300006DC0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaterULoginScreenVC.swift; sourceTree = "<group>"; };
+		F64FB5C425DF05D900672D51 /* PickUpConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpConfirmationViewController.swift; sourceTree = "<group>"; };
 		F656694525263F9B00A6BA2B /* TextFieldMaxLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMaxLength.swift; sourceTree = "<group>"; };
 		F6566949252B968800A6BA2B /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
 		F65A60372188BADC00DB7338 /* CreateNewListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateNewListing.swift; path = ../View/CreateNewListing.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */,
 				F65A60372188BADC00DB7338 /* CreateNewListing.swift */,
 				F62BEEE52108EFF300006DC0 /* MapViewController.swift */,
+				F64FB5C425DF05D900672D51 /* PickUpConfirmationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */,
 				E003B722254B33300065DF41 /* EnterPinVC.swift in Sources */,
 				E04EAC3125D59C63000F5879 /* FoodStopResponse.swift in Sources */,
+				F64FB5C525DF05D900672D51 /* PickUpConfirmationViewController.swift in Sources */,
 				F69265DE24463754005C0701 /* CredentialManager.swift in Sources */,
 				F6AE83A3254B33A500D38310 /* PulleyViewController.swift in Sources */,
 			);

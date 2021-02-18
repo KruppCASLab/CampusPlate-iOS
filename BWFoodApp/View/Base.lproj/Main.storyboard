@@ -209,7 +209,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Photos: 0/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nT-kJ-RfT">
-                                <rect key="frame" x="64" y="529.33333333333337" width="124" height="21.666666666666629"/>
+                                <rect key="frame" x="64" y="529.33333333333337" width="122.66666666666669" height="21.666666666666629"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21.666666666666629" id="tUZ-7c-wMg"/>
@@ -774,6 +774,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="rmF-MA-PRy" kind="presentation" modalPresentationStyle="fullScreen" id="FdT-TK-Hvz"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ba-kS-vsN">
                                 <rect key="frame" x="16" y="124" width="358" height="1"/>
@@ -814,7 +817,7 @@
                                     <constraint firstAttribute="height" constant="1" id="KDB-Ld-Zeu"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="bw campus-1" translatesAutoresizingMaskIntoConstraints="NO" id="48n-5Y-J0c">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="CampusPlateLogo-01.png" translatesAutoresizingMaskIntoConstraints="NO" id="48n-5Y-J0c">
                                 <rect key="frame" x="16" y="414" width="358" height="225"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="48n-5Y-J0c" secondAttribute="height" multiplier="358:225" id="cXa-5x-k2M"/>
@@ -878,6 +881,88 @@
             </objects>
             <point key="canvasLocation" x="4410.7692307692305" y="448.57819905213267"/>
         </scene>
+        <!--Pick Up Confirmation View Controller-->
+        <scene sceneID="MUp-SO-oU4">
+            <objects>
+                <viewController id="rmF-MA-PRy" customClass="PickUpConfirmationViewController" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Lm-Au-AN6">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="YOUR FOOD STOP:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eP-a1-4v5">
+                                <rect key="frame" x="16" y="64" width="358" height="39"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeH-Pi-hGd">
+                                <rect key="frame" x="-5" y="538" width="395" height="306"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="475"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zy-36-DsM">
+                                <rect key="frame" x="16" y="112" width="418" height="418"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="KNOWLTON CENTER" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gUl-Y4-DPf">
+                                        <rect key="frame" x="49" y="141" width="321" height="107"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="107" id="PtK-sb-KfO"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="38"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="275 EASTLAND RD, BEREA, OH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRe-fj-Isy">
+                                        <rect key="frame" x="49" y="256" width="321" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstItem="gUl-Y4-DPf" firstAttribute="top" secondItem="2zy-36-DsM" secondAttribute="top" constant="141" id="9yw-3x-bN6"/>
+                                    <constraint firstItem="QRe-fj-Isy" firstAttribute="leading" secondItem="2zy-36-DsM" secondAttribute="leading" constant="49" id="E2b-iu-LtH"/>
+                                    <constraint firstItem="gUl-Y4-DPf" firstAttribute="leading" secondItem="2zy-36-DsM" secondAttribute="leading" constant="49" id="Jq6-FP-Go3"/>
+                                    <constraint firstAttribute="height" constant="418" id="PQM-ha-mS9"/>
+                                    <constraint firstAttribute="trailing" secondItem="QRe-fj-Isy" secondAttribute="trailing" constant="48" id="UgX-pt-zhY"/>
+                                    <constraint firstAttribute="trailing" secondItem="gUl-Y4-DPf" secondAttribute="trailing" constant="48" id="sPB-Yp-fAD"/>
+                                    <constraint firstItem="QRe-fj-Isy" firstAttribute="top" secondItem="gUl-Y4-DPf" secondAttribute="bottom" constant="8" symbolic="YES" id="vXH-zF-qcQ"/>
+                                    <constraint firstAttribute="width" constant="418" id="z8G-mE-hqd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H2j-sY-x6l"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zeH-Pi-hGd" firstAttribute="trailing" secondItem="H2j-sY-x6l" secondAttribute="trailing" id="5ad-bo-VDa"/>
+                            <constraint firstItem="zeH-Pi-hGd" firstAttribute="top" secondItem="2zy-36-DsM" secondAttribute="bottom" constant="8" id="APN-6z-1pl"/>
+                            <constraint firstItem="2zy-36-DsM" firstAttribute="top" secondItem="8eP-a1-4v5" secondAttribute="bottom" constant="9" id="FNz-xs-xL5"/>
+                            <constraint firstAttribute="bottom" secondItem="zeH-Pi-hGd" secondAttribute="bottom" id="J0A-1l-ZK2"/>
+                            <constraint firstItem="8eP-a1-4v5" firstAttribute="top" secondItem="H2j-sY-x6l" secondAttribute="top" constant="20" id="OFt-zu-HA4"/>
+                            <constraint firstItem="2zy-36-DsM" firstAttribute="leading" secondItem="H2j-sY-x6l" secondAttribute="leading" constant="16" id="Tu9-gQ-YCd"/>
+                            <constraint firstItem="zeH-Pi-hGd" firstAttribute="top" secondItem="2zy-36-DsM" secondAttribute="bottom" constant="8" id="bfb-8b-oP4"/>
+                            <constraint firstItem="zeH-Pi-hGd" firstAttribute="leading" secondItem="6Lm-Au-AN6" secondAttribute="leading" constant="-5" id="fXO-iM-MZj"/>
+                            <constraint firstItem="8eP-a1-4v5" firstAttribute="leading" secondItem="H2j-sY-x6l" secondAttribute="leading" constant="16" id="g5a-uR-nPd"/>
+                            <constraint firstItem="2zy-36-DsM" firstAttribute="top" secondItem="8eP-a1-4v5" secondAttribute="bottom" constant="9" id="h8f-Cr-qq4"/>
+                            <constraint firstItem="H2j-sY-x6l" firstAttribute="trailing" secondItem="8eP-a1-4v5" secondAttribute="trailing" constant="16" id="hb0-jh-k4g"/>
+                            <constraint firstItem="zeH-Pi-hGd" firstAttribute="trailing" secondItem="H2j-sY-x6l" secondAttribute="trailing" id="suR-DK-pzi"/>
+                            <constraint firstAttribute="bottom" secondItem="zeH-Pi-hGd" secondAttribute="bottom" id="wDi-Ce-Mgl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CircleView" destination="2zy-36-DsM" id="j0K-5K-pLS"/>
+                        <outlet property="FoodStopAddress" destination="QRe-fj-Isy" id="CKO-0E-bvg"/>
+                        <outlet property="FoodStopIdNumber" destination="zeH-Pi-hGd" id="6fF-uN-yfw"/>
+                        <outlet property="FoodStopLocation" destination="gUl-Y4-DPf" id="kj9-rR-dTi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J04-7I-0Vn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5235.3846153846152" y="447.86729857819904"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Rel-1s-2at"/>
@@ -885,7 +970,7 @@
     <resources>
         <image name="Campus-Plate-App-Background" width="5939" height="8305"/>
         <image name="Campus-Plate-Logo-White-Full" width="6001" height="2100"/>
-        <image name="bw campus-1" width="1200" height="630"/>
+        <image name="CampusPlateLogo-01.png" width="1366.0799560546875" height="768"/>
         <image name="campusplategreen" width="6001" height="2100"/>
         <namedColor name="CampusPlateGreen">
             <color red="0.40900000929832458" green="0.63700002431869507" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -898,6 +983,9 @@
         </systemColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
