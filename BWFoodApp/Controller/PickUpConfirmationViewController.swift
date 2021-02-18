@@ -23,6 +23,7 @@ class PickUpConfirmationViewController: UIViewController {
         // Do any additional setup after loading the view.
         FoodStopLocation.text = foodStop.name
         FoodStopAddress.text = foodStop.streetAddress
+        FoodStopIdNumber.text = String(foodStop.foodStopId)
         CircleView.layer.cornerRadius = CircleView.frame.size.width/2
         CircleView.backgroundColor = UIColor.init(hexaRGB: foodStop.hexColor)
         FoodStopIdNumber.textColor = UIColor.init(hexaRGB: foodStop.hexColor)

@@ -895,12 +895,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeH-Pi-hGd">
-                                <rect key="frame" x="-5" y="538" width="395" height="306"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="475"/>
-                                <color key="textColor" systemColor="linkColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zy-36-DsM">
                                 <rect key="frame" x="16" y="112" width="418" height="418"/>
                                 <subviews>
@@ -933,23 +927,29 @@
                                     <constraint firstAttribute="width" constant="418" id="z8G-mE-hqd"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeH-Pi-hGd">
+                                <rect key="frame" x="-38" y="538" width="395" height="373"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="475"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H2j-sY-x6l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zeH-Pi-hGd" firstAttribute="trailing" secondItem="H2j-sY-x6l" secondAttribute="trailing" id="5ad-bo-VDa"/>
+                            <constraint firstItem="zeH-Pi-hGd" firstAttribute="trailing" secondItem="H2j-sY-x6l" secondAttribute="trailing" constant="-33" id="5ad-bo-VDa"/>
                             <constraint firstItem="zeH-Pi-hGd" firstAttribute="top" secondItem="2zy-36-DsM" secondAttribute="bottom" constant="8" id="APN-6z-1pl"/>
                             <constraint firstItem="2zy-36-DsM" firstAttribute="top" secondItem="8eP-a1-4v5" secondAttribute="bottom" constant="9" id="FNz-xs-xL5"/>
-                            <constraint firstAttribute="bottom" secondItem="zeH-Pi-hGd" secondAttribute="bottom" id="J0A-1l-ZK2"/>
+                            <constraint firstAttribute="bottom" secondItem="zeH-Pi-hGd" secondAttribute="bottom" constant="-67" id="J0A-1l-ZK2"/>
                             <constraint firstItem="8eP-a1-4v5" firstAttribute="top" secondItem="H2j-sY-x6l" secondAttribute="top" constant="20" id="OFt-zu-HA4"/>
                             <constraint firstItem="2zy-36-DsM" firstAttribute="leading" secondItem="H2j-sY-x6l" secondAttribute="leading" constant="16" id="Tu9-gQ-YCd"/>
                             <constraint firstItem="zeH-Pi-hGd" firstAttribute="top" secondItem="2zy-36-DsM" secondAttribute="bottom" constant="8" id="bfb-8b-oP4"/>
-                            <constraint firstItem="zeH-Pi-hGd" firstAttribute="leading" secondItem="6Lm-Au-AN6" secondAttribute="leading" constant="-5" id="fXO-iM-MZj"/>
+                            <constraint firstItem="zeH-Pi-hGd" firstAttribute="leading" secondItem="6Lm-Au-AN6" secondAttribute="leading" constant="-38" id="fXO-iM-MZj"/>
                             <constraint firstItem="8eP-a1-4v5" firstAttribute="leading" secondItem="H2j-sY-x6l" secondAttribute="leading" constant="16" id="g5a-uR-nPd"/>
                             <constraint firstItem="2zy-36-DsM" firstAttribute="top" secondItem="8eP-a1-4v5" secondAttribute="bottom" constant="9" id="h8f-Cr-qq4"/>
                             <constraint firstItem="H2j-sY-x6l" firstAttribute="trailing" secondItem="8eP-a1-4v5" secondAttribute="trailing" constant="16" id="hb0-jh-k4g"/>
-                            <constraint firstItem="zeH-Pi-hGd" firstAttribute="trailing" secondItem="H2j-sY-x6l" secondAttribute="trailing" id="suR-DK-pzi"/>
-                            <constraint firstAttribute="bottom" secondItem="zeH-Pi-hGd" secondAttribute="bottom" id="wDi-Ce-Mgl"/>
+                            <constraint firstItem="zeH-Pi-hGd" firstAttribute="trailing" secondItem="H2j-sY-x6l" secondAttribute="trailing" constant="-33" id="suR-DK-pzi"/>
+                            <constraint firstAttribute="bottom" secondItem="zeH-Pi-hGd" secondAttribute="bottom" constant="-67" id="wDi-Ce-Mgl"/>
                         </constraints>
                     </view>
                     <connections>
