@@ -114,8 +114,13 @@ class PickUpFoodViewController: UIViewController {
         listingModel.getImage(listingId: listing.listingId!) { (data) in
             
             DispatchQueue.main.async {
-                var decodedImage = UIImage(data: data)
-                self.foodImageView.image = decodedImage
+                if !data.isEmpty{
+                    var decodedImage = UIImage(data: data)
+                    self.foodImageView.image = decodedImage
+                }else{
+                    self.foodImageView.image = UIImage(named: "CampusPlateLogo.png")
+                }
+                
             }
         
         }
