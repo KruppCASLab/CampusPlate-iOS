@@ -99,7 +99,7 @@ class PickUpFoodViewController: UIViewController {
         foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)!
 
         foodLabel.text = listing.title
-        //listfoodDescription.text = listing.description
+        foodDescription.text = listing.description
         
         pickUpLocation.text = foodStop.name
         pickUpLocationAddress.text = foodStop.streetAddress
@@ -116,7 +116,7 @@ class PickUpFoodViewController: UIViewController {
                     var decodedImage = UIImage(data: data)
                     self.foodImageView.image = decodedImage
                 }else{
-                    self.foodImageView.image = UIImage(named: "CampusPlateLogo.png")
+                    self.foodImageView.image = UIImage(named: "CampusPlateLogo-01.png")
                 }
                 
             }
