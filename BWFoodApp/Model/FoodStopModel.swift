@@ -11,6 +11,7 @@ import Foundation
 class FoodStopModel{
     
     private var foodStops = Array<FoodStop>()
+    public var managedFoodStops = Array<FoodStop>()
     
     private let url = URL(string: "https://mopsdev.bw.edu/food/rest.php/foodStops")
     
@@ -43,6 +44,28 @@ class FoodStopModel{
         }.resume()
     }
     
+    public func loadManagedFoodStops(completion:@escaping (Bool)->Void) {
+        var request = URLRequest(url: self.url!.appendingPathComponent("/manage"))
+
+        request.httpMethod = "GET"
+        request = RequestUtility.addAuth(original: request)
+        session.dataTask(with: request){ (data, response, error) in
+        
+            let decoder = JSONDecoder()
+        
+            do {
+                let jsonString = String(data: data!, encoding: .utf8)
+                let response = try decoder.decode(FoodStopResponse.self, from: data!)
+                self.managedFoodStops = response.data!
+                completion(true)
+            }
+            catch {
+                completion(false)
+            }
+            
+        }.resume()
+    }
+    
     public func getFoodStop(foodStopId: Int) -> FoodStop? {
         for foodStop in self.foodStops {
             if foodStop.foodStopId == foodStopId {
@@ -52,6 +75,7 @@ class FoodStopModel{
     
         return nil
     }
+    
 }
 
 

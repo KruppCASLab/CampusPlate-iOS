@@ -15,44 +15,54 @@ protocol CreateNewListingDelegate {
 }
 
 class CreateNewListing:
-UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate{
+    UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource{
     
     public var delegate:CreateNewListingDelegate?
-    @IBOutlet weak var postListing: UIButton!
+    public var mapViewDelegate: MapViewController?
     
+    @IBOutlet weak var createListingButton: UIButton!
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var itemTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
-    
     @IBOutlet weak var quantityTextField: UITextField!
-
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    public var mapViewDelegate: MapViewController?
-    
     let listingModel = ListingModel.getSharedInstance()
+    let foodStopModel = FoodStopModel.getSharedInstance()
     
     var locationManager = CLLocationManager()
     
     public var listing:WSListing!
+
+    let foodStopPicker = UIPickerView()
+    
+    var foodStopPickerData = [FoodStop]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        foodStopPicker.delegate = self
         activityIndicator.isHidden = true
+        
+        foodStopModel.loadManagedFoodStops { [self] (completed) in
+            foodStopPickerData = foodStopModel.managedFoodStops
+            DispatchQueue.main.async {
+                locationTextField.text = foodStopPickerData[0].name
+            }
+        }
+
         
         let leftView = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
                
         let leftView2 = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
         
         let leftView3 = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
-
         
         foodImage.layer.borderWidth = 2
         foodImage.layer.borderColor = UIColor.init(named: "CampusPlateGreen")?.cgColor
         self.locationManager.requestWhenInUseAuthorization()
         
-        postListing.layer.cornerRadius = 20
+        createListingButton.layer.cornerRadius = 20
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
@@ -64,12 +74,32 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
         quantityTextField.delegate = self
         quantityTextField.returnKeyType = .done
 
+        locationTextField.inputView = foodStopPicker
         locationTextField.delegate = self
         locationTextField.returnKeyType = .done
 
         locationManager.delegate = self
 
     }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return foodStopPickerData.count
+    }
+    
+    func pickerView( _ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return foodStopPickerData[row].name
+    }
+    
+   
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        locationTextField.text = foodStopPickerData[row].name
+    }
+    
     
     override func viewWillAppear(_ animated: Bool){
         
@@ -111,6 +141,7 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
     }
     
     
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
@@ -129,17 +160,15 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
     }
     
     
-    
-    @IBAction func postListingButton(_ sender: Any) {
+    @IBAction func createListing(_ sender: UIButton) {
         
-        postListing.isEnabled = false
+        createListingButton.isEnabled = false
         activityIndicator.isHidden = false
         
         activityIndicator.startAnimating()
         
-        postListing.alpha = 0.5
+        createListingButton.alpha = 0.5
     
-        
         let food = itemTextField.text
         let quantity = Int(quantityTextField.text ?? "0") ?? 0
         let subLocation = locationTextField.text
@@ -148,7 +177,7 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
         let imageData:Data = (image?.jpegData(compressionQuality: 0.05)!)!
         let imageBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
         
-        let listing = WSListing(listingId: -1, foodStopId: -1, userId: -1, title: food ?? "", description: "", creationTime: -1, quantity: quantity, image: "")
+        let listing = WSListing(listingId: -1, foodStopId: 1, userId: -1, title: food ?? "", description: "", creationTime: -1, quantity: quantity, image: imageBase64)
     
             listingModel.addListing(listing: listing) { (completed) in
                     if (!completed) {
@@ -167,6 +196,7 @@ UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UIN
             
             }
         
-}
+    }
+    
 
 }

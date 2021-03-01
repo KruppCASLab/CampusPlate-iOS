@@ -29,9 +29,9 @@ class ListingModel {
         request = RequestUtility.addAuth(original: request)
         
         session.dataTask(with: request){ (data, response, error) in
-        
+            
             let decoder = JSONDecoder()
-        
+            
             do {
                 let jsonString = String(data: data!, encoding: .utf8)
                 let response = try decoder.decode(ListingResponse.self, from: data!)
@@ -46,30 +46,51 @@ class ListingModel {
     }
     
     public func getImage(listingId: Int, completion:@escaping (Data)-> Void){
-
+        
         var imageURL = (self.url?.appendingPathComponent("/" + String(listingId) + "/image"))!
-
+        
         var request = URLRequest(url: imageURL)
         request.httpMethod = "GET"
         request = RequestUtility.addAuth(original: request)
-
+        
         session.dataTask(with: request){ (data, response, error) in
-
+            
             let decoder = JSONDecoder()
-
+            
             do {
                 let jsonString = String(data: data!, encoding: .utf8)
                 let response = try decoder.decode(ImageResponse.self, from: data!)
                 var imageString = response.data!
-            
+                
                 let decodedData = Data(base64Encoded: imageString)!
                 completion(decodedData)
             }
             catch{
-
+                
             }
         }.resume()
     }
+    
+//    public func createReservation(listingId: Int, quantity: Int, completion:@escaping (Data)-> Void){
+//        
+//        var postURL = self.url?.appendingPathComponent("/" + "reservations")
+//        var request = URLRequest(url: postURL!)
+//        request.httpMethod = "POST"
+//        
+//        request = RequestUtility.addAuth(original: request)
+//        
+//        let encoder = JSONEncoder()
+//        
+//        do{
+//            let data = try encoder.encode(quantity)
+//            session.uploadTask(with: request, from: data){(data,response,error) in
+//                completion(quantity)
+//            }.resume()
+//        }
+//        catch{
+//            
+//        }
+//    }
     
     public func update() {
         //TODO: Call service client to update
@@ -79,7 +100,7 @@ class ListingModel {
         
         return self.listings[index]
     }
-
+    
     public func addListing(listing:WSListing, completion:@escaping (Bool)->Void) {
         self.listings.append(listing)
         var request = URLRequest(url: self.url!)
