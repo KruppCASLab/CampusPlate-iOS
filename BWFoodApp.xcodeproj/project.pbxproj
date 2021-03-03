@@ -40,6 +40,8 @@
 		F69BDB4A20FA55790065BB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4920FA55790065BB78 /* Assets.xcassets */; };
 		F69BDB4D20FA55790065BB78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4B20FA55790065BB78 /* LaunchScreen.storyboard */; };
 		F69BDB5820FA557A0065BB78 /* BWFoodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB5720FA557A0065BB78 /* BWFoodAppTests.swift */; };
+		F69EBE8325EDA7B000EF5ABA /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EBE8225EDA7B000EF5ABA /* Reservation.swift */; };
+		F69EBE8925EF026900EF5ABA /* ReservationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EBE8825EF026900EF5ABA /* ReservationResponse.swift */; };
 		F6AE83A1254B33A500D38310 /* UIViewController+PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE839D254B33A400D38310 /* UIViewController+PulleyViewController.swift */; };
 		F6AE83A2254B33A500D38310 /* PulleyPassthroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE839E254B33A500D38310 /* PulleyPassthroughScrollView.swift */; };
 		F6AE83A3254B33A500D38310 /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE839F254B33A500D38310 /* PulleyViewController.swift */; };
@@ -101,6 +103,8 @@
 		F69BDB5320FA55790065BB78 /* BWFoodAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BWFoodAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69BDB5720FA557A0065BB78 /* BWFoodAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWFoodAppTests.swift; sourceTree = "<group>"; };
 		F69BDB5920FA557A0065BB78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F69EBE8225EDA7B000EF5ABA /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		F69EBE8825EF026900EF5ABA /* ReservationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationResponse.swift; sourceTree = "<group>"; };
 		F6AE833A25477A9400D38310 /* Pulley.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pulley.h; path = "../../../Downloads/Pulley-master-2/Pulley/Pulley.h"; sourceTree = "<group>"; };
 		F6AE839D254B33A400D38310 /* UIViewController+PulleyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PulleyViewController.swift"; sourceTree = "<group>"; };
 		F6AE839E254B33A500D38310 /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulleyPassthroughScrollView.swift; sourceTree = "<group>"; };
@@ -146,8 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				E00850F9212B00650057B2B5 /* ListingModel.swift */,
-				F6DA60DC25E827AC00710543 /* ReservationModel.swift */,
 				F678900023E7C1A1009FC4C6 /* UserModel.swift */,
+				F6DA60DC25E827AC00710543 /* ReservationModel.swift */,
 				F603CA2725C09829005B6F79 /* FoodStopModel.swift */,
 				F6E3C33325B8CF82007FD10E /* RequestUtility.swift */,
 			);
@@ -194,7 +198,9 @@
 		F69BDB3620FA55780065BB78 = {
 			isa = PBXGroup;
 			children = (
+				F69EBE8225EDA7B000EF5ABA /* Reservation.swift */,
 				F692EA9125DB0E480069589B /* ImageResponse.swift */,
+				F69EBE8825EF026900EF5ABA /* ReservationResponse.swift */,
 				F69265DD24463754005C0701 /* CredentialManager.swift */,
 				F69265DF2446376C005C0701 /* Credential.swift */,
 				F6BCD71824286CE1000C2E02 /* gif.swift */,
@@ -366,6 +372,7 @@
 			files = (
 				F6E3C33425B8CF82007FD10E /* RequestUtility.swift in Sources */,
 				F6663F63257E7EE10084EC1C /* WSListing.swift in Sources */,
+				F69EBE8325EDA7B000EF5ABA /* Reservation.swift in Sources */,
 				F6AE83A2254B33A500D38310 /* PulleyPassthroughScrollView.swift in Sources */,
 				F656694A252B968800A6BA2B /* DoneButton.swift in Sources */,
 				F62A57BA254C86BC00F232BE /* FoodTableViewController.swift in Sources */,
@@ -393,6 +400,7 @@
 				F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */,
 				F692EA9225DB0E480069589B /* ImageResponse.swift in Sources */,
 				F678900123E7C1A1009FC4C6 /* UserModel.swift in Sources */,
+				F69EBE8925EF026900EF5ABA /* ReservationResponse.swift in Sources */,
 				F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */,
 				E003B722254B33300065DF41 /* EnterPinVC.swift in Sources */,
 				E04EAC3125D59C63000F5879 /* FoodStopResponse.swift in Sources */,

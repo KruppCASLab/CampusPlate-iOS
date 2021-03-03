@@ -13,6 +13,7 @@ class PickUpFoodViewController: UIViewController {
 
     let listingModel = ListingModel.getSharedInstance()
     let foodStopModel = FoodStopModel.getSharedInstance()
+    let reservationModel = ReservationModel.getSharedInstance()
     
     public var delegate:CreateNewListingDelegate?
     
@@ -24,49 +25,18 @@ class PickUpFoodViewController: UIViewController {
     @IBOutlet weak var foodStopCircleView: UIView!
     @IBOutlet weak var foodImageView: UIImageView!
     @IBOutlet weak var foodDescription: UITextView!
-    @IBOutlet weak var claimButton: UIButton!
-    @IBOutlet weak var ActivityIndicator: UIActivityIndicatorView!
+   
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     public var listing:WSListing!
+    public var createdReservation:Reservation!
+
     public var indexPathOfListing:IndexPath!
     
     public var foodStop:FoodStop!
     
-    @IBAction func pickUpButton(_ sender: Any) {
-        // TODO: Remove the item from model
-//        ListingModel.getSharedInstance().removeListing(index: self.indexPathOfListing.row)
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
-        
-    }
-
+    @IBOutlet weak var pickUpFoodButton: UIButton!
     
-    @IBAction func claimButton(_ sender: Any) {
-        
-        claimButton.isEnabled = false
-        ActivityIndicator.isHidden = false
-        
-        ActivityIndicator.startAnimating()
-        claimButton.alpha = 0.5
-        
-        
-//        listingModel.updateQuantity(listingID: listing.listingId!, releventQuantity: Int(quantityLabel.text!)!) { (completed) in
-//            if (!completed) {
-//                let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
-//                DispatchQueue.main.async {
-//                    self.present(alert, animated: true, completion: nil)
-//                }
-//            }else {
-//                DispatchQueue.main.async {
-//                    self.delegate?.didComplete()
-//                }
-//           }
-//
-//        }
-        
-        
-    }
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -107,7 +77,7 @@ class PickUpFoodViewController: UIViewController {
     
     
         foodStopCircleView.backgroundColor = UIColor.init(hexaRGB: foodStop.hexColor)
-        claimButton.layer.cornerRadius = 20
+        pickUpFoodButton.layer.cornerRadius = 20
         
         listingModel.getImage(listingId: listing.listingId!) { (data) in
             
@@ -122,6 +92,8 @@ class PickUpFoodViewController: UIViewController {
             }
         
         }
+        
+        
         
         
         let available : Int = listing.quantity ?? 0
@@ -155,6 +127,39 @@ class PickUpFoodViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func pickUpFood(_ sender: Any) {
+        
+        pickUpFoodButton.isEnabled = false
+        activityIndicator.isHidden = false
+        
+        activityIndicator.startAnimating()
+        pickUpFoodButton.alpha = 0.5
+        
+        let reservation = Reservation(listingId: listing.listingId!, quantity: 3)
+        
+        reservationModel.addReservation(reservation: reservation) { (ReservationResponse) in
+            if (ReservationResponse.status == 1 || ReservationResponse.status == 2) {
+                    let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
+                    DispatchQueue.main.async {
+                        self.present(alert, animated: true, completion: nil)
+                    }
+
+                }
+                else {
+                    DispatchQueue.main.async { [self] in
+                        createdReservation = ReservationResponse.data
+                        self.performSegue(withIdentifier: "pickUpConfirmation", sender: self)
+                    }
+                }
+        
+        }
+    }
+    
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return false
+    }
 
     
 
@@ -163,12 +168,11 @@ class PickUpFoodViewController: UIViewController {
 //
 //     In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//         Get the new view controller using segue.destination.
-//         Pass the selected object to the new view controller.
         
         if (segue.identifier == "pickUpConfirmation") {
             if let vc = segue.destination as? PickUpConfirmationViewController {
                 vc.foodStop = foodStop
+                vc.reservation = createdReservation
                 }
             }
         }

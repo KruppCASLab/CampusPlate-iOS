@@ -15,6 +15,10 @@ class PickUpConfirmationViewController: UIViewController {
     @IBOutlet weak var FoodStopAddress: UILabel!
     @IBOutlet weak var FoodStopIdNumber: UILabel!
     
+    @IBOutlet weak var reservationIdNumber: UITextView!
+    
+    public var reservation: Reservation!
+    
     public var foodStop:FoodStop!
 
     override func viewDidLoad() {
@@ -27,6 +31,8 @@ class PickUpConfirmationViewController: UIViewController {
         CircleView.layer.cornerRadius = CircleView.frame.size.width/2
         CircleView.backgroundColor = UIColor.init(hexaRGB: foodStop.hexColor)
         FoodStopIdNumber.textColor = UIColor.init(hexaRGB: foodStop.hexColor)
+        
+        reservationIdNumber.text = "YOUR RESERVATION NUMBER IS " + String(reservation.code!)
         
     }
     

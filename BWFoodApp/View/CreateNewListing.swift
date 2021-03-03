@@ -27,6 +27,11 @@ class CreateNewListing:
     @IBOutlet weak var quantityTextField: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var descriptionTextView: UITextView!
+    
+    let impact = UIImpactFeedbackGenerator()
+    
+    
     let listingModel = ListingModel.getSharedInstance()
     let foodStopModel = FoodStopModel.getSharedInstance()
     
@@ -40,6 +45,8 @@ class CreateNewListing:
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        descriptionTextView.backgroundColor = .white
         
         foodStopPicker.delegate = self
         activityIndicator.isHidden = true
@@ -58,7 +65,6 @@ class CreateNewListing:
         
         let leftView3 = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
         
-        foodImage.layer.borderWidth = 2
         foodImage.layer.borderColor = UIColor.init(named: "CampusPlateGreen")?.cgColor
         self.locationManager.requestWhenInUseAuthorization()
         
@@ -133,6 +139,9 @@ class CreateNewListing:
     
     
     @IBAction func takePicture(_ sender: Any) {
+        
+        impact.impactOccurred()
+        
         let image = UIImagePickerController()
         image.delegate = self
         image.sourceType = UIImagePickerController.SourceType.camera
