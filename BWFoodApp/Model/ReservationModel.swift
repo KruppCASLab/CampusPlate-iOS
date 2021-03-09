@@ -84,4 +84,14 @@ class ReservationModel {
         return self.reservations.count
     }
     
+    public func getReservation(reservationId: Int) -> Reservation? {
+        for reservation in self.reservations {
+            if reservation.reservationId == reservationId {
+                return reservation
+            }
+        }
+    
+        return nil
+    }
+    
 }

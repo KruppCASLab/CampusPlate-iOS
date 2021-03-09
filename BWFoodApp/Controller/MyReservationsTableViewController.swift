@@ -78,19 +78,17 @@ class MyReservationsTableViewController: UITableViewController {
         let minutes = minutesTillExpiration(start: currentDate, end: date)
         let minutesTillExp = String(minutes)
         
-        let listing = listings[14]
+        let listing = listingModel.getListingById(listingId: reservation.listingId!)
         
-        let foodStop:FoodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)!
+        let foodStop:FoodStop = foodStopModel.getFoodStop(foodStopId: listing!.foodStopId!)!
         
-        cell.foodName.text = listing.title
+        cell.foodName.text = listing!.title
         cell.foodStopLocation.text = foodStop.name
         cell.expiresLabel.text = "Expires in: " + minutesTillExp + " minutes"
         cell.foodStopColor.backgroundColor = UIColor(hexaRGB: foodStop.hexColor)
-        cell.reserved.text = "Reserved " + String(reservation.quantity!) + " of " + String(listing.quantity!)
+        cell.reserved.text = "Reserved " + String(reservation.quantity!) + " of " + String(listing!.quantity!)
         
-        
-        
-        listingModel.getImage(listingId: listing.listingId!) { (data) in
+        listingModel.getImage(listingId: listing!.listingId!) { (data) in
             DispatchQueue.main.async {
                 if !data.isEmpty{
                     let decodedImage = UIImage(data: data)
@@ -100,9 +98,6 @@ class MyReservationsTableViewController: UITableViewController {
                 }
             }
         }
-        
-        
-        
         
         return cell
     }

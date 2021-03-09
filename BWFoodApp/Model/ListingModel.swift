@@ -134,5 +134,15 @@ class ListingModel {
         return self.listings.count
     }
     
+    public func getListingById(listingId: Int) -> WSListing? {
+        for listing in self.listings {
+            if listing.listingId == listingId {
+                return listing
+            }
+        }
+    
+        return nil
+    }
+    
     
 }
