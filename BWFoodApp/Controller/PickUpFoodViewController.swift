@@ -74,8 +74,6 @@ class PickUpFoodViewController: UIViewController {
         pickUpLocation.text = foodStop.name
         pickUpLocationAddress.text = foodStop.streetAddress
         
-    
-    
         foodStopCircleView.backgroundColor = UIColor.init(hexaRGB: foodStop.hexColor)
         pickUpFoodButton.layer.cornerRadius = 20
         
@@ -148,6 +146,8 @@ class PickUpFoodViewController: UIViewController {
                 }
                 else {
                     DispatchQueue.main.async { [self] in
+                        //let vc = MyReservationsTableViewController(nibName: "MyReservationsTableViewController", bundle: nil)
+                        //vc.listing = listing
                         createdReservation = ReservationResponse.data
                         self.performSegue(withIdentifier: "pickUpConfirmation", sender: self)
                     }

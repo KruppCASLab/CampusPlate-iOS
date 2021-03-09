@@ -18,7 +18,6 @@ class PickUpConfirmationViewController: UIViewController {
     @IBOutlet weak var reservationIdNumber: UITextView!
     
     public var reservation: Reservation!
-    
     public var foodStop:FoodStop!
 
     override func viewDidLoad() {
@@ -34,6 +33,12 @@ class PickUpConfirmationViewController: UIViewController {
         
         reservationIdNumber.text = "YOUR RESERVATION NUMBER IS " + String(reservation.code!)
         
+    }
+    
+    
+    @IBAction func goToMap(_ sender: Any) {
+//        let vc = MyReservationsTableViewController(nibName: "MyReservationsTableViewController", bundle: nil)
+//        vc.listing = listing
     }
     
  

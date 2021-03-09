@@ -81,6 +81,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
 //    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//
 //        if indexPath.row > 0{
 //            return 137
 //        }else{
@@ -108,7 +109,6 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
                 }
             }
         }
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {

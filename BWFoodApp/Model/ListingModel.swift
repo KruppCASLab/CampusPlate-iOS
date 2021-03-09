@@ -10,7 +10,8 @@ import Foundation
 import MapKit
 
 class ListingModel {
-    private var listings = Array<WSListing>()
+    
+    public var listings = Array<WSListing>()
     
     private let url = URL(string: "https://mopsdev.bw.edu/food/rest.php/listings")
     
@@ -70,28 +71,7 @@ class ListingModel {
             }
         }.resume()
     }
-    
-//    public func createReservation(listingId: Int, quantity: Int, completion:@escaping (Data)-> Void){
-//        
-//        var postURL = self.url?.appendingPathComponent("/" + "reservations")
-//        var request = URLRequest(url: postURL!)
-//        request.httpMethod = "POST"
-//        
-//        request = RequestUtility.addAuth(original: request)
-//        
-//        let encoder = JSONEncoder()
-//        
-//        do{
-//            let data = try encoder.encode(quantity)
-//            session.uploadTask(with: request, from: data){(data,response,error) in
-//                completion(quantity)
-//            }.resume()
-//        }
-//        catch{
-//            
-//        }
-//    }
-    
+
     public func update() {
         //TODO: Call service client to update
     }

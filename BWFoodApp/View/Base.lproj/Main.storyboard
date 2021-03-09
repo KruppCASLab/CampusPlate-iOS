@@ -538,29 +538,74 @@
         <scene sceneID="TXd-zk-0u2">
             <objects>
                 <tableViewController id="236-qj-P6u" customClass="MyReservationsTableViewController" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="137" sectionHeaderHeight="28" sectionFooterHeight="28" id="fQz-Zx-thQ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="176" sectionHeaderHeight="28" sectionFooterHeight="28" id="fQz-Zx-thQ">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reservationCell" rowHeight="137" id="rJy-Wb-xg2" customClass="MyReservationsTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="390" height="137"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reservationCell" rowHeight="176" id="rJy-Wb-xg2" customClass="MyReservationsTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="390" height="176"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rJy-Wb-xg2" id="vh7-4u-sUO" customClass="MyReservationsTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="137"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="176"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="reservationCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBB-df-9MV">
-                                            <rect key="frame" x="20" y="11" width="350" height="21"/>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nGm-Ic-lhD">
+                                            <rect key="frame" x="16" y="11" width="8" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COFFEE BEANS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PT0-Md-MFE">
+                                            <rect key="frame" x="16" y="55" width="264" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reserved: 1 of 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Px-af-qtc">
+                                            <rect key="frame" x="16" y="76" width="264" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expires in: 28 Minutes " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkw-C9-qyA">
+                                            <rect key="frame" x="16" y="97" width="264" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xE6-Hg-V1Y">
+                                            <rect key="frame" x="147" y="135" width="97" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                            <state key="normal" title="CANCEL">
+                                                <color key="titleColor" systemColor="systemRedColor"/>
+                                            </state>
+                                        </button>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="VETERANS CENTER" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2If-r1-Yfy">
+                                            <rect key="frame" x="32" y="11" width="248" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="textColor" systemColor="labelColor"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aT8-tw-obS">
+                                            <rect key="frame" x="297" y="11" width="73" height="73"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="reservationCode" destination="xBB-df-9MV" id="oHZ-4k-muR"/>
+                                    <outlet property="expiresLabel" destination="hkw-C9-qyA" id="hHI-tB-wMG"/>
+                                    <outlet property="foodImageVIew" destination="aT8-tw-obS" id="paV-if-d80"/>
+                                    <outlet property="foodName" destination="PT0-Md-MFE" id="gIq-Xd-JJG"/>
+                                    <outlet property="foodStopColor" destination="nGm-Ic-lhD" id="5Le-ii-Ug3"/>
+                                    <outlet property="foodStopLocation" destination="2If-r1-Yfy" id="Evs-B4-fFr"/>
+                                    <outlet property="reserved" destination="3Px-af-qtc" id="fpF-JN-9DI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -572,7 +617,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etv-Io-KaH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4280" y="-928.43601895734594"/>
+            <point key="canvasLocation" x="3673.8461538461538" y="-769.19431279620846"/>
         </scene>
         <!--Food Table View Controller-->
         <scene sceneID="Mpv-ag-5iq">
@@ -617,7 +662,7 @@
                                             <constraint firstAttribute="height" priority="750" constant="78" id="vDD-iy-MOC"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zSY-7J-meI">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zSY-7J-meI">
                                         <rect key="frame" x="0.0" y="86" width="390" height="316"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
@@ -826,7 +871,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="pickUpFood:" destination="NFq-Ii-tXi" eventType="touchUpInside" id="25y-PE-jjA"/>
-                                    <segue destination="rmF-MA-PRy" kind="presentation" identifier="pickUpConfirmation" id="FdT-TK-Hvz"/>
+                                    <segue destination="rmF-MA-PRy" kind="presentation" identifier="pickUpConfirmation" modalPresentationStyle="fullScreen" id="FdT-TK-Hvz"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ba-kS-vsN">
@@ -952,17 +997,17 @@
             <objects>
                 <viewController id="rmF-MA-PRy" customClass="PickUpConfirmationViewController" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Lm-Au-AN6">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="YOUR FOOD STOP:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eP-a1-4v5">
-                                <rect key="frame" x="16" y="20" width="358" height="39"/>
+                                <rect key="frame" x="16" y="64" width="358" height="39"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zy-36-DsM">
-                                <rect key="frame" x="16" y="68" width="418" height="418"/>
+                                <rect key="frame" x="16" y="112" width="418" height="418"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="KNOWLTON CENTER" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUl-Y4-DPf">
                                         <rect key="frame" x="49" y="141" width="276" height="107"/>
@@ -1005,11 +1050,23 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeH-Pi-hGd">
-                                <rect key="frame" x="-38" y="494" width="395" height="363"/>
+                                <rect key="frame" x="-38" y="538" width="395" height="373"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="475"/>
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izT-zl-uSv">
+                                <rect key="frame" x="149" y="772" width="93" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91362601519999997" green="0.91378277539999997" blue="0.91361618040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="CLOSE">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToMap:" destination="rmF-MA-PRy" eventType="touchUpInside" id="sHS-jG-3Xv"/>
+                                    <segue destination="bHu-jP-lHB" kind="presentation" modalPresentationStyle="fullScreen" id="COy-EN-Qxn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H2j-sY-x6l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1039,11 +1096,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J04-7I-0Vn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5245" y="584"/>
+            <point key="canvasLocation" x="5362" y="894"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rel-1s-2at"/>
+        <segue reference="COy-EN-Qxn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Campus-Plate-App-Background" width="5939" height="8305"/>
@@ -1062,6 +1119,9 @@
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -1074,8 +1134,14 @@
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

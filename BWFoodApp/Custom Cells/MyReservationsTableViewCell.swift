@@ -10,9 +10,15 @@ import UIKit
 
 class MyReservationsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var reservationCode: UILabel!
-    
 
+    @IBOutlet weak var foodStopColor: UIView!
+    @IBOutlet weak var foodStopLocation: UITextView!
+    @IBOutlet weak var foodName: UILabel!
+    @IBOutlet weak var reserved: UILabel!
+    @IBOutlet weak var expiresLabel: UILabel!
+    
+    @IBOutlet weak var foodImageVIew: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

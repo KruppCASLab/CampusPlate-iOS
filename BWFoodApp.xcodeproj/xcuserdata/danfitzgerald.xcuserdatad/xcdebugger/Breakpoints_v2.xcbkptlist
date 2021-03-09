@@ -352,8 +352,8 @@
             timestampString = "589484014.099957"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -766,8 +766,8 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "updateQuantity(listingId:releventQuantity:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -798,8 +798,8 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "addListing(listing:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -814,8 +814,8 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "addListing(listing:completion:)"
             landmarkType = "7">
             <Locations>
@@ -862,8 +862,8 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "addListing(listing:completion:)"
             landmarkType = "7">
             <Locations>
@@ -2293,8 +2293,8 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "getListing(index:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2309,8 +2309,8 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "loadListings(completion:)"
             landmarkType = "7">
             <Locations>
@@ -2357,8 +2357,8 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "loadListings(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2373,8 +2373,8 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "loadListings(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2421,8 +2421,8 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2437,8 +2437,8 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2453,8 +2453,8 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2469,8 +2469,8 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -2613,8 +2613,8 @@
             filePath = "BWFoodApp/Model/ListingModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "addListing(listing:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2649,114 +2649,6 @@
             endingLineNumber = "202"
             landmarkName = "createListing(_:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0C255D6D-6CBD-4456-ACEA-E9DCB68304A8"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BWFoodApp/Controller/PickUpConfirmationViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "PickUpConfirmationViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "0C255D6D-6CBD-4456-ACEA-E9DCB68304A8 - 6db2b1445611f85c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BWFoodApp.PickUpConfirmationViewController.foodStop.getter : Swift.Optional&lt;BWFoodApp.FoodStop&gt;"
-                  moduleName = "BWFoodApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS-Version/BWFoodApp/Controller/PickUpConfirmationViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "0C255D6D-6CBD-4456-ACEA-E9DCB68304A8 - 9dcf3dd01eb7f040"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BWFoodApp.PickUpConfirmationViewController.foodStop.setter : Swift.Optional&lt;BWFoodApp.FoodStop&gt;"
-                  moduleName = "BWFoodApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS-Version/BWFoodApp/Controller/PickUpConfirmationViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "144">
-               </Location>
-               <Location
-                  uuid = "0C255D6D-6CBD-4456-ACEA-E9DCB68304A8 - ab9512093f8c4f05"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BWFoodApp.PickUpConfirmationViewController.foodStop.modify : Swift.Optional&lt;BWFoodApp.FoodStop&gt;"
-                  moduleName = "BWFoodApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS-Version/BWFoodApp/Controller/PickUpConfirmationViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  uuid = "0C255D6D-6CBD-4456-ACEA-E9DCB68304A8 - b775cec6988cf4b8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BWFoodApp.PickUpConfirmationViewController.foodStop.modify : Swift.Optional&lt;BWFoodApp.FoodStop&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "BWFoodApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS-Version/BWFoodApp/Controller/PickUpConfirmationViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "8">
-               </Location>
-               <Location
-                  uuid = "0C255D6D-6CBD-4456-ACEA-E9DCB68304A8 - bf7f6582862f0965"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BWFoodApp.PickUpConfirmationViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; BWFoodApp.PickUpConfirmationViewController"
-                  moduleName = "BWFoodApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS-Version/BWFoodApp/Controller/PickUpConfirmationViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "728">
-               </Location>
-               <Location
-                  uuid = "0C255D6D-6CBD-4456-ACEA-E9DCB68304A8 - 5e477975e8a95e4c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BWFoodApp.PickUpConfirmationViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;BWFoodApp.PickUpConfirmationViewController&gt;"
-                  moduleName = "BWFoodApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS-Version/BWFoodApp/Controller/PickUpConfirmationViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "704">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2893,8 +2785,8 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "pickUpFood(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3301,8 +3193,8 @@
             filePath = "BWFoodApp/Controller/MyReservationsTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "MyReservationsTableViewController"
             landmarkType = "3">
             <Locations>
@@ -3440,8 +3332,8 @@
             filePath = "BWFoodApp/Controller/MyReservationsTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3456,8 +3348,8 @@
             filePath = "BWFoodApp/Controller/MyReservationsTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3488,8 +3380,8 @@
             filePath = "BWFoodApp/Controller/MyReservationsTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3504,8 +3396,8 @@
             filePath = "BWFoodApp/Controller/MyReservationsTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3520,10 +3412,229 @@
             filePath = "BWFoodApp/Controller/MyReservationsTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D2311A9-8431-4B39-9BEB-12A59F2DBBDB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BWFoodApp/Controller/MyReservationsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54D3C692-06AE-470A-AE91-11A8160ADED7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BWFoodApp/Controller/MyReservationsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28733D7B-67A8-495E-B412-1ABEE682D89D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BWFoodApp/Controller/MyReservationsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "564F6751-25F2-4BBC-949F-D67D7D7DA8A1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BWFoodApp/Controller/MyReservationsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "083EC4A0-FF67-4BB9-B3B9-610A254864F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BWFoodApp/Controller/MyReservationsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68F0F74F-A44E-4A49-BC1A-E4F8EE309FF8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BWFoodApp/Controller/MyReservationsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4FAE7E3C-05E1-4F2B-B7CB-13DA49B9E807"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BWFoodApp/Controller/MyReservationsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "MyReservationsTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "4FAE7E3C-05E1-4F2B-B7CB-13DA49B9E807 - 593e5c1f9908ad30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.MyReservationsTableViewController.listing.getter : Swift.Optional&lt;BWFoodApp.WSListing&gt;"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS-Version/BWFoodApp/Controller/MyReservationsTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "4FAE7E3C-05E1-4F2B-B7CB-13DA49B9E807 - b8a223592aa4a518"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.MyReservationsTableViewController.listing.setter : Swift.Optional&lt;BWFoodApp.WSListing&gt;"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS-Version/BWFoodApp/Controller/MyReservationsTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "4FAE7E3C-05E1-4F2B-B7CB-13DA49B9E807 - aa8570dc1cc59e96"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.MyReservationsTableViewController.listing.modify : Swift.Optional&lt;BWFoodApp.WSListing&gt;"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS-Version/BWFoodApp/Controller/MyReservationsTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "4FAE7E3C-05E1-4F2B-B7CB-13DA49B9E807 - 224a988968a2b43e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.MyReservationsTableViewController.listing.modify : Swift.Optional&lt;BWFoodApp.WSListing&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS-Version/BWFoodApp/Controller/MyReservationsTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "4FAE7E3C-05E1-4F2B-B7CB-13DA49B9E807 - 4e943159ce0c1e0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.MyReservationsTableViewController.init(style: __C.UITableViewStyle) -&gt; BWFoodApp.MyReservationsTableViewController"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS-Version/BWFoodApp/Controller/MyReservationsTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "480">
+               </Location>
+               <Location
+                  uuid = "4FAE7E3C-05E1-4F2B-B7CB-13DA49B9E807 - cf3ff6c243511e44"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.MyReservationsTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; BWFoodApp.MyReservationsTableViewController"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS-Version/BWFoodApp/Controller/MyReservationsTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "504">
+               </Location>
+               <Location
+                  uuid = "4FAE7E3C-05E1-4F2B-B7CB-13DA49B9E807 - 511394685b4b20c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.MyReservationsTableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;BWFoodApp.MyReservationsTableViewController&gt;"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS-Version/BWFoodApp/Controller/MyReservationsTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "480">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

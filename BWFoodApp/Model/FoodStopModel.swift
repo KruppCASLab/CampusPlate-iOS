@@ -10,7 +10,7 @@ import Foundation
 
 class FoodStopModel{
     
-    private var foodStops = Array<FoodStop>()
+    public var foodStops = Array<FoodStop>()
     public var managedFoodStops = Array<FoodStop>()
     
     private let url = URL(string: "https://mopsdev.bw.edu/food/rest.php/foodStops")
