@@ -24,18 +24,12 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     let listing : WSListing! = nil
     
-    @IBOutlet weak var timeColorIndicator: UIView!
-    
-    
-    
     @IBOutlet weak var gripperView: UIView!
     @IBOutlet weak var bottomSeperatorView: UIView!
     @IBOutlet weak var topSeperatorView: UIView!
     
     @IBOutlet weak var gripperTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
-    
-    
     
     
     fileprivate var drawerBottomSafeArea: CGFloat = 0.0 {
@@ -55,17 +49,22 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell:FoodListingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FoodListingCell", for: indexPath) as! FoodListingTableViewCell
+        if indexPath.row > 0 {
+            let foodCell:FoodListingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FoodListingCell", for: indexPath) as! FoodListingTableViewCell
+            
+            let listing:WSListing = listingModel.getListing(index: indexPath.row)
+            
+            let foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)
+            foodCell.foodStopLocationLabel.text = foodStop!.name
+            foodCell.foodLabel.text = listing.title?.uppercased()
+            foodCell.leftBar.backgroundColor = UIColor(hexaRGB: foodStop!.hexColor)
+            
+            return foodCell
+        }
         
-        let listing:WSListing = listingModel.getListing(index: indexPath.row)
+        let cell:ReservationTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myReservations", for: indexPath) as! ReservationTableViewCell
         
-        let foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)
-        
-        cell.foodStopLocationLabel.text = foodStop!.name
-        //
-        cell.foodLabel.text = listing.title?.uppercased()
-        
-        cell.leftBar.backgroundColor = UIColor(hexaRGB: foodStop!.hexColor)
+        cell.reservationLabel.text = "RESERVATIONS"
         
         return cell
         
@@ -80,6 +79,14 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
         self.performSegue(withIdentifier: "showFoodPickupDetail", sender: self)
         
     }
+    
+//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        if indexPath.row > 0{
+//            return 137
+//        }else{
+//            return 50
+//        }
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -133,7 +140,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-
+        
         if let foodVC = segue.destination as? PickUpFoodViewController {
             if let indexPath = indexSelected {
                 let listing = self.listingModel.getListing(index: indexPath.row)
@@ -141,14 +148,14 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
                 foodVC.indexPathOfListing = indexPath
             }
         }
-
+        
         
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
     
 }
-    
+
 extension FoodTableViewController: PulleyDrawerViewControllerDelegate{
     
     func collapsedDrawerHeight(bottomSafeArea: CGFloat) -> CGFloat

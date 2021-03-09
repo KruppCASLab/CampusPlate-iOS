@@ -8,8 +8,8 @@
 
 import Foundation
 
-public class ReservationResponse : Codable {
+public class GetReservationResponse : Codable {
     public var status:Int?
     public var error:String?
-    public var data:Reservation?
+    public var data:[Reservation]?
 }

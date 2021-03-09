@@ -10,7 +10,7 @@ import Foundation
 
 class ReservationModel {
     
-    private var reservations = Array<Reservation>()
+    public var reservations = Array<Reservation>()
     
     private let url = URL(string: "https://mopsdev.bw.edu/food/rest.php/reservations")
     
@@ -21,7 +21,31 @@ class ReservationModel {
         return self.sharedInstance
     }
     
-    public func addReservation(reservation:Reservation, completion:@escaping (ReservationResponse)->Void) {
+    public func getUserReservations(completion:@escaping (Bool)->Void){
+            
+            var request = URLRequest(url: self.url!)
+            
+            request.httpMethod = "GET"
+            request = RequestUtility.addAuth(original: request)
+            
+            session.dataTask(with: request){ (data, response, error) in
+                
+                let decoder = JSONDecoder()
+                
+                do {
+                    let jsonString = String(data: data!, encoding: .utf8)
+                    let response = try decoder.decode(GetReservationResponse.self, from: data!)
+                    self.reservations = response.data!
+                    completion(true)
+                }
+                catch {
+                    
+                }
+                
+            }.resume()
+        }
+    
+    public func addReservation(reservation:Reservation, completion:@escaping (CreateReservationResponse)->Void) {
         
         self.reservations.append(reservation)
         var request = URLRequest(url: self.url!)
@@ -37,7 +61,7 @@ class ReservationModel {
             let data = try encoder.encode(reservation)
             session.uploadTask(with: request, from: data) { (data, response, error) in
                 do {
-                    let reservationResponse = try decoder.decode(ReservationResponse.self, from: data!)
+                    let reservationResponse = try decoder.decode(CreateReservationResponse.self, from: data!)
                     completion(reservationResponse)
                 }
                 catch {
@@ -50,6 +74,14 @@ class ReservationModel {
             
         }
         
+    }
+    
+    public func getReservation(index:Int) -> Reservation {
+        return self.reservations[index]
+    }
+    
+    public func getNumberOfReservations() -> Int {
+        return self.reservations.count
     }
     
 }

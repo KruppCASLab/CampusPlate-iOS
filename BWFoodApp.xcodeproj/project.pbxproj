@@ -18,6 +18,7 @@
 		F603CA2825C09829005B6F79 /* FoodStopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F603CA2725C09829005B6F79 /* FoodStopModel.swift */; };
 		F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */; };
 		F61379B9235CBEEA008CF83F /* CampusPlateLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F61379B8235CBEE9008CF83F /* CampusPlateLogo.png */; };
+		F614DAF425F6C6430056C2CA /* CreateReservationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F614DAF325F6C6430056C2CA /* CreateReservationResponse.swift */; };
 		F61785FE2559F03B00CEC8FA /* CustomMaskExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61785FD2559F03B00CEC8FA /* CustomMaskExample.swift */; };
 		F61C0E712413451B0017C3A0 /* CampusPlateLogo-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F61C0E702413451B0017C3A0 /* CampusPlateLogo-01.png */; };
 		F61DCBAD2326E7C700F7FD7C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DCBAC2326E7C700F7FD7C /* Response.swift */; };
@@ -32,6 +33,9 @@
 		F6663F63257E7EE10084EC1C /* WSListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DCBAE2326E95800F7FD7C /* WSListing.swift */; };
 		F6788FFF23E7C037009FC4C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6788FFE23E7C037009FC4C6 /* User.swift */; };
 		F678900123E7C1A1009FC4C6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F678900023E7C1A1009FC4C6 /* UserModel.swift */; };
+		F68F961D25F1924400FDCDB8 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F961C25F1924400FDCDB8 /* ReservationTableViewCell.swift */; };
+		F68F962125F1947400FDCDB8 /* MyReservationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F962025F1947400FDCDB8 /* MyReservationsTableViewCell.swift */; };
+		F68F962925F19B2800FDCDB8 /* MyReservationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F962825F19B2800FDCDB8 /* MyReservationsTableViewController.swift */; };
 		F69265DE24463754005C0701 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69265DD24463754005C0701 /* CredentialManager.swift */; };
 		F69265E02446376C005C0701 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69265DF2446376C005C0701 /* Credential.swift */; };
 		F692EA9225DB0E480069589B /* ImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F692EA9125DB0E480069589B /* ImageResponse.swift */; };
@@ -41,7 +45,7 @@
 		F69BDB4D20FA55790065BB78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4B20FA55790065BB78 /* LaunchScreen.storyboard */; };
 		F69BDB5820FA557A0065BB78 /* BWFoodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB5720FA557A0065BB78 /* BWFoodAppTests.swift */; };
 		F69EBE8325EDA7B000EF5ABA /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EBE8225EDA7B000EF5ABA /* Reservation.swift */; };
-		F69EBE8925EF026900EF5ABA /* ReservationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EBE8825EF026900EF5ABA /* ReservationResponse.swift */; };
+		F69EBE8925EF026900EF5ABA /* GetReservationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EBE8825EF026900EF5ABA /* GetReservationResponse.swift */; };
 		F6AE83A1254B33A500D38310 /* UIViewController+PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE839D254B33A400D38310 /* UIViewController+PulleyViewController.swift */; };
 		F6AE83A2254B33A500D38310 /* PulleyPassthroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE839E254B33A500D38310 /* PulleyPassthroughScrollView.swift */; };
 		F6AE83A3254B33A500D38310 /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE839F254B33A500D38310 /* PulleyViewController.swift */; };
@@ -75,6 +79,7 @@
 		F603CA2725C09829005B6F79 /* FoodStopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStopModel.swift; sourceTree = "<group>"; };
 		F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpFoodViewController.swift; sourceTree = "<group>"; };
 		F61379B8235CBEE9008CF83F /* CampusPlateLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CampusPlateLogo.png; sourceTree = "<group>"; };
+		F614DAF325F6C6430056C2CA /* CreateReservationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReservationResponse.swift; sourceTree = "<group>"; };
 		F61785FD2559F03B00CEC8FA /* CustomMaskExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMaskExample.swift; sourceTree = "<group>"; };
 		F61C0E702413451B0017C3A0 /* CampusPlateLogo-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CampusPlateLogo-01.png"; sourceTree = "<group>"; };
 		F61DCBAC2326E7C700F7FD7C /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -91,6 +96,9 @@
 		F6663F55256C4D6E0084EC1C /* FoodStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStop.swift; sourceTree = "<group>"; };
 		F6788FFE23E7C037009FC4C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F678900023E7C1A1009FC4C6 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		F68F961C25F1924400FDCDB8 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
+		F68F962025F1947400FDCDB8 /* MyReservationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReservationsTableViewCell.swift; sourceTree = "<group>"; };
+		F68F962825F19B2800FDCDB8 /* MyReservationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReservationsTableViewController.swift; sourceTree = "<group>"; };
 		F69265DD24463754005C0701 /* CredentialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialManager.swift; sourceTree = "<group>"; };
 		F69265DF2446376C005C0701 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		F692EA9125DB0E480069589B /* ImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
@@ -104,7 +112,7 @@
 		F69BDB5720FA557A0065BB78 /* BWFoodAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWFoodAppTests.swift; sourceTree = "<group>"; };
 		F69BDB5920FA557A0065BB78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F69EBE8225EDA7B000EF5ABA /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
-		F69EBE8825EF026900EF5ABA /* ReservationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationResponse.swift; sourceTree = "<group>"; };
+		F69EBE8825EF026900EF5ABA /* GetReservationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReservationResponse.swift; sourceTree = "<group>"; };
 		F6AE833A25477A9400D38310 /* Pulley.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pulley.h; path = "../../../Downloads/Pulley-master-2/Pulley/Pulley.h"; sourceTree = "<group>"; };
 		F6AE839D254B33A400D38310 /* UIViewController+PulleyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PulleyViewController.swift"; sourceTree = "<group>"; };
 		F6AE839E254B33A500D38310 /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulleyPassthroughScrollView.swift; sourceTree = "<group>"; };
@@ -140,7 +148,6 @@
 			children = (
 				F69BDB4620FA55780065BB78 /* Main.storyboard */,
 				F61785FD2559F03B00CEC8FA /* CustomMaskExample.swift */,
-				F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */,
 				E04EAC3425D5A2B9000F5879 /* UIColorExtension.swift */,
 			);
 			path = View;
@@ -161,13 +168,15 @@
 		E00850F8212B00410057B2B5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F62A57B9254C86BC00F232BE /* FoodTableViewController.swift */,
+				F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */,
 				F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */,
 				E003B721254B33300065DF41 /* EnterPinVC.swift */,
 				F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */,
 				F65A60372188BADC00DB7338 /* CreateNewListing.swift */,
 				F62BEEE52108EFF300006DC0 /* MapViewController.swift */,
 				F64FB5C425DF05D900672D51 /* PickUpConfirmationViewController.swift */,
+				F62A57B9254C86BC00F232BE /* FoodTableViewController.swift */,
+				F68F962825F19B2800FDCDB8 /* MyReservationsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */,
+				F68F961C25F1924400FDCDB8 /* ReservationTableViewCell.swift */,
+				F68F962025F1947400FDCDB8 /* MyReservationsTableViewCell.swift */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -184,13 +195,16 @@
 			isa = PBXGroup;
 			children = (
 				F61DCBAE2326E95800F7FD7C /* WSListing.swift */,
+				F69EBE8225EDA7B000EF5ABA /* Reservation.swift */,
 				F6788FFE23E7C037009FC4C6 /* User.swift */,
 				F6663F55256C4D6E0084EC1C /* FoodStop.swift */,
 				F61DCBAC2326E7C700F7FD7C /* Response.swift */,
 				E05F76E824005C43006E29AF /* ListingResponse.swift */,
+				F69EBE8825EF026900EF5ABA /* GetReservationResponse.swift */,
 				E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */,
 				E02014B02412E71300C75D6A /* GUID.swift */,
 				E04EAC3025D59C63000F5879 /* FoodStopResponse.swift */,
+				F614DAF325F6C6430056C2CA /* CreateReservationResponse.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -198,9 +212,7 @@
 		F69BDB3620FA55780065BB78 = {
 			isa = PBXGroup;
 			children = (
-				F69EBE8225EDA7B000EF5ABA /* Reservation.swift */,
 				F692EA9125DB0E480069589B /* ImageResponse.swift */,
-				F69EBE8825EF026900EF5ABA /* ReservationResponse.swift */,
 				F69265DD24463754005C0701 /* CredentialManager.swift */,
 				F69265DF2446376C005C0701 /* Credential.swift */,
 				F6BCD71824286CE1000C2E02 /* gif.swift */,
@@ -372,6 +384,7 @@
 			files = (
 				F6E3C33425B8CF82007FD10E /* RequestUtility.swift in Sources */,
 				F6663F63257E7EE10084EC1C /* WSListing.swift in Sources */,
+				F68F962125F1947400FDCDB8 /* MyReservationsTableViewCell.swift in Sources */,
 				F69EBE8325EDA7B000EF5ABA /* Reservation.swift in Sources */,
 				F6AE83A2254B33A500D38310 /* PulleyPassthroughScrollView.swift in Sources */,
 				F656694A252B968800A6BA2B /* DoneButton.swift in Sources */,
@@ -381,8 +394,10 @@
 				F61DCBAD2326E7C700F7FD7C /* Response.swift in Sources */,
 				F61785FE2559F03B00CEC8FA /* CustomMaskExample.swift in Sources */,
 				F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */,
+				F68F962925F19B2800FDCDB8 /* MyReservationsTableViewController.swift in Sources */,
 				F656694625263F9B00A6BA2B /* TextFieldMaxLength.swift in Sources */,
 				E04EAC3525D5A2B9000F5879 /* UIColorExtension.swift in Sources */,
+				F614DAF425F6C6430056C2CA /* CreateReservationResponse.swift in Sources */,
 				F603CA2825C09829005B6F79 /* FoodStopModel.swift in Sources */,
 				F6AE83A1254B33A500D38310 /* UIViewController+PulleyViewController.swift in Sources */,
 				F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */,
@@ -400,12 +415,13 @@
 				F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */,
 				F692EA9225DB0E480069589B /* ImageResponse.swift in Sources */,
 				F678900123E7C1A1009FC4C6 /* UserModel.swift in Sources */,
-				F69EBE8925EF026900EF5ABA /* ReservationResponse.swift in Sources */,
+				F69EBE8925EF026900EF5ABA /* GetReservationResponse.swift in Sources */,
 				F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */,
 				E003B722254B33300065DF41 /* EnterPinVC.swift in Sources */,
 				E04EAC3125D59C63000F5879 /* FoodStopResponse.swift in Sources */,
 				F64FB5C525DF05D900672D51 /* PickUpConfirmationViewController.swift in Sources */,
 				F69265DE24463754005C0701 /* CredentialManager.swift in Sources */,
+				F68F961D25F1924400FDCDB8 /* ReservationTableViewCell.swift in Sources */,
 				F6AE83A3254B33A500D38310 /* PulleyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
