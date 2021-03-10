@@ -17,7 +17,7 @@ class MyReservationsTableViewController: UITableViewController {
     var reservations = [Reservation]()
     var listings = [WSListing]()
     
-//    public var listing:WSListing!
+    var minutes:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class MyReservationsTableViewController: UITableViewController {
             }
         }
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         //return reservationModel.getNumberOfReservations()
@@ -63,20 +63,10 @@ class MyReservationsTableViewController: UITableViewController {
         let unixTimestamp = reservation.timeExpired
         let date = Date(timeIntervalSince1970: TimeInterval(unixTimestamp!))
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = TimeZone(abbreviation: "GMT") //Set timezone that you want
-        dateFormatter.locale = NSLocale.current
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm" //Specify your format that you want
-        let strDate = dateFormatter.string(from: date)
-        
-        func minutesTillExpiration(start: Date, end: Date) -> Int {
-                return Calendar.current.dateComponents([.minute], from: start, to: end).minute!
-        }
-        
         let currentDate = Date()
-        
-        let minutes = minutesTillExpiration(start: currentDate, end: date)
-        let minutesTillExp = String(minutes)
+        func minutesTillExpiration(start: Date, end: Date) -> Int {
+            return Calendar.current.dateComponents([.minute], from: start, to: end).minute!
+        }
         
         let listing = listingModel.getListingById(listingId: reservation.listingId!)
         
@@ -84,7 +74,19 @@ class MyReservationsTableViewController: UITableViewController {
         
         cell.foodName.text = listing!.title
         cell.foodStopLocation.text = foodStop.name
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT") //Set timezone that you want
+        dateFormatter.locale = NSLocale.current
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" //Specify your format that you want
+        
+        let minutes = minutesTillExpiration(start: currentDate, end: date)
+        let minutesTillExp = String(minutes)
+        
+        let strDate = dateFormatter.string(from: date)
+        
         cell.expiresLabel.text = "Expires in: " + minutesTillExp + " minutes"
+        
         cell.foodStopColor.backgroundColor = UIColor(hexaRGB: foodStop.hexColor)
         cell.reserved.text = "Reserved " + String(reservation.quantity!) + " of " + String(listing!.quantity!)
         

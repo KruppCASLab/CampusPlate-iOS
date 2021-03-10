@@ -145,18 +145,16 @@ class CreateNewListing:
         let image = UIImagePickerController()
         image.delegate = self
         image.sourceType = UIImagePickerController.SourceType.camera
-        image.allowsEditing = false
+        image.allowsEditing = true
         self.present(image,animated: true)
     }
     
-    
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
         {
             foodImage.image = image //set image
-       
+
         }else{
             //error message
         }
