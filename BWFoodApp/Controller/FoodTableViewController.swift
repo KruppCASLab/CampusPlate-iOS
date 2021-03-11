@@ -43,8 +43,14 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listingModel.getNumberOfListings()
+
+            return listingModel.getNumberOfListings()
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,7 +66,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
         }else{
             let foodCell:FoodListingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FoodListingCell") as! FoodListingTableViewCell
             
-            let listing:WSListing = listingModel.getListing(index: indexPath.row)
+            let listing:WSListing = listingModel.getListing(index: (indexPath.row - 1))
             
             let foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)
             foodCell.foodStopLocationLabel.text = foodStop!.name
@@ -134,10 +140,10 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        
+    
         if let foodVC = segue.destination as? PickUpFoodViewController {
             if let indexPath = indexSelected {
+                //Check if the indexPath is == 0, then send to reservations, otherwise, subtract 1 from indexPath.row 
                 let listing = self.listingModel.getListing(index: indexPath.row)
                 foodVC.listing = listing
                 foodVC.indexPathOfListing = indexPath
