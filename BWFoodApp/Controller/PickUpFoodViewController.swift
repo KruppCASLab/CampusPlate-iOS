@@ -25,8 +25,6 @@ class PickUpFoodViewController: UIViewController {
     @IBOutlet weak var foodStopCircleView: UIView!
     @IBOutlet weak var foodImageView: UIImageView!
     @IBOutlet weak var foodDescription: UITextView!
-   
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     public var listing:WSListing!
     public var createdReservation:Reservation!
@@ -129,9 +127,9 @@ class PickUpFoodViewController: UIViewController {
     @IBAction func pickUpFood(_ sender: Any) {
         
         pickUpFoodButton.isEnabled = false
-        activityIndicator.isHidden = false
+        //activityIndicator.isHidden = false
         
-        activityIndicator.startAnimating()
+        //activityIndicator.startAnimating()
         pickUpFoodButton.alpha = 0.5
         
         let reservation = Reservation(listingId: listing.listingId!, quantity: 3)
