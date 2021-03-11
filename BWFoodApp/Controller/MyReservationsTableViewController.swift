@@ -14,6 +14,7 @@ class MyReservationsTableViewController: UITableViewController {
     let foodStopModel = FoodStopModel.getSharedInstance()
     let listingModel = ListingModel.getSharedInstance()
     
+    
     var reservations = [Reservation]()
     var listings = [WSListing]()
     
@@ -22,6 +23,8 @@ class MyReservationsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //activityView.startAnimating()
+        tableView.tableFooterView = UIView()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -42,6 +45,8 @@ class MyReservationsTableViewController: UITableViewController {
                 DispatchQueue.main.async {
                     reservations = reservationModel.reservations
                     listings = listingModel.listings
+                    
+                    //activityView.stopAnimating()
                     self.tableView.reloadData()
                 }
             }
@@ -55,6 +60,16 @@ class MyReservationsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.row == 0 {
+            
+            let cell:ReservationsCell = tableView.dequeueReusableCell(withIdentifier: "ReservationsCell") as! ReservationsCell
+            
+            cell.label?.text = "RESERVATIONS"
+            
+            return cell
+            
+        }
         
         let cell:MyReservationsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "reservationCell", for: indexPath) as! MyReservationsTableViewCell
         
@@ -88,7 +103,7 @@ class MyReservationsTableViewController: UITableViewController {
         cell.expiresLabel.text = "Expires in: " + minutesTillExp + " minutes"
         
         cell.foodStopColor.backgroundColor = UIColor(hexaRGB: foodStop.hexColor)
-        cell.reserved.text = "Reserved " + String(reservation.quantity!) + " of " + String(listing!.quantity!)
+        cell.reserved.text = "Reserved " + String(reservation.quantity!)
         
         listingModel.getImage(listingId: listing!.listingId!) { (data) in
             DispatchQueue.main.async {
@@ -102,6 +117,15 @@ class MyReservationsTableViewController: UITableViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        if indexPath.row == 0{
+            return 60
+        }else{
+            return 176
+        }
     }
     
     

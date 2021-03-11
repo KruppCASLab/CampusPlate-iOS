@@ -49,8 +49,16 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row > 0 {
-            let foodCell:FoodListingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FoodListingCell", for: indexPath) as! FoodListingTableViewCell
+        if indexPath.row == 0 {
+            let cell:ReservationTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myReservations") as! ReservationTableViewCell
+            
+            cell.colorIndicator.layer.cornerRadius = min(cell.colorIndicator.frame.size.width/2, cell.colorIndicator.frame.size.height/2)
+            
+            cell.reservationLabel.text = "RESERVATIONS"
+            
+            return cell
+        }else{
+            let foodCell:FoodListingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FoodListingCell") as! FoodListingTableViewCell
             
             let listing:WSListing = listingModel.getListing(index: indexPath.row)
             
@@ -61,13 +69,6 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
             
             return foodCell
         }
-        
-        let cell:ReservationTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myReservations", for: indexPath) as! ReservationTableViewCell
-        
-        cell.reservationLabel.text = "RESERVATIONS"
-        
-        return cell
-        
     }
     
     func didComplete() {
@@ -79,21 +80,15 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
         self.performSegue(withIdentifier: "showFoodPickupDetail", sender: self)
         
     }
-    
-//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//
-//        if indexPath.row > 0{
-//            return 137
-//        }else{
-//            return 50
-//        }
-//    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         gripperView.layer.cornerRadius = 2.5
         tableView.layer.cornerRadius=10
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         //TODO: Fix me
         //loadingIndicator.loadGif(name: "fork-and-knife-logo")
@@ -230,7 +225,11 @@ extension FoodTableViewController: PulleyDrawerViewControllerDelegate{
     //    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 125
+        if indexPath.row == 0{
+            return 58
+        }else{
+            return 119
+        }
     }
     
     //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

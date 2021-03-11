@@ -84,7 +84,7 @@ class PickUpFoodViewController: UIViewController {
                     var decodedImage = UIImage(data: data)
                     self.foodImageView.image = decodedImage
                 }else{
-                    self.foodImageView.image = UIImage(named: "CampusPlateLogo-01.png")
+                    self.foodImageView.image = UIImage(named: "AppIcon.png")
                 }
                 
             }

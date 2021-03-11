@@ -17,7 +17,6 @@
 		E05F76E924005C43006E29AF /* ListingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F76E824005C43006E29AF /* ListingResponse.swift */; };
 		F603CA2825C09829005B6F79 /* FoodStopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F603CA2725C09829005B6F79 /* FoodStopModel.swift */; };
 		F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */; };
-		F61379B9235CBEEA008CF83F /* CampusPlateLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = F61379B8235CBEE9008CF83F /* CampusPlateLogo.png */; };
 		F614DAF425F6C6430056C2CA /* CreateReservationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F614DAF325F6C6430056C2CA /* CreateReservationResponse.swift */; };
 		F61785FE2559F03B00CEC8FA /* CustomMaskExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61785FD2559F03B00CEC8FA /* CustomMaskExample.swift */; };
 		F61C0E712413451B0017C3A0 /* CampusPlateLogo-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F61C0E702413451B0017C3A0 /* CampusPlateLogo-01.png */; };
@@ -52,6 +51,7 @@
 		F6AE83A4254B33A500D38310 /* UIView+constrainToParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE83A0254B33A500D38310 /* UIView+constrainToParent.swift */; };
 		F6BCD71924286CE1000C2E02 /* gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCD71824286CE1000C2E02 /* gif.swift */; };
 		F6BCD71B24286EF2000C2E02 /* fork-and-knife-logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */; };
+		F6D49FA225F9739D00433642 /* ReservationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D49FA125F9739D00433642 /* ReservationsCell.swift */; };
 		F6DA60DD25E827AC00710543 /* ReservationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DA60DC25E827AC00710543 /* ReservationModel.swift */; };
 		F6E3C33425B8CF82007FD10E /* RequestUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E3C33325B8CF82007FD10E /* RequestUtility.swift */; };
 		F6E9726B244B51C8009A2BB0 /* SegueCheckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */; };
@@ -78,7 +78,6 @@
 		E05F76E824005C43006E29AF /* ListingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingResponse.swift; sourceTree = "<group>"; };
 		F603CA2725C09829005B6F79 /* FoodStopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStopModel.swift; sourceTree = "<group>"; };
 		F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpFoodViewController.swift; sourceTree = "<group>"; };
-		F61379B8235CBEE9008CF83F /* CampusPlateLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CampusPlateLogo.png; sourceTree = "<group>"; };
 		F614DAF325F6C6430056C2CA /* CreateReservationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReservationResponse.swift; sourceTree = "<group>"; };
 		F61785FD2559F03B00CEC8FA /* CustomMaskExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMaskExample.swift; sourceTree = "<group>"; };
 		F61C0E702413451B0017C3A0 /* CampusPlateLogo-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CampusPlateLogo-01.png"; sourceTree = "<group>"; };
@@ -120,6 +119,7 @@
 		F6AE83A0254B33A500D38310 /* UIView+constrainToParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constrainToParent.swift"; sourceTree = "<group>"; };
 		F6BCD71824286CE1000C2E02 /* gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gif.swift; sourceTree = "<group>"; };
 		F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "fork-and-knife-logo.gif"; path = "Assets.xcassets/fork-and-knife-logo.dataset/fork-and-knife-logo.gif"; sourceTree = "<group>"; };
+		F6D49FA125F9739D00433642 /* ReservationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReservationsCell.swift; path = ../../ReservationsCell.swift; sourceTree = "<group>"; };
 		F6DA60DC25E827AC00710543 /* ReservationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationModel.swift; sourceTree = "<group>"; };
 		F6E3C33325B8CF82007FD10E /* RequestUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUtility.swift; sourceTree = "<group>"; };
 		F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueCheckerViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */,
+				F6D49FA125F9739D00433642 /* ReservationsCell.swift */,
 				F68F961C25F1924400FDCDB8 /* ReservationTableViewCell.swift */,
 				F68F962025F1947400FDCDB8 /* MyReservationsTableViewCell.swift */,
 			);
@@ -243,7 +244,6 @@
 				F6AE832325477A7000D38310 /* Pulley */,
 				F62BEEB62106255900006DC0 /* Types */,
 				F69BDB4220FA55780065BB78 /* AppDelegate.swift */,
-				F61379B8235CBEE9008CF83F /* CampusPlateLogo.png */,
 				F61C0E702413451B0017C3A0 /* CampusPlateLogo-01.png */,
 				F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */,
 				F69BDB4920FA55790065BB78 /* Assets.xcassets */,
@@ -363,7 +363,6 @@
 				F69BDB4A20FA55790065BB78 /* Assets.xcassets in Resources */,
 				F61C0E712413451B0017C3A0 /* CampusPlateLogo-01.png in Resources */,
 				F6BCD71B24286EF2000C2E02 /* fork-and-knife-logo.gif in Resources */,
-				F61379B9235CBEEA008CF83F /* CampusPlateLogo.png in Resources */,
 				F69BDB4820FA55780065BB78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +405,7 @@
 				E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */,
 				E05F76E724005C2B006E29AF /* PinVerifyResponse.swift in Sources */,
 				E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */,
+				F6D49FA225F9739D00433642 /* ReservationsCell.swift in Sources */,
 				E02014B12412E71300C75D6A /* GUID.swift in Sources */,
 				F6AE83A4254B33A500D38310 /* UIView+constrainToParent.swift in Sources */,
 				F6BCD71924286CE1000C2E02 /* gif.swift in Sources */,
