@@ -483,9 +483,6 @@
                                             <constraint firstAttribute="width" constant="22" id="Qhw-wK-fph"/>
                                         </constraints>
                                         <color key="tintColor" systemColor="systemBlueColor"/>
-                                        <connections>
-                                            <segue destination="236-qj-P6u" kind="presentation" id="Ckx-iF-2Hq"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfx-YI-u0O">
                                         <rect key="frame" x="11" y="42" width="22" height="22"/>
@@ -645,10 +642,11 @@
                             <outlet property="delegate" destination="236-qj-P6u" id="ljz-4s-JMx"/>
                         </connections>
                     </tableView>
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etv-Io-KaH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3673.8461538461538" y="-769.19431279620846"/>
+            <point key="canvasLocation" x="3675" y="1041"/>
         </scene>
         <!--Food Table View Controller-->
         <scene sceneID="Mpv-ag-5iq">
@@ -681,11 +679,16 @@
                                         <subviews>
                                             <view alpha="0.75" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Os-Xf-ko1">
                                                 <rect key="frame" x="0.0" y="77.666666666666657" width="375" height="0.33333333333333331"/>
-                                                <color key="backgroundColor" red="0.81960784310000001" green="0.81960784310000001" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" systemColor="separatorColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="0.5" id="Joa-Xs-i6d"/>
                                                 </constraints>
                                             </view>
+                                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="search for a listing" translatesAutoresizingMaskIntoConstraints="NO" id="hDX-gq-Yhv">
+                                                <rect key="frame" x="0.0" y="17" width="390" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </searchBar>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -737,7 +740,7 @@
                                                 <connections>
                                                     <outlet property="colorIndicator" destination="Zda-qB-Ffd" id="jVM-Lh-Pbc"/>
                                                     <outlet property="reservationLabel" destination="skI-RH-aDo" id="x2W-Ly-syt"/>
-                                                    <segue destination="NFq-Ii-tXi" kind="show" identifier="showFoodPickupDetail" id="iYe-dH-Lyd"/>
+                                                    <segue destination="236-qj-P6u" kind="presentation" identifier="myReservations" id="H2H-vE-qT0"/>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodListingCell" rowHeight="119" id="3jq-qR-meP" customClass="FoodListingTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
@@ -796,6 +799,7 @@
                                                     <outlet property="foodLabel" destination="0gk-t4-2jA" id="ZnH-Df-a7f"/>
                                                     <outlet property="foodStopLocationLabel" destination="e59-aE-FaW" id="72o-iA-hmk"/>
                                                     <outlet property="leftBar" destination="O9f-Ug-OFg" id="h6i-0R-Dwl"/>
+                                                    <segue destination="NFq-Ii-tXi" kind="presentation" identifier="showFoodPickupDetail" id="2Ig-El-6MW"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -847,7 +851,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87C-yl-yJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3673.8461538461538" y="448.57819905213267"/>
+            <point key="canvasLocation" x="3451" y="394"/>
         </scene>
         <!--Pick Up Food View Controller-->
         <scene sceneID="ry7-wP-hRa">
@@ -1156,7 +1160,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iYe-dH-Lyd"/>
+        <segue reference="2Ig-El-6MW"/>
         <segue reference="COy-EN-Qxn"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -140,21 +140,27 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
+        
         if let foodVC = segue.destination as? PickUpFoodViewController {
+            
             if let indexPath = indexSelected {
-                //Check if the indexPath is == 0, then send to reservations, otherwise, subtract 1 from indexPath.row 
-                let listing = self.listingModel.getListing(index: indexPath.row)
-                foodVC.listing = listing
-                foodVC.indexPathOfListing = indexPath
+                
+                if indexPath.row == 0{
+                    
+                    self.performSegue(withIdentifier: "myReservations", sender: self)
+                }else{
+                    let listing = self.listingModel.getListing(index: indexPath.row - 1)
+                    foodVC.listing = listing
+                    foodVC.indexPathOfListing = indexPath
+                }
             }
+            
         }
-        
-        
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
     
+    
+    // Get the new view controller using segue.destination.
+    // Pass the selected object to the new view controller.
 }
 
 extension FoodTableViewController: PulleyDrawerViewControllerDelegate{
