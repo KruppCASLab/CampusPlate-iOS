@@ -52,6 +52,10 @@ class MyReservationsTableViewController: UITableViewController {
             }
         }
     }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -69,54 +73,55 @@ class MyReservationsTableViewController: UITableViewController {
             
             return cell
             
-        }
-        
-        let cell:MyReservationsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "reservationCell", for: indexPath) as! MyReservationsTableViewCell
-        
-        let reservation:Reservation = reservations[indexPath.row]
-        
-        let unixTimestamp = reservation.timeExpired
-        let date = Date(timeIntervalSince1970: TimeInterval(unixTimestamp!))
-        
-        let currentDate = Date()
-        func minutesTillExpiration(start: Date, end: Date) -> Int {
-            return Calendar.current.dateComponents([.minute], from: start, to: end).minute!
-        }
-        
-        let listing = listingModel.getListingById(listingId: reservation.listingId!)
-        
-        let foodStop:FoodStop = foodStopModel.getFoodStop(foodStopId: listing!.foodStopId!)!
-        
-        cell.foodName.text = listing!.title
-        cell.foodStopLocation.text = foodStop.name
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = TimeZone(abbreviation: "GMT") //Set timezone that you want
-        dateFormatter.locale = NSLocale.current
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" //Specify your format that you want
-        
-        let minutes = minutesTillExpiration(start: currentDate, end: date)
-        let minutesTillExp = String(minutes)
-        
-        let strDate = dateFormatter.string(from: date)
-        
-        cell.expiresLabel.text = "Expires in: " + minutesTillExp + " minutes"
-        
-        cell.foodStopColor.backgroundColor = UIColor(hexaRGB: foodStop.hexColor)
-        cell.reserved.text = "Reserved " + String(reservation.quantity!)
-        
-        listingModel.getImage(listingId: listing!.listingId!) { (data) in
-            DispatchQueue.main.async {
-                if !data.isEmpty{
-                    let decodedImage = UIImage(data: data)
-                    cell.foodImageVIew.image = decodedImage
-                }else{
-                    cell.foodImageVIew.image = UIImage(named: "CampusPlateLogo-01.png")
+        }else{
+            let cell:MyReservationsTableViewCell = tableView.dequeueReusableCell(withIdentifier: "reservationCell", for: indexPath) as! MyReservationsTableViewCell
+            
+            let reservation:Reservation = reservations[indexPath.row - 1]
+            
+            let unixTimestamp = reservation.timeExpired
+            let date = Date(timeIntervalSince1970: TimeInterval(unixTimestamp!))
+            
+            let currentDate = Date()
+            func minutesTillExpiration(start: Date, end: Date) -> Int {
+                return Calendar.current.dateComponents([.minute], from: start, to: end).minute!
+            }
+            
+            let listing = listingModel.getListingById(listingId: reservation.listingId!)
+            
+            let foodStop:FoodStop = foodStopModel.getFoodStop(foodStopId: listing!.foodStopId!)!
+            
+            cell.foodName.text = listing!.title
+            cell.foodStopLocation.text = foodStop.name
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.timeZone = TimeZone(abbreviation: "GMT") //Set timezone that you want
+            dateFormatter.locale = NSLocale.current
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" //Specify your format that you want
+            
+            let minutes = minutesTillExpiration(start: currentDate, end: date)
+            let minutesTillExp = String(minutes)
+            
+            let strDate = dateFormatter.string(from: date)
+            
+            cell.expiresLabel.text = "Expires in: " + minutesTillExp + " minutes"
+            
+            cell.foodStopColor.backgroundColor = UIColor(hexaRGB: foodStop.hexColor)
+            cell.reserved.text = "Reserved " + String(reservation.quantity!)
+            
+            listingModel.getImage(listingId: listing!.listingId!) { (data) in
+                DispatchQueue.main.async {
+                    if !data.isEmpty{
+                        let decodedImage = UIImage(data: data)
+                        cell.foodImageVIew.image = decodedImage
+                    }else{
+                        
+                    }
                 }
             }
+            
+            return cell
         }
-        
-        return cell
+    
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

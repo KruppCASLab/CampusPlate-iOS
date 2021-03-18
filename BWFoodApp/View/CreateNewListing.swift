@@ -32,6 +32,9 @@ class CreateNewListing:
     let impact = UIImpactFeedbackGenerator()
     
     
+    @IBOutlet weak var descriptionField: UITextView!
+    
+    
     let listingModel = ListingModel.getSharedInstance()
     let foodStopModel = FoodStopModel.getSharedInstance()
     
@@ -43,10 +46,14 @@ class CreateNewListing:
     
     var foodStopPickerData = [FoodStop]()
     
+    @objc func dismissScreen(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        descriptionTextView.backgroundColor = .white
+        let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissScreen))
         
         foodStopPicker.delegate = self
         activityIndicator.isHidden = true
@@ -68,7 +75,7 @@ class CreateNewListing:
         foodImage.layer.borderColor = UIColor.init(named: "CampusPlateGreen")?.cgColor
         self.locationManager.requestWhenInUseAuthorization()
         
-        createListingButton.layer.cornerRadius = 20
+        createListingButton.layer.cornerRadius = 5
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
