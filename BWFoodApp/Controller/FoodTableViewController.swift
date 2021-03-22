@@ -55,6 +55,10 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        func daysBetween(start: Date, end: Date) -> Double {
+            return Double(Calendar.current.dateComponents([.day], from: start, to: end).day!)
+        }
+        
         if indexPath.row == 0 {
             let cell:ReservationTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myReservations") as! ReservationTableViewCell
             
@@ -69,6 +73,39 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
             let listing:WSListing = listingModel.getListing(index: (indexPath.row - 1))
             
             let foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)
+            
+            let unixTimestamp = listing.expirationTime
+            let date = Date(timeIntervalSince1970: TimeInterval(unixTimestamp!))
+            
+            let dateFormatterDate = DateFormatter()
+            let dateFormatterTime = DateFormatter()
+            
+            dateFormatterDate.timeZone = TimeZone(abbreviation: "EDT")
+            dateFormatterDate.locale = NSLocale.current
+            dateFormatterDate.dateFormat = "M-dd"
+            
+            dateFormatterTime.timeZone = TimeZone(abbreviation: "EDT")
+            dateFormatterTime.locale = NSLocale.current
+            dateFormatterTime.dateFormat = "h:MM aa"
+            
+            let strDate = dateFormatterDate.string(from: date)
+            let strTime = dateFormatterTime.string(from: date)
+            
+            let currentDate = Date()
+            let daysSince = daysBetween(start: currentDate, end: date)
+            
+            let font = UIFont.systemFont(ofSize: 12, weight: .bold)
+            
+            foodCell.availableUntilLabel.text = "Closes on: " + strDate + " at " + strTime
+            
+            if daysSince <= 0.5 {
+                foodCell.availableUntilLabel.textColor = .systemRed
+                foodCell.availableUntilLabel.font = font
+            }else{
+                foodCell.availableUntilLabel.textColor = .white
+                //foodCell.availableUntilLabel.font = font
+            }
+
             foodCell.foodStopLocationLabel.text = foodStop!.name
             foodCell.foodLabel.text = listing.title?.uppercased()
             foodCell.leftBar.backgroundColor = UIColor(hexaRGB: foodStop!.hexColor)

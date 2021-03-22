@@ -20,20 +20,19 @@ class CreateNewListing:
     public var delegate:CreateNewListingDelegate?
     public var mapViewDelegate: MapViewController?
     
-    @IBOutlet weak var createListingButton: UIButton!
+    
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var itemTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var quantityTextField: UITextField!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    //    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var descriptionTextView: UITextView!
     
     let impact = UIImpactFeedbackGenerator()
     
     
-    @IBOutlet weak var descriptionField: UITextView!
-    
+    @IBOutlet weak var expirationTimeField: UITextField!
     
     let listingModel = ListingModel.getSharedInstance()
     let foodStopModel = FoodStopModel.getSharedInstance()
@@ -41,22 +40,21 @@ class CreateNewListing:
     var locationManager = CLLocationManager()
     
     public var listing:WSListing!
-
+    
     let foodStopPicker = UIPickerView()
     
     var foodStopPickerData = [FoodStop]()
     
-    @objc func dismissScreen(){
-        self.dismiss(animated: true, completion: nil)
-    }
+    @IBOutlet weak var createButton: UIBarButtonItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissScreen))
-        
         foodStopPicker.delegate = self
-        activityIndicator.isHidden = true
+        //activityIndicator.isHidden = true
+        
+        createButton.isEnabled = false
         
         foodStopModel.loadManagedFoodStops { [self] (completed) in
             foodStopPickerData = foodStopModel.managedFoodStops
@@ -64,10 +62,9 @@ class CreateNewListing:
                 locationTextField.text = foodStopPickerData[0].name
             }
         }
-
         
         let leftView = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
-               
+        
         let leftView2 = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
         
         let leftView3 = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
@@ -75,24 +72,35 @@ class CreateNewListing:
         foodImage.layer.borderColor = UIColor.init(named: "CampusPlateGreen")?.cgColor
         self.locationManager.requestWhenInUseAuthorization()
         
-        createListingButton.layer.cornerRadius = 5
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
-
+        
         itemTextField.delegate = self
         itemTextField.returnKeyType = .done
-
+        
         quantityTextField.keyboardType = .numberPad
         quantityTextField.delegate = self
         quantityTextField.returnKeyType = .done
-
+        
         locationTextField.inputView = foodStopPicker
         locationTextField.delegate = self
         locationTextField.returnKeyType = .done
-
+        
         locationManager.delegate = self
-
+        
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let text = (itemTextField.text! as NSString).replacingCharacters(in: range, with: string)
+        
+        if text.isEmpty {
+            createButton.isEnabled = false
+        } else {
+            createButton.isEnabled = true
+        }
+        return true
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -107,7 +115,7 @@ class CreateNewListing:
         return foodStopPickerData[row].name
     }
     
-   
+    
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         locationTextField.text = foodStopPickerData[row].name
@@ -118,9 +126,14 @@ class CreateNewListing:
         
         navigationController?.navigationBar.barTintColor = UIColor.init(named: "CampusPlateGreenNew")
         
-//        navigationController?.navigationBar.backgroundColor = UIColor.init(named: "CampusPlateGreenNew")
-//        navigationController?.setNavigationBarHidden(true, animated: false)
+        //        navigationController?.navigationBar.backgroundColor = UIColor.init(named: "CampusPlateGreenNew")
+        //        navigationController?.setNavigationBarHidden(true, animated: false)
     }
+    
+    @IBAction func cancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -145,7 +158,8 @@ class CreateNewListing:
     }
     
     
-    @IBAction func takePicture(_ sender: Any) {
+    
+    @IBAction func takePicture(_ sender: UIButton) {
         
         impact.impactOccurred()
         
@@ -154,14 +168,16 @@ class CreateNewListing:
         image.sourceType = UIImagePickerController.SourceType.camera
         image.allowsEditing = true
         self.present(image,animated: true)
+        
     }
     
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-
+        
         if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
         {
             foodImage.image = image //set image
-
+            
         }else{
             //error message
         }
@@ -169,48 +185,45 @@ class CreateNewListing:
     }
     
     
-    @IBAction func cancel(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
-    
-    @IBAction func createListing(_ sender: UIButton) {
+    @IBAction func createListingButton(_ sender: UIButton) {
+        //createListingButton.isEnabled = false
+        //activityIndicator.isHidden = false
         
-        createListingButton.isEnabled = false
-        activityIndicator.isHidden = false
+        //activityIndicator.startAnimating()
         
-        activityIndicator.startAnimating()
+        //createListingButton.alpha = 0.5
         
-        createListingButton.alpha = 0.5
-    
-        let food = itemTextField.text
-        let quantity = Int(quantityTextField.text ?? "0") ?? 0
-        let subLocation = locationTextField.text
+        let foodName = itemTextField.text
+        let description = descriptionTextView.text
+        let quantity = Int(quantityTextField.text!)
+        let expirationTime = Int(expirationTimeField.text!)
+        
         let image = foodImage.image
         
         let imageData:Data = (image?.jpegData(compressionQuality: 0.05)!)!
         let imageBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
         
-        let listing = WSListing(listingId: -1, foodStopId: 1, userId: -1, title: food ?? "", description: "", creationTime: -1, quantity: quantity, image: imageBase64)
-    
-            listingModel.addListing(listing: listing) { (completed) in
-                    if (!completed) {
-                        let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
-                        DispatchQueue.main.async {
-                            self.present(alert, animated: true, completion: nil)
-                        }
-
-                    }
-                    else {
-                        DispatchQueue.main.async {
-                            self.dismiss(animated: true, completion: nil)
-                            self.delegate?.didComplete()
-                        }
-                    }
-            
+        let listing = WSListing(foodStop: 1, title: foodName!, description: description!, quantity: quantity!, image: imageBase64, expirationTime: expirationTime!)
+        
+        listingModel.addListing(listing: listing) { (completed) in
+            if (!completed) {
+                let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
             }
+            else {
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true, completion: nil)
+                    self.delegate?.didComplete()
+                }
+            }
+            
+        }
         
     }
-    
-
 }
+
+

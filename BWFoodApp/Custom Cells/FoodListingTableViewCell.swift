@@ -16,6 +16,7 @@ class FoodListingTableViewCell: UITableViewCell {
     @IBOutlet weak var foodStopLocationLabel: UILabel!
     
     @IBOutlet weak var leftBar: UIView!
+    @IBOutlet weak var availableUntilLabel: UILabel!
     
     
     override func awakeFromNib() {

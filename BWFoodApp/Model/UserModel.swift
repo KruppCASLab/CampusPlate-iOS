@@ -11,7 +11,7 @@ import Foundation
 class UserModel {
     private var users = Array<User>()
     
-    private let url = URL(string: "https://mopsdev.bw.edu/food/rest.php/users")
+    private let url = URL(string: "https://mopsdev.bw.edu/cp/rest.php/users")
     
     private static let sharedInstance = UserModel()
     let session = URLSession.shared
