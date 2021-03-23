@@ -41,6 +41,8 @@ class CreateNewListing:
     
     public var listing:WSListing!
     
+    var selectedFoodStop: FoodStop?
+    
     let foodStopPicker = UIPickerView()
     
     var foodStopPickerData = [FoodStop]()
@@ -58,6 +60,8 @@ class CreateNewListing:
         
         foodStopModel.loadManagedFoodStops { [self] (completed) in
             foodStopPickerData = foodStopModel.managedFoodStops
+            
+            self.selectedFoodStop = foodStopPickerData[0]
             DispatchQueue.main.async {
                 locationTextField.text = foodStopPickerData[0].name
             }
@@ -119,6 +123,7 @@ class CreateNewListing:
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         locationTextField.text = foodStopPickerData[row].name
+        selectedFoodStop = foodStopPickerData[row]
     }
     
     
@@ -194,6 +199,8 @@ class CreateNewListing:
         
         //createListingButton.alpha = 0.5
         
+        createButton.isEnabled = false
+        
         let foodName = itemTextField.text
         let description = descriptionTextView.text
         let quantity = Int(quantityTextField.text!)
@@ -204,8 +211,7 @@ class CreateNewListing:
         let imageData:Data = (image?.jpegData(compressionQuality: 0.05)!)!
         let imageBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
         
-        let listing = WSListing(foodStop: 1, title: foodName!, description: description!, quantity: quantity!, image: imageBase64, expirationTime: expirationTime!)
-        
+        let listing = WSListing(foodStopId: selectedFoodStop!.foodStopId,title: foodName!, description: description!, quantity: quantity!, image: imageBase64, expirationTime: expirationTime!)
         listingModel.addListing(listing: listing) { (completed) in
             if (!completed) {
                 let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)

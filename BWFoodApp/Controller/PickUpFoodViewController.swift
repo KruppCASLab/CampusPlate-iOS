@@ -17,8 +17,12 @@ class PickUpFoodViewController: UIViewController {
     
     public var delegate:CreateNewListingDelegate?
     
+   
+    @IBOutlet weak var navBar: UINavigationItem!
+    
+    
     @IBOutlet weak var daysPosted: UILabel!
-    @IBOutlet weak var foodLabel: UILabel!
+   
     @IBOutlet weak var colorIndicator: UIView!
     @IBOutlet weak var pickUpLocation: UILabel!
     @IBOutlet weak var pickUpLocationAddress: UILabel!
@@ -32,8 +36,6 @@ class PickUpFoodViewController: UIViewController {
     public var indexPathOfListing:IndexPath!
     
     public var foodStop:FoodStop!
-    
-    @IBOutlet weak var pickUpFoodButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,14 +68,15 @@ class PickUpFoodViewController: UIViewController {
        
         foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)!
 
-        foodLabel.text = listing.title
+        navBar.title = listing.title
+        
         foodDescription.text = listing.description
         
         pickUpLocation.text = foodStop.name
         pickUpLocationAddress.text = foodStop.streetAddress
         
         foodStopCircleView.backgroundColor = UIColor.init(hexaRGB: foodStop.hexColor)
-        pickUpFoodButton.layer.cornerRadius = 20
+        
         
         listingModel.getImage(listingId: listing.listingId!) { (data) in
             
@@ -82,7 +85,7 @@ class PickUpFoodViewController: UIViewController {
                     var decodedImage = UIImage(data: data)
                     self.foodImageView.image = decodedImage
                 }else{
-                    self.foodImageView.image = UIImage(named: "AppIcon.png")
+                    self.foodImageView.image = UIImage(named: "spoony.png")
                 }
                 
             }
@@ -117,6 +120,8 @@ class PickUpFoodViewController: UIViewController {
         
         if strDaysSince == "0" {
             daysPosted.text = "POSTED TODAY"
+        }else if strDaysSince == "1" {
+            daysPosted.text = "POSTED " + strDaysSince + " DAY AGO"
         }else{
             daysPosted.text = "POSTED " + strDaysSince + " DAYS AGO"
         }
@@ -125,12 +130,10 @@ class PickUpFoodViewController: UIViewController {
     }
     
     @IBAction func pickUpFood(_ sender: Any) {
-        
-        pickUpFoodButton.isEnabled = false
         //activityIndicator.isHidden = false
         
         //activityIndicator.startAnimating()
-        pickUpFoodButton.alpha = 0.5
+        
         
         let reservation = Reservation(listingId: listing.listingId!, quantity: 3)
         
