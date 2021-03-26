@@ -48,12 +48,16 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-            return listingModel.getNumberOfListings()
+        
+        return listingModel.getNumberOfListings()
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        func daysBetween(start: Date, end: Date) -> Double {
+            return Double(Calendar.current.dateComponents([.day], from: start, to: end).day!)
+        }
         
         if indexPath.row == 0 {
             let cell:ReservationTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myReservations") as! ReservationTableViewCell
@@ -69,6 +73,41 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
             let listing:WSListing = listingModel.getListing(index: (indexPath.row - 1))
             
             let foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)
+            
+            let unixTimestamp = listing.expirationTime
+            let date = Date(timeIntervalSince1970: TimeInterval(unixTimestamp!))
+            
+            let dateFormatterDate = DateFormatter()
+            let dateFormatterTime = DateFormatter()
+            
+            dateFormatterDate.timeZone = TimeZone(abbreviation: "EDT")
+            dateFormatterDate.locale = NSLocale.current
+            dateFormatterDate.dateFormat = "M-dd"
+            
+            dateFormatterTime.timeZone = TimeZone(abbreviation: "EDT")
+            dateFormatterTime.locale = NSLocale.current
+            dateFormatterTime.dateFormat = "h:MM aa"
+            
+            let strDate = dateFormatterDate.string(from: date)
+            let strTime = dateFormatterTime.string(from: date)
+            
+            let currentDate = Date()
+            let daysSince = daysBetween(start: currentDate, end: date)
+            
+            let font = UIFont.systemFont(ofSize: 12, weight: .bold)
+            
+            //            foodCell.availableUntilLabel.text = "Closes on: " + strDate + " at " + strTime
+            //
+            //            if daysSince <= 0.5 {
+            //                foodCell.availableUntilLabel.textColor = .systemRed
+            //                foodCell.availableUntilLabel.font = font
+            //            }else{
+            //                foodCell.availableUntilLabel.textColor = .white
+            //                //foodCell.availableUntilLabel.font = font
+            //            }
+            
+            foodCell.quantityField.text = String(listing.quantity!) + " available"
+            
             foodCell.foodStopLocationLabel.text = foodStop!.name
             foodCell.foodLabel.text = listing.title?.uppercased()
             foodCell.leftBar.backgroundColor = UIColor(hexaRGB: foodStop!.hexColor)
@@ -86,7 +125,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
         self.performSegue(withIdentifier: "showFoodPickupDetail", sender: self)
         
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -141,21 +180,41 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let foodVC = segue.destination as? PickUpFoodViewController {
+        if segue.identifier == "showFoodPickupDetail" {
             
-            if let indexPath = indexSelected {
+            let navController = segue.destination as! UINavigationController
+            
+            if let foodVC = navController.topViewController as? PickUpFoodViewController {
                 
-                if indexPath.row == 0{
+                if let indexPath = indexSelected {
                     
-                    self.performSegue(withIdentifier: "myReservations", sender: self)
-                }else{
-                    let listing = self.listingModel.getListing(index: indexPath.row - 1)
-                    foodVC.listing = listing
-                    foodVC.indexPathOfListing = indexPath
+                    if indexPath.row == 0{
+                        
+                        self.performSegue(withIdentifier: "myReservations", sender: self)
+                    }else{
+                        let listing = self.listingModel.getListing(index: indexPath.row - 1)
+                        foodVC.listing = listing
+                        foodVC.indexPathOfListing = indexPath
+                    }
                 }
+                
             }
-            
         }
+        //        if let foodVC = segue.destination as? PickUpFoodViewController {
+        //
+        //            if let indexPath = indexSelected {
+        //
+        //                if indexPath.row == 0{
+        //
+        //                    self.performSegue(withIdentifier: "myReservations", sender: self)
+        //                }else{
+        //                    let listing = self.listingModel.getListing(index: indexPath.row - 1)
+        //                    foodVC.listing = listing
+        //                    foodVC.indexPathOfListing = indexPath
+        //                }
+        //            }
+        //
+        //        }
     }
     
     

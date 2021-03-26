@@ -43,6 +43,7 @@
 		F69BDB4A20FA55790065BB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4920FA55790065BB78 /* Assets.xcassets */; };
 		F69BDB4D20FA55790065BB78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4B20FA55790065BB78 /* LaunchScreen.storyboard */; };
 		F69BDB5820FA557A0065BB78 /* BWFoodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB5720FA557A0065BB78 /* BWFoodAppTests.swift */; };
+		F69D00F1260966C1003DE1BD /* spoony.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D00F0260966C1003DE1BD /* spoony.png */; };
 		F69EBE8325EDA7B000EF5ABA /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EBE8225EDA7B000EF5ABA /* Reservation.swift */; };
 		F69EBE8925EF026900EF5ABA /* GetReservationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69EBE8825EF026900EF5ABA /* GetReservationResponse.swift */; };
 		F6AE83A1254B33A500D38310 /* UIViewController+PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE839D254B33A400D38310 /* UIViewController+PulleyViewController.swift */; };
@@ -110,6 +111,7 @@
 		F69BDB5320FA55790065BB78 /* BWFoodAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BWFoodAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69BDB5720FA557A0065BB78 /* BWFoodAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWFoodAppTests.swift; sourceTree = "<group>"; };
 		F69BDB5920FA557A0065BB78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F69D00F0260966C1003DE1BD /* spoony.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spoony.png; sourceTree = "<group>"; };
 		F69EBE8225EDA7B000EF5ABA /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		F69EBE8825EF026900EF5ABA /* GetReservationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReservationResponse.swift; sourceTree = "<group>"; };
 		F6AE833A25477A9400D38310 /* Pulley.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pulley.h; path = "../../../Downloads/Pulley-master-2/Pulley/Pulley.h"; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				F61C0E702413451B0017C3A0 /* CampusPlateLogo-01.png */,
 				F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */,
 				F69BDB4920FA55790065BB78 /* Assets.xcassets */,
+				F69D00F0260966C1003DE1BD /* spoony.png */,
 				F62A57D3254DE6F400F232BE /* SF-Pro-Italic.ttf */,
 				F62A57D4254DE6F400F232BE /* SF-Pro.ttf */,
 				F69BDB4B20FA55790065BB78 /* LaunchScreen.storyboard */,
@@ -364,6 +367,7 @@
 				F61C0E712413451B0017C3A0 /* CampusPlateLogo-01.png in Resources */,
 				F6BCD71B24286EF2000C2E02 /* fork-and-knife-logo.gif in Resources */,
 				F69BDB4820FA55780065BB78 /* Main.storyboard in Resources */,
+				F69D00F1260966C1003DE1BD /* spoony.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
