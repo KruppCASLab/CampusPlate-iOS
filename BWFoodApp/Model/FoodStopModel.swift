@@ -13,7 +13,7 @@ class FoodStopModel{
     public var foodStops = Array<FoodStop>()
     public var managedFoodStops = Array<FoodStop>()
     
-    private let url = URL(string: "https://mopsdev.bw.edu/cp/rest.php/foodStops")
+    private let url = URL(string: "https://mops.bw.edu/cp/rest.php/foodStops")
     
     private static let sharedInstance = FoodStopModel()
     let session = URLSession.shared
