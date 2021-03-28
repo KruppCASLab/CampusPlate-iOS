@@ -318,8 +318,8 @@
             timestampString = "589484014.099883"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "PickUpFoodViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -335,8 +335,8 @@
             timestampString = "589484014.099957"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -563,8 +563,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
             endingLineNumber = "14"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "MapViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -577,8 +577,8 @@
             filePath = "BWFoodApp/Controller/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "MapViewController"
             landmarkType = "3">
             <Locations>
@@ -877,8 +877,8 @@
             filePath = "BWFoodApp/Controller/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "MapViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -893,8 +893,8 @@
             filePath = "BWFoodApp/Controller/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "MapViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1668,8 +1668,8 @@
             filePath = "BWFoodApp/Controller/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1716,8 +1716,8 @@
             filePath = "BWFoodApp/Controller/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "didComplete()"
             landmarkType = "7">
             <Locations>
@@ -1764,8 +1764,8 @@
             filePath = "BWFoodApp/Controller/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1780,8 +1780,8 @@
             filePath = "BWFoodApp/Controller/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1796,8 +1796,8 @@
             filePath = "BWFoodApp/Controller/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "didComplete()"
             landmarkType = "7">
             <Locations>
@@ -2340,8 +2340,8 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2356,8 +2356,8 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2372,8 +2372,8 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2388,8 +2388,8 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -2576,8 +2576,8 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "pickUpFood(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2592,8 +2592,8 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "pickUpFood(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2732,8 +2732,8 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2748,8 +2748,8 @@
             filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3457,6 +3457,130 @@
             startingLineNumber = "204"
             endingLineNumber = "204"
             landmarkName = "createListingButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A367E87D-8B77-458F-9950-2C85C6D75BEC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BWFoodApp/Controller/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "MapViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "A367E87D-8B77-458F-9950-2C85C6D75BEC - e13cd19332ae6fd8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.MapViewController.foodStops.getter : Swift.Optional&lt;Swift.Array&lt;BWFoodApp.FoodStop&gt;&gt;"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS/BWFoodApp/Controller/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "A367E87D-8B77-458F-9950-2C85C6D75BEC - e0aaddca2b0ffbe4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.MapViewController.foodStops.setter : Swift.Optional&lt;Swift.Array&lt;BWFoodApp.FoodStop&gt;&gt;"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS/BWFoodApp/Controller/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "A367E87D-8B77-458F-9950-2C85C6D75BEC - 15cebdc3abb2af0c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.MapViewController.foodStops.modify : Swift.Optional&lt;Swift.Array&lt;BWFoodApp.FoodStop&gt;&gt;"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS/BWFoodApp/Controller/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "A367E87D-8B77-458F-9950-2C85C6D75BEC - 2ab85a43da081736"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.MapViewController.foodStops.modify : Swift.Optional&lt;Swift.Array&lt;BWFoodApp.FoodStop&gt;&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS/BWFoodApp/Controller/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "A367E87D-8B77-458F-9950-2C85C6D75BEC - 10798ad1836d28f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.MapViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; BWFoodApp.MapViewController"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS/BWFoodApp/Controller/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "752">
+               </Location>
+               <Location
+                  uuid = "A367E87D-8B77-458F-9950-2C85C6D75BEC - 459030de7aa9fa08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.MapViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;BWFoodApp.MapViewController&gt;"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danfitzgerald/CampusPlate-iOS/BWFoodApp/Controller/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "728">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A269327-FCDD-41E9-8141-10FCF366B9FE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "stepperValue(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

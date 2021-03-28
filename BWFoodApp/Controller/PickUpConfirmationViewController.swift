@@ -16,9 +16,11 @@ class PickUpConfirmationViewController: UIViewController {
     @IBOutlet weak var FoodStopIdNumber: UILabel!
     
     @IBOutlet weak var reservationIdNumber: UITextView!
-    
+
     public var reservation: Reservation!
     public var foodStop:FoodStop!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

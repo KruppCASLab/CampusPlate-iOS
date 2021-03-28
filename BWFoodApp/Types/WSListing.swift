@@ -18,8 +18,9 @@ public class WSListing: Codable {
     public var quantity:Int?
     public var image: String?
     public var expirationTime: Int?
+    public var weightOunces: Int?
  
-    init(listingId:Int, foodStopId:Int, userId:Int, title:String, description:String, creationTime:Int, quantity:Int, image:String, expirationTime: Int) {
+    init(listingId:Int, foodStopId:Int, userId:Int, title:String, description:String, creationTime:Int, quantity:Int, image:String, expirationTime: Int, weightOunces: Int) {
         
         self.listingId = listingId
         self.foodStopId = foodStopId
@@ -30,10 +31,11 @@ public class WSListing: Codable {
         self.quantity = quantity
         self.image = image
         self.expirationTime = expirationTime
+        self.weightOunces = weightOunces
         
     }
     
-    init(foodStopId:Int, title:String, description:String,quantity:Int, image:String, expirationTime: Int) {
+    init(foodStopId:Int, title:String, description:String,quantity:Int, image:String, expirationTime: Int, weightOunces: Int) {
         
         self.foodStopId = foodStopId
         self.title = title
@@ -41,6 +43,7 @@ public class WSListing: Codable {
         self.quantity = quantity
         self.image = image
         self.expirationTime = expirationTime
+        self.weightOunces = weightOunces
         
     }
 }

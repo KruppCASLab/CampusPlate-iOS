@@ -211,7 +211,7 @@ class CreateNewListing:
         let imageData:Data = (image?.jpegData(compressionQuality: 0.05)!)!
         let imageBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
         
-        let listing = WSListing(foodStopId: selectedFoodStop!.foodStopId,title: foodName!, description: description!, quantity: quantity!, image: imageBase64, expirationTime: expirationTime!)
+        let listing = WSListing(foodStopId: selectedFoodStop!.foodStopId,title: foodName!, description: description!, quantity: quantity!, image: imageBase64, expirationTime: expirationTime!, weightOunces: 19)
         listingModel.addListing(listing: listing) { (completed) in
             if (!completed) {
                 let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)

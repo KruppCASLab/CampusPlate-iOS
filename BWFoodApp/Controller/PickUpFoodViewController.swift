@@ -17,8 +17,12 @@ class PickUpFoodViewController: UIViewController {
     
     public var delegate:CreateNewListingDelegate?
     
-   
+    @IBOutlet weak var testLabel: UILabel!
+    
+    
     @IBOutlet weak var navBar: UINavigationItem!
+    
+
     
     
     @IBOutlet weak var daysPosted: UILabel!
@@ -29,6 +33,7 @@ class PickUpFoodViewController: UIViewController {
     @IBOutlet weak var foodStopCircleView: UIView!
     @IBOutlet weak var foodImageView: UIImageView!
     @IBOutlet weak var foodDescription: UITextView!
+    @IBOutlet weak var quantityLabel: UILabel!
     
     public var listing:WSListing!
     public var createdReservation:Reservation!
@@ -37,15 +42,21 @@ class PickUpFoodViewController: UIViewController {
     
     public var foodStop:FoodStop!
     
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var pickUpButton: UIBarButtonItem!
+    
+    @IBOutlet weak var stepper: UIStepper!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
-        let width:CGFloat = UIScreen.main.bounds.width*0.0533
-        colorIndicator.frame = CGRect(x: 0,y: 0,width: width,height: width)
-        colorIndicator.layer.masksToBounds = true
-        colorIndicator.layer.cornerRadius = width/2
+//        let width:CGFloat = UIScreen.main.bounds.width*0.0533
+//        colorIndicator.frame = CGRect(x: 0,y: 0,width: width,height: width)
+//        colorIndicator.layer.masksToBounds = true
+//        colorIndicator.layer.cornerRadius = width/2
         
-        view.layer.cornerRadius=10
+        foodDescription.textContainer.lineFragmentPadding = 0
         
         // 1
         view.backgroundColor = .clear
@@ -68,15 +79,19 @@ class PickUpFoodViewController: UIViewController {
        
         foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)!
 
+        pickUpButton.tintColor = UIColor(hexaRGB: foodStop.hexColor)
+        cancelButton.tintColor = UIColor(hexaRGB: foodStop.hexColor)
+        
         navBar.title = listing.title
         
         foodDescription.text = listing.description
-        
         pickUpLocation.text = foodStop.name
+        quantityLabel.text = "0/" + String(listing.quantity!)
         pickUpLocationAddress.text = foodStop.streetAddress
         
-        foodStopCircleView.backgroundColor = UIColor.init(hexaRGB: foodStop.hexColor)
+        //stepper.maximumValue = Double(listing.quantity!)
         
+        foodStopCircleView.backgroundColor = UIColor.init(hexaRGB: foodStop.hexColor)
         
         listingModel.getImage(listingId: listing.listingId!) { (data) in
             
@@ -91,9 +106,6 @@ class PickUpFoodViewController: UIViewController {
             }
         
         }
-        
-        
-        
         
         let available : Int = listing.quantity ?? 0
         var availableStr = String(available)
@@ -128,6 +140,16 @@ class PickUpFoodViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func stepperValue(_ sender: UIStepper) {
+        
+        print("test")
+        
+    }
+    
+    
+    
+
     
     @IBAction func pickUpFood(_ sender: Any) {
         //activityIndicator.isHidden = false

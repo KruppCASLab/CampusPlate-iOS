@@ -106,7 +106,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
             //                //foodCell.availableUntilLabel.font = font
             //            }
             
-            foodCell.quantityField.text = String(listing.quantity!) + " available"
+            foodCell.quantityField.text = String(listing.quantity!) + " REMAINING"
             
             foodCell.foodStopLocationLabel.text = foodStop!.name
             foodCell.foodLabel.text = listing.title?.uppercased()
