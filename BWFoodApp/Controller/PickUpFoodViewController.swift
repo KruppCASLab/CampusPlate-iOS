@@ -47,6 +47,7 @@ class PickUpFoodViewController: UIViewController {
     
     @IBOutlet weak var stepper: UIStepper!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -141,15 +142,13 @@ class PickUpFoodViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func stepperValue(_ sender: UIStepper) {
+    
+    
+    @IBAction func stepper(_ sender: UIStepper) {
         
         print("test")
-        
     }
     
-    
-    
-
     
     @IBAction func pickUpFood(_ sender: Any) {
         //activityIndicator.isHidden = false

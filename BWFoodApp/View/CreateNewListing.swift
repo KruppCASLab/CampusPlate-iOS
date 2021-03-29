@@ -29,6 +29,9 @@ class CreateNewListing:
     
     @IBOutlet weak var descriptionTextView: UITextView!
     
+    
+    @IBOutlet weak var weight: UITextField!
+    
     let impact = UIImpactFeedbackGenerator()
     
     
@@ -208,10 +211,12 @@ class CreateNewListing:
         
         let image = foodImage.image
         
+        let unixTimeStampExpiration = expirationTime! * 86400 + Int(NSDate().timeIntervalSince1970)
+        
         let imageData:Data = (image?.jpegData(compressionQuality: 0.05)!)!
         let imageBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
         
-        let listing = WSListing(foodStopId: selectedFoodStop!.foodStopId,title: foodName!, description: description!, quantity: quantity!, image: imageBase64, expirationTime: expirationTime!, weightOunces: 19)
+        let listing = WSListing(foodStopId: selectedFoodStop!.foodStopId,title: foodName!, description: description!, quantity: quantity!, image: imageBase64, expirationTime: Int(unixTimeStampExpiration), weightOunces: Int(weight.text!)!)
         listingModel.addListing(listing: listing) { (completed) in
             if (!completed) {
                 let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
