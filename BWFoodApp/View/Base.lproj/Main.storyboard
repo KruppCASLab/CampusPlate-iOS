@@ -857,7 +857,7 @@
         <scene sceneID="ry7-wP-hRa">
             <objects>
                 <viewController id="NFq-Ii-tXi" customClass="PickUpFoodViewController" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="xRC-x0-scu">
+                    <view key="view" contentMode="scaleToFill" id="xRC-x0-scu">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
