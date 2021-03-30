@@ -219,7 +219,11 @@ class CreateNewListing:
         let listing = WSListing(foodStopId: selectedFoodStop!.foodStopId,title: foodName!, description: description!, quantity: quantity!, image: imageBase64, expirationTime: Int(unixTimeStampExpiration), weightOunces: Int(weight.text!)!)
         listingModel.addListing(listing: listing) { (completed) in
             if (!completed) {
-                let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Listing could not be created.", message: "Please try again later.", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (completed) in
+                    self.createButton.isEnabled = true
+                }))
                 DispatchQueue.main.async {
                     self.present(alert, animated: true, completion: nil)
                 }

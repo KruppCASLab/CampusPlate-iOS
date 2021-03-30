@@ -1035,8 +1035,11 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sAb-fp-lIY">
                             <color key="tintColor" red="0.39938202499999997" green="0.76415365930000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Pick Up" style="done" id="Arv-BF-slY">
-                            <color key="tintColor" red="0.39938202499999997" green="0.76415365930000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <barButtonItem key="rightBarButtonItem" title="Pick Up" style="done" id="dM9-bk-dPn">
+                            <color key="tintColor" red="0.5127672553" green="0.81938940289999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="test:" destination="NFq-Ii-tXi" id="ICL-Je-R4k"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1048,16 +1051,17 @@
                         <outlet property="foodImageView" destination="48n-5Y-J0c" id="dFc-n5-MEa"/>
                         <outlet property="foodStopCircleView" destination="Str-L1-oBS" id="iTX-Xq-j8q"/>
                         <outlet property="navBar" destination="fCn-Dx-xla" id="Lar-pF-vYK"/>
-                        <outlet property="pickUpButton" destination="Arv-BF-slY" id="1Pb-kH-tfI"/>
+                        <outlet property="pickUpButton" destination="dM9-bk-dPn" id="5GQ-Hq-nKw"/>
                         <outlet property="pickUpLocation" destination="8wD-h5-MlL" id="gYO-08-J0o"/>
                         <outlet property="pickUpLocationAddress" destination="c01-WA-Qk3" id="q05-ZK-gnB"/>
                         <outlet property="quantityLabel" destination="zuj-Zq-jep" id="BeD-GA-Msv"/>
                         <outlet property="stepper" destination="UAo-CW-iOT" id="nYj-vF-dDf"/>
+                        <segue destination="rmF-MA-PRy" kind="presentation" identifier="pickUpConfirmation" modalPresentationStyle="fullScreen" id="p27-s5-5ij"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5K-UX-qn3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5847.6923076923076" y="583.64928909952607"/>
+            <point key="canvasLocation" x="5616" y="1022"/>
         </scene>
         <!--Pick Up Confirmation View Controller-->
         <scene sceneID="MUp-SO-oU4">
@@ -1174,7 +1178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J04-7I-0Vn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7240" y="583.64928909952607"/>
+            <point key="canvasLocation" x="6690" y="1022"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9FZ-ql-iE7">
@@ -1222,7 +1226,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="njv-NT-bSF"/>
+        <segue reference="p27-s5-5ij"/>
+        <segue reference="COy-EN-Qxn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Campus-Plate-App-Background" width="5939" height="8305"/>
