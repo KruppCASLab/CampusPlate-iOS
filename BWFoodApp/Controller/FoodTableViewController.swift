@@ -31,6 +31,8 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var gripperTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     
+    let listings:[WSListing] = []
+    
     
     fileprivate var drawerBottomSafeArea: CGFloat = 0.0 {
         didSet {

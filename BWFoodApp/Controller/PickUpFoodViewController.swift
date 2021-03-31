@@ -138,8 +138,11 @@ class PickUpFoodViewController: UIViewController {
     }
     
     
+    @IBAction func cancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
-    @IBAction func test(_ sender: Any) {
+    @IBAction func pickUpButton(_ sender: Any) {
         
         pickUpButton.isEnabled = false
         
