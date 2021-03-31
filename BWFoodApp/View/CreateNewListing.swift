@@ -59,8 +59,6 @@ class CreateNewListing:
         foodStopPicker.delegate = self
         //activityIndicator.isHidden = true
         
-        createButton.isEnabled = false
-        
         foodStopModel.loadManagedFoodStops { [self] (completed) in
             foodStopPickerData = foodStopModel.managedFoodStops
             
@@ -96,18 +94,6 @@ class CreateNewListing:
         
         locationManager.delegate = self
         
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        let text = (itemTextField.text! as NSString).replacingCharacters(in: range, with: string)
-        
-        if text.isEmpty {
-            createButton.isEnabled = false
-        } else {
-            createButton.isEnabled = true
-        }
-        return true
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -215,18 +201,22 @@ class CreateNewListing:
         if let quantityText = quantityTextField.text {
             if let quantityInt = Int(quantityText) {
                 quantity = quantityInt
+                
             }
             else {
                 formCompleted = false
+                
             }
         }
         
         if let expirationText = expirationTimeField.text {
             if let expirationInt = Int(expirationText) {
                 expiratonTime = expirationInt
+                
             }
             else {
                 formCompleted = false
+                
             }
         }
         
@@ -246,9 +236,9 @@ class CreateNewListing:
         guard formCompleted else {
             let alert = UIAlertController(title: "Invalid Listing", message: "Please check the values in the form", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                if foodName?.count != 0 {
+               
                     self.createButton.isEnabled = true
-                }
+                
             }))
             self.present(alert, animated: true, completion: nil)
             return

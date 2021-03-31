@@ -31,7 +31,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var gripperTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     
-    let listings:[Listing] = []
+    var listings:[Listing] = []
     
     
     fileprivate var drawerBottomSafeArea: CGFloat = 0.0 {
@@ -73,6 +73,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
             let foodCell:FoodListingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FoodListingCell") as! FoodListingTableViewCell
             
             let listing:Listing = listingModel.getListing(index: (indexPath.row - 1))
+
             
             let foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)
             
@@ -108,7 +109,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
             //                //foodCell.availableUntilLabel.font = font
             //            }
             
-            foodCell.quantityField.text = String(listing.quantity!) + " REMAINING"
+            foodCell.quantityField.text = String(listing.quantityRemaining!) + " REMAINING"
             
             foodCell.foodStopLocationLabel.text = foodStop!.name
             foodCell.foodLabel.text = listing.title?.uppercased()
@@ -147,6 +148,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
         foodStopModel.loadFoodStops { (sucess) in
             self.listingModel.loadListings { (result) in
                 DispatchQueue.main.async {
+                    self.listings = listingModel.listings
                     self.tableView.reloadData()
                 }
             }

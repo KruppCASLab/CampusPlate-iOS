@@ -19,6 +19,7 @@ public class Listing: Codable {
     public var image: String?
     public var expirationTime: Int?
     public var weightOunces: Int?
+    public var quantityRemaining: Int?
  
     init(listingId:Int, foodStopId:Int, userId:Int, title:String, description:String, creationTime:Int, quantity:Int, image:String, expirationTime: Int, weightOunces: Int) {
         

@@ -82,10 +82,10 @@ class PickUpFoodViewController: UIViewController {
         
         foodDescription.text = listing.description
         pickUpLocation.text = foodStop.name
-        quantityLabel.text = "0/" + String(listing.quantity!)
+        quantityLabel.text = "0/" + String(listing.quantityRemaining!)
         pickUpLocationAddress.text = foodStop.streetAddress
         
-        //stepper.maximumValue = Double(listing.quantity!)
+        stepper.maximumValue = Double(listing.quantityRemaining!)
         
         foodStopCircleView.backgroundColor = UIColor.init(hexaRGB: foodStop.hexColor)
         
@@ -194,7 +194,7 @@ class PickUpFoodViewController: UIViewController {
     
     @IBAction func stepper(_ sender: UIStepper) {
         
-        quantityLabel.text = Int(sender.value).description + "/" + String(listing.quantity!)
+        quantityLabel.text = Int(sender.value).description + "/" + String(listing.quantityRemaining!)
         
         quantitySelected = Int(sender.value)
     }
