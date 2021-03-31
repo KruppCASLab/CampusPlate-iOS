@@ -29,7 +29,7 @@ class PickUpFoodViewController: UIViewController {
     @IBOutlet weak var foodDescription: UITextView!
     @IBOutlet weak var quantityLabel: UILabel!
     
-    public var listing:WSListing!
+    public var listing:Listing!
     public var createdReservation:Reservation!
     public var quantitySelected:Int!
     

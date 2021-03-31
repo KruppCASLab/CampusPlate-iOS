@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class WSListing: Codable {
+public class Listing: Codable {
     public var listingId:Int?
     public var foodStopId:Int?
     public var userId:Int?
@@ -45,5 +45,14 @@ public class WSListing: Codable {
         self.expirationTime = expirationTime
         self.weightOunces = weightOunces
         
+    }
+    init(foodStopId:Int, title:String, description:String,quantity:Int, expirationTime: Int, weightOunces: Int) {
+        
+        self.foodStopId = foodStopId
+        self.title = title
+        self.description = description
+        self.quantity = quantity
+        self.expirationTime = expirationTime
+        self.weightOunces = weightOunces
     }
 }

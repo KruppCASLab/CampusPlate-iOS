@@ -18,7 +18,7 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, CreateNewLi
     let foodStopModel = FoodStopModel.getSharedInstance()
     let locationManager = CLLocationManager()
     let session = URLSession.shared
-    let listing : WSListing! = nil
+    let listing : Listing! = nil
     public var createNewListingDelegate : CreateNewListingDelegate?
     @IBOutlet weak var controlsContainer: UIView!
     

@@ -11,7 +11,7 @@ import MapKit
 
 class ListingModel {
     
-    public var listings = Array<WSListing>()
+    public var listings = Array<Listing>()
     
     private let url = URL(string: "https://mopsdev.bw.edu/cp/rest.php/listings")
     
@@ -76,12 +76,12 @@ class ListingModel {
         //TODO: Call service client to update
     }
     
-    public func getListing(index:Int) -> WSListing {
+    public func getListing(index:Int) -> Listing {
         
         return self.listings[index]
     }
     
-    public func addListing(listing:WSListing, completion:@escaping (Bool)->Void) {
+    public func addListing(listing:Listing, completion:@escaping (Bool)->Void) {
         self.listings.append(listing)
         var request = URLRequest(url: self.url!)
         
@@ -134,7 +134,7 @@ class ListingModel {
         return self.listings.count
     }
     
-    public func getListingById(listingId: Int) -> WSListing? {
+    public func getListingById(listingId: Int) -> Listing? {
         for listing in self.listings {
             if listing.listingId == listingId {
                 return listing

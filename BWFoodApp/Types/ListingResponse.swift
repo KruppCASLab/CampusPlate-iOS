@@ -11,6 +11,6 @@ import Foundation
 public class ListingResponse : Codable {
     public var status:Int?
     public var error:String?
-    public var data:[WSListing]?
+    public var data:[Listing]?
 }
 

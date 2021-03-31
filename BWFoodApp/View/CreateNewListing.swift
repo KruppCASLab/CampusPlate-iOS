@@ -30,7 +30,7 @@ class CreateNewListing:
     @IBOutlet weak var descriptionTextView: UITextView!
     
     
-    @IBOutlet weak var weight: UITextField!
+    @IBOutlet weak var weightField: UITextField!
     
     let impact = UIImpactFeedbackGenerator()
     
@@ -42,7 +42,7 @@ class CreateNewListing:
     
     var locationManager = CLLocationManager()
     
-    public var listing:WSListing!
+    public var listing:Listing!
     
     var selectedFoodStop: FoodStop?
     
@@ -193,7 +193,6 @@ class CreateNewListing:
     }
     
     
-    
     @IBAction func createListingButton(_ sender: UIButton) {
         //createListingButton.isEnabled = false
         //activityIndicator.isHidden = false
@@ -202,21 +201,75 @@ class CreateNewListing:
         
         //createListingButton.alpha = 0.5
         
+        var formCompleted = true
+        
         createButton.isEnabled = false
         
         let foodName = itemTextField.text
         let description = descriptionTextView.text
-        let quantity = Int(quantityTextField.text!)
-        let expirationTime = Int(expirationTimeField.text!)
+        
+        var quantity = 0
+        var expiratonTime = 0
+        var weight = 0
+        
+        if let quantityText = quantityTextField.text {
+            if let quantityInt = Int(quantityText) {
+                quantity = quantityInt
+            }
+            else {
+                formCompleted = false
+            }
+        }
+        
+        if let expirationText = expirationTimeField.text {
+            if let expirationInt = Int(expirationText) {
+                expiratonTime = expirationInt
+            }
+            else {
+                formCompleted = false
+            }
+        }
+        
+        if let weightText = weightField.text {
+            if let weightInt = Int(weightText) {
+                weight = weightInt
+            }
+            else {
+                formCompleted = false
+            }
+        }
+        
+        if foodName?.count == 0 {
+            formCompleted = false
+        }
+        
+        guard formCompleted else {
+            let alert = UIAlertController(title: "Invalid Listing", message: "Please check the values in the form", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                if foodName?.count != 0 {
+                    self.createButton.isEnabled = true
+                }
+            }))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
         
         let image = foodImage.image
         
-        let unixTimeStampExpiration = expirationTime! * 86400 + Int(NSDate().timeIntervalSince1970)
+        let unixTimeStampExpiration = expiratonTime * 86400 + Int(NSDate().timeIntervalSince1970)
         
-        let imageData:Data = (image?.jpegData(compressionQuality: 0.05)!)!
-        let imageBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
-        
-        let listing = WSListing(foodStopId: selectedFoodStop!.foodStopId,title: foodName!, description: description!, quantity: quantity!, image: imageBase64, expirationTime: Int(unixTimeStampExpiration), weightOunces: Int(weight.text!)!)
+        var listing:Listing
+        if let image = image {
+            let imageData = image.jpegData(compressionQuality: 0.05)!
+            let imageBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+            
+            listing = Listing(foodStopId: selectedFoodStop!.foodStopId,title: foodName!, description: description!, quantity: quantity, image: imageBase64, expirationTime: Int(unixTimeStampExpiration), weightOunces: weight)
+        }
+        else {
+            listing = Listing(foodStopId: selectedFoodStop!.foodStopId,title: foodName!, description: description!, quantity: quantity, expirationTime: Int(unixTimeStampExpiration), weightOunces: weight)
+        }
+ 
         listingModel.addListing(listing: listing) { (completed) in
             if (!completed) {
                 let alert = UIAlertController(title: "Listing could not be created.", message: "Please try again later.", preferredStyle: .alert)

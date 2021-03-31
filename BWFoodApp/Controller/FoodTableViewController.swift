@@ -22,7 +22,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     let session = URLSession.shared
     
-    let listing : WSListing! = nil
+    let listing : Listing! = nil
     
     @IBOutlet weak var gripperView: UIView!
     @IBOutlet weak var bottomSeperatorView: UIView!
@@ -31,7 +31,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var gripperTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     
-    let listings:[WSListing] = []
+    let listings:[Listing] = []
     
     
     fileprivate var drawerBottomSafeArea: CGFloat = 0.0 {
@@ -72,7 +72,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
         }else{
             let foodCell:FoodListingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FoodListingCell") as! FoodListingTableViewCell
             
-            let listing:WSListing = listingModel.getListing(index: (indexPath.row - 1))
+            let listing:Listing = listingModel.getListing(index: (indexPath.row - 1))
             
             let foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)
             

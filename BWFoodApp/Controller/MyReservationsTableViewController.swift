@@ -16,7 +16,7 @@ class MyReservationsTableViewController: UITableViewController {
     
     
     var reservations = [Reservation]()
-    var listings = [WSListing]()
+    var listings = [Listing]()
     
     var minutes:Int = 0
     
