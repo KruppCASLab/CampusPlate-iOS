@@ -29,6 +29,9 @@ class CreateNewListing:
     
     @IBOutlet weak var descriptionTextView: UITextView!
     
+    
+    @IBOutlet weak var weightField: UITextField!
+    
     let impact = UIImpactFeedbackGenerator()
     
     
@@ -39,7 +42,7 @@ class CreateNewListing:
     
     var locationManager = CLLocationManager()
     
-    public var listing:WSListing!
+    public var listing:Listing!
     
     var selectedFoodStop: FoodStop?
     
@@ -55,8 +58,6 @@ class CreateNewListing:
         
         foodStopPicker.delegate = self
         //activityIndicator.isHidden = true
-        
-        createButton.isEnabled = false
         
         foodStopModel.loadManagedFoodStops { [self] (completed) in
             foodStopPickerData = foodStopModel.managedFoodStops
@@ -93,18 +94,6 @@ class CreateNewListing:
         
         locationManager.delegate = self
         
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        let text = (itemTextField.text! as NSString).replacingCharacters(in: range, with: string)
-        
-        if text.isEmpty {
-            createButton.isEnabled = false
-        } else {
-            createButton.isEnabled = true
-        }
-        return true
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -190,7 +179,6 @@ class CreateNewListing:
     }
     
     
-    
     @IBAction func createListingButton(_ sender: UIButton) {
         //createListingButton.isEnabled = false
         //activityIndicator.isHidden = false
@@ -199,22 +187,86 @@ class CreateNewListing:
         
         //createListingButton.alpha = 0.5
         
+        var formCompleted = true
+        
         createButton.isEnabled = false
         
         let foodName = itemTextField.text
         let description = descriptionTextView.text
-        let quantity = Int(quantityTextField.text!)
-        let expirationTime = Int(expirationTimeField.text!)
+        
+        var quantity = 0
+        var expiratonTime = 0
+        var weight = 0
+        
+        if let quantityText = quantityTextField.text {
+            if let quantityInt = Int(quantityText) {
+                quantity = quantityInt
+                
+            }
+            else {
+                formCompleted = false
+                
+            }
+        }
+        
+        if let expirationText = expirationTimeField.text {
+            if let expirationInt = Int(expirationText) {
+                expiratonTime = expirationInt
+                
+            }
+            else {
+                formCompleted = false
+                
+            }
+        }
+        
+        if let weightText = weightField.text {
+            if let weightInt = Int(weightText) {
+                weight = weightInt
+            }
+            else {
+                formCompleted = false
+            }
+        }
+        
+        if foodName?.count == 0 {
+            formCompleted = false
+        }
+        
+        guard formCompleted else {
+            let alert = UIAlertController(title: "Invalid Listing", message: "Please check the values in the form", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+               
+                    self.createButton.isEnabled = true
+                
+            }))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
         
         let image = foodImage.image
         
-        let imageData:Data = (image?.jpegData(compressionQuality: 0.05)!)!
-        let imageBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+        let unixTimeStampExpiration = expiratonTime * 86400 + Int(NSDate().timeIntervalSince1970)
         
-        let listing = WSListing(foodStopId: selectedFoodStop!.foodStopId,title: foodName!, description: description!, quantity: quantity!, image: imageBase64, expirationTime: expirationTime!)
+        var listing:Listing
+        if let image = image {
+            let imageData = image.jpegData(compressionQuality: 0.05)!
+            let imageBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+            
+            listing = Listing(foodStopId: selectedFoodStop!.foodStopId,title: foodName!, description: description!, quantity: quantity, image: imageBase64, expirationTime: Int(unixTimeStampExpiration), weightOunces: weight)
+        }
+        else {
+            listing = Listing(foodStopId: selectedFoodStop!.foodStopId,title: foodName!, description: description!, quantity: quantity, expirationTime: Int(unixTimeStampExpiration), weightOunces: weight)
+        }
+ 
         listingModel.addListing(listing: listing) { (completed) in
             if (!completed) {
-                let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Listing could not be created.", message: "Please try again later.", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (completed) in
+                    self.createButton.isEnabled = true
+                }))
                 DispatchQueue.main.async {
                     self.present(alert, animated: true, completion: nil)
                 }

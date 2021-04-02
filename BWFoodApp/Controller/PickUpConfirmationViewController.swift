@@ -10,29 +10,39 @@ import UIKit
 
 class PickUpConfirmationViewController: UIViewController {
     
-    @IBOutlet weak var CircleView: UIView!
+   
     @IBOutlet weak var FoodStopLocation: UITextView!
     @IBOutlet weak var FoodStopAddress: UILabel!
-    @IBOutlet weak var FoodStopIdNumber: UILabel!
+    
     
     @IBOutlet weak var reservationIdNumber: UITextView!
-    
+
     public var reservation: Reservation!
     public var foodStop:FoodStop!
+    @IBOutlet weak var closeButton: UIButton!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        FoodStopLocation.textContainer.lineFragmentPadding = 0
+        reservationIdNumber.textContainer.lineFragmentPadding = 0
         FoodStopLocation.text = foodStop.name
         FoodStopAddress.text = foodStop.streetAddress
-        FoodStopIdNumber.text = String(foodStop.foodStopId)
-        CircleView.layer.cornerRadius = CircleView.frame.size.width/2
-        CircleView.backgroundColor = UIColor.init(hexaRGB: foodStop.hexColor)
-        FoodStopIdNumber.textColor = UIColor.init(hexaRGB: foodStop.hexColor)
+        closeButton.tintColor = UIColor(hexaRGB:foodStop.hexColor)
+//        FoodStopIdNumber.text = String(foodStop.foodStopId)
+//        CircleView.layer.cornerRadius = CircleView.frame.size.width/2
+//        CircleView.backgroundColor = UIColor.init(hexaRGB: foodStop.hexColor)
+//        FoodStopIdNumber.textColor = UIColor.init(hexaRGB: foodStop.hexColor)
         
         reservationIdNumber.text = "YOUR RESERVATION NUMBER IS " + String(reservation.code!)
         
+    }
+    
+    
+    @IBAction func close(_ sender: Any) {
     }
     
     

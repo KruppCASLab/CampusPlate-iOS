@@ -15,29 +15,43 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, CreateNewLi
     
     @IBOutlet weak var mapView: MKMapView!
     let listingModel = ListingModel.getSharedInstance()
+    let foodStopModel = FoodStopModel.getSharedInstance()
     let locationManager = CLLocationManager()
     let session = URLSession.shared
-    let listing : WSListing! = nil
+    let listing : Listing! = nil
     public var createNewListingDelegate : CreateNewListingDelegate?
     @IBOutlet weak var controlsContainer: UIView!
-
+    
+    var foodStops:[FoodStop]!
+    
     override func viewWillAppear(_ animated: Bool) {
         
-        listingModel.loadListings { (completed) in
-            DispatchQueue.main.async {
+        DispatchQueue.main.async { [self] in
+            foodStopModel.loadFoodStops { (completed) in
+                foodStops = foodStopModel.foodStops
                 
-                //self.refreshMap()
-
-
+                for foodStop in foodStops{
+    
+                    let foodStopCoordinates = CLLocationCoordinate2D(latitude: foodStop.lat,longitude: foodStop.lng)
+                    let anno = MKPointAnnotation()
+                    anno.coordinate = foodStopCoordinates
+                    anno.title = foodStop.name
+                    
+                    DispatchQueue.main.async {
+                        mapView.addAnnotation(anno)
+                    }
+                    
+                    
+                }
             }
         }
+        
     }
     
     func didComplete() {
         listingModel.loadListings {  (completed) in
             DispatchQueue.main.async {
                 
-                //self.refreshMap()
             }
             
             if let delegate = self.createNewListingDelegate {
@@ -45,7 +59,7 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, CreateNewLi
             }
         }
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "addListingSegue") {
             if let vc = segue.destination as? UINavigationController {
@@ -59,7 +73,7 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, CreateNewLi
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
+        
     }
     
     
@@ -67,52 +81,38 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, CreateNewLi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         controlsContainer.layer.cornerRadius = 10.0
-   
+        
         self.locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
-
-        let initialLocation = CLLocationCoordinate2D(latitude: 41.371039, longitude: -81.847857)
         
-        let span = MKCoordinateSpan(latitudeDelta: 0.010,longitudeDelta: 0.010)
+        let initialLocation = CLLocationCoordinate2D(latitude: 41.3692, longitude: -81.8486)
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.0050,longitudeDelta: 0.0050)
         let region = MKCoordinateRegion(center:initialLocation, span: span)
-            mapView.setRegion(region, animated: true)
-
+        mapView.setRegion(region, animated: true)
         
-        let knowltonCenter = MKPointAnnotation()
-        knowltonCenter.title = "The Knowlton Center"
-        knowltonCenter.coordinate = CLLocationCoordinate2D(latitude: 41.374858, longitude: -81.851229)
-        mapView.addAnnotation(knowltonCenter)
         
-        let veteransCenter = MKPointAnnotation()
-        veteransCenter.title = "The Veterans Center"
-        veteransCenter.coordinate = CLLocationCoordinate2D(latitude: 41.369901, longitude: -81.849166)
-        mapView.addAnnotation(veteransCenter)
-        
-        let unionDiningHall = MKPointAnnotation()
-        unionDiningHall.title = "The Union Dining Hall"
-        unionDiningHall.coordinate = CLLocationCoordinate2D(latitude: 41.369176, longitude: -81.848572)
-        mapView.addAnnotation(unionDiningHall)
-    
     }
     
-//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//        guard annotation is MKPointAnnotation else { return nil }
-//
-//        let identifier = "Annotation"
-//        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-//
-//        if annotationView == nil {
-//            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-//            annotationView!.canShowCallout = true
-//        } else {
-//            annotationView!.annotation = annotation
-//        }
-//
-//        return annotationView
-//    }
+    //    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    //        guard annotation is MKPointAnnotation else { return nil }
+    //
+    //        let identifier = "Annotation"
+    //        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+    //
+    //        if annotationView == nil {
+    //            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+    //            annotationView!.canShowCallout = true
+    //        } else {
+    //            annotationView!.annotation = annotation
+    //        }
+    //
+    //        return annotationView
+    //    }
     
     
     
