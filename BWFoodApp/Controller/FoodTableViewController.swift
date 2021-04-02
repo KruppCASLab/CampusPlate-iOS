@@ -147,7 +147,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     private func loadData() {
         foodStopModel.loadFoodStops { (sucess) in
             self.listingModel.loadListings { (result) in
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [self] in
                     self.listings = listingModel.listings
                     self.tableView.reloadData()
                 }

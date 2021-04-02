@@ -107,6 +107,7 @@ class MyReservationsTableViewController: UITableViewController {
             
             cell.foodStopColor.backgroundColor = UIColor(hexaRGB: foodStop.hexColor)
             cell.reserved.text = "Reserved " + String(reservation.quantity!)
+            cell.reservationCode.text = "Reservation Code: " + String(reservation.code!)
             
             listingModel.getImage(listingId: listing!.listingId!) { (data) in
                 DispatchQueue.main.async {

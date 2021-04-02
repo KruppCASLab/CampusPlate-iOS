@@ -17,6 +17,9 @@ class MyReservationsTableViewCell: UITableViewCell {
     @IBOutlet weak var reserved: UILabel!
     @IBOutlet weak var expiresLabel: UILabel!
     
+    @IBOutlet weak var reservationCode: UILabel!
+    
+    
     @IBOutlet weak var foodImageVIew: UIImageView!
     
     override func awakeFromNib() {
