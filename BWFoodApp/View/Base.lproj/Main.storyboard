@@ -342,7 +342,7 @@
         <scene sceneID="DX5-ou-JaK">
             <objects>
                 <viewController id="ZtP-yc-jJo" customClass="EnterPinVC" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6h7-hS-7Qo">
+                    <view key="view" contentMode="scaleToFill" id="6h7-hS-7Qo" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -400,7 +400,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Pin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qz8-Ou-urQ">
                                 <rect key="frame" x="84" y="446" width="79" height="24"/>
@@ -435,6 +435,9 @@
                             <constraint firstItem="z87-qO-ABv" firstAttribute="top" secondItem="6h7-hS-7Qo" secondAttribute="top" constant="-126" id="zav-vg-98Q"/>
                             <constraint firstItem="bvq-tn-rGQ" firstAttribute="top" secondItem="z87-qO-ABv" secondAttribute="top" id="zlL-nl-bKV"/>
                         </constraints>
+                        <connections>
+                            <action selector="viewTapped:" destination="ZtP-yc-jJo" eventType="touchUpInside" id="369-Nb-yfi"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="enterPinField" destination="oSU-uW-tkM" id="VCq-NU-7YD"/>

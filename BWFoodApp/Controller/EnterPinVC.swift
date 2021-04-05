@@ -56,6 +56,9 @@ class EnterPinVC: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    @IBAction func viewTapped(_ sender: Any) {
+        enterPinField.resignFirstResponder()
+    }
     
     @IBAction func submitPinButton(_ sender: Any) {
         
