@@ -13,7 +13,7 @@ class ListingModel {
     
     public var listings = Array<Listing>()
     
-    private let url = URL(string: "https://mopsdev.bw.edu/cp/rest.php/listings")
+    private let url = URL(string: "https://mops.bw.edu/cp/rest.php/listings")
     
     private static let sharedInstance = ListingModel()
     let session = URLSession.shared
