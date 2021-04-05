@@ -23,7 +23,7 @@
 		F61DCBAD2326E7C700F7FD7C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DCBAC2326E7C700F7FD7C /* Response.swift */; };
 		F62A57BA254C86BC00F232BE /* FoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62A57B9254C86BC00F232BE /* FoodTableViewController.swift */; };
 		F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62BEEE52108EFF300006DC0 /* MapViewController.swift */; };
-		F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */; };
+		F6412C1C2207ECAB00C2927E /* EnterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6412C1B2207ECAB00C2927E /* EnterEmailViewController.swift */; };
 		F64FB5C525DF05D900672D51 /* PickUpConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64FB5C425DF05D900672D51 /* PickUpConfirmationViewController.swift */; };
 		F656694625263F9B00A6BA2B /* TextFieldMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = F656694525263F9B00A6BA2B /* TextFieldMaxLength.swift */; };
 		F656694A252B968800A6BA2B /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6566949252B968800A6BA2B /* DoneButton.swift */; };
@@ -85,10 +85,8 @@
 		F61DCBAC2326E7C700F7FD7C /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		F61DCBAE2326E95800F7FD7C /* WSListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSListing.swift; sourceTree = "<group>"; };
 		F62A57B9254C86BC00F232BE /* FoodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewController.swift; sourceTree = "<group>"; };
-		F62A57D3254DE6F400F232BE /* SF-Pro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Italic.ttf"; path = "../../../../Library/Fonts/SF-Pro-Italic.ttf"; sourceTree = "<group>"; };
-		F62A57D4254DE6F400F232BE /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro.ttf"; path = "../../../../Library/Fonts/SF-Pro.ttf"; sourceTree = "<group>"; };
 		F62BEEE52108EFF300006DC0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaterULoginScreenVC.swift; sourceTree = "<group>"; };
+		F6412C1B2207ECAB00C2927E /* EnterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailViewController.swift; sourceTree = "<group>"; };
 		F64FB5C425DF05D900672D51 /* PickUpConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpConfirmationViewController.swift; sourceTree = "<group>"; };
 		F656694525263F9B00A6BA2B /* TextFieldMaxLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMaxLength.swift; sourceTree = "<group>"; };
 		F6566949252B968800A6BA2B /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 		F69D00F0260966C1003DE1BD /* spoony.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spoony.png; sourceTree = "<group>"; };
 		F69EBE8225EDA7B000EF5ABA /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		F69EBE8825EF026900EF5ABA /* GetReservationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReservationResponse.swift; sourceTree = "<group>"; };
-		F6AE833A25477A9400D38310 /* Pulley.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pulley.h; path = "../../../Downloads/Pulley-master-2/Pulley/Pulley.h"; sourceTree = "<group>"; };
 		F6AE839D254B33A400D38310 /* UIViewController+PulleyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PulleyViewController.swift"; sourceTree = "<group>"; };
 		F6AE839E254B33A500D38310 /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulleyPassthroughScrollView.swift; sourceTree = "<group>"; };
 		F6AE839F254B33A500D38310 /* PulleyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulleyViewController.swift; sourceTree = "<group>"; };
@@ -171,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */,
-				F6412C1B2207ECAB00C2927E /* CaterULoginScreenVC.swift */,
+				F6412C1B2207ECAB00C2927E /* EnterEmailViewController.swift */,
 				E003B721254B33300065DF41 /* EnterPinVC.swift */,
 				F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */,
 				F65A60372188BADC00DB7338 /* CreateNewListing.swift */,
@@ -250,8 +247,6 @@
 				F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */,
 				F69BDB4920FA55790065BB78 /* Assets.xcassets */,
 				F69D00F0260966C1003DE1BD /* spoony.png */,
-				F62A57D3254DE6F400F232BE /* SF-Pro-Italic.ttf */,
-				F62A57D4254DE6F400F232BE /* SF-Pro.ttf */,
 				F69BDB4B20FA55790065BB78 /* LaunchScreen.storyboard */,
 				F69BDB4E20FA55790065BB78 /* Info.plist */,
 			);
@@ -274,7 +269,6 @@
 				F6AE839F254B33A500D38310 /* PulleyViewController.swift */,
 				F6AE83A0254B33A500D38310 /* UIView+constrainToParent.swift */,
 				F6AE839D254B33A400D38310 /* UIViewController+PulleyViewController.swift */,
-				F6AE833A25477A9400D38310 /* Pulley.h */,
 			);
 			path = Pulley;
 			sourceTree = "<group>";
@@ -324,7 +318,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Dan Fitzgerald";
 				TargetAttributes = {
 					F69BDB3E20FA55780065BB78 = {
@@ -396,7 +390,7 @@
 				F69265E02446376C005C0701 /* Credential.swift in Sources */,
 				F61DCBAD2326E7C700F7FD7C /* Response.swift in Sources */,
 				F61785FE2559F03B00CEC8FA /* CustomMaskExample.swift in Sources */,
-				F6412C1C2207ECAB00C2927E /* CaterULoginScreenVC.swift in Sources */,
+				F6412C1C2207ECAB00C2927E /* EnterEmailViewController.swift in Sources */,
 				F68F962925F19B2800FDCDB8 /* MyReservationsTableViewController.swift in Sources */,
 				F656694625263F9B00A6BA2B /* TextFieldMaxLength.swift in Sources */,
 				E04EAC3525D5A2B9000F5879 /* UIColorExtension.swift in Sources */,
@@ -494,6 +488,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -555,6 +550,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -590,7 +586,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = MF9639JBWV;
 				INFOPLIST_FILE = BWFoodApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12;
@@ -611,7 +607,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = MF9639JBWV;
 				INFOPLIST_FILE = BWFoodApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12;
