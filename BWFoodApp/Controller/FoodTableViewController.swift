@@ -51,7 +51,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return listingModel.getNumberOfListings()
+        return listingModel.getNumberOfListings() + 1
         
     }
     
