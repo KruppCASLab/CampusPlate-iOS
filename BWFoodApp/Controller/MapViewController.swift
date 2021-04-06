@@ -25,27 +25,37 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewL
     var foodStops:[FoodStop]!
     
     override func viewWillAppear(_ animated: Bool) {
+        foodStopModel.loadManagedFoodStops { (completed) in
+            DispatchQueue.main.async {
+                if (self.foodStopModel.managedFoodStops.count > 0) {
+                    self.controlsContainer.isHidden = false
+                }
+                else {
+                    self.controlsContainer.isHidden = true
+                }
+            }
+            
+        }
         
-        DispatchQueue.main.async { [self] in
-            foodStopModel.loadFoodStops { (completed) in
-                foodStops = foodStopModel.foodStops
+        foodStopModel.loadFoodStops { (completed) in
+            self.foodStops = self.foodStopModel.foodStops
+            
+            for foodStop in self.foodStops{
                 
-                for foodStop in foodStops{
-    
-                    let foodStopCoordinates = CLLocationCoordinate2D(latitude: foodStop.lat,longitude: foodStop.lng)
-      
-                    let anno = MKPointAnnotation()
-                    anno.coordinate = foodStopCoordinates
-                    
-                    anno.title = foodStop.name
-                    anno.subtitle = foodStop.description
-                    
-                    DispatchQueue.main.async {
-                        mapView.addAnnotation(anno)
-                    }
+                let foodStopCoordinates = CLLocationCoordinate2D(latitude: foodStop.lat,longitude: foodStop.lng)
+                
+                let anno = MKPointAnnotation()
+                anno.coordinate = foodStopCoordinates
+                
+                anno.title = foodStop.name
+                anno.subtitle = foodStop.description
+                
+                DispatchQueue.main.async {
+                    self.mapView.addAnnotation(anno)
                 }
             }
         }
+        
         
     }
     
@@ -100,7 +110,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewL
         
     }
     
-
+    
     
     //    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     //        guard annotation is MKPointAnnotation else { return nil }
