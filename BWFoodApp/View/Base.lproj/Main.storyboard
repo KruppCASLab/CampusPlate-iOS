@@ -728,23 +728,13 @@
                                                     <constraint firstAttribute="height" constant="0.5" id="Joa-Xs-i6d"/>
                                                 </constraints>
                                             </view>
-                                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="search for a listing" translatesAutoresizingMaskIntoConstraints="NO" id="hDX-gq-Yhv">
-                                                <rect key="frame" x="0.0" y="17" width="390" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="GiG-dU-2Ld"/>
-                                                </constraints>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </searchBar>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="hDX-gq-Yhv" firstAttribute="top" secondItem="U6w-VJ-3h7" secondAttribute="top" constant="17" id="GCs-qQ-W1m"/>
                                             <constraint firstAttribute="bottom" secondItem="2Os-Xf-ko1" secondAttribute="bottom" id="KmE-lA-4YY"/>
                                             <constraint firstAttribute="trailing" secondItem="2Os-Xf-ko1" secondAttribute="trailing" id="a6g-Ug-azI"/>
                                             <constraint firstAttribute="bottom" secondItem="2Os-Xf-ko1" secondAttribute="bottom" constant="1.4210854715202004e-14" id="dmW-5p-MJq"/>
-                                            <constraint firstItem="hDX-gq-Yhv" firstAttribute="leading" secondItem="2Os-Xf-ko1" secondAttribute="leading" id="ecg-jD-Z5i"/>
                                             <constraint firstItem="2Os-Xf-ko1" firstAttribute="leading" secondItem="U6w-VJ-3h7" secondAttribute="leading" id="iXA-Vc-hRd"/>
-                                            <constraint firstItem="hDX-gq-Yhv" firstAttribute="trailing" secondItem="2Os-Xf-ko1" secondAttribute="trailing" id="pDb-dD-SsO"/>
                                             <constraint firstAttribute="height" priority="750" constant="78" id="vDD-iy-MOC"/>
                                         </constraints>
                                     </view>

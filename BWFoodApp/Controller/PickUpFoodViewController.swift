@@ -9,13 +9,15 @@
 import UIKit
 import CoreGraphics
 
-class PickUpFoodViewController: UIViewController {
+class PickUpFoodViewController: UIViewController, PresentingViewControllerDelegate {
+    
     
     let listingModel = ListingModel.getSharedInstance()
     let foodStopModel = FoodStopModel.getSharedInstance()
     let reservationModel = ReservationModel.getSharedInstance()
     
     public var delegate:CreateNewListingDelegate?
+    public var presentingDelegate:PresentingViewControllerDelegate?
     
     @IBOutlet weak var navBar: UINavigationItem!
     
@@ -42,6 +44,12 @@ class PickUpFoodViewController: UIViewController {
     
     
     @IBOutlet weak var stepper: UIStepper!
+    
+    func childViewDidComplete() {
+        if let presentingDelegate = presentingDelegate {
+            presentingDelegate.childViewDidComplete()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -225,6 +233,7 @@ class PickUpFoodViewController: UIViewController {
         
         if (segue.identifier == "pickUpConfirmation") {
             if let vc = segue.destination as? PickUpConfirmationViewController {
+                vc.presentingDelegate = self
                 vc.foodStop = foodStop
                 vc.reservation = createdReservation
             }

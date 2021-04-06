@@ -9,7 +9,7 @@
 import UIKit
 
 class PickUpConfirmationViewController: UIViewController {
-    
+    public var presentingDelegate:PresentingViewControllerDelegate?
    
     @IBOutlet weak var FoodStopLocation: UITextView!
     @IBOutlet weak var FoodStopAddress: UILabel!
@@ -43,7 +43,9 @@ class PickUpConfirmationViewController: UIViewController {
     
     
     @IBAction func close(_ sender: Any) {
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        if let delegate = presentingDelegate {
+            delegate.childViewDidComplete()
+        }
     }
     
     

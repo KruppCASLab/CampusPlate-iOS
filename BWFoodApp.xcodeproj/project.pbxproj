@@ -15,6 +15,7 @@
 		E04EAC3525D5A2B9000F5879 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EAC3425D5A2B9000F5879 /* UIColorExtension.swift */; };
 		E05F76E724005C2B006E29AF /* PinVerifyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */; };
 		E05F76E924005C43006E29AF /* ListingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F76E824005C43006E29AF /* ListingResponse.swift */; };
+		E0935AF8261BEE9700CFB55A /* PresentingViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935AF7261BEE9700CFB55A /* PresentingViewControllerDelegate.swift */; };
 		F603CA2825C09829005B6F79 /* FoodStopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F603CA2725C09829005B6F79 /* FoodStopModel.swift */; };
 		F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */; };
 		F614DAF425F6C6430056C2CA /* CreateReservationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F614DAF325F6C6430056C2CA /* CreateReservationResponse.swift */; };
@@ -77,6 +78,7 @@
 		E04EAC3425D5A2B9000F5879 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVerifyResponse.swift; sourceTree = "<group>"; };
 		E05F76E824005C43006E29AF /* ListingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingResponse.swift; sourceTree = "<group>"; };
+		E0935AF7261BEE9700CFB55A /* PresentingViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PresentingViewControllerDelegate.swift; path = BWFoodApp/PresentingViewControllerDelegate.swift; sourceTree = SOURCE_ROOT; };
 		F603CA2725C09829005B6F79 /* FoodStopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStopModel.swift; sourceTree = "<group>"; };
 		F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpFoodViewController.swift; sourceTree = "<group>"; };
 		F614DAF325F6C6430056C2CA /* CreateReservationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReservationResponse.swift; sourceTree = "<group>"; };
@@ -170,12 +172,13 @@
 				F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */,
 				F6412C1B2207ECAB00C2927E /* EnterEmailViewController.swift */,
 				E003B721254B33300065DF41 /* EnterPinVC.swift */,
-				F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */,
 				F65A60372188BADC00DB7338 /* CreateNewListing.swift */,
 				F62BEEE52108EFF300006DC0 /* MapViewController.swift */,
-				F64FB5C425DF05D900672D51 /* PickUpConfirmationViewController.swift */,
 				F62A57B9254C86BC00F232BE /* FoodTableViewController.swift */,
+				F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */,
+				F64FB5C425DF05D900672D51 /* PickUpConfirmationViewController.swift */,
 				F68F962825F19B2800FDCDB8 /* MyReservationsTableViewController.swift */,
+				E0935AF7261BEE9700CFB55A /* PresentingViewControllerDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				F6E9726B244B51C8009A2BB0 /* SegueCheckerViewController.swift in Sources */,
 				F65A60382188BADC00DB7338 /* CreateNewListing.swift in Sources */,
 				F62BEEE62108EFF400006DC0 /* MapViewController.swift in Sources */,
+				E0935AF8261BEE9700CFB55A /* PresentingViewControllerDelegate.swift in Sources */,
 				F692EA9225DB0E480069589B /* ImageResponse.swift in Sources */,
 				F678900123E7C1A1009FC4C6 /* UserModel.swift in Sources */,
 				F69EBE8925EF026900EF5ABA /* GetReservationResponse.swift in Sources */,

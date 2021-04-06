@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CreateNewListingDelegate {
+class FoodTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CreateNewListingDelegate, PresentingViewControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -32,6 +32,11 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     
     var listings:[Listing] = []
+    
+    func childViewDidComplete() {
+        dismiss(animated: true, completion: nil)
+        self.loadData()
+    }
     
     
     fileprivate var drawerBottomSafeArea: CGFloat = 0.0 {
@@ -175,7 +180,6 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         return false
-        
     }
     
     
@@ -196,6 +200,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
                         
                         self.performSegue(withIdentifier: "myReservations", sender: self)
                     }else{
+                        foodVC.presentingDelegate = self;
                         let listing = self.listingModel.getListing(index: indexPath.row - 1)
                         foodVC.listing = listing
                         foodVC.indexPathOfListing = indexPath
