@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sDa-tb-Zar">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -1106,7 +1106,7 @@
                         <outlet property="pickUpLocationAddress" destination="c01-WA-Qk3" id="q05-ZK-gnB"/>
                         <outlet property="quantityLabel" destination="zuj-Zq-jep" id="BeD-GA-Msv"/>
                         <outlet property="stepper" destination="UAo-CW-iOT" id="nYj-vF-dDf"/>
-                        <segue destination="rmF-MA-PRy" kind="presentation" identifier="pickUpConfirmation" modalPresentationStyle="fullScreen" id="xz3-0U-IH6"/>
+                        <segue destination="rmF-MA-PRy" kind="showDetail" identifier="pickUpConfirmation" id="xz3-0U-IH6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5K-UX-qn3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1118,7 +1118,7 @@
             <objects>
                 <viewController id="rmF-MA-PRy" customClass="PickUpConfirmationViewController" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Lm-Au-AN6">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="YOUR RESERVATION NUMBER IS 123ABC" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aPc-4K-fSu">
@@ -1162,11 +1162,10 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="close:" destination="rmF-MA-PRy" eventType="touchUpInside" id="fwc-wE-nte"/>
-                                    <segue destination="bHu-jP-lHB" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="XpV-yS-CQT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR FOOD STOP:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xf-jd-0E7">
-                                <rect key="frame" x="16" y="66" width="354" height="52"/>
+                                <rect key="frame" x="16" y="22" width="354" height="96"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

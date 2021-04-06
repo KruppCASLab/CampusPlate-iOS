@@ -43,6 +43,7 @@ class PickUpConfirmationViewController: UIViewController {
     
     
     @IBAction func close(_ sender: Any) {
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     
