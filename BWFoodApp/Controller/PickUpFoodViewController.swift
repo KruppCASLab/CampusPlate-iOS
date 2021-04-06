@@ -31,7 +31,7 @@ class PickUpFoodViewController: UIViewController {
     
     public var listing:Listing!
     public var createdReservation:Reservation!
-    public var quantitySelected:Int!
+    private var quantitySelected:Int = 1
     
     public var indexPathOfListing:IndexPath!
     
@@ -82,7 +82,7 @@ class PickUpFoodViewController: UIViewController {
         
         foodDescription.text = listing.description
         pickUpLocation.text = foodStop.name
-        quantityLabel.text = "0/" + String(listing.quantityRemaining!)
+        quantityLabel.text = "1/" + String(listing.quantityRemaining!)
         pickUpLocationAddress.text = foodStop.streetAddress
         
         stepper.maximumValue = Double(listing.quantityRemaining!)
@@ -143,6 +143,14 @@ class PickUpFoodViewController: UIViewController {
     }
     
     @IBAction func pickUpButton(_ sender: Any) {
+        
+        // This should not be reached, but in case it is, make sure we handle it
+        guard quantitySelected > 0 else {
+            let alert = UIAlertController(title: "Error", message: "Please select a quantity to reserve", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
+        }
         
         pickUpButton.isEnabled = false
         
