@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReservationsCell: UITableViewCell {
+class ReservationTitleTableViewCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
     

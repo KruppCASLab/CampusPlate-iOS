@@ -53,7 +53,7 @@
 		F6AE83A4254B33A500D38310 /* UIView+constrainToParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE83A0254B33A500D38310 /* UIView+constrainToParent.swift */; };
 		F6BCD71924286CE1000C2E02 /* gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCD71824286CE1000C2E02 /* gif.swift */; };
 		F6BCD71B24286EF2000C2E02 /* fork-and-knife-logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */; };
-		F6D49FA225F9739D00433642 /* ReservationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D49FA125F9739D00433642 /* ReservationsCell.swift */; };
+		F6D49FA225F9739D00433642 /* ReservationTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D49FA125F9739D00433642 /* ReservationTitleTableViewCell.swift */; };
 		F6DA60DD25E827AC00710543 /* ReservationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DA60DC25E827AC00710543 /* ReservationModel.swift */; };
 		F6E3C33425B8CF82007FD10E /* RequestUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E3C33325B8CF82007FD10E /* RequestUtility.swift */; };
 		F6E9726B244B51C8009A2BB0 /* SegueCheckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */; };
@@ -120,7 +120,7 @@
 		F6AE83A0254B33A500D38310 /* UIView+constrainToParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constrainToParent.swift"; sourceTree = "<group>"; };
 		F6BCD71824286CE1000C2E02 /* gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gif.swift; sourceTree = "<group>"; };
 		F6BCD71A24286EF2000C2E02 /* fork-and-knife-logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "fork-and-knife-logo.gif"; path = "Assets.xcassets/fork-and-knife-logo.dataset/fork-and-knife-logo.gif"; sourceTree = "<group>"; };
-		F6D49FA125F9739D00433642 /* ReservationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReservationsCell.swift; path = ../../ReservationsCell.swift; sourceTree = "<group>"; };
+		F6D49FA125F9739D00433642 /* ReservationTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReservationTitleTableViewCell.swift; path = ../../ReservationTitleTableViewCell.swift; sourceTree = "<group>"; };
 		F6DA60DC25E827AC00710543 /* ReservationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationModel.swift; sourceTree = "<group>"; };
 		F6E3C33325B8CF82007FD10E /* RequestUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUtility.swift; sourceTree = "<group>"; };
 		F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueCheckerViewController.swift; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */,
-				F6D49FA125F9739D00433642 /* ReservationsCell.swift */,
+				F6D49FA125F9739D00433642 /* ReservationTitleTableViewCell.swift */,
 				F68F961C25F1924400FDCDB8 /* ReservationTableViewCell.swift */,
 				F68F962025F1947400FDCDB8 /* MyReservationsTableViewCell.swift */,
 			);
@@ -406,7 +406,7 @@
 				E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */,
 				E05F76E724005C2B006E29AF /* PinVerifyResponse.swift in Sources */,
 				E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */,
-				F6D49FA225F9739D00433642 /* ReservationsCell.swift in Sources */,
+				F6D49FA225F9739D00433642 /* ReservationTitleTableViewCell.swift in Sources */,
 				E02014B12412E71300C75D6A /* GUID.swift in Sources */,
 				F6AE83A4254B33A500D38310 /* UIView+constrainToParent.swift in Sources */,
 				F6BCD71924286CE1000C2E02 /* gif.swift in Sources */,
