@@ -34,6 +34,7 @@
                     </view>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSignUpScreen" modalPresentationStyle="fullScreen" id="S0I-8x-YK7"/>
+                        <segue destination="bHu-jP-lHB" kind="modal" identifier="toApplication" modalPresentationStyle="fullScreen" id="zRq-cf-UCH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47Z-53-7HA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -129,10 +130,10 @@
             </objects>
             <point key="canvasLocation" x="206" y="-658"/>
         </scene>
-        <!--Enter PinVC-->
+        <!--Enter Pin View Controller-->
         <scene sceneID="KR3-6a-zI5">
             <objects>
-                <viewController id="hYy-UZ-3mq" customClass="EnterPinVC" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hYy-UZ-3mq" customClass="EnterPinViewController" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="abU-aV-uLZ" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1281,6 +1282,9 @@
             <point key="canvasLocation" x="4921.538461538461" y="583.64928909952607"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zRq-cf-UCH"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Campus-Plate-App-Background" width="5939" height="8305"/>
         <image name="Campus-Plate-Logo-White-Full" width="6001" height="2100"/>

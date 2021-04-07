@@ -18,83 +18,69 @@ class EnterEmailViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         
-        registerButton.isEnabled = true
-        registerButton.alpha = 1.0
-
+    
         emailField.delegate = self
         emailField.returnKeyType = .done
+        
+        enableRegisterButton()
     }
     
     var user:User = User(userName: "")
     
     @IBAction func register(_ sender: UIButton) {
-        registerButton.isEnabled = false
-        registerButton.alpha = 0.5
+        disableRegisterButton()
         
         let emailAddress = (emailField.text) ?? ""
         
-        user = User(userName: emailAddress)
+        // Convert field to lower case and trim characters from it that may cause an issue, set it back on the view
+        user = User(userName: emailAddress.lowercased().trimmingCharacters(in: .whitespacesAndNewlines))
+        emailField.text = user.userName;
+        
         
         userModel.addUser(user:user) { (completed) in
+            self.enableRegisterButton()
             if (!completed) {
-                let alert = UIAlertController(title: "Failed!", message: "Failed", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Error", message: "We were unable to register this account. Please check the email and try again. If you believe this is in error, please contact the administrator.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil));
                 DispatchQueue.main.async {
                     self.present(alert, animated: true, completion: nil)
                 }
-                
             }
             else {
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "goToPinScreen", sender: nil)
-                    
                 }
             }
             
         }
     }
     
-        
-        
-    
-    
+    func disableRegisterButton() {
+        DispatchQueue.main.async {
+            self.registerButton.isEnabled = false
+            self.registerButton.alpha = 0.5
+        }
+    }
+    func enableRegisterButton() {
+        DispatchQueue.main.async {
+            self.registerButton.isEnabled = true
+            self.registerButton.alpha = 1.0
+        }
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         emailField.resignFirstResponder()
-        
         return true
     }
     
-    func resetRegisterButton(){
-        registerButton.isEnabled = true
-        registerButton.alpha = 1.0
-        
-        performSegue(withIdentifier: "goToRegisterScreen", sender: nil)
-        
-    }
-    
-    
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-        //TODO: DO IT HERE AND PASS THE USERNAME!
-        if let destinationVC = segue.destination as? EnterPinVC {
-            
+        if let destinationVC = segue.destination as? EnterPinViewController {
             destinationVC.userName = user.userName!
-            
         }
-        
-        
      }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         return false
     }
-     
-    
-    
+
 }

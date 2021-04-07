@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E003B722254B33300065DF41 /* EnterPinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E003B721254B33300065DF41 /* EnterPinVC.swift */; };
+		E003B722254B33300065DF41 /* EnterPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E003B721254B33300065DF41 /* EnterPinViewController.swift */; };
 		E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */; };
 		E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F9212B00650057B2B5 /* ListingModel.swift */; };
 		E02014B12412E71300C75D6A /* GUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02014B02412E71300C75D6A /* GUID.swift */; };
@@ -16,6 +16,7 @@
 		E05F76E724005C2B006E29AF /* PinVerifyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */; };
 		E05F76E924005C43006E29AF /* ListingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F76E824005C43006E29AF /* ListingResponse.swift */; };
 		E0935AF8261BEE9700CFB55A /* PresentingViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935AF7261BEE9700CFB55A /* PresentingViewControllerDelegate.swift */; };
+		E0D0D33F261DF7A9009BDBF3 /* CreateUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D0D33E261DF7A9009BDBF3 /* CreateUserResponse.swift */; };
 		F603CA2825C09829005B6F79 /* FoodStopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F603CA2725C09829005B6F79 /* FoodStopModel.swift */; };
 		F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */; };
 		F614DAF425F6C6430056C2CA /* CreateReservationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F614DAF325F6C6430056C2CA /* CreateReservationResponse.swift */; };
@@ -70,7 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E003B721254B33300065DF41 /* EnterPinVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPinVC.swift; sourceTree = "<group>"; };
+		E003B721254B33300065DF41 /* EnterPinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPinViewController.swift; sourceTree = "<group>"; };
 		E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListingTableViewCell.swift; sourceTree = "<group>"; };
 		E00850F9212B00650057B2B5 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
 		E02014B02412E71300C75D6A /* GUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUID.swift; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVerifyResponse.swift; sourceTree = "<group>"; };
 		E05F76E824005C43006E29AF /* ListingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingResponse.swift; sourceTree = "<group>"; };
 		E0935AF7261BEE9700CFB55A /* PresentingViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PresentingViewControllerDelegate.swift; path = BWFoodApp/PresentingViewControllerDelegate.swift; sourceTree = SOURCE_ROOT; };
+		E0D0D33E261DF7A9009BDBF3 /* CreateUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserResponse.swift; sourceTree = "<group>"; };
 		F603CA2725C09829005B6F79 /* FoodStopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStopModel.swift; sourceTree = "<group>"; };
 		F60E5B5D2115053600426FA3 /* PickUpFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickUpFoodViewController.swift; sourceTree = "<group>"; };
 		F614DAF325F6C6430056C2CA /* CreateReservationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReservationResponse.swift; sourceTree = "<group>"; };
@@ -171,7 +173,7 @@
 			children = (
 				F6E9726A244B51C8009A2BB0 /* SegueCheckerViewController.swift */,
 				F6412C1B2207ECAB00C2927E /* EnterEmailViewController.swift */,
-				E003B721254B33300065DF41 /* EnterPinVC.swift */,
+				E003B721254B33300065DF41 /* EnterPinViewController.swift */,
 				F65A60372188BADC00DB7338 /* CreateNewListing.swift */,
 				F62BEEE52108EFF300006DC0 /* MapViewController.swift */,
 				F62A57B9254C86BC00F232BE /* FoodTableViewController.swift */,
@@ -181,6 +183,14 @@
 				E0935AF7261BEE9700CFB55A /* PresentingViewControllerDelegate.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		E0D0D342261DF7AD009BDBF3 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				E0D0D33E261DF7A9009BDBF3 /* CreateUserResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		F61C175F22DBA814008313FD /* Custom Cells */ = {
@@ -197,6 +207,7 @@
 		F62BEEB62106255900006DC0 /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				E0D0D342261DF7AD009BDBF3 /* Responses */,
 				F61DCBAE2326E95800F7FD7C /* WSListing.swift */,
 				F69EBE8225EDA7B000EF5ABA /* Reservation.swift */,
 				F6788FFE23E7C037009FC4C6 /* User.swift */,
@@ -395,6 +406,7 @@
 				F61785FE2559F03B00CEC8FA /* CustomMaskExample.swift in Sources */,
 				F6412C1C2207ECAB00C2927E /* EnterEmailViewController.swift in Sources */,
 				F68F962925F19B2800FDCDB8 /* MyReservationsTableViewController.swift in Sources */,
+				E0D0D33F261DF7A9009BDBF3 /* CreateUserResponse.swift in Sources */,
 				F656694625263F9B00A6BA2B /* TextFieldMaxLength.swift in Sources */,
 				E04EAC3525D5A2B9000F5879 /* UIColorExtension.swift in Sources */,
 				F614DAF425F6C6430056C2CA /* CreateReservationResponse.swift in Sources */,
@@ -419,7 +431,7 @@
 				F678900123E7C1A1009FC4C6 /* UserModel.swift in Sources */,
 				F69EBE8925EF026900EF5ABA /* GetReservationResponse.swift in Sources */,
 				F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */,
-				E003B722254B33300065DF41 /* EnterPinVC.swift in Sources */,
+				E003B722254B33300065DF41 /* EnterPinViewController.swift in Sources */,
 				E04EAC3125D59C63000F5879 /* FoodStopResponse.swift in Sources */,
 				F64FB5C525DF05D900672D51 /* PickUpConfirmationViewController.swift in Sources */,
 				F69265DE24463754005C0701 /* CredentialManager.swift in Sources */,
