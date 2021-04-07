@@ -34,7 +34,7 @@
                     </view>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSignUpScreen" modalPresentationStyle="fullScreen" id="S0I-8x-YK7"/>
-                        <segue destination="bHu-jP-lHB" kind="modal" identifier="toApplication" modalPresentationStyle="fullScreen" id="zRq-cf-UCH"/>
+                        <segue destination="bHu-jP-lHB" kind="presentation" identifier="toApplication" modalPresentationStyle="fullScreen" id="zRq-cf-UCH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47Z-53-7HA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -915,7 +915,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ba-kS-vsN">
-                                <rect key="frame" x="20" y="132.5" width="374" height="1"/>
+                                <rect key="frame" x="20" y="132" width="374" height="1"/>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Xpv-ak-kG1"/>
@@ -935,7 +935,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" verticalCompressionResistancePriority="752" text="Pick Up Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7B-oC-8Sd">
-                                <rect key="frame" x="16" y="141.5" width="382" height="21"/>
+                                <rect key="frame" x="16" y="141" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
