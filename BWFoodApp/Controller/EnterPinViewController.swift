@@ -13,7 +13,7 @@ protocol EnterPinDelegate {
 }
 
 
-class EnterPinVC: UIViewController, UITextFieldDelegate {
+class EnterPinViewController: UIViewController, UITextFieldDelegate {
     
     let userModel = UserModel.getSharedInstance()
     
@@ -68,7 +68,7 @@ class EnterPinVC: UIViewController, UITextFieldDelegate {
         
         userModel.updateAccountVerificationFlag(userName: user.userName ?? "", pin: user.pin ?? 0) { (completed) in
             if (!completed) {
-                let alert = UIAlertController(title: "Incorrect Pin", message: "The pin you entered is not what we have on file, please go back and reenter your email.", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Incorrect Pin", message: "Please check your email and confirm the pin matches the one you received.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (UIAlertAction) in
                     alert.dismiss(animated: true, completion: nil)
                 }))

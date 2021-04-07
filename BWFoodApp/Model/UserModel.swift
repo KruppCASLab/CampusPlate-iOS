@@ -30,7 +30,20 @@ class UserModel {
         do {
             let data = try encoder.encode(user)
             session.uploadTask(with: request, from: data) { (data, response, error) in
-                completion(true)
+                let decoder = JSONDecoder()
+                do {
+                    let response = try decoder.decode(CreateUserResponse.self, from: data!)
+                    // We were able to create the user or the user already exists and we are recreating the user
+                    if (response.status == 0 || response.status == 2) {
+                        completion(true)
+                    }
+                    else {
+                        completion(false)
+                    }
+                }
+                catch {
+                    completion(false)
+                }
             }.resume()
         }
         catch {

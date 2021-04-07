@@ -9,13 +9,15 @@
 import UIKit
 import CoreGraphics
 
-class PickUpFoodViewController: UIViewController {
+class PickUpFoodViewController: UIViewController, PresentingViewControllerDelegate {
+    
     
     let listingModel = ListingModel.getSharedInstance()
     let foodStopModel = FoodStopModel.getSharedInstance()
     let reservationModel = ReservationModel.getSharedInstance()
     
     public var delegate:CreateNewListingDelegate?
+    public var presentingDelegate:PresentingViewControllerDelegate?
     
     @IBOutlet weak var navBar: UINavigationItem!
     
@@ -31,7 +33,7 @@ class PickUpFoodViewController: UIViewController {
     
     public var listing:Listing!
     public var createdReservation:Reservation!
-    public var quantitySelected:Int!
+    private var quantitySelected:Int = 1
     
     public var indexPathOfListing:IndexPath!
     
@@ -42,6 +44,12 @@ class PickUpFoodViewController: UIViewController {
     
     
     @IBOutlet weak var stepper: UIStepper!
+    
+    func childViewDidComplete() {
+        if let presentingDelegate = presentingDelegate {
+            presentingDelegate.childViewDidComplete()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,7 +90,7 @@ class PickUpFoodViewController: UIViewController {
         
         foodDescription.text = listing.description
         pickUpLocation.text = foodStop.name
-        quantityLabel.text = "0/" + String(listing.quantityRemaining!)
+        quantityLabel.text = "1/" + String(listing.quantityRemaining!)
         pickUpLocationAddress.text = foodStop.streetAddress
         
         stepper.maximumValue = Double(listing.quantityRemaining!)
@@ -143,6 +151,14 @@ class PickUpFoodViewController: UIViewController {
     }
     
     @IBAction func pickUpButton(_ sender: Any) {
+        
+        // This should not be reached, but in case it is, make sure we handle it
+        guard quantitySelected > 0 else {
+            let alert = UIAlertController(title: "Error", message: "Please select a quantity to reserve", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
+        }
         
         pickUpButton.isEnabled = false
         
@@ -217,6 +233,7 @@ class PickUpFoodViewController: UIViewController {
         
         if (segue.identifier == "pickUpConfirmation") {
             if let vc = segue.destination as? PickUpConfirmationViewController {
+                vc.presentingDelegate = self
                 vc.foodStop = foodStop
                 vc.reservation = createdReservation
             }

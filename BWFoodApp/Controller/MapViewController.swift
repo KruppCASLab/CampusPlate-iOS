@@ -11,7 +11,7 @@ import UIKit
 import CoreLocation
 
 
-class MapViewController: UIViewController,CLLocationManagerDelegate, CreateNewListingDelegate{
+class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewListingDelegate{
     
     @IBOutlet weak var mapView: MKMapView!
     let listingModel = ListingModel.getSharedInstance()
@@ -25,26 +25,37 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, CreateNewLi
     var foodStops:[FoodStop]!
     
     override func viewWillAppear(_ animated: Bool) {
+        foodStopModel.loadManagedFoodStops { (completed) in
+            DispatchQueue.main.async {
+                if (self.foodStopModel.managedFoodStops.count > 0) {
+                    self.controlsContainer.isHidden = false
+                }
+                else {
+                    self.controlsContainer.isHidden = true
+                }
+            }
+            
+        }
         
-        DispatchQueue.main.async { [self] in
-            foodStopModel.loadFoodStops { (completed) in
-                foodStops = foodStopModel.foodStops
+        foodStopModel.loadFoodStops { (completed) in
+            self.foodStops = self.foodStopModel.foodStops
+            
+            for foodStop in self.foodStops{
                 
-                for foodStop in foodStops{
-    
-                    let foodStopCoordinates = CLLocationCoordinate2D(latitude: foodStop.lat,longitude: foodStop.lng)
-                    let anno = MKPointAnnotation()
-                    anno.coordinate = foodStopCoordinates
-                    anno.title = foodStop.name
-                    
-                    DispatchQueue.main.async {
-                        mapView.addAnnotation(anno)
-                    }
-                    
-                    
+                let foodStopCoordinates = CLLocationCoordinate2D(latitude: foodStop.lat,longitude: foodStop.lng)
+                
+                let anno = MKPointAnnotation()
+                anno.coordinate = foodStopCoordinates
+                
+                anno.title = foodStop.name
+                anno.subtitle = foodStop.description
+                
+                DispatchQueue.main.async {
+                    self.mapView.addAnnotation(anno)
                 }
             }
         }
+        
         
     }
     
@@ -89,14 +100,17 @@ class MapViewController: UIViewController,CLLocationManagerDelegate, CreateNewLi
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
         
-        let initialLocation = CLLocationCoordinate2D(latitude: 41.3692, longitude: -81.8486)
         
-        let span = MKCoordinateSpan(latitudeDelta: 0.0050,longitudeDelta: 0.0050)
+        let initialLocation = CLLocationCoordinate2D(latitude: 41.372442, longitude: -81.850165)
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.0070,longitudeDelta: 0.0070)
         let region = MKCoordinateRegion(center:initialLocation, span: span)
         mapView.setRegion(region, animated: true)
         
         
     }
+    
+    
     
     //    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     //        guard annotation is MKPointAnnotation else { return nil }
