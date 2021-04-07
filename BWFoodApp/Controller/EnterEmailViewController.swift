@@ -10,35 +10,29 @@ import UIKit
 
 class EnterEmailViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var studentEmailLabel: UILabel!
-    
-    
-    @IBOutlet weak var studentEmailField: UITextField!
-    
-    
-    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
     
     let userModel = UserModel.getSharedInstance()
     
     override func viewDidLoad() {
         super.viewDidLoad()
          
-        signInButton.isEnabled = true
-        signInButton.alpha = 1.0
+        registerButton.isEnabled = true
+        registerButton.alpha = 1.0
 
-        studentEmailField.delegate = self
-        studentEmailField.returnKeyType = .done
-
-        
+        emailField.delegate = self
+        emailField.returnKeyType = .done
     }
     
     var user:User = User(userName: "")
     
     @IBAction func register(_ sender: UIButton) {
-        signInButton.isEnabled = false
-        signInButton.alpha = 0.5
+        registerButton.isEnabled = false
+        registerButton.alpha = 0.5
         
-        let emailAddress = (studentEmailField.text) ?? ""
+        let emailAddress = (emailField.text) ?? ""
         
         user = User(userName: emailAddress)
         
@@ -67,14 +61,14 @@ class EnterEmailViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        studentEmailField.resignFirstResponder()
+        emailField.resignFirstResponder()
         
         return true
     }
     
     func resetRegisterButton(){
-        signInButton.isEnabled = true
-        signInButton.alpha = 1.0
+        registerButton.isEnabled = true
+        registerButton.alpha = 1.0
         
         performSegue(withIdentifier: "goToRegisterScreen", sender: nil)
         
