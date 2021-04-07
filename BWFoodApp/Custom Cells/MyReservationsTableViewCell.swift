@@ -20,6 +20,7 @@ class MyReservationsTableViewCell: UITableViewCell {
     @IBOutlet weak var reservationCode: UILabel!
     
     
+    
     @IBOutlet weak var foodImageVIew: UIImageView!
     
     override func awakeFromNib() {
