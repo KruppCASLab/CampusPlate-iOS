@@ -115,7 +115,7 @@
         <scene sceneID="gP8-lm-u5i">
             <objects>
                 <viewController id="3vD-Xu-yWT" customClass="CreateNewListing" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="frz-Vu-BEq" customClass="Line" customModule="BWFoodApp">
+                    <view key="view" contentMode="scaleToFill" id="frz-Vu-BEq">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
