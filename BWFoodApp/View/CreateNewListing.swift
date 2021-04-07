@@ -15,7 +15,7 @@ protocol CreateNewListingDelegate {
 }
 
 class CreateNewListing:
-    UIViewController,CLLocationManagerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource{
+    UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource{
     
     public var delegate:CreateNewListingDelegate?
     public var mapViewDelegate: MapViewController?
@@ -39,8 +39,6 @@ class CreateNewListing:
     
     let listingModel = ListingModel.getSharedInstance()
     let foodStopModel = FoodStopModel.getSharedInstance()
-    
-    var locationManager = CLLocationManager()
     
     public var listing:Listing!
     
@@ -68,18 +66,7 @@ class CreateNewListing:
             }
         }
         
-        let leftView = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
-        
-        let leftView2 = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
-        
-        let leftView3 = UITextField(frame: CGRect(x: 10, y: 0, width: 7, height: 26))
-        
         foodImage.layer.borderColor = UIColor.init(named: "CampusPlateGreen")?.cgColor
-        self.locationManager.requestWhenInUseAuthorization()
-        
-        
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startUpdatingLocation()
         
         itemTextField.delegate = self
         itemTextField.returnKeyType = .done
@@ -91,9 +78,6 @@ class CreateNewListing:
         locationTextField.inputView = foodStopPicker
         locationTextField.delegate = self
         locationTextField.returnKeyType = .done
-        
-        locationManager.delegate = self
-        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -116,14 +100,6 @@ class CreateNewListing:
     }
     
     
-    override func viewWillAppear(_ animated: Bool){
-        
-        navigationController?.navigationBar.barTintColor = UIColor.init(named: "CampusPlateGreenNew")
-        
-        //        navigationController?.navigationBar.backgroundColor = UIColor.init(named: "CampusPlateGreenNew")
-        //        navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -140,18 +116,6 @@ class CreateNewListing:
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    var longitude: Double = 0.0
-    var latitude: Double = 0.0
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            longitude = location.coordinate.longitude
-            latitude = location.coordinate.latitude
-        }
-    }
-    
-    
     
     @IBAction func takePicture(_ sender: UIButton) {
         
