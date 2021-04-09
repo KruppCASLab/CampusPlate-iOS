@@ -1155,7 +1155,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="275 EASTLAND RD, BEREA, OH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRe-fj-Isy">
-                                        <rect key="frame" x="49" y="256" width="321" height="21"/>
+                                        <rect key="frame" x="49" y="256" width="266.33333333333331" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1174,9 +1174,9 @@
                                     <constraint firstItem="gUl-Y4-DPf" firstAttribute="top" secondItem="2zy-36-DsM" secondAttribute="top" constant="141" id="9yw-3x-bN6"/>
                                     <constraint firstItem="aPc-4K-fSu" firstAttribute="top" secondItem="QRe-fj-Isy" secondAttribute="bottom" constant="5" id="CHe-m4-5hY"/>
                                     <constraint firstItem="QRe-fj-Isy" firstAttribute="leading" secondItem="2zy-36-DsM" secondAttribute="leading" constant="49" id="E2b-iu-LtH"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QRe-fj-Isy" secondAttribute="trailing" constant="20" symbolic="YES" id="EKY-dP-gWD"/>
                                     <constraint firstItem="gUl-Y4-DPf" firstAttribute="leading" secondItem="2zy-36-DsM" secondAttribute="leading" constant="49" id="Jq6-FP-Go3"/>
                                     <constraint firstAttribute="height" constant="418" id="PQM-ha-mS9"/>
-                                    <constraint firstAttribute="trailing" secondItem="QRe-fj-Isy" secondAttribute="trailing" constant="48" id="UgX-pt-zhY"/>
                                     <constraint firstAttribute="trailing" secondItem="aPc-4K-fSu" secondAttribute="trailing" constant="93" id="YLb-uW-Vg8"/>
                                     <constraint firstItem="aPc-4K-fSu" firstAttribute="leading" secondItem="2zy-36-DsM" secondAttribute="leading" constant="49" id="d6U-Ve-HmE"/>
                                     <constraint firstAttribute="trailing" secondItem="gUl-Y4-DPf" secondAttribute="trailing" constant="93" id="sPB-Yp-fAD"/>
