@@ -99,6 +99,9 @@ class CreateNewListing:
         selectedFoodStop = foodStopPickerData[row]
     }
     
+    @IBAction func tappedView(_ sender: Any) {
+        view.endEditing(true)
+    }
     
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
