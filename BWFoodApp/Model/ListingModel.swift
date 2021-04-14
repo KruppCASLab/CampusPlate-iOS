@@ -22,7 +22,7 @@ class ListingModel {
         return self.sharedInstance
     }
     
-    public func loadListings(completion:@escaping (Bool)->Void) {
+    public func loadListings(completion:@escaping (Bool, Int?)->Void) {
         
         var request = URLRequest(url: self.url!)
         
@@ -30,6 +30,11 @@ class ListingModel {
         request = RequestUtility.addAuth(original: request)
         
         session.dataTask(with: request){ (data, response, error) in
+            if let response = response as? HTTPURLResponse {
+                if (response.statusCode == 401) {
+                    completion(false, 401)
+                }
+            }
             
             let decoder = JSONDecoder()
             
@@ -37,10 +42,10 @@ class ListingModel {
                 let jsonString = String(data: data!, encoding: .utf8)
                 let response = try decoder.decode(ListingResponse.self, from: data!)
                 self.listings = response.data!
-                completion(true)
+                completion(true, 0)
             }
             catch {
-                
+                completion(false, 0)
             }
             
         }.resume()
