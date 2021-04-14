@@ -33,7 +33,7 @@ class MyReservationsTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        listingModel.loadListings { [self] (completed) in
+        listingModel.loadListings { [self] (completed, status) in
             reservationModel.getUserReservations { [self] (completed) in
                 DispatchQueue.main.async {
                     reservations = reservationModel.reservations

@@ -60,7 +60,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewL
     }
     
     func didComplete() {
-        listingModel.loadListings {  (completed) in
+        listingModel.loadListings {  (completed, status) in
             DispatchQueue.main.async {
                 
             }

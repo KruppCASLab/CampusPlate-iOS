@@ -28,7 +28,6 @@ class FoodStopModel{
         request.httpMethod = "GET"
         request = RequestUtility.addAuth(original: request)
         session.dataTask(with: request){ (data, response, error) in
-        
             let decoder = JSONDecoder()
         
             do {
