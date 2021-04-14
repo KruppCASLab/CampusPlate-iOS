@@ -242,10 +242,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQl-79-hY4">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="jQl-79-hY4">
                                 <rect key="frame" x="0.0" y="140" width="375" height="638"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Vu-hJ-oqk" userLabel="Scroll View Content">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Vu-hJ-oqk" userLabel="Scroll View Content" customClass="UIControl">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="722"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qc-hl-NcJ">
@@ -421,6 +421,9 @@
                                             <constraint firstItem="4il-OR-OK6" firstAttribute="leading" secondItem="7Vu-hJ-oqk" secondAttribute="leading" constant="20" symbolic="YES" id="wrB-kH-7ub"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="722" id="zqK-bW-DEh"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="tappedView:" destination="3vD-Xu-yWT" eventType="touchUpInside" id="Cr3-IL-VDz"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
