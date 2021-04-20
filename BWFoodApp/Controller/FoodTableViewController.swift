@@ -8,7 +8,28 @@
 
 import UIKit
 
-class FoodTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CreateNewListingDelegate, PresentingViewControllerDelegate {
+class FoodTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CreateNewListingDelegate, PresentingViewControllerDelegate, AppStateObserver {
+    
+    private var refreshDataTimer:Timer?
+    
+    // MARK:- Timer Functions
+    private func startTimer() {
+        refreshDataTimer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true) { (timer) in
+            self.loadData()
+        }
+    }
+    private func stopTimer() {
+        refreshDataTimer?.invalidate()
+    }
+    
+    // MARK:- AppStateObserver Delegate
+    func applicationDidBecomeActive() {
+        startTimer()
+    }
+    
+    func applicationDidBecomeInactive() {
+        stopTimer()
+    }
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -143,10 +164,8 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
         
-        //TODO: Fix me
-        //loadingIndicator.loadGif(name: "fork-and-knife-logo")
-        
-        // Do any additional setup after loading the view.
+        AppState.shared.addObserver(observer: self)
+        startTimer()
     }
     
     private func loadData() {

@@ -23,9 +23,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>CaterU Needs To Use Your Camera</string>
+	<string>Campus Plate uses your camera to capture food to post</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Food App wants to use your location</string>
+	<string>Campus Plate uses your location to help find food stops</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Food App wants to use your location</string>
 	<key>UILaunchStoryboardName</key>

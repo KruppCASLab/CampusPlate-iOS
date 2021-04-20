@@ -11,6 +11,7 @@
 		E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */; };
 		E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F9212B00650057B2B5 /* ListingModel.swift */; };
 		E02014B12412E71300C75D6A /* GUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02014B02412E71300C75D6A /* GUID.swift */; };
+		E02A909D262F43CA003B342B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02A909C262F43CA003B342B /* AppState.swift */; };
 		E04EAC3125D59C63000F5879 /* FoodStopResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EAC3025D59C63000F5879 /* FoodStopResponse.swift */; };
 		E04EAC3525D5A2B9000F5879 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EAC3425D5A2B9000F5879 /* UIColorExtension.swift */; };
 		E05F76E724005C2B006E29AF /* PinVerifyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */; };
@@ -75,6 +76,7 @@
 		E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListingTableViewCell.swift; sourceTree = "<group>"; };
 		E00850F9212B00650057B2B5 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
 		E02014B02412E71300C75D6A /* GUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUID.swift; sourceTree = "<group>"; };
+		E02A909C262F43CA003B342B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E04EAC3025D59C63000F5879 /* FoodStopResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStopResponse.swift; sourceTree = "<group>"; };
 		E04EAC3425D5A2B9000F5879 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVerifyResponse.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				F69D00F0260966C1003DE1BD /* spoony.png */,
 				F69BDB4B20FA55790065BB78 /* LaunchScreen.storyboard */,
 				F69BDB4E20FA55790065BB78 /* Info.plist */,
+				E02A909C262F43CA003B342B /* AppState.swift */,
 			);
 			path = BWFoodApp;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				F6AE83A1254B33A500D38310 /* UIViewController+PulleyViewController.swift in Sources */,
 				F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */,
 				F6663F56256C4D6E0084EC1C /* FoodStop.swift in Sources */,
+				E02A909D262F43CA003B342B /* AppState.swift in Sources */,
 				F6DA60DD25E827AC00710543 /* ReservationModel.swift in Sources */,
 				E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */,
 				E05F76E724005C2B006E29AF /* PinVerifyResponse.swift in Sources */,

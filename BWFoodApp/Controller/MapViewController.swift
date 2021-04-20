@@ -11,7 +11,11 @@ import UIKit
 import CoreLocation
 
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewListingDelegate{
+class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewListingDelegate {
+    
+    
+
+    
     
     @IBOutlet weak var mapView: MKMapView!
     let listingModel = ListingModel.getSharedInstance()
