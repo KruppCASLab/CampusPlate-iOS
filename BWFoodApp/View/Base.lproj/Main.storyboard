@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sDa-tb-Zar">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sDa-tb-Zar">
     <device id="retina6_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -599,7 +599,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReservationTitleCell" id="V2h-4u-dWi" customClass="ReservationTitleTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="390" height="58.333332061767578"/>
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="58.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V2h-4u-dWi" id="et9-Qt-7lb">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="58.333332061767578"/>
@@ -626,7 +626,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReservationCell" rowHeight="165" id="qyM-1X-qpW" customClass="MyReservationsTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86.333332061767578" width="390" height="165"/>
+                                <rect key="frame" x="0.0" y="82.666666030883789" width="390" height="165"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qyM-1X-qpW" id="CkO-yl-N5r">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="165"/>
@@ -789,7 +789,7 @@
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myReservations" rowHeight="58" id="R9L-WV-uhC" customClass="ReservationTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="390" height="58"/>
+                                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="58"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R9L-WV-uhC" id="p9w-K1-QmJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="390" height="58"/>
@@ -832,7 +832,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodListingCell" rowHeight="110" id="3jq-qR-meP" customClass="FoodListingTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="86" width="390" height="110"/>
+                                                <rect key="frame" x="0.0" y="82.333333969116211" width="390" height="110"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3jq-qR-meP" id="Orb-7a-paR">
                                                     <rect key="frame" x="0.0" y="0.0" width="390" height="110"/>

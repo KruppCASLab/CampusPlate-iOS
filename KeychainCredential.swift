@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Credential {
+class KeychainCredential {
     let username: String
     let password: String
     

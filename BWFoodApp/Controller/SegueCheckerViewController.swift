@@ -18,7 +18,7 @@ class SegueCheckerViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if CredentialManager.getCredential() != nil {
+        if KeychainCredentialManager.getCredential() != nil {
             performSegue(withIdentifier: "toApplication", sender: nil)
         }else{
             performSegue(withIdentifier: "toSignUpScreen", sender: nil)

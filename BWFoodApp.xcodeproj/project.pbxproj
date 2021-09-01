@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4FF758D26DFE393000B40FF /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF758C26DFE393000B40FF /* Credential.swift */; };
 		E003B722254B33300065DF41 /* EnterPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E003B721254B33300065DF41 /* EnterPinViewController.swift */; };
 		E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */; };
 		E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F9212B00650057B2B5 /* ListingModel.swift */; };
@@ -38,8 +39,8 @@
 		F68F961D25F1924400FDCDB8 /* ReservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F961C25F1924400FDCDB8 /* ReservationTableViewCell.swift */; };
 		F68F962125F1947400FDCDB8 /* MyReservationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F962025F1947400FDCDB8 /* MyReservationsTableViewCell.swift */; };
 		F68F962925F19B2800FDCDB8 /* MyReservationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F962825F19B2800FDCDB8 /* MyReservationsTableViewController.swift */; };
-		F69265DE24463754005C0701 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69265DD24463754005C0701 /* CredentialManager.swift */; };
-		F69265E02446376C005C0701 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69265DF2446376C005C0701 /* Credential.swift */; };
+		F69265DE24463754005C0701 /* KeychainCredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69265DD24463754005C0701 /* KeychainCredentialManager.swift */; };
+		F69265E02446376C005C0701 /* KeychainCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69265DF2446376C005C0701 /* KeychainCredential.swift */; };
 		F692EA9225DB0E480069589B /* ImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F692EA9125DB0E480069589B /* ImageResponse.swift */; };
 		F69BDB4320FA55780065BB78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69BDB4220FA55780065BB78 /* AppDelegate.swift */; };
 		F69BDB4820FA55780065BB78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69BDB4620FA55780065BB78 /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D4FF758C26DFE393000B40FF /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		E003B721254B33300065DF41 /* EnterPinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPinViewController.swift; sourceTree = "<group>"; };
 		E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListingTableViewCell.swift; sourceTree = "<group>"; };
 		E00850F9212B00650057B2B5 /* ListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingModel.swift; sourceTree = "<group>"; };
@@ -105,8 +107,8 @@
 		F68F961C25F1924400FDCDB8 /* ReservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationTableViewCell.swift; sourceTree = "<group>"; };
 		F68F962025F1947400FDCDB8 /* MyReservationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReservationsTableViewCell.swift; sourceTree = "<group>"; };
 		F68F962825F19B2800FDCDB8 /* MyReservationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReservationsTableViewController.swift; sourceTree = "<group>"; };
-		F69265DD24463754005C0701 /* CredentialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialManager.swift; sourceTree = "<group>"; };
-		F69265DF2446376C005C0701 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		F69265DD24463754005C0701 /* KeychainCredentialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainCredentialManager.swift; sourceTree = "<group>"; };
+		F69265DF2446376C005C0701 /* KeychainCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainCredential.swift; sourceTree = "<group>"; };
 		F692EA9125DB0E480069589B /* ImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
 		F69BDB3F20FA55780065BB78 /* BWFoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWFoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69BDB4220FA55780065BB78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				E02014B02412E71300C75D6A /* GUID.swift */,
 				E04EAC3025D59C63000F5879 /* FoodStopResponse.swift */,
 				F614DAF325F6C6430056C2CA /* CreateReservationResponse.swift */,
+				D4FF758C26DFE393000B40FF /* Credential.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -241,8 +244,8 @@
 			children = (
 				E014BACF26DE94A8006A0D11 /* Configuration */,
 				F692EA9125DB0E480069589B /* ImageResponse.swift */,
-				F69265DD24463754005C0701 /* CredentialManager.swift */,
-				F69265DF2446376C005C0701 /* Credential.swift */,
+				F69265DD24463754005C0701 /* KeychainCredentialManager.swift */,
+				F69265DF2446376C005C0701 /* KeychainCredential.swift */,
 				F6BCD71824286CE1000C2E02 /* gif.swift */,
 				F6566949252B968800A6BA2B /* DoneButton.swift */,
 				F656694525263F9B00A6BA2B /* TextFieldMaxLength.swift */,
@@ -416,7 +419,7 @@
 				F656694A252B968800A6BA2B /* DoneButton.swift in Sources */,
 				F62A57BA254C86BC00F232BE /* FoodTableViewController.swift in Sources */,
 				F6788FFF23E7C037009FC4C6 /* User.swift in Sources */,
-				F69265E02446376C005C0701 /* Credential.swift in Sources */,
+				F69265E02446376C005C0701 /* KeychainCredential.swift in Sources */,
 				F61DCBAD2326E7C700F7FD7C /* Response.swift in Sources */,
 				F61785FE2559F03B00CEC8FA /* CustomMaskExample.swift in Sources */,
 				F6412C1C2207ECAB00C2927E /* EnterEmailViewController.swift in Sources */,
@@ -434,6 +437,7 @@
 				E00850FA212B00650057B2B5 /* ListingModel.swift in Sources */,
 				E05F76E724005C2B006E29AF /* PinVerifyResponse.swift in Sources */,
 				E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */,
+				D4FF758D26DFE393000B40FF /* Credential.swift in Sources */,
 				F6D49FA225F9739D00433642 /* ReservationTitleTableViewCell.swift in Sources */,
 				E02014B12412E71300C75D6A /* GUID.swift in Sources */,
 				F6AE83A4254B33A500D38310 /* UIView+constrainToParent.swift in Sources */,
@@ -450,7 +454,7 @@
 				E003B722254B33300065DF41 /* EnterPinViewController.swift in Sources */,
 				E04EAC3125D59C63000F5879 /* FoodStopResponse.swift in Sources */,
 				F64FB5C525DF05D900672D51 /* PickUpConfirmationViewController.swift in Sources */,
-				F69265DE24463754005C0701 /* CredentialManager.swift in Sources */,
+				F69265DE24463754005C0701 /* KeychainCredentialManager.swift in Sources */,
 				F68F961D25F1924400FDCDB8 /* ReservationTableViewCell.swift in Sources */,
 				F6AE83A3254B33A500D38310 /* PulleyViewController.swift in Sources */,
 			);
@@ -621,14 +625,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_TEAM = MF9639JBWV;
+				DEVELOPMENT_TEAM = GHXH2VVSJ2;
 				INFOPLIST_FILE = BWFoodApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.krupp.CampusPlateBW;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.gersey.CampusPlateBW;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -642,14 +646,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_TEAM = MF9639JBWV;
+				DEVELOPMENT_TEAM = GHXH2VVSJ2;
 				INFOPLIST_FILE = BWFoodApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.krupp.CampusPlateBW;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.gersey.CampusPlateBW;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

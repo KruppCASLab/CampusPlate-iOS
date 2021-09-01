@@ -13,13 +13,13 @@ class FoodStopModel{
     public var foodStops = Array<FoodStop>()
     public var managedFoodStops = Array<FoodStop>()
     
-    private let url = URL(string: "https://mops.bw.edu/cp/rest.php/foodstops")
+    private let url = URL(string: "https://mopsdev.bw.edu/cp/rest.php/foodstops")
     
     private static let sharedInstance = FoodStopModel()
     let session = URLSession.shared
     
     static public func getSharedInstance() -> FoodStopModel {
-        return self.sharedInstance
+        return self.sharedInstance  
     }
     
     public func loadFoodStops(completion:@escaping (Bool)->Void) {

@@ -14,8 +14,8 @@ public class RequestUtility {
         
         var request = original
         
-        let username = CredentialManager.getCredential()?.username
-        let password = CredentialManager.getCredential()?.password
+        let username = KeychainCredentialManager.getCredential()?.username
+        let password = KeychainCredentialManager.getCredential()?.password
           let loginString = String(format: "%@:%@", username as! CVarArg, password as! CVarArg)
         let loginData = loginString.data(using: String.Encoding.utf8)!
         let base64LoginString = loginData.base64EncodedString()

@@ -11,7 +11,7 @@ import Foundation
 class UserModel {
     private var users = Array<User>()
     
-    private let url = URL(string: "https://mops.bw.edu/cp/rest.php/users")
+    private let url = URL(string: "https://mopsdev.bw.edu/cp/rest.php/users")
     
     private static let sharedInstance = UserModel()
     let session = URLSession.shared
@@ -81,9 +81,9 @@ class UserModel {
                     }else{
                         
                         
-                        let credentials : Credential = Credential(username: userName, password: response.data!.GUID!)
+                        let credentials : KeychainCredential = KeychainCredential(username: userName, password: response.data!.GUID!)
                         
-                        CredentialManager.saveCredential(credential: credentials)
+                        KeychainCredentialManager.saveCredential(credential: credentials)
                         completion(true)
                     
                     }

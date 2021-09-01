@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CredentialManager {
+class KeychainCredentialManager {
     enum KeychainError: Error {
         case noPassword
         case unexpectedPasswordData
@@ -27,7 +27,7 @@ class CredentialManager {
         
     }
     
-    static public func saveCredential(credential:Credential) -> Bool {
+    static public func saveCredential(credential:KeychainCredential) -> Bool {
         clearCredentials()
         let account = credential.username
         let password = credential.password.data(using: .utf8)!
@@ -43,7 +43,7 @@ class CredentialManager {
         
     }
     
-    static public func getCredential() -> Credential? {
+    static public func getCredential() -> KeychainCredential? {
         let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
                                     kSecAttrLabel as String: "Campus Plate",
                                     kSecMatchLimit as String: kSecMatchLimitOne,
@@ -63,7 +63,7 @@ class CredentialManager {
             return nil
         }
         
-        return Credential(username: username, password: password)
+        return KeychainCredential(username: username, password: password)
         
         
     }

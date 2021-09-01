@@ -174,7 +174,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
                 if (status == 401) {
                     let alert = UIAlertController(title: "Error", message: "Your device can no longer login to the Campus Plate. It is recommended you reset your account. ", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Reset", style: .destructive, handler: { (action) in
-                        CredentialManager.clearCredentials()
+                        KeychainCredentialManager.clearCredentials()
                         self.present(UIAlertController(title: "Completed", message: "Please force close the app to re-register your device.", preferredStyle: .alert), animated: true, completion: nil)
                     }))
                     alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in

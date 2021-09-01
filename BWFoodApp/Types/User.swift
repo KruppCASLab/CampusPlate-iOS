@@ -12,6 +12,7 @@ public class User: Codable {
     public var userName:String?
     public var password:String?
     public var pin: Int?
+    public var credential: Credential = Credential()
 
 
     init(userName: String) {
