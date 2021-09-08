@@ -12,7 +12,7 @@ class ReservationModel {
     
     public var reservations = Array<Reservation>()
     
-    private let url = URL(string: "https://mopsdev.bw.edu/cp/rest.php/reservations")
+    private let url = URL(string: ServiceClient.serviceClientUrl() + "/reservations")
     
     private static let sharedInstance = ReservationModel()
     let session = URLSession.shared

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D47AE5F926E86CFA0047C726 /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47AE5F826E86CFA0047C726 /* ServiceClient.swift */; };
 		D4FF758D26DFE393000B40FF /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF758C26DFE393000B40FF /* Credential.swift */; };
 		E003B722254B33300065DF41 /* EnterPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E003B721254B33300065DF41 /* EnterPinViewController.swift */; };
 		E00850F6212AFC1E0057B2B5 /* FoodListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */; };
@@ -73,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D47AE5F826E86CFA0047C726 /* ServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
 		D4FF758C26DFE393000B40FF /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		E003B721254B33300065DF41 /* EnterPinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPinViewController.swift; sourceTree = "<group>"; };
 		E00850F5212AFC1E0057B2B5 /* FoodListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListingTableViewCell.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				F6DA60DC25E827AC00710543 /* ReservationModel.swift */,
 				F603CA2725C09829005B6F79 /* FoodStopModel.swift */,
 				F6E3C33325B8CF82007FD10E /* RequestUtility.swift */,
+				D47AE5F826E86CFA0047C726 /* ServiceClient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				F69265E02446376C005C0701 /* KeychainCredential.swift in Sources */,
 				F61DCBAD2326E7C700F7FD7C /* Response.swift in Sources */,
 				F61785FE2559F03B00CEC8FA /* CustomMaskExample.swift in Sources */,
+				D47AE5F926E86CFA0047C726 /* ServiceClient.swift in Sources */,
 				F6412C1C2207ECAB00C2927E /* EnterEmailViewController.swift in Sources */,
 				F68F962925F19B2800FDCDB8 /* MyReservationsTableViewController.swift in Sources */,
 				E0D0D33F261DF7A9009BDBF3 /* CreateUserResponse.swift in Sources */,
