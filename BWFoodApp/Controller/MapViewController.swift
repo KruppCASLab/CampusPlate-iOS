@@ -11,7 +11,7 @@ import UIKit
 import CoreLocation
 
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewListingDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewListingDelegate, MKMapViewDelegate {
     
     
 
@@ -63,6 +63,36 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewL
         
     }
     
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        var view: MKMarkerAnnotationView
+        
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: "annotation") as? MKMarkerAnnotationView {
+            view = dequeuedView
+        }
+        else {
+            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier:"annotation")
+        }
+        
+  
+        view.canShowCallout = true
+        view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        var color = "#FFFFFF"
+        for foodStop in foodStops {
+            if foodStop.name == annotation.title {
+                color = foodStop.hexColor
+                view.glyphText = String(foodStop.name.prefix(2).uppercased())
+            }
+        }
+   
+        view.markerTintColor = UIColor(hexaRGB: color)
+        
+        return view
+    }
+    
     func didComplete() {
         listingModel.loadListings {  (completed, status) in
             DispatchQueue.main.async {
@@ -110,6 +140,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewL
         let span = MKCoordinateSpan(latitudeDelta: 0.0070,longitudeDelta: 0.0070)
         let region = MKCoordinateRegion(center:initialLocation, span: span)
         mapView.setRegion(region, animated: true)
+        mapView.delegate = self
         
         
     }
