@@ -101,7 +101,7 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
             
             DispatchQueue.main.async {
                 if !data.isEmpty{
-                    var decodedImage = UIImage(data: data)
+                    let decodedImage = UIImage(data: data)
                     self.foodImageView.image = decodedImage
                 }else{
                     self.foodImageView.image = UIImage(named: "spoony.png")
@@ -111,10 +111,6 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
             
         }
         
-        let available : Int = listing.quantity ?? 0
-        var availableStr = String(available)
-        
-        
         let unixTimestamp = listing.creationTime
         let date = Date(timeIntervalSince1970: TimeInterval(unixTimestamp!))
         
@@ -122,8 +118,7 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
         dateFormatter.timeZone = TimeZone(abbreviation: "GMT") //Set timezone that you want
         dateFormatter.locale = NSLocale.current
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm" //Specify your format that you want
-        let strDate = dateFormatter.string(from: date)
-        
+
         func daysBetween(start: Date, end: Date) -> Int {
             return Calendar.current.dateComponents([.day], from: start, to: end).day!
         }

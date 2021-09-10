@@ -14,14 +14,14 @@ public class RequestUtility {
         
         var request = original
         
-        let username = KeychainCredentialManager.getCredential()?.username
-        let password = KeychainCredentialManager.getCredential()?.password
-          let loginString = String(format: "%@:%@", username as! CVarArg, password as! CVarArg)
-        let loginData = loginString.data(using: String.Encoding.utf8)!
-        let base64LoginString = loginData.base64EncodedString()
+        if let username = KeychainCredentialManager.getCredential()?.username, let password = KeychainCredentialManager.getCredential()?.password {
+            let loginString = String(format: "%@:%@", username, password)
+            let loginData = loginString.data(using: String.Encoding.utf8)!
+            let base64LoginString = loginData.base64EncodedString()
 
-        // create the request
-        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+            // create the request
+            request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        }
         
         return request
         

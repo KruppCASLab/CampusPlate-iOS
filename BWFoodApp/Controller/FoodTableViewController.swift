@@ -103,8 +103,6 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
             
             let foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)
             
-            let unixTimestamp = listing.expirationTime
-            let date = Date(timeIntervalSince1970: TimeInterval(unixTimestamp!))
             
             let dateFormatterDate = DateFormatter()
             let dateFormatterTime = DateFormatter()
@@ -116,24 +114,6 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
             dateFormatterTime.timeZone = TimeZone(abbreviation: "EDT")
             dateFormatterTime.locale = NSLocale.current
             dateFormatterTime.dateFormat = "h:MM aa"
-            
-            let strDate = dateFormatterDate.string(from: date)
-            let strTime = dateFormatterTime.string(from: date)
-            
-            let currentDate = Date()
-            let daysSince = daysBetween(start: currentDate, end: date)
-            
-            let font = UIFont.systemFont(ofSize: 12, weight: .bold)
-            
-            //            foodCell.availableUntilLabel.text = "Closes on: " + strDate + " at " + strTime
-            //
-            //            if daysSince <= 0.5 {
-            //                foodCell.availableUntilLabel.textColor = .systemRed
-            //                foodCell.availableUntilLabel.font = font
-            //            }else{
-            //                foodCell.availableUntilLabel.textColor = .white
-            //                //foodCell.availableUntilLabel.font = font
-            //            }
             
             foodCell.quantityField.text = String(listing.quantityRemaining!) + " REMAINING"
             

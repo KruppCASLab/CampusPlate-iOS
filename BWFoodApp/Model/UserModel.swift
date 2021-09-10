@@ -55,19 +55,18 @@ class UserModel {
         
         // TODO : Add to URL listingId
         let patchUrl = self.url?.appendingPathComponent(userName)
-    
+        
         var request = URLRequest(url: patchUrl!)
         
         request.httpMethod = "PATCH"
         //request = RequestUtility.addAuth(original: request)
-    
+        
         var userUpdate = Dictionary<String, Int>()
         userUpdate["pin"] = pin
         
         let encoder = JSONEncoder()
         
         do{
-            //TODO:
             let data = try encoder.encode(userUpdate)
             session.uploadTask(with: request, from: data) { (data, response, error) in
                 let decoder = JSONDecoder()
@@ -78,26 +77,26 @@ class UserModel {
                     
                     if response.status != 0{
                         completion(false)
-                    }else{
-                        
-                        
+                    }
+                    else{
                         let credentials : KeychainCredential = KeychainCredential(username: userName, password: response.data!.GUID!)
                         
-                        KeychainCredentialManager.saveCredential(credential: credentials)
-                        completion(true)
-                    
+                        if (KeychainCredentialManager.saveCredential(credential: credentials)) {
+                            completion(true)
+                        }
+                        else {
+                            completion(false)
+                        }
+
                     }
-                    
                 }
                 catch{
-                    
+                    completion(false)
                 }
-
-                
             }.resume()
         }
         catch {
-            
+            completion(false)
         }
     }
     

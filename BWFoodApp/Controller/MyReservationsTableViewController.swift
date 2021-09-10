@@ -90,7 +90,7 @@ class MyReservationsTableViewController: UITableViewController {
             let minutes = minutesTillExpiration(start: currentDate, end: date)
             let minutesTillExp = String(minutes)
             
-            let strDate = dateFormatter.string(from: date)
+           
             
             cell.expiresLabel.text = "Expires in: " + minutesTillExp + " minutes"
             

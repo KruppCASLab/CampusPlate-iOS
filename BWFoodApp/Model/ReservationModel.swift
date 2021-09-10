@@ -33,7 +33,6 @@ class ReservationModel {
                 let decoder = JSONDecoder()
                 
                 do {
-                    let jsonString = String(data: data!, encoding: .utf8)
                     let response = try decoder.decode(GetReservationResponse.self, from: data!)
                     self.reservations = response.data!
                     completion(true)

@@ -31,7 +31,6 @@ class FoodStopModel{
             let decoder = JSONDecoder()
         
             do {
-                let jsonString = String(data: data!, encoding: .utf8)
                 let response = try decoder.decode(FoodStopResponse.self, from: data!)
                 self.foodStops = response.data!
                 completion(true)
@@ -53,7 +52,6 @@ class FoodStopModel{
             let decoder = JSONDecoder()
         
             do {
-                let jsonString = String(data: data!, encoding: .utf8)
                 let response = try decoder.decode(FoodStopResponse.self, from: data!)
                 self.managedFoodStops = response.data!
                 completion(true)

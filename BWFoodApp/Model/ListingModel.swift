@@ -39,7 +39,6 @@ class ListingModel {
             let decoder = JSONDecoder()
             
             do {
-                let jsonString = String(data: data!, encoding: .utf8)
                 let response = try decoder.decode(ListingResponse.self, from: data!)
                 self.listings = response.data!
                 completion(true, 0)
@@ -52,8 +51,7 @@ class ListingModel {
     }
     
     public func getImage(listingId: Int, completion:@escaping (Data)-> Void){
-        
-        var imageURL = (self.url?.appendingPathComponent("/" + String(listingId) + "/image"))!
+        let imageURL = (self.url?.appendingPathComponent("/" + String(listingId) + "/image"))!
         
         var request = URLRequest(url: imageURL)
         request.httpMethod = "GET"
@@ -64,9 +62,8 @@ class ListingModel {
             let decoder = JSONDecoder()
             
             do {
-                let jsonString = String(data: data!, encoding: .utf8)
                 let response = try decoder.decode(ImageResponse.self, from: data!)
-                var imageString = response.data!
+                let imageString = response.data!
                 
                 let decodedData = Data(base64Encoded: imageString)!
                 completion(decodedData)
