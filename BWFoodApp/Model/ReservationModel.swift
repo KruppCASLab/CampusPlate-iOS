@@ -22,27 +22,54 @@ class ReservationModel {
     }
     
     public func getUserReservations(completion:@escaping (Bool)->Void){
+        
+        var request = URLRequest(url: self.url!)
+        
+        request.httpMethod = "GET"
+        request = RequestUtility.addAuth(original: request)
+        
+        session.dataTask(with: request){ (data, response, error) in
             
-            var request = URLRequest(url: self.url!)
+            let decoder = JSONDecoder()
             
-            request.httpMethod = "GET"
-            request = RequestUtility.addAuth(original: request)
-            
-            session.dataTask(with: request){ (data, response, error) in
+            do {
+                let response = try decoder.decode(GetReservationResponse.self, from: data!)
+                self.reservations = response.data!
+                completion(true)
+            }
+            catch {
                 
-                let decoder = JSONDecoder()
-                
-                do {
-                    let response = try decoder.decode(GetReservationResponse.self, from: data!)
-                    self.reservations = response.data!
+            }
+            
+        }.resume()
+    }
+    
+    public func deleteUserReservations(reservationId: Int, completion:@escaping (Bool)->Void){
+        let deleteURL = (self.url?.appendingPathComponent("/" + String(reservationId)))!
+        
+        var request = URLRequest(url: deleteURL)
+        
+        request.httpMethod = "DELETE"
+        request = RequestUtility.addAuth(original: request)
+        
+        session.dataTask(with: request){ (data, response, error) in
+            
+            let decoder = JSONDecoder()
+            
+            do {
+                let response = try decoder.decode(Response.self, from: data!)
+                if (response.status == 0){
                     completion(true)
+                } else {
+                    completion(false)
                 }
-                catch {
-                    
-                }
-                
-            }.resume()
-        }
+            }
+            catch {
+                completion(false)
+            }
+            
+        }.resume()
+    }
     
     public func addReservation(reservation:Reservation, completion:@escaping (CreateReservationResponse)->Void) {
         

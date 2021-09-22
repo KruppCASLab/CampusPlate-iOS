@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyReservationsTableViewController: UITableViewController {
+class MyReservationsTableViewController: UITableViewController{
     
     let reservationModel = ReservationModel.getSharedInstance()
     let foodStopModel = FoodStopModel.getSharedInstance()
@@ -30,6 +30,7 @@ class MyReservationsTableViewController: UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -116,14 +117,50 @@ class MyReservationsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         if (indexPath.row > 0) {
-            //return true
+            return true
         }
         return false
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            // TODO:
+            
+            let deleteConfirmationAlert = UIAlertController(title: "Delete Reservation", message: "Are you sure you want to delete this reservation?", preferredStyle: .actionSheet)
+            
+            deleteConfirmationAlert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: {
+                (alert:UIAlertAction!) in
+                self.reservationModel.deleteUserReservations(reservationId: self.reservations[indexPath.row - 1].reservationId!) { success in
+                    if (success) {
+                        DispatchQueue.main.async {
+                            tableView.deleteRows(at: [indexPath], with: .left)
+                        }
+                        self.reservations.remove(at: indexPath.row - 1)
+                        
+                    } else {
+                        // if an error occurs while trying to delete reseravtion
+                        DispatchQueue.main.async {
+                            
+                            let failAlert = UIAlertController(title: "An Error Occured", message: "Please try again.", preferredStyle: .alert)
+                            
+                            failAlert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                            
+                            self.present(failAlert, animated: true, completion: nil)
+                        }
+                    }
+                    DispatchQueue.main.async {
+                        
+                        let successAlert = UIAlertController(title: "Reservation Deleted", message: "You have cancelled and deleted this reservation.", preferredStyle: .alert)
+                        
+                        successAlert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                        
+                        self.present(successAlert, animated: true, completion: nil)
+                    }
+                }
+                
+            }))
+            deleteConfirmationAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+            self.present(deleteConfirmationAlert, animated: true, completion: nil)
+            
         }
     }
 }
