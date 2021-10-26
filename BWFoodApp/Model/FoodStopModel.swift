@@ -1,11 +1,3 @@
-//
-//  FoodStopModel.swift
-//  BWFoodApp
-//
-//  Created by Dan Fitzgerald on 1/26/21.
-//  Copyright © 2021 Dan Fitzgerald. All rights reserved.
-//
-
 import Foundation
 
 class FoodStopModel{
@@ -28,17 +20,26 @@ class FoodStopModel{
         request.httpMethod = "GET"
         request = RequestUtility.addAuth(original: request)
         session.dataTask(with: request){ (data, response, error) in
-            let decoder = JSONDecoder()
+            guard let data = data else {
+                completion(false)
+                return
+            }
         
+            let decoder = JSONDecoder()
             do {
-                let response = try decoder.decode(FoodStopResponse.self, from: data!)
-                self.foodStops = response.data!
+                let response = try decoder.decode(FoodStopResponse.self, from: data)
+                
+                guard let responseData = response.data else {
+                    completion(false)
+                    return
+                }
+                
+                self.foodStops = responseData
                 completion(true)
             }
             catch {
                 completion(false)
             }
-            
         }.resume()
     }
     
@@ -48,13 +49,22 @@ class FoodStopModel{
         request.httpMethod = "GET"
         request = RequestUtility.addAuth(original: request)
         session.dataTask(with: request){ (data, response, error) in
-        
+            guard let data = data else {
+                completion(false)
+                return
+            }
+            
             let decoder = JSONDecoder()
-        
             do {
-                let response = try decoder.decode(FoodStopResponse.self, from: data!)
-                self.managedFoodStops = response.data!
+                let response = try decoder.decode(FoodStopResponse.self, from: data)
+                guard let responseData = response.data else {
+                    completion(false)
+                    return
+                }
+ 
+                self.managedFoodStops = responseData
                 completion(true)
+                
             }
             catch {
                 completion(false)
@@ -74,17 +84,3 @@ class FoodStopModel{
     }
     
 }
-
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-

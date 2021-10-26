@@ -151,18 +151,35 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     private func loadData() {
         foodStopModel.loadFoodStops { (sucess) in
             self.listingModel.loadListings { (result, status) in
-                if (status == 401) {
-                    let alert = UIAlertController(title: "Error", message: "Your device can no longer login to the Campus Plate. It is recommended you reset your account. ", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Reset", style: .destructive, handler: { (action) in
-                        KeychainCredentialManager.clearCredentials()
-                        self.present(UIAlertController(title: "Completed", message: "Please force close the app to re-register your device.", preferredStyle: .alert), animated: true, completion: nil)
-                    }))
-                    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
-                        
-                    }))
+                var alertMessage:String?
+                
+                if (result == false) {
+                    alertMessage = "Unable to communicate with Campus Plate. Please check your network connection."
+                }
+                else if (status == 401) {
+                    alertMessage = "Your device can no longer login to the Campus Plate. It is recommended you reset your account."
+                }
+                
+                if let alertMessage = alertMessage {
+                    let alert = UIAlertController(title: "Error", message: alertMessage, preferredStyle: .alert)
+                    
+                    if (status == 401) {
+                        alert.addAction(UIAlertAction(title: "Reset", style: .destructive, handler: { (action) in
+                            KeychainCredentialManager.clearCredentials()
+                            self.present(UIAlertController(title: "Completed", message: "Please force close the app to re-register your device.", preferredStyle: .alert), animated: true, completion: nil)
+                        }))
+                        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+                        }))
+                    }
+                    else {
+                        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
+                        }))
+                    }
                     DispatchQueue.main.async {
                         self.present(alert, animated: true, completion: nil)
                     }
+                    return
+                    
                 }
                 DispatchQueue.main.async { [self] in
                     self.listings = listingModel.listings

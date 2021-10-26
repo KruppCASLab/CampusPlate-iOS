@@ -1,11 +1,3 @@
-//
-//  ListingModel.swift
-//  BWFoodApp
-//
-//  Created by Brian Krupp on 8/20/18.
-//  Copyright © 2018 Dan Fitzgerald. All rights reserved.
-//
-
 import Foundation
 import MapKit
 
@@ -36,12 +28,22 @@ class ListingModel {
                 }
             }
             
-            let decoder = JSONDecoder()
+            guard let data = data else {
+                completion(false, 0)
+                return
+            }
             
+            let decoder = JSONDecoder()
             do {
-                let response = try decoder.decode(ListingResponse.self, from: data!)
-                self.listings = response.data!
+                let response = try decoder.decode(ListingResponse.self, from: data)
+                guard let responseData = response.data else {
+                    completion(false, 0)
+                    return
+                }
+        
+                self.listings = responseData
                 completion(true, 0)
+            
             }
             catch {
                 completion(false, 0)
@@ -58,15 +60,24 @@ class ListingModel {
         request = RequestUtility.addAuth(original: request)
         
         session.dataTask(with: request){ (data, response, error) in
-            
+            guard let data = data else {
+//                completion(nil)
+                return
+            }
             let decoder = JSONDecoder()
             
             do {
-                let response = try decoder.decode(ImageResponse.self, from: data!)
-                let imageString = response.data!
+                let response = try decoder.decode(ImageResponse.self, from: data)
                 
-                let decodedData = Data(base64Encoded: imageString)!
-                completion(decodedData)
+                guard let responseData = response.data else {
+//                    completion(false)
+                    return
+                }
+                let imageString = responseData
+                
+                if let decodedData = Data(base64Encoded: imageString) {
+                    completion(decodedData)
+                }
             }
             catch{
                 
@@ -79,7 +90,6 @@ class ListingModel {
     }
     
     public func getListing(index:Int) -> Listing {
-        
         return self.listings[index]
     }
     
@@ -101,35 +111,6 @@ class ListingModel {
         catch {
             
         }
-    }
-    
-    public func updateQuantity(listingId: Int, releventQuantity: Int, completion:@escaping (Bool)->Void) {
-        
-        // TODO : Add to URL listingId
-        let patchUrl = (self.url?.appendingPathComponent(String(listingId)))!
-        
-        var request = URLRequest(url: patchUrl)
-        
-        request.httpMethod = "PATCH"
-        
-        request = RequestUtility.addAuth(original: request)
-        
-        let encoder = JSONEncoder()
-        do{
-            let quantityToUpdate: [String:Int] = ["quantity":releventQuantity * -1]
-            
-            let data = try encoder.encode(quantityToUpdate)
-            session.uploadTask(with: request, from: data) { (data, response, error) in
-                completion(true)
-            }.resume()
-        }
-        catch {
-            
-        }
-    }
-    
-    public func removeListing(index:Int) {
-        self.listings.remove(at: index)
     }
     
     public func getNumberOfListings() -> Int {
