@@ -40,7 +40,7 @@ class EnterEmailViewController: UIViewController, UITextFieldDelegate {
         userModel.addUser(user:user) { (completed) in
             self.enableRegisterButton()
             if (!completed) {
-                let alert = UIAlertController(title: "Error", message: "We were unable to register this account. Please check the email and try again. If you believe this is in error, please contact the administrator.", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Error", message: "We were unable to register this account. Please check your internet connection and the email address and try again.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil));
                 DispatchQueue.main.async {
                     self.present(alert, animated: true, completion: nil)

@@ -32,10 +32,15 @@ class UserModel {
             session.uploadTask(with: request, from: data) { (data, response, error) in
                 let decoder = JSONDecoder()
                 do {
-                    let response = try decoder.decode(CreateUserResponse.self, from: data!)
-                    // We were able to create the user or the user already exists and we are recreating the user
-                    if (response.status == 0 || response.status == 2) {
-                        completion(true)
+                    if let data = data {
+                        let response = try decoder.decode(CreateUserResponse.self, from: data)
+                        // We were able to create the user or the user already exists and we are recreating the user
+                        if (response.status == 0 || response.status == 2) {
+                            completion(true)
+                        }
+                        else {
+                            completion(false)
+                        }
                     }
                     else {
                         completion(false)
@@ -73,21 +78,26 @@ class UserModel {
                 
                 //Todo: decode data into pin verify response and then check response codes, if not 0 completion(false)
                 do{
-                    let response = try decoder.decode(PinVerifyResponse.self, from: data!)
-                    
-                    if response.status != 0{
-                        completion(false)
-                    }
-                    else{
-                        let credentials : KeychainCredential = KeychainCredential(username: userName, password: response.data!.GUID!)
+                    if let data = data {
+                        let response = try decoder.decode(PinVerifyResponse.self, from: data)
                         
-                        if (KeychainCredentialManager.saveCredential(credential: credentials)) {
-                            completion(true)
-                        }
-                        else {
+                        if response.status != 0{
                             completion(false)
                         }
+                        else{
+                            let credentials : KeychainCredential = KeychainCredential(username: userName, password: response.data!.GUID!)
+                            
+                            if (KeychainCredentialManager.saveCredential(credential: credentials)) {
+                                completion(true)
+                            }
+                            else {
+                                completion(false)
+                            }
 
+                        }
+                    }
+                    else {
+                        completion(false)
                     }
                 }
                 catch{
