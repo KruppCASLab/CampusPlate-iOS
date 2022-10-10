@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sDa-tb-Zar">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sDa-tb-Zar">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campusplategreen" translatesAutoresizingMaskIntoConstraints="NO" id="LD5-1m-z25">
-                                <rect key="frame" x="16" y="359" width="358" height="136"/>
+                                <rect key="frame" x="16" y="360.66666666666669" width="358" height="136"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="136" id="bkt-om-ibm"/>
                                 </constraints>
@@ -51,14 +51,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Campus-Plate-App-Background" translatesAutoresizingMaskIntoConstraints="NO" id="W9U-P4-6Of">
-                                <rect key="frame" x="-110.66666666666669" y="-115.66666666666669" width="611.33333333333337" height="1085.3333333333333"/>
+                                <rect key="frame" x="-110.66666666666669" y="-114" width="611.33333333333337" height="1085"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1085" id="Bjk-Ky-Wst"/>
                                     <constraint firstAttribute="width" constant="611" id="P72-gO-EKj"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyy-Is-Frv">
-                                <rect key="frame" x="96" y="504" width="198" height="54"/>
+                                <rect key="frame" x="96" y="505.66666666666674" width="198" height="54"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="y6d-cs-ELe"/>
@@ -76,20 +76,20 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0vp-pL-NBO">
-                                <rect key="frame" x="96" y="410" width="198" height="34"/>
+                                <rect key="frame" x="96" y="411.66666666666669" width="198" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teX-Bb-MqN">
-                                <rect key="frame" x="96" y="378" width="139" height="24"/>
+                                <rect key="frame" x="96" y="379.66666666666669" width="139" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Campus-Plate-Logo-White-Full" translatesAutoresizingMaskIntoConstraints="NO" id="O1l-js-KqJ">
-                                <rect key="frame" x="49" y="218.66666666666666" width="292" height="105.33333333333334"/>
+                                <rect key="frame" x="49" y="219.99999999999997" width="292" height="105.66666666666666"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="O1l-js-KqJ" secondAttribute="height" multiplier="158:57" id="HWn-wh-LrI"/>
                                 </constraints>
@@ -136,7 +136,7 @@
             <objects>
                 <viewController id="hYy-UZ-3mq" customClass="EnterPinViewController" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="abU-aV-uLZ" customClass="UIControl">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Campus-Plate-App-Background" translatesAutoresizingMaskIntoConstraints="NO" id="qez-cB-CtZ">
@@ -183,10 +183,10 @@
                                     <constraint firstAttribute="width" secondItem="e5i-ze-RGr" secondAttribute="height" multiplier="158:57" id="Nab-TS-3UI"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The pin is sent to the email that you provided." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g5F-aB-erd">
-                                <rect key="frame" x="49" y="574" width="292" height="50"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The pin is sent to the email that you provided. Please check your Junk or Clutter folder." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g5F-aB-erd">
+                                <rect key="frame" x="49" y="574" width="292" height="67"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="p8a-xh-pmg"/>
+                                    <constraint firstAttribute="height" constant="67" id="p8a-xh-pmg"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -232,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qP7-rF-LW5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1092.753623188406" y="-658.25892857142856"/>
+            <point key="canvasLocation" x="1092.3076923076924" y="-658.29383886255926"/>
         </scene>
         <!--CREATE A LISTING-->
         <scene sceneID="gP8-lm-u5i">
@@ -243,7 +243,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="jQl-79-hY4">
-                                <rect key="frame" x="0.0" y="140" width="390" height="670"/>
+                                <rect key="frame" x="0.0" y="143" width="390" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Vu-hJ-oqk" userLabel="Scroll View Content" customClass="UIControl">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="722"/>
@@ -522,11 +522,11 @@
             <objects>
                 <viewController id="q7Y-US-kbJ" customClass="MapViewController" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GTo-6q-3ho">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="s8h-mA-9Qe">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                             </mapView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nzk-CQ-D1q">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="0.0"/>
@@ -594,12 +594,12 @@
             <objects>
                 <tableViewController id="236-qj-P6u" customClass="MyReservationsTableViewController" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fQz-Zx-thQ">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReservationTitleCell" id="V2h-4u-dWi" customClass="ReservationTitleTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="58.333332061767578"/>
+                                <rect key="frame" x="0.0" y="50" width="390" height="58.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V2h-4u-dWi" id="et9-Qt-7lb">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="58.333332061767578"/>
@@ -626,7 +626,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReservationCell" rowHeight="165" id="qyM-1X-qpW" customClass="MyReservationsTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="102.99999809265137" width="390" height="165"/>
+                                <rect key="frame" x="0.0" y="108.33333206176758" width="390" height="165"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qyM-1X-qpW" id="CkO-yl-N5r">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="165"/>
@@ -779,7 +779,7 @@
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myReservations" rowHeight="58" id="R9L-WV-uhC" customClass="ReservationTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="58"/>
+                                                <rect key="frame" x="0.0" y="50" width="390" height="58"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R9L-WV-uhC" id="p9w-K1-QmJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="390" height="58"/>
@@ -822,7 +822,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodListingCell" rowHeight="110" id="3jq-qR-meP" customClass="FoodListingTableViewCell" customModule="BWFoodApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="102.66666603088379" width="390" height="110"/>
+                                                <rect key="frame" x="0.0" y="108" width="390" height="110"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3jq-qR-meP" id="Orb-7a-paR">
                                                     <rect key="frame" x="0.0" y="0.0" width="390" height="110"/>
@@ -954,7 +954,7 @@
             <objects>
                 <viewController id="NFq-Ii-tXi" customClass="PickUpFoodViewController" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xRC-x0-scu">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ba-kS-vsN">
@@ -1068,7 +1068,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" image="spoony.png" translatesAutoresizingMaskIntoConstraints="NO" id="48n-5Y-J0c">
-                                <rect key="frame" x="16" y="450" width="358" height="340"/>
+                                <rect key="frame" x="16" y="450" width="358" height="337"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
@@ -1132,7 +1132,7 @@
                                 <action selector="cancel:" destination="NFq-Ii-tXi" id="s45-lw-sjB"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Pick Up" style="done" id="dM9-bk-dPn">
+                        <barButtonItem key="rightBarButtonItem" title="Reserve" style="done" id="dM9-bk-dPn">
                             <color key="tintColor" red="0.5127672553" green="0.81938940289999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="pickUpButton:" destination="NFq-Ii-tXi" id="ICL-Je-R4k"/>
@@ -1165,17 +1165,17 @@
             <objects>
                 <viewController id="rmF-MA-PRy" customClass="PickUpConfirmationViewController" customModule="BWFoodApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Lm-Au-AN6">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="YOUR FOOD STOP:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eP-a1-4v5">
-                                <rect key="frame" x="16" y="44" width="358" height="39"/>
+                                <rect key="frame" x="16" y="47" width="358" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zy-36-DsM">
-                                <rect key="frame" x="16" y="92" width="418" height="418"/>
+                                <rect key="frame" x="16" y="89" width="418" height="418"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="KNOWLTON CENTER" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUl-Y4-DPf">
                                         <rect key="frame" x="49" y="141" width="276" height="107"/>
@@ -1218,13 +1218,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeH-Pi-hGd">
-                                <rect key="frame" x="-38" y="518" width="395" height="339"/>
+                                <rect key="frame" x="-38" y="515" width="395" height="339"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="475"/>
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izT-zl-uSv">
-                                <rect key="frame" x="121" y="703" width="148" height="55"/>
+                                <rect key="frame" x="121" y="700" width="148" height="55"/>
                                 <color key="backgroundColor" red="0.91362601519999997" green="0.91378277539999997" blue="0.91361618040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="izT-zl-uSv" secondAttribute="height" multiplier="148:55" id="8fY-UM-uyh"/>
@@ -1284,7 +1284,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TW0-WC-Erl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="wSu-K5-vDV">
-                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="black" pointSize="33"/>
@@ -1306,7 +1306,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gqb-TN-bIP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="rGw-Tk-RwC">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
@@ -1323,7 +1323,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zRq-cf-UCH"/>
+        <segue reference="S9U-BH-LY6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Campus-Plate-App-Background" width="5939" height="8305"/>
@@ -1337,7 +1337,7 @@
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
