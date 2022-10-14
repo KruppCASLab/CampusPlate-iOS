@@ -194,7 +194,7 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
         
         loadData()
         
-        
+        pulleyViewController?.setDrawerPosition(position: .partiallyRevealed, animated: false)
         
         // The bounce here is optional, but it's done automatically after appearance as a demonstration.
         Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(bounceDrawer), userInfo: nil, repeats: false)
