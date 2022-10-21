@@ -163,7 +163,7 @@ class CreateNewListing:
         
         var quantity = 0
         var expiratonTime = 0
-        var weight = 0
+        var weight = 0.0
         
         if let quantityText = quantityTextField.text {
             if let quantityInt = Int(quantityText) {
@@ -188,8 +188,8 @@ class CreateNewListing:
         }
         
         if let weightText = weightField.text {
-            if let weightInt = Int(weightText) {
-                weight = weightInt
+            if let weightValue = Double(weightText) {
+                weight = weightValue
             }
             else {
                 formCompleted = false
