@@ -34,8 +34,7 @@ class CreateNewListing:
     
     let impact = UIImpactFeedbackGenerator()
     
-    
-    @IBOutlet weak var expirationTimeField: UITextField!
+    @IBOutlet weak var expirationTimePicker: UIDatePicker!
     
     let listingModel = ListingModel.getSharedInstance()
     let foodStopModel = FoodStopModel.getSharedInstance()
@@ -78,6 +77,10 @@ class CreateNewListing:
         locationTextField.inputView = foodStopPicker
         locationTextField.delegate = self
         locationTextField.returnKeyType = .done
+        
+        // Initialize date by default, 2 days from now
+        expirationTimePicker.minimumDate = Date()
+        expirationTimePicker.date = Date(timeIntervalSinceNow: 60 * 60 * 24 * 2)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -175,18 +178,7 @@ class CreateNewListing:
                 
             }
         }
-        
-        if let expirationText = expirationTimeField.text {
-            if let expirationInt = Int(expirationText) {
-                expiratonTime = expirationInt
-                
-            }
-            else {
-                formCompleted = false
-                
-            }
-        }
-        
+    
         if let weightText = weightField.text {
             if let weightValue = Double(weightText) {
                 weight = weightValue
@@ -214,7 +206,7 @@ class CreateNewListing:
         
         let image = foodImage.image
         
-        let unixTimeStampExpiration = expiratonTime * 86400 + Int(NSDate().timeIntervalSince1970)
+        let unixTimeStampExpiration = expirationTimePicker.date.timeIntervalSince1970
         
         var listing:Listing
         if let image = image {

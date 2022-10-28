@@ -115,7 +115,13 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
             dateFormatterTime.locale = NSLocale.current
             dateFormatterTime.dateFormat = "h:MM aa"
             
-            foodCell.quantityField.text = String(listing.quantityRemaining!) + " REMAINING"
+            if let quantityRemaining = listing.quantityRemaining {
+                foodCell.quantityField.text = String(quantityRemaining) + " REMAINING"
+            }
+            else {
+                foodCell.quantityField.text = ""
+            }
+            
             
             foodCell.foodStopLocationLabel.text = foodStop!.name
             foodCell.foodLabel.text = listing.title?.uppercased()
