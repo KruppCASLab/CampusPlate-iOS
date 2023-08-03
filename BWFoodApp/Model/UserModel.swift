@@ -20,7 +20,7 @@ class UserModel {
         return self.sharedInstance
     }
     
-    public func addUser(user:User, completion:@escaping (Bool)->Void) {
+    public func addUser(user:User, completion:@escaping (Bool, String)->Void) {
         self.users.append(user)
         var request = URLRequest(url: self.url!)
         
@@ -36,18 +36,18 @@ class UserModel {
                         let response = try decoder.decode(CreateUserResponse.self, from: data)
                         // We were able to create the user or the user already exists and we are recreating the user
                         if (response.status == 0 || response.status == 2) {
-                            completion(true)
+                            completion(true, "Registerd user")
                         }
                         else {
-                            completion(false)
+                            completion(false, String("Unable to register user: \(response.status)"))
                         }
                     }
                     else {
-                        completion(false)
+                        completion(false, String("Unable to register user (error):" + (error?.localizedDescription ?? "data not returned")))
                     }
                 }
                 catch {
-                    completion(false)
+                    completion(false, String("Unable to register user: " + error.localizedDescription))
                 }
             }.resume()
         }

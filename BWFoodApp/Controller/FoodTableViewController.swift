@@ -76,9 +76,13 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return listingModel.getNumberOfListings() + 1
-        
+        // Return model + 1 for the resevation, otherwise 2 for reservation and empty state
+        if (listingModel.getNumberOfListings() > 0 ) {
+            return listingModel.getNumberOfListings() + 1
+        }
+        else {
+            return 2;
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -88,15 +92,21 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
         if indexPath.row == 0 {
-            let cell:ReservationTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myReservations") as! ReservationTableViewCell
+            let cell:ReservationTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myReservations", for: indexPath) as! ReservationTableViewCell
             
             cell.colorIndicator.layer.cornerRadius = min(cell.colorIndicator.frame.size.width/2, cell.colorIndicator.frame.size.height/2)
             
             cell.reservationLabel.text = "RESERVATIONS"
             
             return cell
-        }else{
-            let foodCell:FoodListingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FoodListingCell") as! FoodListingTableViewCell
+        }
+        else if indexPath.row == 1 && listingModel.getNumberOfListings() == 0 {
+            let cell:EmptyStateTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EmptyStateCell", for: indexPath) as! EmptyStateTableViewCell
+            return cell
+  
+        }
+        else{
+            let foodCell:FoodListingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FoodListingCell", for: indexPath) as! FoodListingTableViewCell
             
             let listing:Listing = listingModel.getListing(index: (indexPath.row - 1))
 

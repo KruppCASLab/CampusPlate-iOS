@@ -68,6 +68,11 @@ class MyReservationsTableViewController: UITableViewController{
             
             let reservation:Reservation = reservations[indexPath.row - 1]
             
+            guard let listingId = reservation.listingId else {
+                cell.foodName.text = "Error: Unable to load reservation listing, please try again."
+                return cell
+            }
+                        
             let unixTimestamp = reservation.timeExpired
             let date = Date(timeIntervalSince1970: TimeInterval(unixTimestamp!))
             
@@ -76,11 +81,17 @@ class MyReservationsTableViewController: UITableViewController{
                 return Calendar.current.dateComponents([.minute], from: start, to: end).minute!
             }
             
-            let listing = listingModel.getListingById(listingId: reservation.listingId!)
+            guard let listing = listingModel.getListingById(listingId: listingId), let foodStopId = listing.foodStopId else {
+                cell.foodName.text = "Error: Unable to load reservation listing, please try again."
+                return cell
+            }
             
-            let foodStop:FoodStop = foodStopModel.getFoodStop(foodStopId: listing!.foodStopId!)!
+            guard let foodStop:FoodStop = foodStopModel.getFoodStop(foodStopId: foodStopId) else {
+                cell.foodName.text = "Error: Unable to load food stop of listing, please try again."
+                return cell
+            }
             
-            cell.foodName.text = listing!.title
+            cell.foodName.text = listing.title
             cell.foodStopLocation.text = foodStop.name
             
             let dateFormatter = DateFormatter()
@@ -91,7 +102,7 @@ class MyReservationsTableViewController: UITableViewController{
             let minutes = minutesTillExpiration(start: currentDate, end: date)
             let minutesTillExp = String(minutes)
             
-           
+            
             
             cell.expiresLabel.text = "Expires in: " + minutesTillExp + " minutes"
             
@@ -99,7 +110,7 @@ class MyReservationsTableViewController: UITableViewController{
             cell.reserved.text = "Reserved " + String(reservation.quantity!)
             cell.reservationCode.text = "Reservation Code: " + String(reservation.code!)
             
-            listingModel.getImage(listingId: listing!.listingId!) { (data) in
+            listingModel.getImage(listingId: listingId) { (data) in
                 DispatchQueue.main.async {
                     if !data.isEmpty{
                         let decodedImage = UIImage(data: data)
@@ -112,7 +123,6 @@ class MyReservationsTableViewController: UITableViewController{
             
             return cell
         }
-    
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

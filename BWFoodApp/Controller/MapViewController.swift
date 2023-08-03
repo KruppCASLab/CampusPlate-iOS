@@ -26,7 +26,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewL
     public var createNewListingDelegate : CreateNewListingDelegate?
     @IBOutlet weak var controlsContainer: UIView!
     
-    var foodStops:[FoodStop]!
+    var foodStops:[FoodStop] = []
     
     override func viewWillAppear(_ animated: Bool) {
         foodStopModel.loadManagedFoodStops { (completed) in

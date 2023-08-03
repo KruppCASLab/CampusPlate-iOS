@@ -61,7 +61,7 @@ class CreateNewListing:
             
             self.selectedFoodStop = foodStopPickerData[0]
             DispatchQueue.main.async {
-                locationTextField.text = foodStopPickerData[0].name
+                self.locationTextField.text = self.foodStopPickerData[0].name
             }
         }
         

@@ -36,11 +36,10 @@ class EnterEmailViewController: UIViewController, UITextFieldDelegate {
         user = User(userName: emailAddress.lowercased().trimmingCharacters(in: .whitespacesAndNewlines))
         emailField.text = user.userName;
         
-        
-        userModel.addUser(user:user) { (completed) in
+        userModel.addUser(user:user) { (completed, error) in
             self.enableRegisterButton()
             if (!completed) {
-                let alert = UIAlertController(title: "Error", message: "We were unable to register this account. Please check your internet connection and the email address and try again.", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Error", message: "We were unable to register this account(\(String(describing: self.user.userName))). Please check your internet connection to (\(ServiceClient.serviceClientUrl())) and the email address and try again." + error, preferredStyle: .alert)
                 alert.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil));
                 DispatchQueue.main.async {
                     self.present(alert, animated: true, completion: nil)
@@ -51,7 +50,6 @@ class EnterEmailViewController: UIViewController, UITextFieldDelegate {
                     self.performSegue(withIdentifier: "goToPinScreen", sender: nil)
                 }
             }
-            
         }
     }
     
