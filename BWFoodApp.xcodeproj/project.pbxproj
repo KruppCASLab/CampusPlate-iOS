@@ -209,6 +209,12 @@
 			isa = PBXGroup;
 			children = (
 				E0D0D33E261DF7A9009BDBF3 /* CreateUserResponse.swift */,
+				E05F76E824005C43006E29AF /* ListingResponse.swift */,
+				F69EBE8825EF026900EF5ABA /* GetReservationResponse.swift */,
+				F692EA9125DB0E480069589B /* ImageResponse.swift */,
+				E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */,
+				F614DAF325F6C6430056C2CA /* CreateReservationResponse.swift */,
+				E04EAC3025D59C63000F5879 /* FoodStopResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -234,12 +240,7 @@
 				F6788FFE23E7C037009FC4C6 /* User.swift */,
 				F6663F55256C4D6E0084EC1C /* FoodStop.swift */,
 				F61DCBAC2326E7C700F7FD7C /* Response.swift */,
-				E05F76E824005C43006E29AF /* ListingResponse.swift */,
-				F69EBE8825EF026900EF5ABA /* GetReservationResponse.swift */,
-				E05F76E624005C2B006E29AF /* PinVerifyResponse.swift */,
 				E02014B02412E71300C75D6A /* GUID.swift */,
-				E04EAC3025D59C63000F5879 /* FoodStopResponse.swift */,
-				F614DAF325F6C6430056C2CA /* CreateReservationResponse.swift */,
 				D4FF758C26DFE393000B40FF /* Credential.swift */,
 			);
 			path = Types;
@@ -249,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				E014BACF26DE94A8006A0D11 /* Configuration */,
-				F692EA9125DB0E480069589B /* ImageResponse.swift */,
 				F69265DD24463754005C0701 /* KeychainCredentialManager.swift */,
 				F69265DF2446376C005C0701 /* KeychainCredential.swift */,
 				F6BCD71824286CE1000C2E02 /* gif.swift */,

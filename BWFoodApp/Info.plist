@@ -26,10 +26,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Campus Plate uses your camera to capture food to post at food stops.</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Campus Plate uses your location to help find food stops near you.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Campus Plate uses your location to help find food stops near you.</string>
+	<string>Campus Plate uses your location to allow you to recover food from dedicated food stops.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

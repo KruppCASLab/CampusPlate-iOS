@@ -12,9 +12,7 @@ import Foundation
 class ServiceClient {
     
     static func serviceClientUrl() -> String {
-        let url = "https://" + (Bundle.main.infoDictionary?["BASE_URL"] as! String) + "/cp/rest.php"
-        
+        let url = (Bundle.main.infoDictionary?["BASE_URL"] as! String)
         return url
-        
     }
 }

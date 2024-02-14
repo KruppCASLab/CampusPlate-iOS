@@ -1,4 +1,4 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-BASE_URL = mopsdev.bw.edu
+BASE_URL = https:/$()/mopsdev.bw.edu/cp/rest.php
