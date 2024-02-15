@@ -142,10 +142,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewL
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
             switch status {
+            case .notDetermined:
+                locationManager.requestWhenInUseAuthorization()
             case .denied, .restricted:
                 showLocationAccessDeniedAlert()
-            case .notDetermined:
-                // Location access not determined yet, do nothing
+            case .authorizedWhenInUse:
                 break
             @unknown default:
                 fatalError("Unknown case when handling location authorization status.")
