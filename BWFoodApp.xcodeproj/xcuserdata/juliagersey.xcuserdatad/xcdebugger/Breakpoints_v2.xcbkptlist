@@ -3,4 +3,150 @@
    uuid = "D310D261-74DB-401B-BFC3-0C71DBD6F561"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "811F4459-6CD7-48CA-A8D9-0372FEC12F12"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BWFoodApp/LocationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6B304D87-186E-4FE6-8F4B-6659D42707FA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "viewDidDisappear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "66989C17-46E2-4A7E-9791-80AF8FEC4BDD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BWFoodApp/Controller/PickUpFoodViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A190442-4875-442A-8B76-011766869C12"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BWFoodApp/LocationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "startUpdatingLocation()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6A190442-4875-442A-8B76-011766869C12 - 53aecb1a126795fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.LocationManager.startUpdatingLocation() -&gt; ()"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliagersey/Documents/GitHub/CampusPlate-iOS/BWFoodApp/LocationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "6A190442-4875-442A-8B76-011766869C12 - 53aecb1a126795fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.LocationManager.startUpdatingLocation() -&gt; ()"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliagersey/Documents/GitHub/CampusPlate-iOS/BWFoodApp/LocationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D4F1A7B0-86FC-4996-8590-D271D72A42D4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BWFoodApp/LocationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "startUpdatingLocation()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D4F1A7B0-86FC-4996-8590-D271D72A42D4 - 53aecb1a1267959d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.LocationManager.startUpdatingLocation() -&gt; ()"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliagersey/Documents/GitHub/CampusPlate-iOS/BWFoodApp/LocationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "218">
+               </Location>
+               <Location
+                  uuid = "D4F1A7B0-86FC-4996-8590-D271D72A42D4 - 53aecb1a1267959d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BWFoodApp.LocationManager.startUpdatingLocation() -&gt; ()"
+                  moduleName = "BWFoodApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliagersey/Documents/GitHub/CampusPlate-iOS/BWFoodApp/LocationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "251">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

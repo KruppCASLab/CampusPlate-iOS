@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD5853BF2935273700E3CF66 /* EmptyStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5853BE2935273700E3CF66 /* EmptyStateTableViewCell.swift */; };
+		D40213942B7D4290006493C3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40213932B7D4290006493C3 /* LocationManager.swift */; };
 		D47AE5F926E86CFA0047C726 /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47AE5F826E86CFA0047C726 /* ServiceClient.swift */; };
 		D4FF758D26DFE393000B40FF /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF758C26DFE393000B40FF /* Credential.swift */; };
 		E003B722254B33300065DF41 /* EnterPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E003B721254B33300065DF41 /* EnterPinViewController.swift */; };
@@ -76,6 +77,7 @@
 
 /* Begin PBXFileReference section */
 		CD5853BE2935273700E3CF66 /* EmptyStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateTableViewCell.swift; sourceTree = "<group>"; };
+		D40213932B7D4290006493C3 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D47AE5F826E86CFA0047C726 /* ServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
 		D4FF758C26DFE393000B40FF /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		E003B721254B33300065DF41 /* EnterPinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPinViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				F69BDB4B20FA55790065BB78 /* LaunchScreen.storyboard */,
 				F69BDB4E20FA55790065BB78 /* Info.plist */,
 				E02A909C262F43CA003B342B /* AppState.swift */,
+				D40213932B7D4290006493C3 /* LocationManager.swift */,
 			);
 			path = BWFoodApp;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				F6D49FA225F9739D00433642 /* ReservationTitleTableViewCell.swift in Sources */,
 				E02014B12412E71300C75D6A /* GUID.swift in Sources */,
 				F6AE83A4254B33A500D38310 /* UIView+constrainToParent.swift in Sources */,
+				D40213942B7D4290006493C3 /* LocationManager.swift in Sources */,
 				F6BCD71924286CE1000C2E02 /* gif.swift in Sources */,
 				E05F76E924005C43006E29AF /* ListingResponse.swift in Sources */,
 				F6E9726B244B51C8009A2BB0 /* SegueCheckerViewController.swift in Sources */,

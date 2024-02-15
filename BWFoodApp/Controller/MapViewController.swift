@@ -13,10 +13,6 @@ import CoreLocation
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewListingDelegate, MKMapViewDelegate {
     
-    
-
-    
-    
     @IBOutlet weak var mapView: MKMapView!
     let listingModel = ListingModel.getSharedInstance()
     let foodStopModel = FoodStopModel.getSharedInstance()
@@ -122,7 +118,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewL
     }
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -144,6 +139,35 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewL
         
         
     }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+            switch status {
+            case .denied, .restricted:
+                showLocationAccessDeniedAlert()
+            case .notDetermined:
+                // Location access not determined yet, do nothing
+                break
+            @unknown default:
+                fatalError("Unknown case when handling location authorization status.")
+            }
+        }
+
+        private func showLocationAccessDeniedAlert() {
+            let alertController = UIAlertController(
+                title: "Location Access Denied",
+                message: "Please enable location access in Settings. Campus Plate is unable to offer Self-Serve Food Stops until location access is allowed.",
+                preferredStyle: .alert
+            )
+            let settingsAction = UIAlertAction(title: "Settings", style: .default) { _ in
+                if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+                }
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alertController.addAction(settingsAction)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+        }
     
     
     //    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

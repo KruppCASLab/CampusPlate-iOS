@@ -8,9 +8,9 @@
 
 import UIKit
 import CoreGraphics
+import CoreLocation
 
-class PickUpFoodViewController: UIViewController, PresentingViewControllerDelegate {
-    
+class PickUpFoodViewController: UIViewController, PresentingViewControllerDelegate, CLLocationManagerDelegate {
     
     let listingModel = ListingModel.getSharedInstance()
     let foodStopModel = FoodStopModel.getSharedInstance()
@@ -53,7 +53,8 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // TODO: based on a geofence around the area, switch button to say Retrieve (if self-stop)
+        LocationManager.shared.startUpdatingLocation()
         
         //        let width:CGFloat = UIScreen.main.bounds.width*0.0533
         //        colorIndicator.frame = CGRect(x: 0,y: 0,width: width,height: width)
@@ -118,7 +119,7 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
         dateFormatter.timeZone = TimeZone(abbreviation: "GMT") //Set timezone that you want
         dateFormatter.locale = NSLocale.current
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm" //Specify your format that you want
-
+        
         func daysBetween(start: Date, end: Date) -> Int {
             return Calendar.current.dateComponents([.day], from: start, to: end).day!
         }
@@ -138,6 +139,11 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
         }
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        LocationManager.shared.stopUpdatingLocation()
     }
     
     
@@ -167,7 +173,7 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
                     self.pickUpButton.isEnabled = true
                 }))
                 
-                        
+                
                 DispatchQueue.main.async {
                     self.present(alert, animated: true, completion: nil)
                 }
@@ -180,7 +186,7 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
                     self.dismiss(animated: true, completion: nil)
                 }))
                 
-                        
+                
                 DispatchQueue.main.async {
                     self.present(alert, animated: true, completion: nil)
                 }
@@ -235,6 +241,4 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
         }
     }
 }
-
-
 
