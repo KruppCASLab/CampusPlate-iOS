@@ -18,9 +18,10 @@ public class FoodStop:Codable {
     let lng : Double
     let hexColor: String
     let foodStopNumber: Int
+    let type: String
     
 
-    init(foodStopID:Int, name:String, description: String, streetAddress:String, lat: Double, lng: Double, hexColor: String, foodStopNumber:Int) {
+    init(foodStopID:Int, name:String, description: String, streetAddress:String, lat: Double, lng: Double, hexColor: String, foodStopNumber:Int, type:String) {
     
         self.foodStopId = foodStopID
         self.name = name
@@ -30,7 +31,7 @@ public class FoodStop:Codable {
         self.lng = lng
         self.hexColor = hexColor
         self.foodStopNumber = foodStopNumber
-        
+        self.type = type
     }
 }
 

@@ -10,7 +10,14 @@ import UIKit
 import CoreGraphics
 import CoreLocation
 
-class PickUpFoodViewController: UIViewController, PresentingViewControllerDelegate, CLLocationManagerDelegate {
+// once the viwe popsup, check to see if the user location is within a range of a geofence, then switch button text
+// use Geofence API -- region enter and exit (i don't think we will use this approach tho)
+// use Dispatch.main.async here to
+
+// alternative: add foodstop if foodstop type is unmanaged, see if the users location is .004 near lat/long which will disable/enable -- so all you need is the user's current location (delegate)
+
+
+class PickUpFoodViewController: UIViewController, PresentingViewControllerDelegate, CLLocationManagerDelegate, LocationManagerDelegate {
     
     let listingModel = ListingModel.getSharedInstance()
     let foodStopModel = FoodStopModel.getSharedInstance()
@@ -18,6 +25,9 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
     
     public var delegate:CreateNewListingDelegate?
     public var presentingDelegate:PresentingViewControllerDelegate?
+    public var locationDelegate:LocationManagerDelegate?
+    var locationManager = CLLocationManager()
+    var currentLocation = CLLocation()
     
     @IBOutlet weak var navBar: UINavigationItem!
     
@@ -42,7 +52,6 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var pickUpButton: UIBarButtonItem!
     
-    
     @IBOutlet weak var stepper: UIStepper!
     
     func childViewDidComplete() {
@@ -50,11 +59,30 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
             presentingDelegate.childViewDidComplete()
         }
     }
+
+    func receiveLocation(location: CLLocation) {
+        currentLocation = location
+        checkGeofence(location: location)
+    }
+    
+    
+    func checkGeofence(location: CLLocation) {
+        let startLat = foodStop.lat + 0.0004
+        let endLat = foodStop.lat - 0.0004
+        let startLng = foodStop.lng + 0.0004
+        let endLng = foodStop.lng - 0.0004
+        var shouldEnable = false
+        if location.coordinate.latitude >= endLat && location.coordinate.latitude <= startLat && location.coordinate.longitude >= endLng && location.coordinate.longitude <= startLng {
+            shouldEnable = true
+        }
+        DispatchQueue.main.async {
+            self.pickUpButton.isEnabled = shouldEnable
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TODO: based on a geofence around the area, switch button to say Retrieve (if self-stop)
-        LocationManager.shared.startUpdatingLocation()
+        
         
         //        let width:CGFloat = UIScreen.main.bounds.width*0.0533
         //        colorIndicator.frame = CGRect(x: 0,y: 0,width: width,height: width)
@@ -83,6 +111,13 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
         
         
         foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)!
+        
+        if foodStop.type == "unmanaged" {
+            DispatchQueue.main.async {
+                self.pickUpButton.title = "Retrieve"
+                self.pickUpButton.isEnabled = false
+            }
+        }
         
         pickUpButton.tintColor = UIColor(hexaRGB: foodStop.hexColor)
         cancelButton.tintColor = UIColor(hexaRGB: foodStop.hexColor)
@@ -139,6 +174,12 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
         }
         
         // Do any additional setup after loading the view.
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        LocationManager.shared.delegate = self
+        LocationManager.shared.startUpdatingLocation()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -198,6 +239,7 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
                     //vc.listing = listing
                     createdReservation = ReservationResponse.data
                     self.performSegue(withIdentifier: "pickUpConfirmation", sender: self)
+                    
                 }
             }
             

@@ -8,22 +8,33 @@
 
 import Foundation
 import CoreLocation
+import CoreLocationUI
 
-  // only have this start when reservation -> food is clicked (use Dispatch.Main.async Queue) to change reserve/retrieve, stop tracking location when it view.Disappear()
-  //pragma mark - location delegate
-//  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//       print(locations)
-//  }
+protocol LocationManagerDelegate {
+    func receiveLocation(location:CLLocation)
+}
+
 class LocationManager: NSObject, CLLocationManagerDelegate {
     
     static let shared = LocationManager()
     
     private let locationManager = CLLocationManager()
+    private var currentLocation: CLLocation?
+    public var delegate:LocationManagerDelegate?
     
     override private init() {
         super.init()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            currentLocation = location
+            if let delegate = delegate {
+                delegate.receiveLocation(location: location)
+            }
+        }
     }
     
     func startUpdatingLocation() {

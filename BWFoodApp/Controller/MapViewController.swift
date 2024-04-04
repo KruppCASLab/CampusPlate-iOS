@@ -9,14 +9,19 @@
 import MapKit
 import UIKit
 import CoreLocation
+// TODO: find a way to have both the add listing button AND enable the userLocation button on the map
 
-
-class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewListingDelegate, MKMapViewDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewListingDelegate, MKMapViewDelegate, LocationManagerDelegate {
+    
+    func receiveLocation(location: CLLocation) {
+        currentLocation = location
+    }
     
     @IBOutlet weak var mapView: MKMapView!
     let listingModel = ListingModel.getSharedInstance()
     let foodStopModel = FoodStopModel.getSharedInstance()
-    let locationManager = CLLocationManager()
+    var locationManager = CLLocationManager()
+    var currentLocation = CLLocation()
     let session = URLSession.shared
     let listing : Listing! = nil
     public var createNewListingDelegate : CreateNewListingDelegate?
@@ -36,8 +41,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewL
             }
             
         }
-        
-        foodStopModel.loadFoodStops { (completed) in
+        foodStopModel.loadFoodStops { [self] (completed) in
             self.foodStops = self.foodStopModel.foodStops
             
             for foodStop in self.foodStops{
@@ -53,10 +57,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewL
                 DispatchQueue.main.async {
                     self.mapView.addAnnotation(anno)
                 }
+                
             }
         }
-        
-        
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
@@ -77,16 +80,23 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewL
         view.canShowCallout = true
         view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         var color = "#FFFFFF"
+        var found = false
         for foodStop in foodStops {
             if foodStop.name == annotation.title {
                 color = foodStop.hexColor
                 view.glyphText = String(foodStop.name.prefix(2).uppercased())
+                found = true
+            } else {
+                
             }
         }
    
         view.markerTintColor = UIColor(hexaRGB: color)
-        
-        return view
+        if (found) {
+            return view
+        } else {
+            return nil
+        }
     }
     
     func didComplete() {
@@ -107,6 +117,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewL
                 if let addVc:CreateNewListing = vc.viewControllers[0] as? CreateNewListing {
                     addVc.delegate = self
                 }
+                
             }
         }
     }
@@ -117,11 +128,31 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewL
         
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else {
+            return
+        }
+        currentLocation = location
+    }
+
+   func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+       print("Location manager failed with error: \(error.localizedDescription)")
+       // TODO: Handle the error
+   }
     
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if overlay is MKCircle {
+            let renderer = MKCircleRenderer(overlay: overlay)
+            renderer.fillColor = UIColor.blue.withAlphaComponent(0.1)
+            renderer.strokeColor = UIColor.blue
+            renderer.lineWidth = 1
+            return renderer
+        }
+        return MKOverlayRenderer(overlay: overlay)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         controlsContainer.layer.cornerRadius = 10.0
         
         self.locationManager.requestWhenInUseAuthorization()
@@ -129,15 +160,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewL
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
         
+                
+        if let location = locationManager.location {
+            let initialLocation = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            let span = MKCoordinateSpan(latitudeDelta: 0.0070, longitudeDelta: 0.0070)
+            let region = MKCoordinateRegion(center: initialLocation, span: span)
+            mapView.setRegion(region, animated: true)
+        }
         
-        let initialLocation = CLLocationCoordinate2D(latitude: 41.372442, longitude: -81.850165)
-        
-        let span = MKCoordinateSpan(latitudeDelta: 0.0070,longitudeDelta: 0.0070)
-        let region = MKCoordinateRegion(center:initialLocation, span: span)
-        mapView.setRegion(region, animated: true)
         mapView.delegate = self
-        
-        
+        mapView.userTrackingMode = .follow
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -153,42 +185,22 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, CreateNewL
             }
         }
 
-        private func showLocationAccessDeniedAlert() {
-            let alertController = UIAlertController(
-                title: "Location Access Denied",
-                message: "Please enable location access in Settings. Campus Plate is unable to offer Self-Serve Food Stops until location access is allowed.",
-                preferredStyle: .alert
-            )
-            let settingsAction = UIAlertAction(title: "Settings", style: .default) { _ in
-                if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
-                    UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
-                }
+    private func showLocationAccessDeniedAlert() {
+        let alertController = UIAlertController(
+            title: "Location Access Denied",
+            message: "Please enable location access in Settings. Campus Plate is unable to offer Self-Serve Food Stops until location access is allowed.",
+            preferredStyle: .alert
+        )
+        let settingsAction = UIAlertAction(title: "Settings", style: .default) { _ in
+            if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
             }
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            alertController.addAction(settingsAction)
-            alertController.addAction(cancelAction)
-            present(alertController, animated: true, completion: nil)
         }
-    
-    
-    //    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-    //        guard annotation is MKPointAnnotation else { return nil }
-    //
-    //        let identifier = "Annotation"
-    //        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-    //
-    //        if annotationView == nil {
-    //            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-    //            annotationView!.canShowCallout = true
-    //        } else {
-    //            annotationView!.annotation = annotation
-    //        }
-    //
-    //        return annotationView
-    //    }
-    
-    
-    
-    
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(settingsAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
     
 }
+
