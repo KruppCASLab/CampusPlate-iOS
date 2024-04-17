@@ -132,7 +132,6 @@ class FoodTableViewController: UIViewController, UITableViewDelegate, UITableVie
                 foodCell.quantityField.text = ""
             }
             
-            
             foodCell.foodStopLocationLabel.text = foodStop!.name
             foodCell.foodLabel.text = listing.title?.uppercased()
             foodCell.leftBar.backgroundColor = UIColor(hexaRGB: foodStop!.hexColor)

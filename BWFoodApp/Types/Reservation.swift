@@ -36,4 +36,10 @@ public class Reservation: Codable{
         self.quantity = quantity
     }
     
+    init(listingId: Int, status: Int, quantity: Int) {
+        self.listingId = listingId
+        self.status = status
+        self.quantity = quantity
+    }
+    
 }

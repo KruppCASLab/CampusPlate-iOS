@@ -67,16 +67,18 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
     
     
     func checkGeofence(location: CLLocation) {
-        let startLat = foodStop.lat + 0.0004
-        let endLat = foodStop.lat - 0.0004
-        let startLng = foodStop.lng + 0.0004
-        let endLng = foodStop.lng - 0.0004
-        var shouldEnable = false
-        if location.coordinate.latitude >= endLat && location.coordinate.latitude <= startLat && location.coordinate.longitude >= endLng && location.coordinate.longitude <= startLng {
-            shouldEnable = true
-        }
-        DispatchQueue.main.async {
-            self.pickUpButton.isEnabled = shouldEnable
+        if foodStop.type == "unmanaged" {
+            let startLat = foodStop.lat + 0.0004
+            let endLat = foodStop.lat - 0.0004
+            let startLng = foodStop.lng + 0.0004
+            let endLng = foodStop.lng - 0.0004
+            var shouldEnable = false
+            if location.coordinate.latitude >= endLat && location.coordinate.latitude <= startLat && location.coordinate.longitude >= endLng && location.coordinate.longitude <= startLng {
+                shouldEnable = true
+            }
+            DispatchQueue.main.async {
+                self.pickUpButton.isEnabled = shouldEnable
+            }
         }
     }
     
@@ -111,7 +113,7 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
         
         
         foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)!
-        
+
         if foodStop.type == "unmanaged" {
             DispatchQueue.main.async {
                 self.pickUpButton.title = "Retrieve"
@@ -204,51 +206,89 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
         
         pickUpButton.isEnabled = false
         
-        let reservation = Reservation(listingId: listing.listingId!, quantity: quantitySelected)
-        
-        reservationModel.addReservation(reservation: reservation) { [self] (ReservationResponse) in
-            if (ReservationResponse.status == 1) {
-                let alert = UIAlertController(title: "Quantity Not Available", message: "The quantity you selected was not available for pick up, please select a lesser quantity.", preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (completed) in
-                    self.pickUpButton.isEnabled = true
-                }))
-                
-                
-                DispatchQueue.main.async {
-                    self.present(alert, animated: true, completion: nil)
-                }
-                
-            }
-            else if (ReservationResponse.status == 2) {
-                let alert = UIAlertController(title: listing.title! + " is no longer available.", message: "The listing you have selected, is no longer available for pick up.", preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (completed) in
-                    self.dismiss(animated: true, completion: nil)
-                }))
-                
-                
-                DispatchQueue.main.async {
-                    self.present(alert, animated: true, completion: nil)
-                }
-                
-            }
-            else {
-                DispatchQueue.main.async { [self] in
-                    //let vc = MyReservationsTableViewController(nibName: "MyReservationsTableViewController", bundle: nil)
-                    //vc.listing = listing
-                    createdReservation = ReservationResponse.data
-                    self.performSegue(withIdentifier: "pickUpConfirmation", sender: self)
+        if foodStop.type == "unmanaged" {
+            let reservation = Reservation(listingId: listing.listingId!, status: 2, quantity: quantitySelected)
+            reservationModel.addReservation(reservation: reservation) { [self] (ReservationResponse) in
+                if (ReservationResponse.status == 1) {
+                    let alert = UIAlertController(title: "Quantity Not Available", message: "The quantity you selected was not available for pick up, please select a lesser quantity.", preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (completed) in
+                        self.pickUpButton.isEnabled = true
+                    }))
+                    
+                    
+                    DispatchQueue.main.async {
+                        self.present(alert, animated: true, completion: nil)
+                    }
                     
                 }
+                else if (ReservationResponse.status == 2) {
+                    let alert = UIAlertController(title: listing.title! + " is no longer available.", message: "The listing you have selected, is no longer available for pick up.", preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (completed) in
+                        self.dismiss(animated: true, completion: nil)
+                    }))
+                    
+                    
+                    DispatchQueue.main.async {
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                    
+                }
+                else {
+                    DispatchQueue.main.async { [self] in
+                        //let vc = MyReservationsTableViewController(nibName: "MyReservationsTableViewController", bundle: nil)
+                        //vc.listing = listing
+                        createdReservation = ReservationResponse.data
+                        self.performSegue(withIdentifier: "pickUpConfirmation", sender: self)
+                        
+                    }
+                }
+                
             }
-            
         }
-        
-        
+        else {
+            let reservation = Reservation(listingId: listing.listingId!, quantity: quantitySelected)
+            reservationModel.addReservation(reservation: reservation) { [self] (ReservationResponse) in
+                if (ReservationResponse.status == 1) {
+                    let alert = UIAlertController(title: "Quantity Not Available", message: "The quantity you selected was not available for pick up, please select a lesser quantity.", preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (completed) in
+                        self.pickUpButton.isEnabled = true
+                    }))
+                    
+                    
+                    DispatchQueue.main.async {
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                    
+                }
+                else if (ReservationResponse.status == 2) {
+                    let alert = UIAlertController(title: listing.title! + " is no longer available.", message: "The listing you have selected, is no longer available for pick up.", preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (completed) in
+                        self.dismiss(animated: true, completion: nil)
+                    }))
+                    
+                    
+                    DispatchQueue.main.async {
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                    
+                }
+                else {
+                    DispatchQueue.main.async { [self] in
+                        //let vc = MyReservationsTableViewController(nibName: "MyReservationsTableViewController", bundle: nil)
+                        //vc.listing = listing
+                        createdReservation = ReservationResponse.data
+                        self.performSegue(withIdentifier: "pickUpConfirmation", sender: self)
+                        
+                    }
+                }
+
+            }
+        }
     }
-    
-    
     
     
     @IBAction func stepper(_ sender: UIStepper) {

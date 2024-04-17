@@ -31,15 +31,21 @@ class PickUpConfirmationViewController: UIViewController {
         // Do any additional setup after loading the view.
         FoodStopLocation.textContainer.lineFragmentPadding = 0
         reservationIdNumber.textContainer.lineFragmentPadding = 0
-        FoodStopLocation.text = foodStop.name
-        FoodStopAddress.text = foodStop.streetAddress
         closeButton.tintColor = UIColor(hexaRGB:foodStop.hexColor)
         foodStopIdNumber.text = String(foodStop.foodStopId)
         circleView.layer.cornerRadius = circleView.frame.size.width/2
         circleView.backgroundColor = UIColor.init(hexaRGB: foodStop.hexColor)
         foodStopIdNumber.textColor = UIColor.init(hexaRGB: foodStop.hexColor)
         
-        reservationIdNumber.text = "YOUR RESERVATION NUMBER IS " + String(reservation.code!)
+        if foodStop.type == "managed" {
+            FoodStopLocation.text = foodStop.name
+            FoodStopAddress.text = foodStop.streetAddress
+            reservationIdNumber.text = "YOUR RESERVATION NUMBER IS " + String(reservation.code!)
+        } else {
+            FoodStopLocation.text = "Please retrieve your meal."
+            FoodStopAddress.text = ""
+            reservationIdNumber.text = "Thank you for using campus plate!"
+        }
         
     }
     
