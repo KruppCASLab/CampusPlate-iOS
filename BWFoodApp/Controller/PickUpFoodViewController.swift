@@ -207,7 +207,7 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
         pickUpButton.isEnabled = false
         
         if foodStop.type == "unmanaged" {
-            let reservation = Reservation(listingId: listing.listingId!, status: 2, quantity: quantitySelected)
+            let reservation = Reservation(listingId: listing.listingId!, status: 3, quantity: quantitySelected)
             reservationModel.addReservation(reservation: reservation) { [self] (ReservationResponse) in
                 if (ReservationResponse.status == 1) {
                     let alert = UIAlertController(title: "Quantity Not Available", message: "The quantity you selected was not available for pick up, please select a lesser quantity.", preferredStyle: .alert)
