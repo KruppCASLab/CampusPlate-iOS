@@ -116,13 +116,13 @@
 		F69265DD24463754005C0701 /* KeychainCredentialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainCredentialManager.swift; sourceTree = "<group>"; };
 		F69265DF2446376C005C0701 /* KeychainCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainCredential.swift; sourceTree = "<group>"; };
 		F692EA9125DB0E480069589B /* ImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
-		F69BDB3F20FA55780065BB78 /* BWFoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWFoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69BDB3F20FA55780065BB78 /* CampusPlate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusPlate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69BDB4220FA55780065BB78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F69BDB4720FA55780065BB78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F69BDB4920FA55790065BB78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F69BDB4C20FA55790065BB78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F69BDB4E20FA55790065BB78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F69BDB5320FA55790065BB78 /* BWFoodAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BWFoodAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69BDB5320FA55790065BB78 /* CampusPlateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampusPlateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69BDB5720FA557A0065BB78 /* BWFoodAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWFoodAppTests.swift; sourceTree = "<group>"; };
 		F69BDB5920FA557A0065BB78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F69D00F0260966C1003DE1BD /* spoony.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spoony.png; sourceTree = "<group>"; };
@@ -267,8 +267,8 @@
 		F69BDB4020FA55780065BB78 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F69BDB3F20FA55780065BB78 /* BWFoodApp.app */,
-				F69BDB5320FA55790065BB78 /* BWFoodAppTests.xctest */,
+				F69BDB3F20FA55780065BB78 /* CampusPlate.app */,
+				F69BDB5320FA55790065BB78 /* CampusPlateTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -317,9 +317,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F69BDB3E20FA55780065BB78 /* BWFoodApp */ = {
+		F69BDB3E20FA55780065BB78 /* CampusPlate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F69BDB5C20FA557A0065BB78 /* Build configuration list for PBXNativeTarget "BWFoodApp" */;
+			buildConfigurationList = F69BDB5C20FA557A0065BB78 /* Build configuration list for PBXNativeTarget "CampusPlate" */;
 			buildPhases = (
 				F69BDB3B20FA55780065BB78 /* Sources */,
 				F69BDB3C20FA55780065BB78 /* Frameworks */,
@@ -329,14 +329,14 @@
 			);
 			dependencies = (
 			);
-			name = BWFoodApp;
+			name = CampusPlate;
 			productName = BWFoodApp;
-			productReference = F69BDB3F20FA55780065BB78 /* BWFoodApp.app */;
+			productReference = F69BDB3F20FA55780065BB78 /* CampusPlate.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F69BDB5220FA55790065BB78 /* BWFoodAppTests */ = {
+		F69BDB5220FA55790065BB78 /* CampusPlateTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F69BDB5F20FA557A0065BB78 /* Build configuration list for PBXNativeTarget "BWFoodAppTests" */;
+			buildConfigurationList = F69BDB5F20FA557A0065BB78 /* Build configuration list for PBXNativeTarget "CampusPlateTests" */;
 			buildPhases = (
 				F69BDB4F20FA55790065BB78 /* Sources */,
 				F69BDB5020FA55790065BB78 /* Frameworks */,
@@ -347,9 +347,9 @@
 			dependencies = (
 				F69BDB5520FA55790065BB78 /* PBXTargetDependency */,
 			);
-			name = BWFoodAppTests;
+			name = CampusPlateTests;
 			productName = BWFoodAppTests;
-			productReference = F69BDB5320FA55790065BB78 /* BWFoodAppTests.xctest */;
+			productReference = F69BDB5320FA55790065BB78 /* CampusPlateTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -360,7 +360,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1240;
-				ORGANIZATIONNAME = "Campus Plate - BW";
+				ORGANIZATIONNAME = "Campus Plate";
 				TargetAttributes = {
 					F69BDB3E20FA55780065BB78 = {
 						CreatedOnToolsVersion = 10.0;
@@ -373,7 +373,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F69BDB3A20FA55780065BB78 /* Build configuration list for PBXProject "BWFoodApp" */;
+			buildConfigurationList = F69BDB3A20FA55780065BB78 /* Build configuration list for PBXProject "CampusPlate" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -386,8 +386,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F69BDB3E20FA55780065BB78 /* BWFoodApp */,
-				F69BDB5220FA55790065BB78 /* BWFoodAppTests */,
+				F69BDB3E20FA55780065BB78 /* CampusPlate */,
+				F69BDB5220FA55790065BB78 /* CampusPlateTests */,
 			);
 		};
 /* End PBXProject section */
@@ -485,7 +485,7 @@
 /* Begin PBXTargetDependency section */
 		F69BDB5520FA55790065BB78 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F69BDB3E20FA55780065BB78 /* BWFoodApp */;
+			target = F69BDB3E20FA55780065BB78 /* CampusPlate */;
 			targetProxy = F69BDB5420FA55790065BB78 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -638,6 +638,7 @@
 				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = MF9639JBWV;
 				INFOPLIST_FILE = BWFoodApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Campus Plate";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -659,6 +660,7 @@
 				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = MF9639JBWV;
 				INFOPLIST_FILE = BWFoodApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Campus Plate";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -678,7 +680,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4M6CUF4NU7;
+				DEVELOPMENT_TEAM = MF9639JBWV;
 				INFOPLIST_FILE = BWFoodAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -689,7 +691,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BWFoodApp.app/BWFoodApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CampusPlate.app/CampusPlate";
 			};
 			name = Debug;
 		};
@@ -699,7 +701,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4M6CUF4NU7;
+				DEVELOPMENT_TEAM = MF9639JBWV;
 				INFOPLIST_FILE = BWFoodAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -710,14 +712,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BWFoodApp.app/BWFoodApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CampusPlate.app/CampusPlate";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F69BDB3A20FA55780065BB78 /* Build configuration list for PBXProject "BWFoodApp" */ = {
+		F69BDB3A20FA55780065BB78 /* Build configuration list for PBXProject "CampusPlate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F69BDB5A20FA557A0065BB78 /* Debug */,
@@ -726,7 +728,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F69BDB5C20FA557A0065BB78 /* Build configuration list for PBXNativeTarget "BWFoodApp" */ = {
+		F69BDB5C20FA557A0065BB78 /* Build configuration list for PBXNativeTarget "CampusPlate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F69BDB5D20FA557A0065BB78 /* Debug */,
@@ -735,7 +737,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F69BDB5F20FA557A0065BB78 /* Build configuration list for PBXNativeTarget "BWFoodAppTests" */ = {
+		F69BDB5F20FA557A0065BB78 /* Build configuration list for PBXNativeTarget "CampusPlateTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F69BDB6020FA557A0065BB78 /* Debug */,
