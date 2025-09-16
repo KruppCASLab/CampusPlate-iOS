@@ -2,43 +2,51 @@
 //  LocationManager.swift
 //  BWFoodApp
 //
-//  Created by Dan Fitzgerald on 1/31/20.
-//  Copyright © 2020 Dan Fitzgerald. All rights reserved.
+//  Created by Julia  Gersey on 2/14/24.
+//  Copyright © 2024 Campus Plate - BW. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import CoreLocation
+import CoreLocationUI
 
-class LocationManager: UIViewController, CLLocationManagerDelegate {
+protocol LocationManagerDelegate {
+    func receiveLocation(location:CLLocation)
+}
+
+class LocationManager: NSObject, CLLocationManagerDelegate {
     
-    let locationManager = CLLocationManager()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.locationManager.requestWhenInUseAuthorization()
-            
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    static let shared = LocationManager()
+    
+    private let locationManager = CLLocationManager()
+    private var currentLocation: CLLocation?
+    public var delegate:LocationManagerDelegate?
+    
+    override private init() {
+        super.init()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            currentLocation = location
+            if let delegate = delegate {
+                delegate.receiveLocation(location: location)
+            }
+        }
+    }
+    
+    func startUpdatingLocation() {
+        if locationManager.authorizationStatus == .authorizedWhenInUse {
             locationManager.startUpdatingLocation()
-        
-            locationManager.delegate = self
-        
-            // Set initial location in Berea
-            let initialLocation = CLLocationCoordinate2D(latitude: 41.371039, longitude: -81.847857)
-            
-            let span = MKCoordinateSpan(latitudeDelta: 0.008,longitudeDelta: 0.008)
-            let region = MKCoordinateRegion(center:initialLocation, span: span)
-            mapView.setRegion(region, animated: true)
+        } else {
+            print("Location permission denied.")
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func stopUpdatingLocation() {
+        locationManager.stopUpdatingLocation()
     }
-    */
-
+    
 }

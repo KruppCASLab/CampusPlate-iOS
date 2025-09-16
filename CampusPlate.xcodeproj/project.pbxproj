@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CD5853BF2935273700E3CF66 /* EmptyStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5853BE2935273700E3CF66 /* EmptyStateTableViewCell.swift */; };
+		CD8CCCA02E798ACC00576C79 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CCC9F2E798ACC00576C79 /* LocationManager.swift */; };
+		CD8CCCA22E798B0700576C79 /* PresentingViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8CCCA12E798B0700576C79 /* PresentingViewControllerDelegate.swift */; };
 		D47AE5F926E86CFA0047C726 /* ServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47AE5F826E86CFA0047C726 /* ServiceClient.swift */; };
 		D4FF758D26DFE393000B40FF /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FF758C26DFE393000B40FF /* Credential.swift */; };
 		E003B722254B33300065DF41 /* EnterPinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E003B721254B33300065DF41 /* EnterPinViewController.swift */; };
@@ -75,6 +77,8 @@
 
 /* Begin PBXFileReference section */
 		CD5853BE2935273700E3CF66 /* EmptyStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateTableViewCell.swift; sourceTree = "<group>"; };
+		CD8CCC9F2E798ACC00576C79 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		CD8CCCA12E798B0700576C79 /* PresentingViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentingViewControllerDelegate.swift; sourceTree = "<group>"; };
 		D47AE5F826E86CFA0047C726 /* ServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClient.swift; sourceTree = "<group>"; };
 		D4FF758C26DFE393000B40FF /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		E003B721254B33300065DF41 /* EnterPinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterPinViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +256,8 @@
 				F6BCD71824286CE1000C2E02 /* gif.swift */,
 				F6566949252B968800A6BA2B /* DoneButton.swift */,
 				F656694525263F9B00A6BA2B /* TextFieldMaxLength.swift */,
+				CD8CCC9F2E798ACC00576C79 /* LocationManager.swift */,
+				CD8CCCA12E798B0700576C79 /* PresentingViewControllerDelegate.swift */,
 				F69BDB4120FA55780065BB78 /* CampusPlate */,
 				F69BDB5620FA557A0065BB78 /* CampusPlateTests */,
 				F69BDB4020FA55780065BB78 /* Products */,
@@ -414,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8CCCA22E798B0700576C79 /* PresentingViewControllerDelegate.swift in Sources */,
 				F6E3C33425B8CF82007FD10E /* RequestUtility.swift in Sources */,
 				F6663F63257E7EE10084EC1C /* WSListing.swift in Sources */,
 				F68F962125F1947400FDCDB8 /* MyReservationsTableViewCell.swift in Sources */,
@@ -434,6 +441,7 @@
 				F614DAF425F6C6430056C2CA /* CreateReservationResponse.swift in Sources */,
 				F603CA2825C09829005B6F79 /* FoodStopModel.swift in Sources */,
 				F6AE83A1254B33A500D38310 /* UIViewController+PulleyViewController.swift in Sources */,
+				CD8CCCA02E798ACC00576C79 /* LocationManager.swift in Sources */,
 				F60E5B5E2115053600426FA3 /* PickUpFoodViewController.swift in Sources */,
 				F6663F56256C4D6E0084EC1C /* FoodStop.swift in Sources */,
 				E02A909D262F43CA003B342B /* AppState.swift in Sources */,
@@ -629,7 +637,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = MF9639JBWV;
-				INFOPLIST_FILE = BWFoodApp/Info.plist;
+				INFOPLIST_FILE = CampusPlate/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Campus Plate";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -651,7 +659,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = MF9639JBWV;
-				INFOPLIST_FILE = BWFoodApp/Info.plist;
+				INFOPLIST_FILE = CampusPlate/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Campus Plate";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
