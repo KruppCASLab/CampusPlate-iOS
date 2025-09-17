@@ -4,6 +4,10 @@
 <dict>
 	<key>BASE_URL</key>
 	<string>$(BASE_URL)</string>
+	<key>CASE_EDU</key>
+	<string>$(CASE_EDU)</string>
+	<key>BW_EDU</key>
+	<string>$(BW_EDU)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>

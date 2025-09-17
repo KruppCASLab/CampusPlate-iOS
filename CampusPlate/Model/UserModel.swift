@@ -11,7 +11,7 @@ import Foundation
 class UserModel {
     private var users = Array<User>()
     
-    private let url = URL(string: ServiceClient.serviceClientUrl() + "/users")
+    private let path = "/users"
     
     private static let sharedInstance = UserModel()
     let session = URLSession.shared
@@ -21,8 +21,9 @@ class UserModel {
     }
     
     public func addUser(user:User, completion:@escaping (Bool, String)->Void) {
+        let url = URL(string: ServiceClient.serviceClientUrl(for: user.userName) + path)
         self.users.append(user)
-        var request = URLRequest(url: self.url!)
+        var request = URLRequest(url: url!)
         
         request.httpMethod = "POST"
         
@@ -57,9 +58,9 @@ class UserModel {
     }
     
     public func updateAccountVerificationFlag(userName: String, pin: Int, completion:@escaping (Bool)->Void) {
-        
-        // TODO : Add to URL listingId
-        let patchUrl = self.url?.appendingPathComponent(userName)
+        let url = URL(string: ServiceClient.serviceClientUrl(for: userName) + path)
+
+        let patchUrl = url?.appendingPathComponent(userName)
         
         var request = URLRequest(url: patchUrl!)
         

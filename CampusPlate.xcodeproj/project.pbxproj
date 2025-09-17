@@ -200,8 +200,8 @@
 		E014BACF26DE94A8006A0D11 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				E014BAD226DE95F0006A0D11 /* prod.xcconfig */,
 				E014BAD326DE960B006A0D11 /* dev.xcconfig */,
+				E014BAD226DE95F0006A0D11 /* prod.xcconfig */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
