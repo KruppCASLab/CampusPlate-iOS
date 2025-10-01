@@ -37,7 +37,7 @@ class PickUpConfirmationViewController: UIViewController {
         circleView.backgroundColor = UIColor.init(hexaRGB: foodStop.hexColor)
         foodStopIdNumber.textColor = UIColor.init(hexaRGB: foodStop.hexColor)
         
-        if foodStop.type == "managed" {
+        if !foodStop.isManaged() {
             FoodStopLocation.text = foodStop.name
             FoodStopAddress.text = foodStop.streetAddress
             reservationIdNumber.text = "YOUR RESERVATION NUMBER IS " + String(reservation.code!)

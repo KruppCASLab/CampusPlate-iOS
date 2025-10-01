@@ -18,10 +18,11 @@ public class FoodStop:Codable {
     let lng : Double
     let hexColor: String
     let foodStopNumber: Int
-    let type: String
+    private let managed: Int
+    private let reservable: Int
     
 
-    init(foodStopID:Int, name:String, description: String, streetAddress:String, lat: Double, lng: Double, hexColor: String, foodStopNumber:Int, type:String) {
+    init(foodStopID:Int, name:String, description: String, streetAddress:String, lat: Double, lng: Double, hexColor: String, foodStopNumber:Int, managed:Int, reservable:Int) {
     
         self.foodStopId = foodStopID
         self.name = name
@@ -31,7 +32,15 @@ public class FoodStop:Codable {
         self.lng = lng
         self.hexColor = hexColor
         self.foodStopNumber = foodStopNumber
-        self.type = type
+        self.managed = managed
+        self.reservable = reservable
+    }
+    
+    public func isReservable() -> Bool {
+        return reservable == 1
+    }
+    public func isManaged() -> Bool {
+        return managed == 1
     }
 }
 

@@ -67,7 +67,7 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
     
     
     func checkGeofence(location: CLLocation) {
-        if foodStop.type == "unmanaged" {
+        if !foodStop.isManaged() {
             let startLat = foodStop.lat + 0.0004
             let endLat = foodStop.lat - 0.0004
             let startLng = foodStop.lng + 0.0004
@@ -114,7 +114,7 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
         
         foodStop = foodStopModel.getFoodStop(foodStopId: listing.foodStopId!)!
 
-        if foodStop.type == "unmanaged" {
+        if !foodStop.isManaged() {
             DispatchQueue.main.async {
                 self.pickUpButton.title = "Retrieve"
                 self.pickUpButton.isEnabled = false
@@ -175,6 +175,12 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
             daysPosted.text = "POSTED " + strDaysSince + " DAYS AGO"
         }
         
+        if !foodStop.isReservable() {
+            stepper.isHidden = true
+            navBar.rightBarButtonItem?.isHidden = true
+            quantityLabel.text = String(listing.quantityRemaining!)
+        }
+        
         // Do any additional setup after loading the view.
 
     }
@@ -206,7 +212,7 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
         
         pickUpButton.isEnabled = false
         
-        if foodStop.type == "unmanaged" {
+        if !foodStop.isManaged() {
             let reservation = Reservation(listingId: listing.listingId!, status: 3, quantity: quantitySelected)
             reservationModel.addReservation(reservation: reservation) { [self] (ReservationResponse) in
                 if (ReservationResponse.status == 1) {
@@ -293,7 +299,13 @@ class PickUpFoodViewController: UIViewController, PresentingViewControllerDelega
     
     @IBAction func stepper(_ sender: UIStepper) {
         
-        quantityLabel.text = Int(sender.value).description + "/" + String(listing.quantityRemaining!)
+        if foodStop.isReservable() {
+            quantityLabel.text = Int(sender.value).description + "/" + String(listing.quantityRemaining!)
+        }
+        else {
+            quantityLabel.text = String(listing.quantityRemaining!)
+        }
+        
         
         quantitySelected = Int(sender.value)
     }
