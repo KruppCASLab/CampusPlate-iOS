@@ -2,4 +2,4 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 BW_EDU = https:/$()/mopsdev.bw.edu/cp/rest.php
-CASE_EDU = https:/$()/caslab.case.edu/~nsq5/rest.php
+CASE_EDU = https:/$()/caslab.case.edu/~briankrupp/rest.php
