@@ -1,0 +1,37 @@
+{
+  "fill" : "automatic",
+  "groups" : [
+    {
+      "blur-material" : null,
+      "layers" : [
+        {
+          "image-name" : "CP Layer 1.png",
+          "name" : "CP Layer 1"
+        },
+        {
+          "image-name" : "CP Layer 2.png",
+          "name" : "CP Layer 2"
+        },
+        {
+          "image-name" : "CP Layer 3.png",
+          "name" : "CP Layer 3"
+        }
+      ],
+      "name" : "Group",
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : false,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}
