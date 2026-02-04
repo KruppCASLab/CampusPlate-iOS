@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct User {
-    let username: String
-    var credential:Credential?
+struct User : Codable {
+    public let username: String
+    public var password:String?
+    public var pin: Int?
+//    var credential:Credential?
 }
