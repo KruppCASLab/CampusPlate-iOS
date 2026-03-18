@@ -1,16 +1,14 @@
 //
-//  RegisterView.swift
+//  PinConfirmationView.swift
 //  Campus Plate
 //
-//  Created by Brian Krupp on 2/4/26.
+//  Created by Tyler Powers on 3/18/26.
 //
 
 import SwiftUI
 
-struct RegisterView: View {
-    @State var email = ""
-    @State private var isShowingSheet = false
-    
+struct PinConfirmationView: View {
+    @State var pin = ""
     var body: some View {
         ZStack {
             Image("Background-Texture")
@@ -30,27 +28,28 @@ struct RegisterView: View {
                     Spacer(minLength: 60)
                     VStack(spacing:20) {
                         HStack {
-                            Text("University Email")
+                            Text("Enter PIN")
                                 .foregroundStyle(.white)
                                 .font(.title2)
-                                .keyboardType(.emailAddress)
                             Spacer()
                         }
-                        TextField("", text: $email)
+                        TextField("", text: $pin)
                             .background(.white)
                             .font(.title2)
-                        Button("Get Pin") {
-                            isShowingSheet.toggle()
+                            .keyboardType(.numberPad)
+                        Button("Verify PIN") {
                             // TODO: Task to call service
+                            // Reject: dismiss the sheet
+                            // Accept: Navigate to main map view
                         }
                         .foregroundStyle(.accent)
                         .font(.title3)
                         .buttonStyle(.borderedProminent)
                         .tint(.white)
-                        .sheet(isPresented: $isShowingSheet, onDismiss: didDismiss) {
-                            PinConfirmationView()
-                        }
-                        
+                        Text("The PIN is sent to the email that you provided. Please check your Junk or Clutter folder.")
+                            .font(.caption)
+                            .foregroundStyle(.white)
+                            .multilineTextAlignment(.center)
                     }.padding()
                     Spacer(minLength: 60)
                 }
@@ -59,12 +58,8 @@ struct RegisterView: View {
         }
         .background(.tint)
     }
-    
-    func didDismiss() {
-        // Handle dismissed sheet
-    }
 }
 
 #Preview {
-    RegisterView()
+    PinConfirmationView()
 }
