@@ -10,6 +10,8 @@ import SwiftUI
 struct RegisterView: View {
     @State var email = ""
     @State private var isShowingSheet = false
+    @State private var isShowingAlert = false
+    @State private var isRegistering = false
     
     var body: some View {
         ZStack {
@@ -22,38 +24,61 @@ struct RegisterView: View {
                 }
                 
             VStack {
-                Image("Header-Image-White")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding()
-                HStack {
-                    Spacer(minLength: 60)
-                    VStack(spacing:20) {
-                        HStack {
-                            Text("University Email")
-                                .foregroundStyle(.white)
-                                .font(.title2)
-                                .keyboardType(.emailAddress)
-                            Spacer()
+                Spacer()
+                VStack(spacing:30) {
+                    Image("Header-Image-White")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                    
+                    Text("University Email")
+                        .foregroundStyle(.white)
+                        .font(.title2)
+                        .keyboardType(.emailAddress)
+                    
+                    TextField("Enter Email", text: $email)
+                        .padding()
+                        .background(.white)
+                        .clipShape(Capsule())
+                        .autocorrectionDisabled(true)
+                        .textInputAutocapitalization(.never)
+                    
+                    Button("Register") {
+                        isRegistering = true
+                        do {
+                            try Session.shared.configure(email: email)
+                            Task {
+                                do {
+                                    try await UserModel.createUser(username: email)
+                                }
+                                catch {
+                                    
+                                }
+                                isRegistering = false
+                            }
                         }
-                        TextField("", text: $email)
-                            .background(.white)
-                            .font(.title2)
-                        Button("Get Pin") {
-                            isShowingSheet.toggle()
-                            // TODO: Task to call service
+                        catch {
+                            isRegistering = false
+                            isShowingAlert.toggle()
                         }
-                        .foregroundStyle(.accent)
-                        .font(.title3)
-                        .buttonStyle(.borderedProminent)
-                        .tint(.white)
-                        .sheet(isPresented: $isShowingSheet, onDismiss: didDismiss) {
-                            PinConfirmationView()
-                        }
-                        
-                    }.padding()
-                    Spacer(minLength: 60)
+                
+//                            isShowingSheet.toggle()
+                        // TODO: Task to call service
+                    }
+                    .disabled(email.isEmpty || !email.contains("@") || isRegistering)
+                    .foregroundStyle(.accent)
+                    .font(.title2)
+                    .buttonStyle(.borderedProminent)
+                    .tint(.white)
+                    .sheet(isPresented: $isShowingSheet, onDismiss: didDismiss) {
+                        PinConfirmationView()
+                    }
+                    .alert("Error", isPresented: $isShowingAlert) {
+                    } message: {
+                        Text("The email you entered is currently not configured for Campus Plate. Please make sure you are using an email that is associated with the university.")
+                    }
+                    
                 }
+                Spacer()
             }
             .padding()
         }
@@ -66,5 +91,5 @@ struct RegisterView: View {
 }
 
 #Preview {
-    RegisterView()
+    RegisterView(email: "krupp@case.edu")
 }

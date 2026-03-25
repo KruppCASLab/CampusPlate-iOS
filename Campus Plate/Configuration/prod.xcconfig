@@ -1,5 +1,4 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-BW_EDU = https:/$()/mops.bw.edu/cp/rest.php
-CASE_EDU = https:/$()/caslab.case.edu/cp/rest.php
+DEPLOY_ENV = prod

@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CDB1AE362F197AD80079004D /* prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CDB1AE342F197AD80079004D /* prod.xcconfig */; };
-		CDB1AE372F197AD80079004D /* dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CDB1AE332F197AD80079004D /* dev.xcconfig */; };
+		CD07E1682F74056B008C250B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07E1672F74056B008C250B /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD07E1672F74056B008C250B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CD721D352F197132001E5A93 /* Campus Plate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Campus Plate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD721D422F197134001E5A93 /* Campus PlateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Campus PlateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD721D4C2F197134001E5A93 /* Campus PlateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Campus PlateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +105,7 @@
 			children = (
 				CDB1AE332F197AD80079004D /* dev.xcconfig */,
 				CDB1AE342F197AD80079004D /* prod.xcconfig */,
+				CD07E1672F74056B008C250B /* Environment.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -188,7 +189,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2620;
-				LastUpgradeCheck = 2620;
+				LastUpgradeCheck = 2630;
 				TargetAttributes = {
 					CD721D342F197132001E5A93 = {
 						CreatedOnToolsVersion = 26.2;
@@ -229,8 +230,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDB1AE362F197AD80079004D /* prod.xcconfig in Resources */,
-				CDB1AE372F197AD80079004D /* dev.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD07E1682F74056B008C250B /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +347,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -404,6 +405,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -411,6 +413,7 @@
 		};
 		CD721D572F197134001E5A93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDB1AE332F197AD80079004D /* dev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -419,6 +422,7 @@
 				DEVELOPMENT_TEAM = MF9639JBWV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Campus-Plate-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -446,6 +450,7 @@
 		};
 		CD721D582F197134001E5A93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDB1AE342F197AD80079004D /* prod.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -454,6 +459,7 @@
 				DEVELOPMENT_TEAM = MF9639JBWV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Campus-Plate-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
