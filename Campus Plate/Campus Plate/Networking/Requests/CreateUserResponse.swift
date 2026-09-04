@@ -7,8 +7,14 @@
 
 import Foundation
 
-struct CreateUserResponse : Codable{
-    var data:Data?
-    var status:Int
-    var error:Int
+enum CreateUserResponseStatus : Int, Codable {
+    case success = 0
+    case successAccountExists = 2
+    case error = 1
+}
+
+struct CreateUserResponse : Codable {
+    var data:User?
+    var status:CreateUserResponseStatus
+    var error:Int?
 }

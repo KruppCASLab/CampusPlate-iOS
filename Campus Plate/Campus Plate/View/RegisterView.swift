@@ -40,35 +40,49 @@ struct RegisterView: View {
                         .background(.white)
                         .clipShape(Capsule())
                         .autocorrectionDisabled(true)
+                        .keyboardType(.emailAddress)
                         .textInputAutocapitalization(.never)
-                    
-                    Button("Register") {
-                        isRegistering = true
-                        do {
-                            try Session.shared.configure(email: email)
-                            Task {
-                                do {
-                                    try await UserModel.createUser(username: email)
-                                }
-                                catch {
-                                    
-                                }
-                                isRegistering = false
+                    HStack {
+                        if isRegistering {
+                            withAnimation {
+                                ProgressView()
                             }
                         }
-                        catch {
-                            isRegistering = false
-                            isShowingAlert.toggle()
+                        
+                        Button("Register") {
+                            isRegistering = true
+                            do {
+                                try Session.shared.configure(email: email)
+                                Task {
+                                    do {
+                                        let response = try await UserModel.createUser(username: email)
+                                        
+                                        if (response.status == .success || response.status == .successAccountExists) {
+                                            print("Received Credential \(response.data?.credential)")
+                                            isShowingSheet = true
+                                        }
+                                        
+                                    }
+                                    catch {
+                                        print(error)
+                                    }
+                                    isRegistering = false
+                                }
+                            }
+                            catch {
+                                isRegistering = false
+                                isShowingAlert.toggle()
+                            }
+                            
+                            //                            isShowingSheet.toggle()
+                            // TODO: Task to call service
                         }
-                
-//                            isShowingSheet.toggle()
-                        // TODO: Task to call service
+                        .disabled(email.isEmpty || !email.contains("@") || isRegistering)
+                        .foregroundStyle(.accent)
+                        .font(.title2)
+                        .buttonStyle(.borderedProminent)
+                        .tint(.white)
                     }
-                    .disabled(email.isEmpty || !email.contains("@") || isRegistering)
-                    .foregroundStyle(.accent)
-                    .font(.title2)
-                    .buttonStyle(.borderedProminent)
-                    .tint(.white)
                     .sheet(isPresented: $isShowingSheet, onDismiss: didDismiss) {
                         PinConfirmationView()
                     }

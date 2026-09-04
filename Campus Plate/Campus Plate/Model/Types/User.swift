@@ -11,5 +11,5 @@ struct User : Codable {
     public let username: String
     public var password:String?
     public var pin: Int?
-//    var credential:Credential?
+    var credential:Credential?
 }
