@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		CD07E1682F74056B008C250B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07E1672F74056B008C250B /* Environment.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		CD721D432F197134001E5A93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -28,13 +24,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CD07E1672F74056B008C250B /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CD721D352F197132001E5A93 /* Campus Plate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Campus Plate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD721D422F197134001E5A93 /* Campus PlateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Campus PlateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD721D4C2F197134001E5A93 /* Campus PlateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Campus PlateUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDB1AE332F197AD80079004D /* dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = dev.xcconfig; sourceTree = "<group>"; };
-		CDB1AE342F197AD80079004D /* prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = prod.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CD7D613A305866020000F879 /* Exceptions for "Configuration" folder in "Campus Plate" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Environment.swift,
+			);
+			target = CD721D342F197132001E5A93 /* Campus Plate */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		CD721D372F197132001E5A93 /* Campus Plate */ = {
@@ -50,6 +53,14 @@
 		CD721D4F2F197134001E5A93 /* Campus PlateUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Campus PlateUITests";
+			sourceTree = "<group>";
+		};
+		CD7D6138305866010000F879 /* Configuration */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CD7D613A305866020000F879 /* Exceptions for "Configuration" folder in "Campus Plate" target */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -82,7 +93,7 @@
 		CD721D2C2F197132001E5A93 = {
 			isa = PBXGroup;
 			children = (
-				CDB1AE352F197AD80079004D /* Configuration */,
+				CD7D6138305866010000F879 /* Configuration */,
 				CD721D372F197132001E5A93 /* Campus Plate */,
 				CD721D452F197134001E5A93 /* Campus PlateTests */,
 				CD721D4F2F197134001E5A93 /* Campus PlateUITests */,
@@ -98,16 +109,6 @@
 				CD721D4C2F197134001E5A93 /* Campus PlateUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		CDB1AE352F197AD80079004D /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				CDB1AE332F197AD80079004D /* dev.xcconfig */,
-				CDB1AE342F197AD80079004D /* prod.xcconfig */,
-				CD07E1672F74056B008C250B /* Environment.swift */,
-			);
-			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD07E1682F74056B008C250B /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +413,8 @@
 		};
 		CD721D572F197134001E5A93 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDB1AE332F197AD80079004D /* dev.xcconfig */;
+			baseConfigurationReferenceAnchor = CD7D6138305866010000F879 /* Configuration */;
+			baseConfigurationReferenceRelativePath = dev.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -450,7 +451,8 @@
 		};
 		CD721D582F197134001E5A93 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDB1AE342F197AD80079004D /* prod.xcconfig */;
+			baseConfigurationReferenceAnchor = CD7D6138305866010000F879 /* Configuration */;
+			baseConfigurationReferenceRelativePath = prod.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct PinConfirmationView: View {
+    let username:String
     @State var pin = ""
+    @State private var isConfirming = false
+    @State private var errorReceived = false
+    @State private var invalidCodeReceived = false
+    @Binding var isPresented:Bool
+    
     var body: some View {
         ZStack {
             Image("Background-Texture")
@@ -34,18 +40,67 @@ struct PinConfirmationView: View {
                             Spacer()
                         }
                         TextField("", text: $pin)
-                            .background(.white)
-                            .font(.title2)
+                            .cpTextField()
                             .keyboardType(.numberPad)
-                        Button("Verify PIN") {
-                            // TODO: Task to call service
-                            // Reject: dismiss the sheet
-                            // Accept: Navigate to main map view
+                        VStack {
+  
+                            Button("Verify PIN") {
+                                withAnimation {
+                                    isConfirming = true
+                                    invalidCodeReceived = false
+                                    errorReceived = false
+                                }
+                                Task {
+                                    do {
+                                        let response = try await UserModel.confirmUser(username: username, pin: pin)
+                                        
+                                        if (response.status == .success) {
+                                            if let credential = response.data?.GUID {
+                                                let result = KeychainCredentialManager.saveCredential(credential: KeychainCredential(username: username, password: credential))
+                                                if result {
+                                                    isPresented = false
+                                                }
+                                                else {
+                                                    errorReceived.toggle()
+                                                }
+                                            }
+                                        }
+                                        else if (response.status == .invalidMatch) {
+                                            withAnimation {
+                                                invalidCodeReceived = true
+                                            }
+                                        }
+                                    }
+                                    catch {
+                                        print(error)
+                                    }
+                                    isConfirming = false
+                                }
+
+                            }
+                            
+                            .disabled(pin.isEmpty || isConfirming)
+                            .buttonStyle(CPButtonStyle())
+                            if isConfirming {
+                                withAnimation {
+                                    ProgressView()
+                                }
+                            }
+                            
                         }
-                        .foregroundStyle(.accent)
-                        .font(.title3)
-                        .buttonStyle(.borderedProminent)
-                        .tint(.white)
+                        if invalidCodeReceived {
+                            Text("The PIN that you provided is invalid. Please try again.")
+                                .font(.caption)
+                                .foregroundStyle(.white)
+                                .multilineTextAlignment(.center)
+                        }
+                        else if errorReceived {
+                            Text("Unable to confirm your PIN at this time. Please try again.")
+                                .font(.caption)
+                                .foregroundStyle(.white)
+                                .multilineTextAlignment(.center)
+                        }
+                        
                         Text("The PIN is sent to the email that you provided. Please check your Junk or Clutter folder.")
                             .font(.caption)
                             .foregroundStyle(.white)
@@ -61,5 +116,5 @@ struct PinConfirmationView: View {
 }
 
 #Preview {
-    PinConfirmationView()
+    PinConfirmationView(username: "krupp@case.edu", pin: "423215", isPresented: .constant(true))
 }

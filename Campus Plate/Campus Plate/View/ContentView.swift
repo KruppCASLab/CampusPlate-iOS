@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isShowingRegistration = false
     var body: some View {
-        RegisterView()
+        ItemsView()
+            .sheet(isPresented: $isShowingRegistration, content: {
+                RegisterView(isShowingRegistration: $isShowingRegistration)
+                    .interactiveDismissDisabled()
+            })
+            .task {
+                if let credentail = KeychainCredentialManager.getCredential() {
+                    print(credentail)
+                }
+                else {
+                    isShowingRegistration = true
+                }
+            }
+            
     }
 }
 
