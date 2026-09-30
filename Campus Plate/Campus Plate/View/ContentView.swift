@@ -38,8 +38,8 @@ struct ContentView: View {
         .task {
             if shouldShowRegister() {
                 isShowingRegistration = true
-                initialCheckCompleted = true
             }
+            initialCheckCompleted = true
         }
 
     }
