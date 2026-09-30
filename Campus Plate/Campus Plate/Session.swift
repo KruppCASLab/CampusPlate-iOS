@@ -8,12 +8,16 @@
 import Foundation
 
 @Observable class Session {
-    public var email = ""
     public var url:URL?
+    private var credential:Credential?
     
-    public func configure(email: String) throws {
-        url = try Environment.urlForEmail(email)
-        self.email = email
+    public func configure(credential:Credential) throws {
+        url = try Environment.urlForEmail(credential.username)
+        self.credential = credential
+    }
+    
+    public func getCredentail() -> Credential? {
+        return credential
     }
     
     static let shared = Session()

@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Credential: Codable {
+struct UserCreationCredential: Codable {
     var label: String
 }

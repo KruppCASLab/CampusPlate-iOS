@@ -56,7 +56,7 @@ struct PinConfirmationView: View {
                                         
                                         if (response.status == .success) {
                                             if let credential = response.data?.GUID {
-                                                let result = KeychainCredentialManager.saveCredential(credential: KeychainCredential(username: username, password: credential))
+                                                let result = KeychainCredentialManager.saveCredential(credential: Credential(username: username, password: credential))
                                                 if result {
                                                     isPresented = false
                                                 }
@@ -112,6 +112,7 @@ struct PinConfirmationView: View {
             .padding()
         }
         .background(.tint)
+        .navigationBarBackButtonHidden()
     }
 }
 

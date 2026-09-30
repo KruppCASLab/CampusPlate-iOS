@@ -41,10 +41,4 @@ struct CPButtonStyle:ButtonStyle {
 
 #Preview {
     RegisterView(email: "krupp@case.edu", isShowingRegistration: .constant(true))
-//    Button("Hello") {
-//        
-//    }
-//    .buttonStyle(CPButtonStyle())
-//    .modifier(CPButton())
-    
 }

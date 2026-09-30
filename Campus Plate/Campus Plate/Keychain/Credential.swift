@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct KeychainCredential {
+struct Credential {
     let username: String
     let password: String
 }

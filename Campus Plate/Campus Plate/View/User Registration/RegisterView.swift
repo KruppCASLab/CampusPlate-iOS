@@ -46,7 +46,7 @@ struct RegisterView: View {
                             Button("Register") {
                                 isRegistering = true
                                 do {
-                                    try Session.shared.configure(email: email)
+                                    try Session.shared.configure(credential: Credential(username: email, password: ""))
                                     Task {
                                         do {
                                             let response = try await UserModel.createUser(username: email)

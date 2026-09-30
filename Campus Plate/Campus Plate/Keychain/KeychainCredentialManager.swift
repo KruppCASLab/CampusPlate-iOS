@@ -23,7 +23,7 @@ struct KeychainCredentialManager {
         }
     }
     
-    static public func saveCredential(credential:KeychainCredential) -> Bool {
+    static public func saveCredential(credential:Credential) -> Bool {
         clearCredentials()
         let account = credential.username
         let password = credential.password.data(using: .utf8)!
@@ -39,7 +39,7 @@ struct KeychainCredentialManager {
         
     }
     
-    static public func getCredential() -> KeychainCredential? {
+    static public func getCredential() -> Credential? {
         let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
                                     kSecAttrLabel as String: "Campus Plate",
                                     kSecMatchLimit as String: kSecMatchLimitOne,
@@ -59,6 +59,6 @@ struct KeychainCredentialManager {
             return nil
         }
         
-        return KeychainCredential(username: username, password: password)
+        return Credential(username: username, password: password)
     }
 }
